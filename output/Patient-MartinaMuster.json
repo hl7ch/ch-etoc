@@ -1,0 +1,42 @@
+{
+  "resourceType": "Patient",
+  "id": "MartinaMuster",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Martina Muster </p><p><b>telecom</b>: ph: 079 999 99 99, <a href=\"mailto:martina.muster@example.com\">martina.muster@example.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1995-01-27</p><p><b>address</b>: Quartierweg 15a Bern 3000 </p></div>"
+  },
+  "name": [
+    {
+      "family": "Muster",
+      "given": [
+        "Martina"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "079 999 99 99"
+    },
+    {
+      "system": "email",
+      "value": "martina.muster@example.com"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1995-01-27",
+  "address": [
+    {
+      "line": [
+        "Quartierweg 15a"
+      ],
+      "city": "Bern",
+      "postalCode": "3000"
+    }
+  ]
+}

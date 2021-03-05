@@ -1,0 +1,583 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<!-- broken links = 46, errors = 7, warn = 6, info = 1 -->
+<head>
+  <title>CH_eTOC : Validation Results</title>
+  <link href="fhir.css" rel="stylesheet"/>
+  <style>
+    span.flip  { background-color: #4CAF50; color: white; border: solid 1px #a6d8a8; padding: 2px }
+  </style>
+  <script>
+    function flip(id) {
+      var span = document.getElementById('s'+id);
+      var div = document.getElementById(id);
+      if (document.getElementById('s'+id).innerHTML == 'Show Reasoning') {
+        div.style.display = 'block';
+        span.innerHTML = 'Hide Reasoning';
+      } else {
+        div.style.display = 'none';
+        span.innerHTML = 'Show Reasoning';
+      }
+    }
+  </script>
+</head>
+<body style="margin: 20px; background-color: #ffffff">
+ <h1>Validation Results for CH_eTOC</h1>
+ <p>Generated Fri Mar 05 10:01:42 CET 2021, FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = <a href="http://fhir.ch/ig/ch-etoc">http://fhir.ch/ig/ch-etoc</a> (<a href="http://fhir.ch/ig/ch-etoc/history.html">history</a>)). See <a href="/users/bleuer/documents/github/etoc/output/qa.min.html">Errors Only</a></p>
+<table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
+ <tr><td>Publisher Version:</td><td><span style="background-color: #ffcccc">IG Publisher Version: v1.1.59, which is out of date. The current version is v1.1.63 <a href="https://github.com/HL7/fhir-ig-publisher/releases/latest/download/publisher.jar">Download Latest</a></span></td></tr>
+ <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = ch.fhir.ig.ch-etoc, Canonical = http://fhir.ch/ig/ch-etoc</td></tr>
+ <tr><td>Realm Check for n/a:</td><td><span style="color: maroon; font-weight: bold"></span><ul><li>n/a</li></ul></td></tr>
+ <tr><td>Version Check:</td><td>0.0.1: <span stlye="color: marron; font-weight: bold">no package-list.json - the guide is not ready for publishing</span></td></tr>
+ <tr><td>Supressed Messages:</td><td><a href="#suppressed">9 Suppressed Issues</a>
+</td></tr>
+ <tr><td>Dependency Checks:</td><td><div><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The NPM Package Id">Package</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of the package">Version</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="The version of FHIR that the package is based on">FHIR Release</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Canonical URL">Canonical</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Web Reference Base">Web Base</span></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span title="Comments about this entry">Comment</span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAL0lEQVR42u3XsQ0AQAgCQHdl/xn8jxvYWB3JlTR0VJLa+OltBwAAYP6EEQAAgCsPVYVAgIJrA/sAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> ch.fhir.ig.ch-etoc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-etoc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMElEQVR42u3QwQkAMAwDsezq/WdoskKgFAoy6HkfV5LamJ1tc7MHAAD+5QQAAOCZBkurQFbnaRSlAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> ch.fhir.ig.ch-core</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.2.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-core</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">./output</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAL0lEQVR42u3XsQ0AQAgCQHdl/xn8jxvYWB3JlTR0VJLa+OltBwAAYP6EEQAAgCsPVYVAgIJrA/sAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> ch.fhir.ig.ch-epr-term</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">2.0.x</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-epr-term</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-epr-term</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMElEQVR42u3QwQkAMAwDsezq/WdoskKgFAoy6HkfV5LamJ1tc7MHAAD+5QQAAOCZBkurQFbnaRSlAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> ch.fhir.ig.ch-orf</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">0.9.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-orf</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">https://build.fhir.org/ig/ehealthsuisse/ch-orf/</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Matched to latest patch release</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMElEQVR42u3QwQkAMAwDsezq/WdoskKgFAoy6HkfV5LamJ1tc7MHAAD+5QQAAOCZBkurQFbnaRSlAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> ch.fhir.ig.ch-core</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.2.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-core</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">./output</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">see above</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMElEQVR42u3QwQkAMAwDsezq/WdoskKgFAoy6HkfV5LamJ1tc7MHAAD+5QQAAOCZBkurQFbnaRSlAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> ch.fhir.ig.ch-epr-term</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">2.0.4</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-epr-term</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://fhir.ch/ig/ch-epr-term</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAL0lEQVR42u3XsQ0AQAgCQHdl/xn8jxvYWB3JlTR0VJLa+OltBwAAYP6EEQAAgCsPVYVAgIJrA/sAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzMPbYccAgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAMElEQVQ4y+3OQREAIBDDwAv+PQcFFN5MIyCzqHMKUGVCpMFLK97heq+gggoq+EiwAVjvMhFGmlEUAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.sdc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">2.7.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc/2019May</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAMElEQVR42u3QwQkAMAwDsezq/WdoskKgFAoy6HkfV5LamJ1tc7MHAAD+5QQAAOCZBkurQFbnaRSlAAAAAElFTkSuQmCC)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzI3XJ6V3QAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+2RsQ0AIAzDav7/2VzQwoCY4iWbZSmo1QGoUgNMghvWaIejPQW/CrrNCylIwcOCDYfLNRcNer4SAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: #F7F7F7; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.sdc</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">2.7.0</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/sdc/2019May</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">see above</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(/Users/bleuer/Documents/GitHub/eTOC/outputdata:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAACCAYAAACg/LjIAAAAI0lEQVR42u3QIQEAAAACIL/6/4MvTAQOkLYBAAB4kAAAANwMad9AqkRjgNAAAAAASUVORK5CYII=)" class="hierarchy"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAWCAYAAAABxvaqAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzIs1vtcMQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAE0lEQVQI12P4//8/AxMDAwNdCABMPwMo2ctnoQAAAABJRU5ErkJggg==" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wYeFzME+lXFigAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANklEQVQ4y+3OsRUAIAjEUOL+O8cJABttJM11/x1qZAGqRBEVcNIqdWj1efDqQbb3HwwwwEfABmQUHSPM9dtDAAAAAElFTkSuQmCC" alt="." style="background-color: inherit" class="hierarchy"/><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QYZCik0qECmbAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABtUlEQVQoz2P8//8/Ayb4///v8xfM4iIMzKxoMkwMOMC3DVv/vXmEKY5Dw///Pw8c+Xn2CLEa/r55+/P07t/nrxKl4f/PX6+8g1mlP/44c4eAhn8fP33bsOV1dBoT51V2+z/MohIfeyYy/P2LXcPfFy8/NLb9efTs//utgjUfft35xRUY8Hnm/N/Xb2LT8P//h5ZOnvjoj+11giXcTH//MTLp/v/x9c/z279uXsOi4e/LRwzsbz6vmMyTLM6m9fnXE3Y2l+yv+yez2nL9eX0Wi4afF5eyW4r/+3qYP1Xjz/N3P17ZsRsKMrJd4rL9wcTxDIsGZqEvLEKv2VT/Mgl+/XGbXSB72s/zxXyBYmwqLCxSLFg0sKkHsAg+YJX7xfBTmt204s/NXE4dQTZtT2beH6yqFv9ebkDXwMhnxixrySb68f9fcWYRTSbGA6ya2QwMsixCvxk/djByiWIJVkbBBGaNOoafO5nYWVlkPRjYtP5/388s+JdJkI+R1xquDMl9zOqMQioM7BIMjJ8Z2IUYWOQZeT0Y/u5mEF+G7AdGLMn7712GnycY/v1g+HOZga+WgUkYWRIAe6ip9OnE1GoAAAAASUVORK5CYII=" alt="." style="background-color: white; background-color: inherit" title="NPM Package" class="hierarchy"/> hl7.fhir.uv.ips</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1.0.0</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">4.0.1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/ips</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">http://hl7.org/fhir/uv/ips/STU1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"></td></tr>
+</table><para>Templates: ch.fhir.ig.template#current -&gt; fhir.base.template#current</para></div></td></tr>
+ <tr><td>HL7 Publication Rules:</td><td>Code = n/a. n/a - not an HL7.org or FHIR.org implementation guide
+</td></tr>
+ <tr><td>HTA Analysis:</td><td><i>Non-HL7 Igs are exempt from terminology dependency analysis</i></td></tr>
+ <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at http://fhir.ch/ig/ch-etoc (Problem #1 with package-list.json at http://fhir.ch/ig/ch-etoc: com.google.gson.stream.MalformedJsonException: Use JsonReader.setLenient(true) to accept malformed JSON at line 1 column 12 path $)</td></tr>
+ <tr><td>Summary:</td><td> broken links = 46, errors = 7, warn = 6, info = 1</td></tr>
+</table>
+ <table class="grid">
+   <tr>
+     <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>49</b></td><td><b>5</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_CodeSystem-chradorder-cs-example"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/CodeSystem-chradorder-cs-example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_Patient-MartinaMuster"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Patient-MartinaMuster</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_Practitioner-HansRoentgen"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Practitioner-HansRoentgen</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_Questionnaire-RadiologyOrder"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder</b></a></td><td><b>4</b></td><td><b>1</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_ServiceRequest-EtocServiceRequest"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ServiceRequest-EtocServiceRequest</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>2</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-allergyintolerance"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-allergyintolerance</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-composition"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-composition</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-condition"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-condition</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-device"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-device</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-deviceobserver"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-deviceusestatement"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-diagnosticreport"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-diagnosticreport</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-document"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-document</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-immunization"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-immunization</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-medicationstatement"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-procedure"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-procedure</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-questionnaire"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaire</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-questionnaireresponse"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-servicerequest"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-servicerequest</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_ValueSet-chradorder-vs-example"><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ValueSet-chradorder-vs-example</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+   <tr style="background-color: #EFFFEF">
+     <td><a href="#_Users_bleuer_Documents_GitHub_eTOC_input_ch.fhir.ig.ch-etoc"><b>/Users/bleuer/Documents/GitHub/eTOC/input/ch.fhir.ig.ch-etoc</b></a></td><td><b>0</b></td><td><b>0</b></td><td><b>1</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="internal"> </a>
+<h2><a href="">n/a</a></h2>
+ <table class="grid">
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide.dependency[3].url</b></td><td><b>warning</b></td><td title=""><b>The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole</b></td>
+   </tr>
+   <tr style="background-color: #ffffe6">
+     <td><b>ImplementationGuide.dependency[3].url</b></td><td><b>information</b></td><td title=""><b>The correct canonical URL for this dependency is http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/HansRoentgen.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/HansRoentgen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Patient/MartinaMuster.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Patient/MartinaMuster.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/EtocServiceRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b></b></td><td><b>error</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.name for the resource Questionnaire/RadiologyOrder.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b></b></td><td><b>warning</b></td><td title=""><b>Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/RadiologyOrder.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#71baddb6-3362-4b7c-9227-c408044bc3bd">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 302, column 154</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for &quot;EPRDataEnterer&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#33afe058-aab5-4737-8556-e666b8602b19">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 373, column 116</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;DocumentEntryTypeCode&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#335fa46d-13ae-4040-8630-caf30cf56cfd">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 385, column 116</a></b></td><td><b>error</b></td><td><b>The link '' for &quot;DocumentEntryClassCode&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#73c91938-1cc4-4191-add4-7e3d61c79013">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 399, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CHCorePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#257e3735-79ff-49ae-ac39-2fc9f2104e11">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 490, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CHCorePractitionerRole&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#d67196bd-57bf-4144-9f93-674ccd989fa1">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CHCorePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#d67196bd-57bf-4144-9f93-674ccd989fa1">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 435</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitioner.html' for &quot;CHCorePractitioner&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#d67196bd-57bf-4144-9f93-674ccd989fa1">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 600</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CHCorePractitionerRole&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#d67196bd-57bf-4144-9f93-674ccd989fa1">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 777</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-organization.html' for &quot;CHCoreOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition-definitions.html#df89162e-298e-49ac-b128-a2b746c51bdf">StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 710, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-organization.html' for &quot;CHCoreOrganization&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#9e3e3d80-073b-45a1-801f-48d38c9bf88a">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 315, column 1624</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for &quot;http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#a53d50aa-4824-4719-ba2a-02a12445d76a">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 316, column 1473</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#4174a5d9-3130-4279-8429-4f08e968b44a">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 317, column 1525</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#57548653-2094-4dec-97c6-c189bc54f880">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 318, column 1408</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#a3013538-e311-4317-a355-5a7cf940220b">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 328, column 743</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CH Core Patient Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#6803ae07-d84c-44e1-98c0-3e6576ad8374">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 339, column 1578</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#63f07798-4477-423e-b1ff-2741e6930053">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1495</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CH Core Patient Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#63f07798-4477-423e-b1ff-2741e6930053">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1657</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitioner.html' for &quot;CH Core Practitioner Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#63f07798-4477-423e-b1ff-2741e6930053">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1757</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#63f07798-4477-423e-b1ff-2741e6930053">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1866</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-organization.html' for &quot;CH Core Organization Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#ca0908ad-48d3-403f-b686-bfccfcdcf4b2">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 367, column 1619</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-organization.html' for &quot;CH Core Organization Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#4c900b3e-0dec-427d-8d57-574ae2143b98">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 669, column 1624</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for &quot;http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#82325062-3189-4061-93eb-599af02a2e59">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 670, column 1473</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#3a1e42e5-2560-4dac-ba45-57b75a910575">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 671, column 1525</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#572e738f-6114-4ab8-ac94-e175dfd838d3">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 672, column 1408</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#7fe04654-9f80-4ad0-b63b-eb57f96856fc">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 682, column 743</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CH Core Patient Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#f8f309d9-e830-431b-9068-5887eed8b4bf">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 693, column 1578</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#fdc1e668-5d11-4773-ac11-24f0dc4e1aa8">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1495</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CH Core Patient Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#fdc1e668-5d11-4773-ac11-24f0dc4e1aa8">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1657</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitioner.html' for &quot;CH Core Practitioner Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#fdc1e668-5d11-4773-ac11-24f0dc4e1aa8">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1757</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#fdc1e668-5d11-4773-ac11-24f0dc4e1aa8">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1866</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-organization.html' for &quot;CH Core Organization Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#c1fdc373-7d5e-4809-95b5-3956bd27d148">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 721, column 1619</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-organization.html' for &quot;CH Core Organization Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#2b5d4a20-da3d-456d-bdce-5490f0763a79">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 989, column 141</a></b></td><td><b>error</b></td><td><b>The link '??' for &quot;DocumentEntryTypeCode (missing link)&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-composition.html#326603a1-2ada-4005-8c56-311a2010f86c">StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 990, column 145</a></b></td><td><b>error</b></td><td><b>The link '??' for &quot;DocumentEntryClassCode (missing link)&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest-definitions.html#87ecebb1-316f-428f-9163-8ae6b3672599">StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 634, column 262</a></b></td><td><b>error</b></td><td><b>The link 'valueset-diagnostic-requests.html' for &quot;here&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest-definitions.html#619ec42e-fd55-4ef8-8c4a-8e826989004a">StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 669, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CHCorePatient&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest-definitions.html#5935d6cd-2360-47b0-abcb-8545245ac441">StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 712, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CHCorePractitionerRole&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest-definitions.html#02f51cc2-874e-49e5-b778-c9881c17334e">StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 735, column 151</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CHCorePractitionerRole&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#4218d174-b38f-41f2-b569-e872e2fd03e9">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 394, column 2412</a></b></td><td><b>error</b></td><td><b>The link 'valueset-diagnostic-requests.html' for &quot;here&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#71c1a4de-68af-41af-8511-fbb68dcade9c">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 400, column 1553</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CH Core Patient Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#11f8def8-1b11-4619-bd3d-b71e6b0313f0">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 410, column 1529</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#babdb2fc-49b2-4454-81d8-c07bc5e7d764">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 412, column 1565</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#4c10c444-96a6-45e9-b934-6ecaa2deefa2">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 650, column 2412</a></b></td><td><b>error</b></td><td><b>The link 'valueset-diagnostic-requests.html' for &quot;here&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#61254849-17fc-4498-903b-a758f5f9dfe1">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 656, column 1553</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-patient.html' for &quot;CH Core Patient Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#5fffcb5c-f570-4d68-842d-a83c7a767321">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 666, column 1529</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="StructureDefinition-ch-etoc-servicerequest.html#79418ca0-75c2-44c1-8de7-1a1f393b76cb">StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 668, column 1565</a></b></td><td><b>error</b></td><td><b>The link './output/StructureDefinition-ch-core-practitionerrole.html' for &quot;CH Core Practitioner Role Profile&quot; cannot be resolved</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_CodeSystem-chradorder-cs-example"> </a>
+<h2><a href="CodeSystem-chradorder-cs-example.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/CodeSystem-chradorder-cs-example.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>CodeSystem/chradorder-cs-example: CodeSystem</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_Patient-MartinaMuster"> </a>
+<h2><a href="Patient-MartinaMuster.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Patient-MartinaMuster.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Patient/MartinaMuster: Patient (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Patient/MartinaMuster: Patient (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST_META"><b>Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient - listed in meta</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_Practitioner-HansRoentgen"> </a>
+<h2><a href="Practitioner-HansRoentgen.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Practitioner-HansRoentgen.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Practitioner/HansRoentgen: Practitioner (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Practitioner/HansRoentgen: Practitioner (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST_META"><b>Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner - listed in meta</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_Questionnaire-RadiologyOrder"> </a>
+<h2><a href="Questionnaire-RadiologyOrder.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire.where(url = 'http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder')</b></td><td><b>error</b></td><td title="RESOURCE_CANONICAL_MISMATCH"><b>Conformance resource /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json - the canonical URL (http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder) does not match the URL (http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder)</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Questionnaire/RadiologyOrder: Questionnaire</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/Questionnaire</b></td>
+   </tr>
+   <tr style="background-color: #ffebcc">
+     <td><b>Questionnaire/RadiologyOrder: Questionnaire</b></td><td><b>warning</b></td><td title="que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]"><b>que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire/RadiologyOrder: Questionnaire.extension[0]</b></td><td><b>error</b></td><td title="ext-1: Must have either extensions or value[x], not both [extension.exists() != value.exists()]"><b>ext-1: Must have either extensions or value[x], not both [extension.exists() != value.exists()]</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>Questionnaire/RadiologyOrder: Questionnaire.extension[0]</b></td><td><b>error</b></td><td title="Extension_EXT_Simple"><b>Die Definition der Extension &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap&quot; impliziert eine simple Extension, sie muss also einen Wert enthalten, keine Extensions.</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>Questionnaire/RadiologyOrder: Questionnaire</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST_META"><b>Validate resource against profile http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire - listed in meta</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b>/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder</b></td><td><b>error</b></td><td title=""><b>URL Mismatch http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder vs http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_ServiceRequest-EtocServiceRequest"> </a>
+<h2><a href="ServiceRequest-EtocServiceRequest.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ServiceRequest-EtocServiceRequest.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ServiceRequest/EtocServiceRequest: ServiceRequest (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ServiceRequest/EtocServiceRequest: ServiceRequest (l1/c2)</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST_META"><b>Validate resource against profile http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest - listed in meta</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-allergyintolerance"> </a>
+<h2><a href="StructureDefinition-ch-etoc-allergyintolerance.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-allergyintolerance.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-allergyintolerance: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-composition"> </a>
+<h2><a href="StructureDefinition-ch-etoc-composition.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-composition.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-composition: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-condition"> </a>
+<h2><a href="StructureDefinition-ch-etoc-condition.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-condition.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-condition: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-device"> </a>
+<h2><a href="StructureDefinition-ch-etoc-device.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-device.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-device: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-deviceobserver"> </a>
+<h2><a href="StructureDefinition-ch-etoc-deviceobserver.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-deviceobserver: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-deviceusestatement"> </a>
+<h2><a href="StructureDefinition-ch-etoc-deviceusestatement.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-deviceusestatement: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-diagnosticreport"> </a>
+<h2><a href="StructureDefinition-ch-etoc-diagnosticreport.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-diagnosticreport.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-diagnosticreport: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-document"> </a>
+<h2><a href="StructureDefinition-ch-etoc-document.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-document.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-document: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-immunization"> </a>
+<h2><a href="StructureDefinition-ch-etoc-immunization.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-immunization.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-immunization: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-medicationstatement"> </a>
+<h2><a href="StructureDefinition-ch-etoc-medicationstatement.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-medicationstatement: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-procedure"> </a>
+<h2><a href="StructureDefinition-ch-etoc-procedure.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-procedure.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-procedure: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-questionnaire"> </a>
+<h2><a href="StructureDefinition-ch-etoc-questionnaire.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaire.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-questionnaire: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-questionnaireresponse"> </a>
+<h2><a href="StructureDefinition-ch-etoc-questionnaireresponse.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-questionnaireresponse: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_StructureDefinition-ch-etoc-servicerequest"> </a>
+<h2><a href="StructureDefinition-ch-etoc-servicerequest.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-servicerequest.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>StructureDefinition/ch-etoc-servicerequest: StructureDefinition</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_fsh-generated_resources_ValueSet-chradorder-vs-example"> </a>
+<h2><a href="ValueSet-chradorder-vs-example.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ValueSet-chradorder-vs-example.json</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ValueSet/chradorder-vs-example: ValueSet</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="_Users_bleuer_Documents_GitHub_eTOC_input_ch.fhir.ig.ch-etoc"> </a>
+<h2><a href="ImplementationGuide-ch.fhir.ig.ch-etoc.html">/Users/bleuer/Documents/GitHub/eTOC/input/ch.fhir.ig.ch-etoc.xml</a></h2>
+ <table class="grid">
+   <tr>
+     <td><b>Path</b></td><td><b>Severity</b></td><td><b>Message</b></td>
+   </tr>
+   <tr style="background-color: #d6feff">
+     <td><b>ImplementationGuide/ch.fhir.ig.ch-etoc: ImplementationGuide</b></td><td><b>Process Info</b></td><td title="VALIDATION_VAL_PROFILE_SIGNPOST"><b>Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide</b></td>
+   </tr>
+</table>
+<a name="suppressed"> </a>
+<p><b>Suppressed Messages (Warnings, hints, broken links)</b></p>
+<p><b>Allow German display values or clearer descriptions for the questionnaire</b></p><ul>
+ <li>Display Name for http://hl7.org/fhir/administrative-gender#other should be one of 'Other' instead of 'Anderes' for 'http://hl7.org/fhir/administrative-gender#other'</li>
+ <li>Display Name for http://hl7.org/fhir/administrative-gender#female should be one of 'Female' instead of 'Weiblich' for 'http://hl7.org/fhir/administrative-gender#female'</li>
+ <li>Display Name for http://hl7.org/fhir/request-priority#routine should be one of 'Routine' instead of 'Die Anfrage hat normale Priorität.' for 'http://hl7.org/fhir/request-priority#routine'</li>
+ <li>Display Name for http://hl7.org/fhir/request-priority#stat should be one of 'STAT' instead of 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' for 'http://hl7.org/fhir/request-priority#stat'</li>
+ <li>Display Name for http://hl7.org/fhir/request-priority#asap should be one of 'ASAP' instead of 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' for 'http://hl7.org/fhir/request-priority#asap'</li>
+ <li>Display Name for http://hl7.org/fhir/request-priority#urgent should be one of 'Urgent' instead of 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' for 'http://hl7.org/fhir/request-priority#urgent'</li>
+ <li>Display Name for http://hl7.org/fhir/administrative-gender#male should be one of 'Male' instead of 'Männlich' for 'http://hl7.org/fhir/administrative-gender#male'</li>
+</ul>
+<p><b>No examples for extensions</b></p><ul>
+ <li>The Implementation Guide contains no explicitly linked examples for this profile</li>
+ <li>The Implementation Guide contains no examples for this profile</li>
+</ul>
+<p>No suppressed messsages</p><a name="sorted"> </a>
+<p><b>Errors sorted by type</b></p>
+<hr/>
+<a name="Extension_EXT_Simple"> </a>
+<h2>Extension_EXT_Simple</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Questionnaire-RadiologyOrder.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json</a></td><td><b>Die Definition der Extension &quot;http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap&quot; impliziert eine simple Extension, sie muss also einen Wert enthalten, keine Extensions.</b></td>
+   </tr>
+</table>
+<hr/>
+<a name="RESOURCE_CANONICAL_MISMATCH"> </a>
+<h2>RESOURCE_CANONICAL_MISMATCH</h2>
+ <table class="grid">
+   <tr style="background-color: #ffeeee">
+     <td><a href="Questionnaire-RadiologyOrder.html">/Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json</a></td><td><b>Conformance resource /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json - the canonical URL (http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder) does not match the URL (http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder)</b></td>
+   </tr>
+</table>
+</body>
+</html>

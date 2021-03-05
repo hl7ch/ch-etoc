@@ -1,0 +1,25 @@
+{
+  4
+  "package-id": "ch.fhir.ig.ch-etoc",
+  "title": "CH eTOC (R4)",
+  "canonical": "http://fhir.ch/ig/ch-etoc",
+  "introduction": "Implementation Guide for CH eTOC (R4)",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://build.fhir.org/ig/hl7ch/ch-etoc",
+      "status": "ci-build",
+      "current": true
+    },
+    {
+      "version": "0.0.1",
+      "date": "2021-03-0",
+      "desc": "DSTU 1",
+      "path": "http://fhir.ch/ig/ch-etoc/0.0.1",
+      "status": "trial-use",
+      "sequence": "DSTU 1",
+      "fhirversion": "4.0.1"
+    }
+  ]
+}

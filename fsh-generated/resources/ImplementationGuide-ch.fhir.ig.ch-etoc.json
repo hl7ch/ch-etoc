@@ -1,0 +1,264 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "ch.fhir.ig.ch-etoc",
+  "url": "http://fhir.ch/ig/ch-etoc/ImplementationGuide/ch.fhir.ig.ch-etoc",
+  "version": "0.1.0",
+  "name": "CH_eTOC",
+  "title": "CH eTOC (R4)",
+  "status": "draft",
+  "date": "2021-01-14",
+  "publisher": "HL7",
+  "contact": [
+    {
+      "name": "Juerg Bleuer",
+      "telecom": [
+        {
+          "value": null
+        }
+      ]
+    }
+  ],
+  "description": "Implementation guide for eTOC based on CH-ORF",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "code": "CH",
+          "system": "urn:iso:std:iso:3166"
+        }
+      ]
+    }
+  ],
+  "copyright": "CC-BY-SA-4.0",
+  "packageId": "ch.fhir.ig.ch-etoc",
+  "license": "CC-BY-SA-4.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "ch.fhir.ig.ch-orf",
+      "version": "current",
+      "uri": "http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf",
+      "id": "ch_fhir_ig_ch_orf"
+    },
+    {
+      "packageId": "ch.fhir.ig.ch-core",
+      "version": "current",
+      "uri": "http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core",
+      "id": "ch_fhir_ig_ch_core"
+    },
+    {
+      "packageId": "hl7.fhir.uv.ips",
+      "version": "current",
+      "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+      "id": "hl7_fhir_uv_ips"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-diagnosticreport"
+        },
+        "name": "CH eTOC DiagnosticReport",
+        "description": "Definition for the DiagnosticReport resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-allergyintolerance"
+        },
+        "name": "CH eTOC AllergyIntolerance",
+        "description": "Definition for the AllergyIntolerance resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-composition"
+        },
+        "name": "CH eTOC Composition",
+        "description": "Definition for the Composition resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-condition"
+        },
+        "name": "CH eTOC Condition",
+        "description": "Definition for the Condition resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-device"
+        },
+        "name": "CH eTOC Device",
+        "description": "Definition for the Device resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-deviceobserver"
+        },
+        "name": "CH eTOC DeviceObserver",
+        "description": "Definition for the DeviceObserver resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-deviceusestatement"
+        },
+        "name": "CH eTOC DeviceUseStatement",
+        "description": "Definition for the DeviceUseStatement resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-document"
+        },
+        "name": "CH eTOC Document",
+        "description": "Definition for the Document resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-immunization"
+        },
+        "name": "CH eTOC Immunization",
+        "description": "Definition for the Immunization resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-medicationstatement"
+        },
+        "name": "CH eTOC MedicationStatement",
+        "description": "Definition for the MedicationStatement resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-procedure"
+        },
+        "name": "CH eTOC Procedure",
+        "description": "Definition for the Procedure resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-questionnaireresponse"
+        },
+        "name": "CH eTOC QuestionnaireResponse",
+        "description": "Definition for the QuestionnaireResponse resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-servicerequest"
+        },
+        "name": "CH eTOC ServiceRequest",
+        "description": "Definition for the ServiceRequest resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-questionnaire"
+        },
+        "name": "CH eTOC Questionnaire",
+        "description": "Definition for the Questionnaire resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/chradorder-vs-example"
+        },
+        "name": "CH RAD-Order ValueSet Example",
+        "description": "CH RAD-Order ValueSet Example",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/chradorder-cs-example"
+        },
+        "name": "CH RAD-Order CodeSystem Example",
+        "description": "CH RAD-Order CodeSystem Example",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ServiceRequest/EtocServiceRequest"
+        },
+        "name": "Radiology Order",
+        "description": "Example for CH RAD-Order ServiceRequest",
+        "exampleCanonical": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/HansRoentgen"
+        },
+        "name": "Hans Roentgen",
+        "description": "Example for Practitioner",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/MartinaMuster"
+        },
+        "name": "Martina Muster",
+        "description": "Example for Patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/RadiologyOrder"
+        },
+        "name": "Questionniaire Radiology Order",
+        "description": "Example for Questionnaire",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "extensions.html",
+          "title": "Extensions",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "usecase-german.html",
+          "title": "Usecase German",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}

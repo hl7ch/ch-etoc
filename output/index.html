@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>CH.FHIR.IG.CH-ETOC\Home - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+    <link href="assets/css/hl7.css" rel="stylesheet"/>
+    <link href="assets/css/fhir.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"1"}
+    h3,h4,h5,h6{--heading-prefix:"1"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+            <!--
+<div id="family-nav">
+	<a id="logo" no-external="true" href="http://hl7.org/fhir"> <img
+		alt="logo fhir" src="assets/images/fhir-logo-www.png" />
+	</a>
+</div>
+-->
+
+
+            <!--
+<div id="hl7-nav">
+    <a id="e-health-suisse-logo" no-external="true" href="https://www.e-health-suisse.ch/startseite.html">
+        <img alt="visit the e-health-suisse website" height="60" src="LogoDE_ehealthsuisse.svg" />
+    </a>            
+</div>
+-->
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">CH eTOC (R4)</span><br/>0.0.1 - CI Build</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <!--<li>
+    <a href="toc.html">Table of Contents</a>
+  </li>-->
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Case<b class="caret">
+      </b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecase-german.html">German</a>
+      </li>
+      <!--<li>
+        <a href="usecase-french.html">French</a>
+      </li>-->
+    </ul>
+  </li>
+  <li>
+    <a href="profiles.html">Profiles</a>
+  </li>
+  <li>
+    <a href="extensions.html">Extensions</a>
+  </li>
+  <li>
+    <a href="terminology.html">Terminology</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Home</b></li>
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <div id="segment-content">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">CH eTOC (R4) - Local Development build (v0.0.1). See the <a href="http://fhir.ch/ig/ch-etoc/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Home</h2>
+  
+  <div xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <p>This Implementation Guide uses FHIR defined resources – Composition Resource, Questionnaire Resource,
+    QuestionnaireResponse Resource, Patient Resource, PractitionerRole Resource, Practitioner Resource, Organization Resource, ServiceRequest Resource and Bundle Resource from
+    FHIR R4. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>.
+    </p>
+    <p>The CH-eTOC (CH-eTOC) Implementation Guide describes how forms for eReferrals from one healthcare provider to another (e.g. paratctioner to hospital, hospital to hospital etc.), 
+    shall be defined, deployed and used in order to achieve a syntactical and semantically consistent cross enterprise information exchange.
+    </p>
+    <p>The Implementation Guide relies on FHIR e.g. the questionnaire resource. Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and
+    QuestionnaireResponse, forms are addressed here as Questionnaires.
+    </p>
+    <p>This Implementation Guide is derived from the Order &amp; Referral by Form (ORF) Implementation Guide  
+        <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a> which relies on HL7 Structured Data Capture Implementation Guide, see
+        <a href="http://build.fhir.org/ig/HL7/sdc/">SDC IG</a> and uses the Swiss Core Profiles, see 
+        <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>.
+    </p>
+    <p>Applications claiming for conformance with the eTOC Implementation Guide shall:
+    </p>
+    <ul>
+        <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the
+        user interface (e.g. on screen, in print). Grouping of items and the order of items within shall be adequately
+        reproduced according to the Questionnaire.</li>
+        <li>Be able to process all MUST SUPPORT items.</li>
+    </ul>
+    <p>Venders of applications with Questionnaire Filler/Questionnaire Receiver Actors are strongly recommended to implement
+    interfaces to other applications (such as HIS and PACS) for all MUST SUPPORT items.
+    <a name="volume1"> </a><h3>Content Modules</h3>
+    </p>
+    <p>This Implementation Guide covers the content of CH-eTOC based on CH-ORF. CH-eTOC is intended for use in directional communiation
+    as well as for the use in the SWISS EPR.  
+    </p>
+   <p> Actors, transcations and security considerations are covered in the corresponding sections of 
+      <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a>
+    </p>
+    <a name="volume3"> </a><h4>Questionnaire Content</h4>
+    <p>This section describes the content of a form. The following definitions apply:
+    </p>
+    <p>Request and responses consist of filled in questionnaires. Some elements of the questionnaire are generic 
+        elements (such as author, data entry person, receiver etc. and are always present in a questionnaire compliant to
+        the ORF Implementation Guide. In addition, a questionnaire will contain elements which are dependent on particular needs of 
+        the addressed use cased. Those eleements are named Healthcare Domain Specific Elements.
+    </p>
+    <a name="volume1"> </a><h4>Generic elements of a questionnaire</h4>
+    <p>A questionnaire shall have a set of generice elements (e.g. author, data entry person, receiver etc. 
+        <sup>[Table 7]</sup> lists the generic given elements
+    </p>
+     <table>
+        <tbody>
+            <tr>
+                <th><b>Name</b>
+                </th>
+                <th colspan="2"><b>Role taker</b>
+                </th>
+                <th><b>HL7 V3<br/> Equivalent</b>
+                </th>
+                <th><b>FHIR<br/> Representation</b>
+                </th>
+                <th><b>Comment</b>
+                </th>
+            </tr>
+            <tr>
+                <th>
+                </th>
+                <th><b>Human</b>
+                </th>
+                <th><b>Organization</b>
+                </th>
+                <th>
+                </th>
+                <th>
+                </th>
+                <th>
+                </th>
+            </tr>
+            <tr>
+                <td>Author
+                </td>
+                <td>X
+                </td>
+                <td>X
+                </td>
+                <td>Author
+                </td>
+                <td>PractitionerRole
+                </td>
+                <td>The person/organization responsible for the form content.
+                </td>
+            </tr>
+            <tr>
+                <td>Data Entry Person
+                </td>
+                <td>X
+                </td>
+                <td>X
+                </td>
+                <td>DataEnterer
+                </td>
+                <td>PractitionerRole
+                </td>
+                <td>The person/organization who has typed/filled in the form content.
+                </td>
+            </tr>
+            <tr>
+                <td>Urgent Notification Contact for this document
+                </td>
+                <td>X
+                </td>
+                <td>X
+                </td>
+                <td>PrimaryInformationRecipient
+                </td>
+                <td>PractitionerRole
+                </td>
+                <td>An information recipient to notify for urgent matters (e.g. in a radiology service, the radiologist 
+                    has to be called by phone right away at the time the doucment is received.)
+                </td>
+            </tr>
+            <tr>
+                <td>Urgent Notification Contact for the Response to this document
+                </td>
+                <td>X
+                </td>
+                <td>X
+                </td>
+                <td>PrimaryInformationRecipient
+                </td>
+                <td>PractitionerRole
+                </td>
+                <td>
+                    <p>An information recipient to notify for urgent matters about the response (e.g. in a clinical
+                        setting, the referring doctor has to be called by phone right away at the time the images and
+                        reports arrive).
+                    </p>
+                    <p>The Urgent Notification Contact for the Response can be specified already in the request. At the
+                        time the response is written, this element shall be populated to the Urgent Notification Contact
+                        element in the response.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>Request Receiver
+                </td>
+                <td>X
+                </td>
+                <td>X
+                </td>
+                <td>
+                </td>
+                <td>PractitionerRole
+                </td>
+                <td>Person/organization who receives the request.
+                </td>
+            </tr>
+            <tr>
+                <td>Response Receiver
+                </td>
+                <td>X
+                </td>
+                <td>X
+                </td>
+                <td>
+                </td>
+                <td>PractitionerRole
+                </td>
+                <td>Person/organization who receives the response.
+                </td>
+            </tr>
+            <tr>
+                <td>Patient
+                </td>
+                <td>X
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>Patient
+                </td>
+                <td>The principle target of a particular form content is one patient (for obstetrical and neonatal use
+                    cases see...).
+                </td>
+            </tr>
+            <tr>
+                <td>Precedent Document Id
+                </td>
+                <td>na
+                </td>
+                <td>na
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>This element provides a link to the preceding document in a thread (e.g. from a response to the
+                    request).
+                </td>
+            </tr>
+            <tr>
+                <td>Date
+                </td>
+                <td>na
+                </td>
+                <td>na
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>Date, the document was created.
+                </td>
+            </tr>
+            <tr>
+                <td>Priority
+                </td>
+                <td>na
+                </td>
+                <td>na
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>Order priority.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p><sup>[Table 7]</sup> <i>Generic elements in Questionnaires compliant to the ORF Implementation Guide</i>
+    </p>
+    <a name="volume1"> </a><h4>Healthcare domain specific elements of a questionnaire</h4>
+     <table>
+        <tbody>
+            <tr>
+                <th>Resource
+                </th>
+                <th>Description
+                </th>
+            </tr>
+            <tr>
+                <td>ServiceRequest
+                </td>
+                <td>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p>There may be the need to provide a linkage between a particular files or between a particular file and an imaging
+        study (e.g. a link between a PDF-File containing a report and a DICOM study). Such links shall be expressed with
+        a DocumentReference as follows:
+    </p>
+     <table>
+        <tbody>
+            <tr>
+                <th>Resource
+                </th>
+                <th colspan="3">Elements
+                </th>
+                <th>Description
+                </th>
+            </tr>
+            <tr>
+                <td>DocumentReference
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>type
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>(e.g. LOINC 18748-4 for Diagnostic Imaging Study)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>content
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>attachment
+                </td>
+                <td>
+                </td>
+                <td>Attachment
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>contentType
+                </td>
+                <td>Mime Type
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>data
+                </td>
+                <td>Data inline, base64ed (contains the file; e.g. a PDF-Report)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>context
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>related
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>Reference (ImagingStudy)
+                </td>
+                <td>ImagingStudyResource provides StudyInstanceUID etc.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a name="volume1"> </a><h4>FHIR Representation</h4>
+    <p>For questions regarding the FHIR representations please refer to the corresponding section of 
+      <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a>
+    </p>
+</div>
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://www.hl7.ch/">HL7 Switzerland</a>.  Package ch.fhir.ig.ch-etoc#0.0.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Mar 5, 2021 10:00+0100">2021-03-05</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

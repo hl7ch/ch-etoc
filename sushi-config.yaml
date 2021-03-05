@@ -1,0 +1,26 @@
+id: ch.fhir.ig.ch-etoc
+canonical: http://fhir.ch/ig/ch-etoc
+name: CH_eTOC
+title: "CH eTOC (R4)"
+description: Implementation guide for eTOC based on CH-ORF
+status: draft
+license: CC-BY-SA-4.0
+copyright: CC-BY-SA-4.0
+jurisdiction: urn:iso:std:iso:3166#CH
+date: 2021-01-14
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: ci-build
+publisher:
+  name: HL7
+contact:
+  name: Juerg Bleuer
+  telecom:
+    system:
+    value: 
+dependencies:
+  ch.fhir.ig.ch-orf: current
+  ch.fhir.ig.ch-core: current
+  hl7.fhir.uv.ips: current
+

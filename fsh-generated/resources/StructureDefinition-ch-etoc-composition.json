@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ch-etoc-composition",
+  "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition",
+  "version": "0.1.0",
+  "name": "ChEtocComposition",
+  "title": "CH eTOC Composition",
+  "status": "active",
+  "description": "Definition for the Composition resource in the context of electronic transition of care.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "fhirdocumentreference",
+      "uri": "http://hl7.org/fhir/documentreference",
+      "name": "FHIR DocumentReference"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Composition",
+  "baseDefinition": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Composition",
+        "path": "Composition",
+        "short": "CH eToc Composition"
+      }
+    ]
+  }
+}

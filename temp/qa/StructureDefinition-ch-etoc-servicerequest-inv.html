@@ -1,0 +1,77 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-ch-etoc-servicerequest-inv</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Constraints</h4>
+<table class="list">
+<tr><td width="60"><b>Id</b></td><td><b>Path</b></td><td><b>Details</b></td><td><b>Requirements</b></td></tr>
+<tr><td>dom-2</td><td>ServiceRequest</td><td>If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>: contained.contained.empty()</td><td></td></tr>
+<tr><td>dom-3</td><td>ServiceRequest</td><td>If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource<br/>: contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()</td><td></td></tr>
+<tr><td>dom-4</td><td>ServiceRequest</td><td>If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>: contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()</td><td></td></tr>
+<tr><td>dom-5</td><td>ServiceRequest</td><td>If a resource is contained in another resource, it SHALL NOT have a security label<br/>: contained.meta.security.empty()</td><td></td></tr>
+<tr><td>dom-6</td><td>ServiceRequest</td><td>A resource should have narrative for robust management<br/>: text.`div`.exists()</td><td></td></tr>
+<tr><td>prr-1</td><td>ServiceRequest</td><td>orderDetail SHALL only be present if code is present<br/>: orderDetail.empty() or code.exists()</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.meta</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.implicitRules</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.language</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.text</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ext-1</td><td>ServiceRequest.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.modifierExtension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ext-1</td><td>ServiceRequest.modifierExtension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ext-1</td><td>ServiceRequest.identifier:placerOrderId.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.use</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.type</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.system</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.value</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.period</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:placerOrderId.assigner</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.extension</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ext-1</td><td>ServiceRequest.identifier:fillerOrderId.extension</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.use</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.type</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.system</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.value</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.period</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.identifier:fillerOrderId.assigner</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.instantiatesCanonical</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.instantiatesUri</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.basedOn</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.replaces</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.requisition</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.status</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.intent</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.category</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.priority</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.doNotPerform</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.code</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.orderDetail</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.quantity[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.subject</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.encounter</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.occurrence[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.asNeeded[x]</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.authoredOn</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.requester</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.performerType</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.performer</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.locationCode</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.locationReference</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.reasonCode</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.reasonReference</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.insurance</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.supportingInfo</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.specimen</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.bodySite</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.note</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.patientInstruction</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+<tr><td>ele-1</td><td>ServiceRequest.relevantHistory</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-etoc/Patient/MartinaMuster> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "MartinaMuster"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Martina Muster </p><p><b>telecom</b>: ph: 079 999 99 99, <a href=\"mailto:martina.muster@example.com\">martina.muster@example.com</a></p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1995-01-27</p><p><b>address</b>: Quartierweg 15a Bern 3000 </p></div>"
+  ];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Muster" ];
+     fhir:HumanName.given [
+       fhir:value "Martina";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "079 999 99 99" ]
+  ], [
+     fhir:index 1;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "martina.muster@example.com" ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "1995-01-27"^^xsd:date];
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "Quartierweg 15a";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Bern" ];
+     fhir:Address.postalCode [ fhir:value "3000" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-etoc/Patient/MartinaMuster.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

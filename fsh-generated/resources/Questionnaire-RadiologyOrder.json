@@ -1,0 +1,34 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "RadiologyOrder",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
+    }
+  ],
+  "url": "http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder",
+  "subjectType": [
+    "Patient"
+  ],
+  "status": "active",
+  "item": [
+    {
+      "linkId": "order",
+      "text": "Auftrag",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "order.number",
+          "text": "Auftragsnummer",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

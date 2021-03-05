@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+  <title>StructureDefinition-ch-etoc-immunization-tx-must-support</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<h4>Terminology Bindings</h4>
+<table class="list">
+<tr><td><b>Path</b></td><td><b>Conformance</b></td><td><b>ValueSet</b></td></tr>
+<tr><td>Immunization.status</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td title="A set of codes indicating the current status of an Immunization."><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/valueset-immunization-status.html">ImmunizationStatusCodes</a></td></tr>
+<tr><td>Immunization.vaccineCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td title="The type of vaccine for particular disease or diseases against which the patient has been immunised."><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-vaccines-uv-ips.html">VaccinesUvIps</a></td></tr>
+<tr><td>Immunization.vaccineCode:vaccineGPSCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-vaccines-gps-uv-ips.html">VaccinesGpsUvIps</a></td></tr>
+<tr><td>Immunization.vaccineCode:atcClass</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-whoatc-uv-ips.html">WhoAtcUvIps</a></td></tr>
+<tr><td>Immunization.vaccineCode:absentOrUnknownImmunization</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-absent-or-unknown-immunizations-uv-ips.html">NoImmunizationInfoUvIps</a></td></tr>
+<tr><td>Immunization.site</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-target-site-uv-ips.html">TargetSiteCodeUvIps</a></td></tr>
+<tr><td>Immunization.route</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#preferred">preferred</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-medicine-route-of-administration.html">RouteOfAdminUvIps</a></td></tr>
+<tr><td>Immunization.protocolApplied.targetDisease:targetDiseaseGPSCode</td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/R4/terminologies.html#required">required</a></td><td><a style="opacity: 1.0" href="http://hl7.org/fhir/uv/ips/STU1/ValueSet-targetDiseases-gps-uv-ips.html">TargetDiseasesGpsUvIps</a></td></tr>
+</table>
+</body>
+</html>

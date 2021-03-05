@@ -1,0 +1,61 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://fhir.ch/ig/ch-etoc",
+  "igId": "ch.fhir.ig.ch-etoc",
+  "igName": "CH_eTOC",
+  "packageId": "ch.fhir.ig.ch-etoc",
+  "igVer": "0.0.1",
+  "errorCount": 6,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.5.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.5.0 (3)",
+  "totalFiles": 21,
+  "processedFiles": 54,
+  "genDate": "Fri, Mar 5, 2021 10:00+0100",
+  "genDay": "05/03/2021",
+  "ig": {
+    "id": "ch.fhir.ig.ch-etoc",
+    "name": "CH_eTOC",
+    "title": "CH eTOC (R4)",
+    "url": "http://fhir.ch/ig/ch-etoc/ImplementationGuide/ch.fhir.ig.ch-etoc",
+    "version": "0.0.1",
+    "status": "active",
+    "experimental": false,
+    "publisher": "HL7 Switzerland",
+    "gitstatus": "main",
+    "contact": [
+      {
+        "name": "HL7 Switzerland",
+        "telecom": [
+          "https://www.hl7.ch/"
+        ]
+      },
+      {
+        "name": "Juer P. Bleuer",
+        "telecom": [
+          "bleuer@healthevidence.ch"
+        ]
+      }
+    ],
+    "date": "2021-03-02",
+    "description": "Implementation Guide for CH eTOC",
+    "copyright": "CC-BY-SA-4.0",
+    "fhirVersion": "4.0.1"
+  },
+  "chcore": "http://fhir.ch/ig/ch-core",
+  "ver": {
+    "chcore": "./output",
+    "chorf": "https://build.fhir.org/ig/ehealthsuisse/ch-orf/",
+    "hl7.fhir.uv.sdc": "http://hl7.org/fhir/uv/sdc/2019May",
+    "sdc": "http://hl7.org/fhir/uv/sdc/2019May",
+    "ips": "http://hl7.org/fhir/uv/ips/STU1"
+  },
+  "ch.fhir.ig.ch-epr-term": "http://fhir.ch/ig/ch-epr-term",
+  "chorf": "http://fhir.ch/ig/ch-orf",
+  "hl7.fhir.uv.sdc": "http://hl7.org/fhir/uv/sdc",
+  "sdc": "http://hl7.org/fhir/uv/sdc",
+  "ips": "http://hl7.org/fhir/uv/ips/"
+}

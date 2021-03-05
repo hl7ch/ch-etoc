@@ -1,0 +1,186 @@
+{% raw %}<a name="ihe-sdc"> </a><h3>Mappings for IHE-SDC (http://unknown.org/IHE-SDC)</h3><table class="grid">
+ <tr><td colspan="3"><b>CheTocQuestionnaire</b></td></tr>
+ <tr><td>Questionnaire</td><td>Form_Package</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;version</td><td>Not currently in schema</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>./administration_package/registration/state/registration_status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;item</td><td>./form_design/*[self::header or self::footer or self::section]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (itemHidden)</td><td>Any element with @initial_state=&quot;hidden&quot; and no rule that unhides the element</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linkId</td><td>./section_identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prefix</td><td>./section_number/label</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>Form Design/designation[context=&quot;primary?&quot;/definition/  ./section_instruction/label</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>./*/datatype</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required</td><td>./cardinality/minimum!=0</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repeats</td><td>./cardinality/maximum!=1</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readOnly</td><td>./*_Field/default_value_read_only  ./default_element/read_only</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLength</td><td>./*_Field/maximum_character_quantity | ./*_Field/datatype/string/maximum_characters</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answerValueSet</td><td>./list_field | ./lookup_field/endpoint</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;initial</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>./default_value  ./default_element/default/value  ./default_element/list_item_identifier (resolve)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item</td><td>./contained_section</td> </tr>
+</table>
+<a name="workflow"> </a><h3>Mappings for Workflow Pattern (<a href="http://hl7.org/fhir/workflow.html">http://hl7.org/fhir/workflow</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>CheTocQuestionnaire</b></td></tr>
+ <tr><td>Questionnaire</td><td>Definition</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>Definition.url</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Definition.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;version</td><td>Definition.version</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;title</td><td>Definition.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td>Definition.derivedFrom</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Definition.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;experimental</td><td>Definition.experimental</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subjectType</td><td>Definition.subject[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;date</td><td>Definition.date</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;publisher</td><td>Definition.publisher</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contact</td><td>Definition.contact</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>Definition.description</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;useContext</td><td>Definition.useContext</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;jurisdiction</td><td>Definition.jurisdiction</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;purpose</td><td>Definition.purpose</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;copyright</td><td>Definition.copyright</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;approvalDate</td><td>Definition.approvalDate</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lastReviewDate</td><td>Definition.lastReviewDate</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effectivePeriod</td><td>Definition.effectivePeriod</td> </tr>
+</table>
+<a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>CheTocQuestionnaire</b></td></tr>
+ <tr><td>Questionnaire</td><td>Entity. Role, or Act, Observation[moodCode=DEF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (designNote)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (terminologyServer)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (targetStructureMap)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueCanonical</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (library)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueCanonical</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (rootContext)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueExpression</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension (itemContext)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueExpression</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>.identifier[scope=BUSN;reliability=ISS]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;version</td><td>N/A (to add?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;name</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;title</td><td>.title</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td>.outboundRelationship[typeCode=DRIV].target[classCode=OBS, moodCode=DEFN]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;experimental</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;subjectType</td><td>.outboundRelationship[typeCode=META].target[classCode=OBS, moodCode=DEFN, isCriterion=true].participation.role.classCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;date</td><td>.participation[typeCode=AUT].time</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;publisher</td><td>.participation[typeCode=AUT].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;contact</td><td>.participation[typeCode=CALLBCK].role</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;description</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;useContext</td><td>N/A (to add?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;jurisdiction</td><td>N/A (to add?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;purpose</td><td>.reasonCode.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;copyright</td><td>N/A (to add?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;approvalDate</td><td>.outboundRelationship[typeCode=&quot;SUBJ&quot;].act[classCode=CACT;moodCode=EVN;code=&quot;approval&quot;].effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lastReviewDate</td><td>.outboundRelationship[typeCode=&quot;SUBJ&quot;; subsetCode=&quot;RECENT&quot;].act[classCode=CACT;moodCode=EVN;code=&quot;review&quot;].effectiveTime</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effectivePeriod</td><td>N/A (to add?)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;item</td><td>.outboundRelationship[typeCode=COMP].target[classCode=OBS, moodCode=DEF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (designNote)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (terminologyServer)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (unit)</td><td>N/A (MIF-level)</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueCoding</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (observationLinkPeriod)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueDuration</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (itemContext)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueExpression</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (itemVariable)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueExpression</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (initialExpression)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueExpression</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (itemHidden)</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;url</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;valueBoolean</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;linkId</td><td>.id</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;definition</td><td>.outboundRelationship[typeCode=INST].target[classCode=OBS, moodCode=DEF]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;prefix</td><td>Not supported</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td><td>.text</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enableWhen</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;question</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;operator</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answer[x]</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enableBehavior</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;required</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;repeats</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;readOnly</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLength</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answerValueSet</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;answerOption</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;initialSelected</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;initial</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value[x]</td><td>N/A - MIF rather than RIM level</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;item</td><td>.outboundRelationship[typeCode=COMP].target</td> </tr>
+</table>
+<a name="w5"> </a><h3>Mappings for FiveWs Pattern Mapping (http://hl7.org/fhir/fivews)</h3><table class="grid">
+ <tr><td colspan="3"><b>CheTocQuestionnaire</b></td></tr>
+ <tr><td>Questionnaire</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;url</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;version</td><td>FiveWs.version</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;experimental</td><td>FiveWs.class</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;date</td><td>FiveWs.recorded</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;publisher</td><td>FiveWs.witness</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;purpose</td><td>FiveWs.why[x]</td> </tr>
+</table>
+<a name="objimpl"> </a><h3>Mappings for Object Implementation Information (http://hl7.org/fhir/object-implementation)</h3><table class="grid">
+ <tr><td colspan="3"><b>CheTocQuestionnaire</b></td></tr>
+ <tr><td>Questionnaire</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>no-gen-base</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;purpose</td><td>no-gen-base</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;copyright</td><td>no-gen-base</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;approvalDate</td><td>no-gen-base</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;lastReviewDate</td><td>no-gen-base</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;effectivePeriod</td><td>no-gen-base</td> </tr>
+</table>
+<a name="v2"> </a><h3>Mappings for HL7 v2 Mapping (<a href="http://hl7.org/comparison-v2.html">http://hl7.org/v2</a>)</h3><table class="grid">
+ <tr><td colspan="3"><b>CheTocQuestionnaire</b></td></tr>
+ <tr><td>Questionnaire</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;item</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;maxLength</td><td>N/A</td> </tr>
+</table>
+{% endraw %}

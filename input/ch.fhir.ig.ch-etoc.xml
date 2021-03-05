@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="ch.fhir.ig.ch-etoc"/>
+  <text>
+    <status value="additional"/>
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      Implementation Guide for CH eTOC
+    </div>
+  </text>
+  <url value="http://fhir.ch/ig/ch-etoc/ImplementationGuide/ch.fhir.ig.ch-etoc"/>
+  <version value="0.0.1"/>
+  <name value="CH_eTOC"/>
+  <title value="CH eTOC (R4)"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2021-03-02"/>
+  <publisher value="HL7 Switzerland"/>
+  <contact>
+    <name value="HL7 Switzerland"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.hl7.ch/"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Juer P. Bleuer"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bleuer@healthevidence.ch"/>
+    </telecom>
+  </contact>
+  <description value="Implementation Guide for CH eTOC"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CH"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="CC-BY-SA-4.0"/>
+  <packageId value="ch.fhir.ig.ch-etoc"/>
+  <license value="CC-BY-SA-4.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="chcore">
+    <uri value="http://fhir.ch/ig/ch-core/ImplementationGuide/ch.fhir.ig.ch-core"/>
+    <packageId value="ch.fhir.ig.ch-core"/>
+    <version value="1.2.0"/>
+  </dependsOn>
+  <dependsOn id="chorf">
+    <uri value="http://fhir.ch/ig/ch-orf/ImplementationGuide/ch.fhir.ig.ch-orf"/>
+    <packageId value="ch.fhir.ig.ch-orf"/>
+    <version value="current"/>
+  </dependsOn>
+  <dependsOn id="sdc">
+    <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
+    <packageId value="hl7.fhir.uv.sdc"/>
+    <version value="2.7.0"/>
+  </dependsOn>
+    <dependsOn id="ips">
+    <uri value="http://hl7.org/fhir/uv/ips/"/>
+    <packageId value="hl7.fhir.uv.ips"/>
+    <version value="1.0.0"/>
+  </dependsOn>
+  <definition>
+    <grouping>
+      <name value="CH eTOC"/>
+    </grouping>
+
+    <!-- Resource Profiles -->
+    <!--<resource>
+      <reference>
+        <reference value="StructureDefinition/AllergyIntolerance-uv-ips"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>-->
+    <!--<resource>
+      <reference>
+        <reference value="StructureDefinition/ch-orf-questionnaire"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-orf-questionnaireresponse"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    
+      <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-etoc-servicerequest"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>-->
+  
+
+    <!-- Extension Definitions 
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-orf-precedentdocument"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-orf-urgentnoficationcontactforthisdocument"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ch-orf-responsereceiver"/>
+      </reference>
+      <exampleBoolean value="false"/>
+    </resource>-->
+
+    <!-- Value Sets
+    <resource>
+      <reference>
+        <reference value="ValueSet/minimaldataset"/>
+      </reference>
+      <name value="Minimal Data Set for questionnaires"/>
+      <exampleBoolean value="false"/>
+    </resource>-->
+
+    <!-- Code Systems 
+    <resource>
+      <reference>
+        <reference value="CodeSystem/minimaldataset"/>
+      </reference>
+      <name value="Minimal Data Set for questionnaires"/>
+      <exampleBoolean value="false"/>
+    </resource>-->
+
+    <!-- Structure Maps 
+    <resource>
+      <reference>
+        <reference value="StructureMap/OrfQrToBundle"/>
+      </reference>
+      <name value="Map ORF"/>
+      <description value="Mapping ORF Questionnaire Response to Bundle"/>
+      <exampleBoolean value="false"/>
+    </resource>-->
+
+    <!-- Example Instances
+    <resource>
+      <reference>
+        <reference value="Bundle/referral-min"/>
+      </reference>
+      <name value="Bundle Referral minimal"/>
+      <description value="Example for Bundle"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Composition/referral-min"/>
+      </reference>
+      <name value="Composition Referral minimal"/>
+      <description value="Example for Composition"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Questionnaire/referral-min"/>
+      </reference>
+      <name value="Questionnaire Referral minimal"/>
+      <description value="Example for Questionnaire"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/ebida-order-1"/>
+      </reference>
+      <name value="Questionnaire Ebida Order"/>
+      <description value="Example for Questionnaire"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Questionnaire/lab-order-chemogram"/>
+      </reference>
+      <name value="Questionnaire Lab Order Chemogram"/>
+      <description value="Example for Questionnaire"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="QuestionnaireResponse/referral-min"/>
+      </reference>
+      <name value="Questionnaire Response Referral minimal"/>
+      <description value="Example for Questionnaire Response"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="ServiceRequest/EtocServiceRequest"/>
+      </reference>
+      <name value="Service Request Referral minimal"/>
+      <description value="Example for Service Request"/>
+      <exampleCanonical value="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/SabineMeierPraxisSeeblick"/>
+      </reference>
+      <name value="Sabine Meier at Praxis Seeblick (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/NotificationContactPraxisSeeblick"/>
+      </reference>
+      <name value="Notification Contact at Praxis Seeblick (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/ResponseReceiverPraxisSeeblick"/>
+      </reference>
+      <name value="Response Receiver at Praxis Seeblick (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/StabiloBossPraxisSeeblick"/>
+      </reference>
+      <name value="Stabilo Boss at Praxis Seeblick (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/HansRoentgenKantonsspital"/>
+      </reference>
+      <name value="Hans Röntgen at Kantonsspital (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/NotificationContactKantonsspital"/>
+      </reference>
+      <name value="Hans Röntgen at Kantonsspital (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="PractitionerRole/ResponseReceiverGruppenpraxis"/>
+      </reference>
+      <name value="Response Receiver at Gruppenpraxis (Referral minimal)"/>
+      <description value="Example for PractitionerRole"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Organization/PraxisSeeblick"/>
+      </reference>
+      <name value="Praxis Seeblick (Referral minimal)"/>
+      <description value="Example for Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Organization/Kantonsspital"/>
+      </reference>
+      <name value="Kantonsspital (Referral minimal)"/>
+      <description value="Example for Organization"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Practitioner/SabineMeier"/>
+      </reference>
+      <name value="Sabine Meier (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/NotificationContactSabineMeier"/>
+      </reference>
+      <name value="Notification Contact Sabine Meier (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/ResponseReceiverSabineMeier"/>
+      </reference>
+      <name value="Response Receiver Sabine Meier (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/StabiloBoss"/>
+      </reference>
+      <name value="Stabilo Boss (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/HansRoentgen"/>
+      </reference>
+      <name value="Hans Röntgen (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/NotificationContactHansRoentgen"/>
+      </reference>
+      <name value="Notification Contact Hans Röntgen (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/ResponseReceiverGianLucaSpezialist"/>
+      </reference>
+      <name value="Response Receiver Gian Luca Spezialist (Referral minimal)"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Practitioner/MarcAgpar"/>
+      </reference>
+      <name value="Marc Agpar"/>
+      <description value="Example for Practitioner"/>
+      <exampleBoolean value="true"/>
+    </resource>
+
+    <resource>
+      <reference>
+        <reference value="Patient/ErikaMusterfrau"/>
+      </reference>
+      <name value="Erika Musterfrau (Referral minimal)"/>
+      <description value="Example for Patient"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Patient/FranzMuster"/>
+      </reference>
+      <name value="Franz Muster"/>
+      <description value="Example for Patient"/>
+      <exampleBoolean value="true"/>
+    </resource>-->
+
+    <!-- pages -->
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="usecase-german.html"/>
+        <title value="Anwendungsfälle"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="extensions.html"/>
+        <title value="Extensions"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="html"/>
+      </page>
+    </page>
+
+    <!-- parameters -->
+    <parameter>
+      <code value="releaselabel"/>
+      <value value="CI Build"/>
+      <!--<value value="STU Ballot"/>-->
+    </parameter>
+    <parameter>
+      <code value="copyrightyear"/>
+      <value value="2020+"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages" />
+      <value value="pages"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

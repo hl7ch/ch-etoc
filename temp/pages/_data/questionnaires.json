@@ -1,0 +1,11 @@
+{
+  "RadiologyOrder": {
+    "index": 14,
+    "url": "http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder",
+    "path": "Questionnaire-RadiologyOrder.html",
+    "status": "active",
+    "date": "Fri Mar 05 10:00:54 CET 2021",
+    "publisher": "HL7 Switzerland",
+    "copyright": "CC-BY-SA-4.0"
+  }
+}

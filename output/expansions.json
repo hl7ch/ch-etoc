@@ -1,0 +1,66 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "09f0bcf3-bf9c-41c1-90dc-ffaeb48c5747",
+  "meta" : {
+    "lastUpdated" : "2021-03-05T10:00:54.807+01:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "id" : "chradorder-vs-example",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 1 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-chradorder-cs-example.html\">CH RAD-Order CodeSystem Example v0.0.1 (CodeSystem)</a></p><p>All codes from system <a href=\"CodeSystem-chradorder-cs-example.html\"><code>http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example</code></a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---fhir.ch-ig-ch-etoc-CodeSystem-chradorder-cs-example-bsp\"> </a><a href=\"CodeSystem-chradorder-cs-example.html#chradorder-cs-example-bsp\">bsp</a></td><td>Beispiel</td><td/></tr></table></div>"
+      },
+      "url" : "http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example",
+      "version" : "0.0.1",
+      "name" : "ChRadOrderVSExample",
+      "title" : "CH RAD-Order ValueSet Example",
+      "status" : "active",
+      "date" : "2021-03-05T10:00:54+01:00",
+      "publisher" : "HL7 Switzerland",
+      "contact" : [{
+        "name" : "HL7 Switzerland",
+        "telecom" : [{
+          "system" : "url",
+          "value" : "https://www.hl7.ch/"
+        }]
+      },
+      {
+        "name" : "Juer P. Bleuer",
+        "telecom" : [{
+          "system" : "email",
+          "value" : "bleuer@healthevidence.ch"
+        }]
+      }],
+      "description" : "CH RAD-Order ValueSet Example",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "urn:iso:std:iso:3166",
+          "code" : "CH"
+        }]
+      }],
+      "copyright" : "CC-BY-SA-4.0",
+      "expansion" : {
+        "identifier" : "urn:uuid:d8651fc0-9257-4f8a-920d-5f44f315ac4e",
+        "timestamp" : "2021-03-05T10:01:20+01:00",
+        "total" : 1,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example|0.0.1"
+        }],
+        "contains" : [{
+          "system" : "http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example",
+          "code" : "bsp",
+          "display" : "Beispiel"
+        }]
+      }
+    }
+  }]
+}

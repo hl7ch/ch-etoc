@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-etoc/Practitioner/HansRoentgen> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "HansRoentgen"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Hans Röntgen </p><p><b>telecom</b>: <a href=\"mailto:roentgenblick@example.com\">roentgenblick@example.com</a></p></div>"
+  ];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Röntgen" ];
+     fhir:HumanName.given [
+       fhir:value "Hans";
+       fhir:index 0
+     ];
+     fhir:HumanName.prefix [
+       fhir:value "Praxiszentrum Röntgenblick";
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier" ];
+         fhir:Extension.valueCode [ fhir:value "LS" ]
+       ]
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "email" ];
+     fhir:ContactPoint.value [ fhir:value "roentgenblick@example.com" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-etoc/Practitioner/HansRoentgen.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

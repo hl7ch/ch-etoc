@@ -1,0 +1,42 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ch-etoc-questionnaireresponse",
+  "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-questionnaireresponse",
+  "version": "0.1.0",
+  "name": "ChEtocQuestionnaireResponse",
+  "title": "CH eTOC QuestionnaireResponse",
+  "status": "active",
+  "description": "Definition for the QuestionnaireResponse resource in the context of electronic transition of care.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "QuestionnaireResponse",
+  "baseDefinition": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "QuestionnaireResponse",
+        "path": "QuestionnaireResponse",
+        "short": "CH eToc QuestionnaireResponse"
+      }
+    ]
+  }
+}

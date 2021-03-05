@@ -1,0 +1,14 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "EtocServiceRequest",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"
+    ]
+  },
+  "status": "active",
+  "intent": "original-order",
+  "subject": {
+    "reference": "Patient/MartinaMuster"
+  }
+}

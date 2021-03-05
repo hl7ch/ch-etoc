@@ -1,0 +1,15 @@
+
+{"severity":"error","code":"required","details":{"text":"Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/HansRoentgen.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[4]"]}
+,
+{"severity":"warning","code":"invariant","details":{"text":"Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/HansRoentgen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[4]"]}
+,
+{"severity":"error","code":"required","details":{"text":"Unable to find ImplementationGuide.definition.resource.name for the resource Patient/MartinaMuster.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[5]"]}
+,
+{"severity":"warning","code":"invariant","details":{"text":"Unable to find ImplementationGuide.definition.resource.description for the resource Patient/MartinaMuster.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[5]"]}
+,
+{"severity":"warning","code":"invariant","details":{"text":"Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/EtocServiceRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[6]"]}
+,
+{"severity":"error","code":"required","details":{"text":"Unable to find ImplementationGuide.definition.resource.name for the resource Questionnaire/RadiologyOrder.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[8]"]}
+,
+{"severity":"warning","code":"invariant","details":{"text":"Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/RadiologyOrder.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list."},"location":["ImplementationGuide.definition.resource[8]"]}
+,

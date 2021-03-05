@@ -1,0 +1,52 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "ch-etoc-servicerequest",
+  "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest",
+  "version": "0.1.0",
+  "name": "ChEtocServiceRequest",
+  "title": "CH eTOC ServiceRequest",
+  "status": "active",
+  "description": "Definition for the ServiceRequest resource in the context of electronic transition of care.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "quick",
+      "uri": "http://siframework.org/cqf",
+      "name": "Quality Improvement and Clinical Knowledge (QUICK)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "ServiceRequest",
+  "baseDefinition": "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "ServiceRequest",
+        "path": "ServiceRequest",
+        "short": "CH eToc ServiceRequest"
+      }
+    ]
+  }
+}

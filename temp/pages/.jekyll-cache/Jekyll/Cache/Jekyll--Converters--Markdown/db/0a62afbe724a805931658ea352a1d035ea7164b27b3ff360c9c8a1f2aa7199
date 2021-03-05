@@ -1,0 +1,14 @@
+I"ü<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+<p>TBD</p>
+
+<h3 id="anwendungsfall-1">Anwendungsfall 1</h3>
+<p>Dr. med. Sabine Meier der Praxis Seeblick weist Frau Hugentobler notfallm√§ssig auf die Innere Medizin des Kantonsspitls ein und erstellt ein Zuweisungschreiben an Dr. med. Fitz Balsiger, OA Innere Medizin, Kantonsspital.</p>
+<ul>
+  <li>Im Vorfeld telefoniert Dr. Meier mit Dr. Balsiger</li>
+  <li>Dr. Balsiger soll bei Eingang des Zuweiungsschreiben sofort kontaktiert werden; die  Patientin ist unterwegs.</li>
+</ul>
+
+:ET
