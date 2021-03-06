@@ -155,25 +155,13 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Practitioner"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Practitioner-HansRoentgen.html"/>
-         </extension>
-         <reference>
-            <reference value="Practitioner/HansRoentgen"/>
-         </reference>
-         <groupingId value="_other"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="Patient"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Patient-MartinaMuster.html"/>
+            <valueUri value="Patient-SUfferer.html"/>
          </extension>
          <reference>
-            <reference value="Patient/MartinaMuster"/>
+            <reference value="Patient/SUfferer"/>
          </reference>
          <groupingId value="_other"/>
       </resource>
@@ -190,6 +178,18 @@
          <name value="Example ServiceRequest - EtocServiceRequest"/>
          <exampleCanonical value="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"/>
          <groupingId value="_ex_example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-RadiologieORderfiller.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/RadiologieORderfiller"/>
+         </reference>
+         <groupingId value="_other"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -261,6 +261,18 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-ORderplacer.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/ORderplacer"/>
+         </reference>
+         <groupingId value="_other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -272,6 +284,18 @@
          <name value="CH eTOC Composition"/>
          <description value="Definition for the Composition resource in the context of electronic transition of care."/>
          <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-PraxisORderplacer.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/PraxisORderplacer"/>
+         </reference>
+         <groupingId value="_other"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -300,6 +324,18 @@
          <name value="CH eTOC Immunization"/>
          <description value="Definition for the Immunization resource in the context of electronic transition of care."/>
          <groupingId value="_str_profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-SpitalORderfiller.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/SpitalORderfiller"/>
+         </reference>
+         <groupingId value="_other"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -359,6 +395,18 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-ORderfiller.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/ORderfiller"/>
+         </reference>
+         <groupingId value="_other"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
             <valueString value="StructureDefinition:resource"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
@@ -379,6 +427,11 @@
             <nameUrl value="index.html"/>
             <title value="Home"/>
             <generation value="html"/>
+         </page>
+         <page>
+            <nameUrl value="usecase-english.html"/>
+            <title value="Use Cases"/>
+            <generation value="markdown"/>
          </page>
          <page>
             <nameUrl value="usecase-german.html"/>
@@ -495,12 +548,32 @@
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Practitioner-HansRoentgen.html"/>
+               <nameUrl value="Patient-SUfferer.html"/>
                <title value=""/>
                <generation value="generated"/>
             </page>
             <page>
-               <nameUrl value="Patient-MartinaMuster.html"/>
+               <nameUrl value="Organization-RadiologieORderfiller.html"/>
+               <title value=""/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-ORderplacer.html"/>
+               <title value=""/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-PraxisORderplacer.html"/>
+               <title value=""/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-SpitalORderfiller.html"/>
+               <title value=""/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-ORderfiller.html"/>
                <title value=""/>
                <generation value="generated"/>
             </page>

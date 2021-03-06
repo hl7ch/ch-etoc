@@ -6,11 +6,11 @@
     <profile value="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"/>
   </meta>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>subject</b>: <a href="Patient-MartinaMuster.html">Generated Summary: Martina Muster ; Phone: 079 999 99 99, martina.muster@example.com; gender: female; birthDate: 1995-01-27</a></p></div>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>intent</b>: original-order</p><p><b>subject</b>: <a href="MartinaMuster">MartinaMuster</a></p></div>
   </text>
   <status value="active"/>
   <intent value="original-order"/>
   <subject>
-    <reference value="Patient/MartinaMuster"/>
+    <reference value="MartinaMuster"/>
   </subject>
 </ServiceRequest>

@@ -15,3 +15,5 @@ Alias:   ChOrfQuestionnaire = http://fhir.ch/ig/ch-orf/StructureDefinition/ch-or
 Alias:   ChOrfQuestionnaireResponse = http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaireresponse
 Alias:   ChOrfDocument = http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document
 Alias:   ChOrfComposition = http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition
+
+Alias:   ChCoreOrganization = http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization

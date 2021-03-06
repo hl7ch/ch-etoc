@@ -195,18 +195,34 @@
       },
       {
         "reference": {
-          "reference": "Practitioner/HansRoentgen"
+          "reference": "Practitioner/ORderfiller"
         },
-        "name": "Hans Roentgen",
+        "name": "Dr. O. Rderfiller",
         "description": "Example for Practitioner",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Patient/MartinaMuster"
+          "reference": "Practitioner/ORderplacer"
         },
-        "name": "Martina Muster",
-        "description": "Example for Patient",
+        "name": "Dr. O. Rderplacer",
+        "description": "Example for Practitioner",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/PraxisORderplacer"
+        },
+        "name": "Gruppenpraxis Happy Docotors",
+        "description": "Example for Organization",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/RadiologieORderfiller"
+        },
+        "name": "Radiology Dept. Happy Hospital",
+        "description": "Example for Organization",
         "exampleBoolean": true
       },
       {
@@ -215,6 +231,22 @@
         },
         "name": "Questionniaire Radiology Order",
         "description": "Example for Questionnaire",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/SUfferer"
+        },
+        "name": "Susanna Ufferer",
+        "description": "Example for Patient",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/SpitalORderfiller"
+        },
+        "name": "Happy Hospital",
+        "description": "Example for Organization",
         "exampleBoolean": true
       }
     ],
@@ -242,6 +274,11 @@
           "nameUrl": "terminology.html",
           "title": "Terminology",
           "generation": "html"
+        },
+        {
+          "nameUrl": "usecase-english.html",
+          "title": "Usecase English",
+          "generation": "markdown"
         },
         {
           "nameUrl": "usecase-german.html",

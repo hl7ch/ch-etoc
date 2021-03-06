@@ -1,137 +1,164 @@
 ﻿CH_eTOC : Validation Results
 =========================================
 
-err = 7, warn = 6, info = 1
+err = 12, warn = 11, info = 1
 IG Publisher Version: 1.1.59 Out of date - current version is 1.1.63
-Generated Fri Mar 05 10:01:42 CET 2021. FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = http://fhir.ch/ig/ch-etoc)
+Generated Sat Mar 06 01:34:48 CET 2021. FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = http://fhir.ch/ig/ch-etoc)
 
- Build Errors : 49 / 5 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/CodeSystem-chradorder-cs-example : 0 / 0 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Patient-MartinaMuster : 0 / 0 / 2
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Practitioner-HansRoentgen : 0 / 0 / 2
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder : 4 / 1 / 2
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ServiceRequest-EtocServiceRequest : 0 / 0 / 2
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-allergyintolerance : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-composition : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-condition : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-device : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-diagnosticreport : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-document : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-immunization : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-procedure : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaire : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse : 0 / 1 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-servicerequest : 0 / 0 / 1
- /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ValueSet-chradorder-vs-example : 0 / 0 / 1
- /Users/bleuer/Documents/GitHub/eTOC/input/ch.fhir.ig.ch-etoc : 0 / 0 / 1
+ Build Errors : 54 / 9 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/CodeSystem-chradorder-cs-example : 0 / 0 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-PraxisORderplacer : 0 / 0 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-RadiologieORderfiller : 0 / 0 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-SpitalORderfiller : 0 / 0 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Patient-SUfferer : 0 / 0 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Practitioner-ORderfiller : 0 / 0 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Practitioner-ORderplacer : 0 / 1 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Questionnaire-RadiologyOrder : 4 / 1 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/ServiceRequest-EtocServiceRequest : 1 / 0 / 2
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-allergyintolerance : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-composition : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-condition : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-device : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-diagnosticreport : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-document : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-immunization : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-procedure : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaire : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse : 0 / 1 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-servicerequest : 0 / 0 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/ValueSet-chradorder-vs-example : 0 / 0 / 1
+ /Users/bleuer/Documents/GitHub/ch-etoc/input/ch.fhir.ig.ch-etoc : 0 / 0 / 1
 </table>
 == n/a ==
 WARNING: ImplementationGuide.dependency[3].url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 INFORMATION: ImplementationGuide.dependency[3].url: The correct canonical URL for this dependency is http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/HansRoentgen.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/HansRoentgen.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Patient/MartinaMuster.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
-WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/MartinaMuster.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Patient/SUfferer.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Patient/SUfferer.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource ServiceRequest/EtocServiceRequest.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/RadiologieORderfiller.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/RadiologieORderfiller.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Questionnaire/RadiologyOrder.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Questionnaire/RadiologyOrder.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 302, column 154: The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for "EPRDataEnterer" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 373, column 116: The link '' for "DocumentEntryTypeCode" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 385, column 116: The link '' for "DocumentEntryClassCode" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 399, column 151: The link './output/StructureDefinition-ch-core-patient.html' for "CHCorePatient" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 490, column 151: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 151: The link './output/StructureDefinition-ch-core-patient.html' for "CHCorePatient" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 435: The link './output/StructureDefinition-ch-core-practitioner.html' for "CHCorePractitioner" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 600: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 777: The link './output/StructureDefinition-ch-core-organization.html' for "CHCoreOrganization" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 710, column 151: The link './output/StructureDefinition-ch-core-organization.html' for "CHCoreOrganization" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 315, column 1624: The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 316, column 1473: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 317, column 1525: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 318, column 1408: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 328, column 743: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 339, column 1578: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1495: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1657: The link './output/StructureDefinition-ch-core-practitioner.html' for "CH Core Practitioner Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1757: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1866: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 367, column 1619: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 669, column 1624: The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 670, column 1473: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 671, column 1525: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 672, column 1408: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 682, column 743: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 693, column 1578: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1495: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1657: The link './output/StructureDefinition-ch-core-practitioner.html' for "CH Core Practitioner Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1757: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1866: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 721, column 1619: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 989, column 141: The link '??' for "DocumentEntryTypeCode (missing link)" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 990, column 145: The link '??' for "DocumentEntryClassCode (missing link)" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 634, column 262: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 669, column 151: The link './output/StructureDefinition-ch-core-patient.html' for "CHCorePatient" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 712, column 151: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 735, column 151: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 394, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 400, column 1553: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 410, column 1529: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 412, column 1565: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 650, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 656, column 1553: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 666, column 1529: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 668, column 1565: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/CodeSystem-chradorder-cs-example.json ==
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/ORderplacer.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/ORderplacer.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/PraxisORderplacer.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/PraxisORderplacer.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Organization/SpitalORderfiller.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/SpitalORderfiller.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/ORderfiller.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/ORderfiller.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/ServiceRequest-EtocServiceRequest.html#/html/body/div/div/div/div/div/div/p/a at Line 196, column 162: The link 'MartinaMuster' for "MartinaMuster" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 302, column 154: The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for "EPRDataEnterer" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 373, column 116: The link '' for "DocumentEntryTypeCode" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 385, column 116: The link '' for "DocumentEntryClassCode" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 399, column 151: The link './output/StructureDefinition-ch-core-patient.html' for "CHCorePatient" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 490, column 151: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 151: The link './output/StructureDefinition-ch-core-patient.html' for "CHCorePatient" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 435: The link './output/StructureDefinition-ch-core-practitioner.html' for "CHCorePractitioner" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 600: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 641, column 777: The link './output/StructureDefinition-ch-core-organization.html' for "CHCoreOrganization" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 710, column 151: The link './output/StructureDefinition-ch-core-organization.html' for "CHCoreOrganization" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 315, column 1624: The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 316, column 1473: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 317, column 1525: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 318, column 1408: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 328, column 743: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 339, column 1578: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1495: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1657: The link './output/StructureDefinition-ch-core-practitioner.html' for "CH Core Practitioner Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1757: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 358, column 1866: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 367, column 1619: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 669, column 1624: The link './output/StructureDefinition-ch-ext-epr-dataenterer.html' for "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 670, column 1473: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 671, column 1525: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 672, column 1408: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 682, column 743: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 693, column 1578: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1495: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1657: The link './output/StructureDefinition-ch-core-practitioner.html' for "CH Core Practitioner Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1757: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 712, column 1866: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 721, column 1619: The link './output/StructureDefinition-ch-core-organization.html' for "CH Core Organization Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 989, column 141: The link '??' for "DocumentEntryTypeCode (missing link)" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 990, column 145: The link '??' for "DocumentEntryClassCode (missing link)" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 634, column 262: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 669, column 151: The link './output/StructureDefinition-ch-core-patient.html' for "CHCorePatient" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 712, column 151: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 735, column 151: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CHCorePractitionerRole" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 394, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 400, column 1553: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 410, column 1529: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 412, column 1565: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 650, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 656, column 1553: The link './output/StructureDefinition-ch-core-patient.html' for "CH Core Patient Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 666, column 1529: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 668, column 1565: The link './output/StructureDefinition-ch-core-practitionerrole.html' for "CH Core Practitioner Role Profile" cannot be resolved
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/CodeSystem-chradorder-cs-example.json ==
 INFORMATION: CodeSystem/chradorder-cs-example: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Patient-MartinaMuster.json ==
-INFORMATION: Patient/MartinaMuster: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
-INFORMATION: Patient/MartinaMuster: Patient: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient - listed in meta
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Practitioner-HansRoentgen.json ==
-INFORMATION: Practitioner/HansRoentgen: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
-INFORMATION: Practitioner/HansRoentgen: Practitioner: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner - listed in meta
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json ==
-ERROR: Questionnaire.where(url = 'http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder'): Conformance resource /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder.json - the canonical URL (http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder) does not match the URL (http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder)
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-PraxisORderplacer.json ==
+INFORMATION: Organization/PraxisORderplacer: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/PraxisORderplacer: Organization: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization - listed in meta
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-RadiologieORderfiller.json ==
+INFORMATION: Organization/RadiologieORderfiller: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/RadiologieORderfiller: Organization: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization - listed in meta
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-SpitalORderfiller.json ==
+INFORMATION: Organization/SpitalORderfiller: Organization: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Organization
+INFORMATION: Organization/SpitalORderfiller: Organization: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization - listed in meta
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Patient-SUfferer.json ==
+INFORMATION: Patient/SUfferer: Patient: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Patient
+INFORMATION: Patient/SUfferer: Patient: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient - listed in meta
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Practitioner-ORderfiller.json ==
+INFORMATION: Practitioner/ORderfiller: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+INFORMATION: Practitioner/ORderfiller: Practitioner: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner - listed in meta
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Practitioner-ORderplacer.json ==
+INFORMATION: Practitioner/ORderplacer: Practitioner: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Practitioner
+WARNING: Practitioner/ORderplacer: Practitioner.name[0].family: Wert sollte nicht mit Leerzeichen beginnen oder enden
+INFORMATION: Practitioner/ORderplacer: Practitioner: Validate resource against profile http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner - listed in meta
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Questionnaire-RadiologyOrder.json ==
+ERROR: Questionnaire.where(url = 'http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder'): Conformance resource /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Questionnaire-RadiologyOrder.json - the canonical URL (http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder) does not match the URL (http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder)
 INFORMATION: Questionnaire/RadiologyOrder: Questionnaire: Validate resource against profile http://hl7.org/fhir/StructureDefinition/Questionnaire
 WARNING: Questionnaire/RadiologyOrder: Questionnaire: que-0: Name should be usable as an identifier for the module by machine processing applications such as code generation [name.matches('[A-Z]([A-Za-z0-9_]){0,254}')]
 ERROR: Questionnaire/RadiologyOrder: Questionnaire.extension[0]: ext-1: Must have either extensions or value[x], not both [extension.exists() != value.exists()]
 ERROR: Questionnaire/RadiologyOrder: Questionnaire.extension[0]: Die Definition der Extension "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap" impliziert eine simple Extension, sie muss also einen Wert enthalten, keine Extensions.
 INFORMATION: Questionnaire/RadiologyOrder: Questionnaire: Validate resource against profile http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire - listed in meta
-ERROR: /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/Questionnaire-RadiologyOrder: URL Mismatch http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder vs http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ServiceRequest-EtocServiceRequest.json ==
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Questionnaire-RadiologyOrder: URL Mismatch http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder vs http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/ServiceRequest-EtocServiceRequest.json ==
 INFORMATION: ServiceRequest/EtocServiceRequest: ServiceRequest: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ServiceRequest
+ERROR: ServiceRequest/EtocServiceRequest: ServiceRequest.subject: Ressource "MartinaMuster" nicht auffindbar
 INFORMATION: ServiceRequest/EtocServiceRequest: ServiceRequest: Validate resource against profile http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest - listed in meta
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-allergyintolerance.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-allergyintolerance.json ==
 INFORMATION: StructureDefinition/ch-etoc-allergyintolerance: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-composition.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-composition.json ==
 INFORMATION: StructureDefinition/ch-etoc-composition: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-condition.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-condition.json ==
 INFORMATION: StructureDefinition/ch-etoc-condition: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-device.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-device.json ==
 INFORMATION: StructureDefinition/ch-etoc-device: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver.json ==
 INFORMATION: StructureDefinition/ch-etoc-deviceobserver: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement.json ==
 INFORMATION: StructureDefinition/ch-etoc-deviceusestatement: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-diagnosticreport.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-diagnosticreport.json ==
 INFORMATION: StructureDefinition/ch-etoc-diagnosticreport: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-document.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-document.json ==
 INFORMATION: StructureDefinition/ch-etoc-document: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-immunization.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-immunization.json ==
 INFORMATION: StructureDefinition/ch-etoc-immunization: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement.json ==
 INFORMATION: StructureDefinition/ch-etoc-medicationstatement: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-procedure.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-procedure.json ==
 INFORMATION: StructureDefinition/ch-etoc-procedure: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaire.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaire.json ==
 INFORMATION: StructureDefinition/ch-etoc-questionnaire: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse.json ==
 INFORMATION: StructureDefinition/ch-etoc-questionnaireresponse: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/StructureDefinition-ch-etoc-servicerequest.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/StructureDefinition-ch-etoc-servicerequest.json ==
 INFORMATION: StructureDefinition/ch-etoc-servicerequest: StructureDefinition: Validate resource against profile http://hl7.org/fhir/StructureDefinition/StructureDefinition
-== /Users/bleuer/Documents/GitHub/eTOC/fsh-generated/resources/ValueSet-chradorder-vs-example.json ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/ValueSet-chradorder-vs-example.json ==
 INFORMATION: ValueSet/chradorder-vs-example: ValueSet: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ValueSet
-== /Users/bleuer/Documents/GitHub/eTOC/input/ch.fhir.ig.ch-etoc.xml ==
+== /Users/bleuer/Documents/GitHub/ch-etoc/input/ch.fhir.ig.ch-etoc.xml ==
 INFORMATION: ImplementationGuide/ch.fhir.ig.ch-etoc: ImplementationGuide: Validate resource against profile http://hl7.org/fhir/StructureDefinition/ImplementationGuide

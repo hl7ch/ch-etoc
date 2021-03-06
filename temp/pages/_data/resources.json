@@ -2,7 +2,7 @@
   "ImplementationGuide/ch.fhir.ig.ch-etoc": {
     "history": false,
     "index": 0,
-    "source": "/Users/bleuer/Documents/GitHub/eTOC/input/ch.fhir.ig.ch-etoc.xml",
+    "source": "/Users/bleuer/Documents/GitHub/ch-etoc/input/ch.fhir.ig.ch-etoc.xml",
     "url": "http://fhir.ch/ig/ch-etoc/ImplementationGuide/ch.fhir.ig.ch-etoc",
     "name": "CH_eTOC",
     "title": "CH eTOC (R4)",
@@ -23,7 +23,7 @@
     "name": "ChEtocDocument",
     "title": "CH eTOC Document",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -39,7 +39,7 @@
     "name": "ChEtocProcedure",
     "title": "CH eTOC Procedure",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -55,7 +55,7 @@
     "name": "ChEtocAllergyIntolerance",
     "title": "CH eTOC AllergyIntolerance",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -71,7 +71,7 @@
     "name": "ChEtocDevice",
     "title": "CH eTOC Device",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -79,20 +79,20 @@
       "status": "Active"
     }
   },
-  "Practitioner/HansRoentgen": {
+  "Patient/SUfferer": {
     "history": false,
     "index": 5,
-    "source": "fsh-generated/resources/Practitioner-HansRoentgen.json"
-  },
-  "Patient/MartinaMuster": {
-    "history": false,
-    "index": 6,
-    "source": "fsh-generated/resources/Patient-MartinaMuster.json"
+    "source": "fsh-generated/resources/Patient-SUfferer.json"
   },
   "ServiceRequest/EtocServiceRequest": {
     "history": false,
-    "index": 7,
+    "index": 6,
     "source": "fsh-generated/resources/ServiceRequest-EtocServiceRequest.json"
+  },
+  "Organization/RadiologieORderfiller": {
+    "history": false,
+    "index": 7,
+    "source": "fsh-generated/resources/Organization-RadiologieORderfiller.json"
   },
   "StructureDefinition/ch-etoc-questionnaire": {
     "history": false,
@@ -102,7 +102,7 @@
     "name": "CheTocQuestionnaire",
     "title": "CH eTOC Questionnaire",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -116,7 +116,7 @@
     "source": "fsh-generated/resources/Questionnaire-RadiologyOrder.json",
     "url": "http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -132,7 +132,7 @@
     "name": "ChEtocServiceRequest",
     "title": "CH eTOC ServiceRequest",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -148,7 +148,7 @@
     "name": "ChRadOrderCSExample",
     "title": "CH RAD-Order CodeSystem Example",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -164,7 +164,7 @@
     "name": "ChEtocADiagnosticReport",
     "title": "CH eTOC DiagnosticReport",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -172,15 +172,20 @@
       "status": "Active"
     }
   },
-  "StructureDefinition/ch-etoc-composition": {
+  "Practitioner/ORderplacer": {
     "history": false,
     "index": 13,
+    "source": "fsh-generated/resources/Practitioner-ORderplacer.json"
+  },
+  "StructureDefinition/ch-etoc-composition": {
+    "history": false,
+    "index": 14,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-composition.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition",
     "name": "ChEtocComposition",
     "title": "CH eTOC Composition",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -188,15 +193,20 @@
       "status": "Active"
     }
   },
+  "Organization/PraxisORderplacer": {
+    "history": false,
+    "index": 15,
+    "source": "fsh-generated/resources/Organization-PraxisORderplacer.json"
+  },
   "ValueSet/chradorder-vs-example": {
     "history": false,
-    "index": 14,
+    "index": 16,
     "source": "fsh-generated/resources/ValueSet-chradorder-vs-example.json",
     "url": "http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example",
     "name": "ChRadOrderVSExample",
     "title": "CH RAD-Order ValueSet Example",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -206,13 +216,13 @@
   },
   "StructureDefinition/ch-etoc-immunization": {
     "history": false,
-    "index": 15,
+    "index": 17,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-immunization.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-immunization",
     "name": "ChEtocImmunization",
     "title": "CH eTOC Immunization",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -220,15 +230,20 @@
       "status": "Active"
     }
   },
+  "Organization/SpitalORderfiller": {
+    "history": false,
+    "index": 18,
+    "source": "fsh-generated/resources/Organization-SpitalORderfiller.json"
+  },
   "StructureDefinition/ch-etoc-questionnaireresponse": {
     "history": false,
-    "index": 16,
+    "index": 19,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-questionnaireresponse.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-questionnaireresponse",
     "name": "ChEtocQuestionnaireResponse",
     "title": "CH eTOC QuestionnaireResponse",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -238,13 +253,13 @@
   },
   "StructureDefinition/ch-etoc-deviceusestatement": {
     "history": false,
-    "index": 17,
+    "index": 20,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-deviceusestatement.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-deviceusestatement",
     "name": "ChEtocDeviceUseStatement",
     "title": "CH eTOC DeviceUseStatement",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -254,13 +269,13 @@
   },
   "StructureDefinition/ch-etoc-deviceobserver": {
     "history": false,
-    "index": 18,
+    "index": 21,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-deviceobserver.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-deviceobserver",
     "name": "ChEtocDeviceObserver",
     "title": "CH eTOC DeviceObserver",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -270,13 +285,13 @@
   },
   "StructureDefinition/ch-etoc-medicationstatement": {
     "history": false,
-    "index": 19,
+    "index": 22,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-medicationstatement.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-medicationstatement",
     "name": "ChEtocMedicationStatement",
     "title": "CH eTOC MedicationStatement",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -284,15 +299,20 @@
       "status": "Active"
     }
   },
+  "Practitioner/ORderfiller": {
+    "history": false,
+    "index": 23,
+    "source": "fsh-generated/resources/Practitioner-ORderfiller.json"
+  },
   "StructureDefinition/ch-etoc-condition": {
     "history": false,
-    "index": 20,
+    "index": 24,
     "source": "fsh-generated/resources/StructureDefinition-ch-etoc-condition.json",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-condition",
     "name": "ChEtocCondition",
     "title": "CH eTOC Condition",
     "version": "0.0.1",
-    "date": "2021-03-05T10:00:54+01:00",
+    "date": "2021-03-06T01:33:59+01:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",

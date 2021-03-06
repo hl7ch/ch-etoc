@@ -401,22 +401,11 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Practitioner"
-          }
-        ],
-        "reference": {
-          "reference": "Practitioner/HansRoentgen"
-        }
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "Patient"
           }
         ],
         "reference": {
-          "reference": "Patient/MartinaMuster"
+          "reference": "Patient/SUfferer"
         }
       },
       {
@@ -431,6 +420,17 @@
         },
         "name": "Example ServiceRequest - EtocServiceRequest",
         "exampleCanonical": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/RadiologieORderfiller"
+        }
       },
       {
         "extension": [
@@ -499,6 +499,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/ORderplacer"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -507,6 +518,17 @@
         },
         "name": "CH eTOC Composition",
         "description": "Definition for the Composition resource in the context of electronic transition of care."
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/PraxisORderplacer"
+        }
       },
       {
         "extension": [
@@ -533,6 +555,17 @@
         },
         "name": "CH eTOC Immunization",
         "description": "Definition for the Immunization resource in the context of electronic transition of care."
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Organization"
+          }
+        ],
+        "reference": {
+          "reference": "Organization/SpitalORderfiller"
+        }
       },
       {
         "extension": [
@@ -590,6 +623,17 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "Practitioner"
+          }
+        ],
+        "reference": {
+          "reference": "Practitioner/ORderfiller"
+        }
+      },
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "valueString": "StructureDefinition:resource"
           }
         ],
@@ -609,6 +653,11 @@
           "nameUrl": "index.html",
           "title": "Home",
           "generation": "html"
+        },
+        {
+          "nameUrl": "usecase-english.html",
+          "title": "Use Cases",
+          "generation": "markdown"
         },
         {
           "nameUrl": "usecase-german.html",

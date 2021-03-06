@@ -1,0 +1,32 @@
+I"b	<p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#radiologie-auftrag" id="markdown-toc-radiologie-auftrag">Radiologie-Auftrag</a></li>
+  <li><a href="#anfrage-nach-ergebnissen-von-früher" id="markdown-toc-anfrage-nach-ergebnissen-von-früher">Anfrage nach Ergebnissen von früher</a></li>
+</ul>
+
+</div>
+<p>TBD</p>
+
+<h3 id="radiologie-auftrag">Radiologie-Auftrag</h3>
+<p>Wir haben die folgenden Akteure:</p>
+
+<ul>
+  <li>Auftrag erteilt durch: Dr. O. Rderplacer, Hausarzt in der Gemeinschaftspraxis “Happy Doctors”</li>
+  <li>Empfänger des Auftrages: Radiologieabteilung “Happy Hospital”</li>
+  <li>Patient: Herr S. Ufferer, der eine radiologische Untersuchung benötigt.</li>
+</ul>
+
+<p>Patient S. Ufferer hat einen Termin bei Dr. O. Rderplacer in der Gemeinschaftspraxis “Happy Docotors”: Dr. O. Rderplacer vereinbart mit dem Patienten, dass ein Thorax-Röntgen die in der Röntgenabteilung des “Happy Hospital” gemacht wird. Dr. O. Rderplacer schreibt einen Röntgenauftrag, der alle notwendigen Informationen enthält und schickt ihn an die Röntgenabteilung des “Happy Hospital”. Zum Vergleich legt Dr. O. Rderplacer Bilder und Berichte vom früher bei. Außerdem bittet er darum, dem Patienten eine Kopie des Berichts zukommen zu lassen.</p>
+
+<h3 id="anfrage-nach-ergebnissen-von-früher">Anfrage nach Ergebnissen von früher</h3>
+<p>Wir haben die folgenden Akteure:</p>
+
+<ul>
+  <li>Auftrag erteilt durch: Dr. O. Rderplacer, Hausarzt in der Gemeinschaftspraxis “Happy Doctors”</li>
+  <li>Empfänger des Auftrages: Radiologieabteilung “Happy Hospital”</li>
+  <li>Patient:Herr S. Ufferer, der vor sechs Monaten eine radiologische Untersuchung (auf Anordnung seines ehemaligen Hausarztes) hatte.</li>
+</ul>
+
+<p>Patient S. Ufferer hat einen Termin bei seinem neuen Hausarzt Dr. O. Rderplacer in der Gemeinschaftspraxis “Happy Docotors”: Dr. O. Rderplacer fragt den Patienten, ob er schon einmal eine Röntgenaufnahme der Brust hatte. Patient S. Ufferer erzählt, dass er vor sechs Monaten in der Röntgenabteilung des “Happy Hospital” geröntgt wurde. Dr. O. Rderplacer schreibt eine Anfrage nach den Ergebnissen dieser Untersuchung und schickt sie an die Radiologieabteilung des “Happy Hospital”. Außerdem bittet er darum, dem Patienten eine Kopie des Berichts zukommen zu lassen.</p>
+:ET

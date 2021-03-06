@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="fhir.css"/>
 </head>
 <body>
-<pre class="json"><code class="language-json">
+<pre class="json"><code>
 {
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide">resourceType</a>" : "ImplementationGuide",
   "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a>" : "ch.fhir.ig.ch-etoc",
@@ -408,22 +408,11 @@
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Practitioner"
-          }
-        ],
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/HansRoentgen"
-        }
-      },
-      {
-        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
-          {
-            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Patient"
           }
         ],
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
-          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/MartinaMuster"
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/SUfferer"
         }
       },
       {
@@ -438,6 +427,17 @@
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "Example ServiceRequest - EtocServiceRequest",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleCanonical</a>" : "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Organization"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/RadiologieORderfiller"
+        }
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
@@ -506,6 +506,17 @@
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Practitioner"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ORderplacer"
+        }
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "StructureDefinition:resource"
           }
         ],
@@ -514,6 +525,17 @@
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CH eTOC Composition",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "Definition for the Composition resource in the context of electronic transition of care."
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Organization"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/PraxisORderplacer"
+        }
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
@@ -540,6 +562,17 @@
         },
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a>" : "CH eTOC Immunization",
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>" : "Definition for the Immunization resource in the context of electronic transition of care."
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Organization"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/SpitalORderfiller"
+        }
       },
       {
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
@@ -597,6 +630,17 @@
         "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
           {
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "Practitioner"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/ORderfiller"
+        }
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
             "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a>" : "StructureDefinition:resource"
           }
         ],
@@ -616,6 +660,11 @@
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "index.html",
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Home",
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "html"
+        },
+        {
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "usecase-english.html",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a>" : "Use Cases",
+          "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a>" : "markdown"
         },
         {
           "<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a>" : "usecase-german.html",

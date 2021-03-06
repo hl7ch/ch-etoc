@@ -233,12 +233,35 @@
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="Practitioner-HansRoentgen.html" title="Practitioner/HansRoentgen">Practitioner/HansRoentgen</a>
+                  <a href="Patient-SUfferer.html" title="Patient/SUfferer">Patient/SUfferer</a>
                </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Patient-MartinaMuster.html" title="Patient/MartinaMuster">Patient/MartinaMuster</a>
+                  <a href="Organization-RadiologieORderfiller.html"
+                     title="Organization/RadiologieORderfiller">Organization/RadiologieORderfiller</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Practitioner-ORderplacer.html" title="Practitioner/ORderplacer">Practitioner/ORderplacer</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Organization-PraxisORderplacer.html"
+                     title="Organization/PraxisORderplacer">Organization/PraxisORderplacer</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Organization-SpitalORderfiller.html"
+                     title="Organization/SpitalORderfiller">Organization/SpitalORderfiller</a>
+               </td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Practitioner-ORderfiller.html" title="Practitioner/ORderfiller">Practitioner/ORderfiller</a>
                </td>
             </tr>
          </tbody>

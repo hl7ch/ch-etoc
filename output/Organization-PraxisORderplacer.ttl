@@ -1,0 +1,30 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-etoc/Organization/PraxisORderplacer> a fhir:Organization;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "PraxisORderplacer"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization";
+       fhir:index 0;
+       fhir:link <http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>name</b>: Gruppenpraxis Happy Docotors</p></div>"
+  ];
+  fhir:Organization.name [ fhir:value "Gruppenpraxis Happy Docotors"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://fhir.ch/ig/ch-etoc/Organization/PraxisORderplacer.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

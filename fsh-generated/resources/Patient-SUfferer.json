@@ -1,0 +1,38 @@
+{
+  "resourceType": "Patient",
+  "id": "SUfferer",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
+    ]
+  },
+  "name": [
+    {
+      "family": "Ufferer",
+      "given": [
+        "Samuel"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+41 79 999 99 99"
+    },
+    {
+      "system": "email",
+      "value": "martina.muster@example.com"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1995-01-27",
+  "address": [
+    {
+      "line": [
+        "Leidensweg 15a"
+      ],
+      "city": "Bern",
+      "postalCode": "3000"
+    }
+  ]
+}

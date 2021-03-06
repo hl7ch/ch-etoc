@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="fhir.css"/>
 </head>
 <body>
-<pre class="xml"><code class="language-xml">
+<pre class="xml"><code>
 
 &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide">ImplementationGuide</a> xmlns=&quot;http://hl7.org/fhir&quot;&gt;
   &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.id">id</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;ch.fhir.ig.ch-etoc&quot;/&gt;
@@ -283,19 +283,10 @@
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner&quot;/&gt;
-      &lt;/extension&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/HansRoentgen&quot;/&gt;
-      &lt;/reference&gt;
-    &lt;/resource&gt;
-    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
-      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
-                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
-        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/MartinaMuster&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Patient/SUfferer&quot;/&gt;
       &lt;/reference&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
@@ -309,6 +300,15 @@
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Example ServiceRequest - EtocServiceRequest&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.example[x]">exampleCanonical</a>
                         <a href="http://hl7.org/fhir/R4/datatypes.html#canonical">value</a>=&quot;http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/RadiologieORderfiller&quot;/&gt;
+      &lt;/reference&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
@@ -369,6 +369,15 @@
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ORderplacer&quot;/&gt;
+      &lt;/reference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;StructureDefinition:resource&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
@@ -377,6 +386,15 @@
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CH eTOC Composition&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Definition for the Composition resource in the context of electronic transition of care.&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/PraxisORderplacer&quot;/&gt;
+      &lt;/reference&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
@@ -400,6 +418,15 @@
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.name">name</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;CH eTOC Immunization&quot;/&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.description">description</a>
                    <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Definition for the Immunization resource in the context of electronic transition of care.&quot;/&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Organization/SpitalORderfiller&quot;/&gt;
+      &lt;/reference&gt;
     &lt;/resource&gt;
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
@@ -452,6 +479,15 @@
     &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
                  <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner&quot;/&gt;
+      &lt;/extension&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Practitioner/ORderfiller&quot;/&gt;
+      &lt;/reference&gt;
+    &lt;/resource&gt;
+    &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource">resource</a>&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.extension">extension</a>
+                 <a href="http://hl7.org/fhir/R4/datatypes.html#uri">url</a>=&quot;http://hl7.org/fhir/tools/StructureDefinition/resource-information&quot;&gt;
         &lt;<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueString</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;StructureDefinition:resource&quot;/&gt;
       &lt;/extension&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.resource.reference">reference</a>&gt;
@@ -469,6 +505,11 @@
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;index.html&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Home&quot;/&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;html&quot;/&gt;
+      &lt;/page&gt;
+      &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;usecase-english.html&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.title">title</a> <a href="http://hl7.org/fhir/R4/datatypes.html#string">value</a>=&quot;Use Cases&quot;/&gt;
+        &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.generation">generation</a> <a href="http://hl7.org/fhir/R4/datatypes.html#code">value</a>=&quot;markdown&quot;/&gt;
       &lt;/page&gt;
       &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.page">page</a>&gt;
         &lt;<a href="http://hl7.org/fhir/R4/implementationguide.html#ImplementationGuide.definition.page.name[x]">nameUrl</a> <a href="http://hl7.org/fhir/R4/datatypes.html#url">value</a>=&quot;usecase-german.html&quot;/&gt;

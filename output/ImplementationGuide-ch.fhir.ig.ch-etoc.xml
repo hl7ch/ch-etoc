@@ -266,18 +266,10 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Practitioner"/>
-      </extension>
-      <reference>
-        <reference value="Practitioner/HansRoentgen"/>
-      </reference>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="Patient"/>
       </extension>
       <reference>
-        <reference value="Patient/MartinaMuster"/>
+        <reference value="Patient/SUfferer"/>
       </reference>
     </resource>
     <resource>
@@ -289,6 +281,14 @@
       </reference>
       <name value="Example ServiceRequest - EtocServiceRequest"/>
       <exampleCanonical value="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/RadiologieORderfiller"/>
+      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -340,6 +340,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ORderplacer"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -347,6 +355,14 @@
       </reference>
       <name value="CH eTOC Composition"/>
       <description value="Definition for the Composition resource in the context of electronic transition of care."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/PraxisORderplacer"/>
+      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -367,6 +383,14 @@
       </reference>
       <name value="CH eTOC Immunization"/>
       <description value="Definition for the Immunization resource in the context of electronic transition of care."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/SpitalORderfiller"/>
+      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -410,6 +434,14 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/ORderfiller"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
         <valueString value="StructureDefinition:resource"/>
       </extension>
       <reference>
@@ -426,6 +458,11 @@
         <nameUrl value="index.html"/>
         <title value="Home"/>
         <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="usecase-english.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
       </page>
       <page>
         <nameUrl value="usecase-german.html"/>

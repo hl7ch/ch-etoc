@@ -1,0 +1,10 @@
+{
+  "resourceType": "Organization",
+  "id": "SpitalORderfiller",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization"
+    ]
+  },
+  "name": "Happy Hospital"
+}

@@ -1,0 +1,51 @@
+﻿<html>
+<head>
+  <title>Patient-PraxisSeeblick-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resourceType</a>" : "Patient",
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "PraxisSeeblick",
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Samuel Ufferer &lt;/p&gt;&lt;p&gt;&lt;b&gt;telecom&lt;/b&gt;: &lt;a href=\&quot;tel:+41799999999\&quot;&gt;+41 79 999 99 99&lt;/a&gt;, &lt;a href=\&quot;mailto:martina.muster@example.com\&quot;&gt;martina.muster@example.com&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1995-01-27&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: Leidensweg 15a Bern 3000 &lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Ufferer",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+        "Samuel"
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.telecom">telecom</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "+41 79 999 99 99"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "martina.muster@example.com"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "female",
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "1995-01-27",
+  "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+        "Leidensweg 15a"
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Bern",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "3000"
+    }
+  ]
+}</code></pre>
+</body>
+</html>

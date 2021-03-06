@@ -9,6 +9,6 @@
   "status": "active",
   "intent": "original-order",
   "subject": {
-    "reference": "Patient/MartinaMuster"
+    "reference": "MartinaMuster"
   }
 }

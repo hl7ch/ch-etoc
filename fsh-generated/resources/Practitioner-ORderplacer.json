@@ -1,0 +1,36 @@
+{
+  "resourceType": "Practitioner",
+  "id": "ORderplacer",
+  "meta": {
+    "profile": [
+      "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner"
+    ]
+  },
+  "name": [
+    {
+      "family": "Rderplacer ",
+      "given": [
+        "Otilie"
+      ],
+      "prefix": [
+        "Dr."
+      ],
+      "_prefix": [
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier",
+              "valueCode": "LS"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "email",
+      "value": "allzeitbereit@example.com"
+    }
+  ]
+}
