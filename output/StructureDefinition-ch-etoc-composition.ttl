@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "ChEtocComposition"];
   fhir:StructureDefinition.title [ fhir:value "CH eTOC Composition"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-03-06T01:33:59+01:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-03-06T16:56:59+01:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 Switzerland"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

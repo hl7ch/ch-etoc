@@ -3,7 +3,7 @@
 
 err = 12, warn = 11, info = 1
 IG Publisher Version: 1.1.59 Out of date - current version is 1.1.63
-Generated Sat Mar 06 01:34:48 CET 2021. FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = http://fhir.ch/ig/ch-etoc)
+Generated Sat Mar 06 16:57:38 CET 2021. FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = http://fhir.ch/ig/ch-etoc)
 
  Build Errors : 54 / 9 / 1
  /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/CodeSystem-chradorder-cs-example : 0 / 0 / 1

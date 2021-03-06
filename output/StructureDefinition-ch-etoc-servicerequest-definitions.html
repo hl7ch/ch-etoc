@@ -622,7 +622,7 @@ Identifies the level of importance to be assigned to actioning the request.
   <tr><td>Definition</td><td><p>A code that identifies a particular service (i.e., procedure, diagnostic investigation, or panel of investigations) that have been requested.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td><a name="93df1386-69e8-4809-9915-a1de4bbfdb79">​</a>For example codes, see <a href="http://hl7.org/fhir/R4/valueset-procedure-code.html">ProcedureCodes(SNOMEDCT)</a>
+  <tr><td><a href="http://hl7.org/fhir/R4/terminologies.html">Binding</a></td><td><a name="0538fb22-8b64-42c2-8a14-744ad30761cb">​</a>For example codes, see <a href="http://hl7.org/fhir/R4/valueset-procedure-code.html">ProcedureCodes(SNOMEDCT)</a>
 Codes for tests or services that can be carried out by a designated individual, organization or healthcare service.  For laboratory, LOINC is  (preferred)[http://build.fhir.org/terminologies.html#preferred] and a valueset using LOINC Order codes is available <a href="valueset-diagnostic-requests.html">here</a>.
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept">CodeableConcept</a></td></tr>
@@ -658,7 +658,7 @@ Codified order entry details which are based on order context.
   <tr><td>Definition</td><td><p>The principle target of a particular form content is one patient (for obstetrical and neonatal use cases see...).</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>1..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="842870b6-7be6-465e-81a8-f5ba75a51230">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="./output/StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="3a8865c5-a146-4cab-93af-c9f155b56e6e">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="./output/StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a>)</td></tr>
   <tr><td>Invariants</td><td><b>Defined on this element</b><br/>
 <b title="Formal Invariant Identifier">ele-1</b>: All FHIR elements must have a @value or children (: hasValue() or (children().count() &gt; id.count()))</td></tr>
   <tr><td colspan="2" class="structure"><span class="self-link-parent"><a name="ServiceRequest.encounter"> </a><span style="color: grey">43.</span> <b>ServiceRequest.encounter</b><a href="#ServiceRequest.encounter" title="link to here" class="self-link"><svg viewBox="0 0 1792 1792" width="16" class="self-link" height="16"><path d="M1520 1216q0-40-28-68l-208-208q-28-28-68-28-42 0-72 32 3 3 19 18.5t21.5 21.5 15 19 13 25.5 3.5 27.5q0 40-28 68t-68 28q-15 0-27.5-3.5t-25.5-13-19-15-21.5-21.5-18.5-19q-33 31-33 73 0 40 28 68l206 207q27 27 68 27 40 0 68-26l147-146q28-28 28-67zm-703-705q0-40-28-68l-206-207q-28-28-68-28-39 0-68 27l-147 146q-28 28-28 67 0 40 28 68l208 208q27 27 68 27 42 0 72-31-3-3-19-18.5t-21.5-21.5-15-19-13-25.5-3.5-27.5q0-40 28-68t68-28q15 0 27.5 3.5t25.5 13 19 15 21.5 21.5 18.5 19q33-31 33-73zm895 705q0 120-85 203l-147 146q-83 83-203 83-121 0-204-85l-206-207q-83-83-83-203 0-123 88-209l-88-88q-86 88-208 88-120 0-204-84l-208-208q-84-84-84-204t85-203l147-146q83-83 203-83 121 0 204 85l206 207q83 83 83 203 0 123-88 209l88 88q86-88 208-88 120 0 204 84l208 208q84 84 84 204z" fill="navy"></path></svg></a></span></td></tr>
@@ -701,7 +701,7 @@ A coded concept identifying the pre-condition that should hold prior to performi
   <tr><td>Definition</td><td><p>The individual who initiated the request and has responsibility for its activation.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="5061889f-ef46-4312-8af1-fad3921afefe">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="./output/StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="3c21b382-9d3c-4d2c-898f-548340e1df81">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="./output/StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a>)</td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>author, orderer</td></tr>
   <tr><td>Comments</td><td><p>This not the dispatcher, but rather who is the authorizer.  This element is not intended to handle delegation which would generally be managed through the Provenance resource.</p>
 </td></tr>
@@ -724,7 +724,7 @@ Indicates specific responsibility of an individual within the care team, such as
   <tr><td>Definition</td><td><p>The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..*</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="822b8806-0740-46ea-b82a-055390910cbf">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="./output/StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a name="33cf78b7-e6f1-4a67-917a-990546999eb1">​</a><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="./output/StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a>)</td></tr>
   <tr><td title="Other names by which this resource/element may be known">Alternate Names</td><td>request recipient</td></tr>
   <tr><td>Comments</td><td><p>If multiple performers are present, it is interpreted as a list of <em>alternative</em> performers without any preference regardless of order.  If order of preference is needed use the <a href="http://hl7.org/fhir/R4/extension-request-performerorder.html">request-performerOrder extension</a>.  Use CareTeam to represent a group of performers (for example, Practitioner A <em>and</em> Practitioner B).</p>
 </td></tr>
@@ -886,7 +886,7 @@ All Provenances should have some historical version of this Request as their sub
     <div class="container">    <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &copy; 2020+ <a style="color: #81BEF7" href="https://www.hl7.ch/">HL7 Switzerland</a>.  Package ch.fhir.ig.ch-etoc#0.0.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Mar 6, 2021 01:33+0100">2021-03-06</span>
+          IG &copy; 2020+ <a style="color: #81BEF7" href="https://www.hl7.ch/">HL7 Switzerland</a>.  Package ch.fhir.ig.ch-etoc#0.0.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Mar 6, 2021 16:56+0100">2021-03-06</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
