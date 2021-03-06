@@ -3,7 +3,7 @@
   "name": "CH_eTOC",
   "package-id": "ch.fhir.ig.ch-etoc",
   "ig-ver": "0.0.1",
-  "date": "Sat, 06 Mar, 2021 16:56:59 +0100",
+  "date": "Sat, 06 Mar, 2021 17:02:01 +0100",
   "errs": 12,
   "warnings": 11,
   "hints": 1,
