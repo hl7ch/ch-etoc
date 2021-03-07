@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
   "fhirVersion": "[4.0.1]",
-  "date": "20210306170140",
+  "date": "20210307145325",
   "name": "ch.fhir.ig.ch-etoc"
 }

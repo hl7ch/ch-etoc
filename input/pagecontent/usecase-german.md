@@ -6,7 +6,7 @@ Die Beteiligten sind:
 * Zuweiser: Dr. O. Rderplacer, der Hausarzt in der Gemeinschaftspraxis "Happy Doctors" ist
 *  Spital:  Abteilung des "Happy Hospital"
  Radiologische Abteilung des "Happy Hospital"
-* Patient: Herr S. Ufferer, der eine radiologische Untersuchung benötigt
+* Patient: Herr S. Ufferer, der eine chirurgische Intervention benötigt.
 
 Patient S. Ufferer hat einen Termin bei Dr. O. Rderplacer: Dieser vereinbart mit dem Patienten, dass eine Operation notwendig ist, die in der chirurgischen Abteilung des "Happy Hospital" durchgeführt werden soll. Dr. O. Rderplacer schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an die chirurgische Abteilung des "Happy Hospital". Dazu gehören vorhandene Röntgenbilder und Berichte sowie Laborergebnisse. Außerdem bittet er darum, dem Patienten eine Kopie des Berichts zukommen zu lassen.
 
