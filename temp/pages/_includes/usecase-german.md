@@ -8,7 +8,7 @@ Die Beteiligten sind:
  Radiologische Abteilung des "Happy Hospital"
 * Patient: Herr S. Ufferer, der eine chirurgische Intervention benötigt.
 
-Patient S. Ufferer hat einen Termin bei Dr. O. Rderplacer: Dieser vereinbart mit dem Patienten, dass eine Operation notwendig ist, die in der chirurgischen Abteilung des "Happy Hospital" durchgeführt werden soll. Dr. O. Rderplacer schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an die chirurgische Abteilung des "Happy Hospital". Dazu gehören vorhandene Röntgenbilder und Berichte sowie Laborergebnisse. Außerdem bittet er darum, dem Patienten eine Kopie des Berichts zukommen zu lassen.
+Patient S. Ufferer hat einen Termin bei Dr. O. Rderplacer: Dieser vereinbart mit dem Patienten, dass eine Operation notwendig ist, die in der chirurgischen Abteilung des "Happy Hospital" durchgeführt werden soll. Dr. O. Rderplacer schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an die chirurgische Abteilung des "Happy Hospital". Dazu gehören vorhandene Röntgenbilder und Berichte sowie Laborergebnisse. Außerdem bittet er darum, dem Patienten eine Kopie des Berichts zukommen zu lassen.DD
 
 ### Anforderung von Ergebnissen von früher
 Die Beteiligten sind:
