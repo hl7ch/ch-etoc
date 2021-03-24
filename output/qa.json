@@ -3,10 +3,10 @@
   "name": "CH_eTOC",
   "package-id": "ch.fhir.ig.ch-etoc",
   "ig-ver": "0.0.1",
-  "date": "Tue, 09 Mar, 2021 13:54:55 +0100",
+  "date": "Wed, 24 Mar, 2021 22:35:14 +0100",
   "errs": 12,
   "warnings": 11,
-  "hints": 1,
+  "hints": 3,
   "version": "4.0.1",
   "tool": "4.5.0 (3)"
 }

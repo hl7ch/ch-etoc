@@ -10,7 +10,7 @@
   "name": "ChEtocDocument",
   "title": "CH eTOC Document",
   "status": "active",
-  "date": "2021-03-09T13:54:55+01:00",
+  "date": "2021-03-24T22:35:14+01:00",
   "publisher": "HL7 Switzerland",
   "contact": [
     {
@@ -814,7 +814,7 @@
       {
         "id": "Bundle.timestamp",
         "path": "Bundle.timestamp",
-        "short": "When the bundle was assembled",
+        "short": "Date, the document was created",
         "definition": "The date/time that the bundle was assembled - i.e. when the resources were placed in the bundle.",
         "comment": "For many bundles, the timestamp is equal to .meta.lastUpdated, because they are not stored (e.g. search results). When a bundle is placed in a persistent store, .meta.lastUpdated will be usually be changed by the server. When the bundle is a message, a middleware agent altering the message (even if not stored) SHOULD update .meta.lastUpdated. .timestamp is used to track the original time of the Bundle, and SHOULD be populated.  \n\nUsage:\n\n* document : the date the document was created. Note: the composition may predate the document, or be associated with multiple documents. The date of the composition - the authoring time - may be earlier than the document assembly time\n* message : the date that the content of the message was assembled. This date is not changed by middleware engines unless they add additional data that changes the meaning of the time of the message\n* history : the date that the history was assembled. This time would be used as the _since time to ask for subsequent updates\n* searchset : the time that the search set was assembled. Note that different pages MAY have different timestamps but need not. Having different timestamps does not imply that subsequent pages will represent or include changes made since the initial query\n* transaction | transaction-response | batch | batch-response | collection : no particular assigned meaning\n\nThe timestamp value should be greater than the lastUpdated and other timestamps in the resources in the bundle, and it should be equal or earlier than the .meta.lastUpdated on the Bundle itself.",
         "min": 1,
@@ -6360,7 +6360,7 @@
         },
         "type": [
           {
-            "code": "Resource",
+            "code": "ServiceRequest",
             "profile": [
               "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest"
             ]

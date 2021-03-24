@@ -31,4 +31,4 @@ Parent: ChOrfComposition
 Id: ch-etoc-composition
 Title: "CH eTOC Composition"
 Description: "Definition for the Composition resource in the context of electronic transition of care."
-* . ^short = "CH eToc Composition"
+* . ^short = "<p style=\"color:#FF0000\" ;>EPR</p> CH eToc Composition"

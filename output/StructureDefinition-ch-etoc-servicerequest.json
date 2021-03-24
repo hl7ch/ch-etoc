@@ -10,7 +10,7 @@
   "name": "ChEtocServiceRequest",
   "title": "CH eTOC ServiceRequest",
   "status": "active",
-  "date": "2021-03-09T13:54:55+01:00",
+  "date": "2021-03-24T22:35:14+01:00",
   "publisher": "HL7 Switzerland",
   "contact": [
     {
@@ -555,10 +555,10 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier",
         "path": "ServiceRequest.identifier",
-        "sliceName": "placerOrderId",
-        "short": "Placer Order Id",
+        "sliceName": "placerOrderIdentifier",
+        "short": "Placer Order Identifier",
         "definition": "Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.",
         "comment": "The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.",
         "min": 0,
@@ -619,7 +619,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.id",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.id",
         "path": "ServiceRequest.identifier.id",
         "representation": [
           "xmlAttr"
@@ -654,7 +654,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.extension",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.extension",
         "path": "ServiceRequest.identifier.extension",
         "slicing": {
           "discriminator": [
@@ -713,7 +713,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.use",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.use",
         "path": "ServiceRequest.identifier.use",
         "short": "usual | official | temp | secondary | old (If known)",
         "definition": "The purpose of this identifier.",
@@ -767,7 +767,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.type",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.type",
         "path": "ServiceRequest.identifier.type",
         "short": "Description of identifier",
         "definition": "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
@@ -824,7 +824,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.system",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.system",
         "path": "ServiceRequest.identifier.system",
         "short": "The namespace for the identifier value",
         "definition": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
@@ -876,7 +876,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.value",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.value",
         "path": "ServiceRequest.identifier.value",
         "short": "The value that is unique",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
@@ -927,7 +927,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.period",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.period",
         "path": "ServiceRequest.identifier.period",
         "short": "Time period when id is/was valid for use",
         "definition": "Time period during which identifier is/was valid for use.",
@@ -971,7 +971,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:placerOrderId.assigner",
+        "id": "ServiceRequest.identifier:placerOrderIdentifier.assigner",
         "path": "ServiceRequest.identifier.assigner",
         "short": "Organization that issued id (may be just text)",
         "definition": "Organization that issued/manages the identifier.",
@@ -1019,9 +1019,9 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier",
         "path": "ServiceRequest.identifier",
-        "sliceName": "fillerOrderId",
+        "sliceName": "fillerOrderIdentifier",
         "short": "Filler Order Id",
         "definition": "Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.",
         "comment": "The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.",
@@ -1083,7 +1083,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.id",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.id",
         "path": "ServiceRequest.identifier.id",
         "representation": [
           "xmlAttr"
@@ -1118,7 +1118,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.extension",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.extension",
         "path": "ServiceRequest.identifier.extension",
         "slicing": {
           "discriminator": [
@@ -1177,7 +1177,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.use",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.use",
         "path": "ServiceRequest.identifier.use",
         "short": "usual | official | temp | secondary | old (If known)",
         "definition": "The purpose of this identifier.",
@@ -1231,7 +1231,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.type",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.type",
         "path": "ServiceRequest.identifier.type",
         "short": "Description of identifier",
         "definition": "A coded type for the identifier that can be used to determine which identifier to use for a specific purpose.",
@@ -1288,7 +1288,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.system",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.system",
         "path": "ServiceRequest.identifier.system",
         "short": "The namespace for the identifier value",
         "definition": "Establishes the namespace for the value - that is, a URL that describes a set values that are unique.",
@@ -1340,7 +1340,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.value",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.value",
         "path": "ServiceRequest.identifier.value",
         "short": "The value that is unique",
         "definition": "The portion of the identifier typically relevant to the user and which is unique within the context of the system.",
@@ -1391,7 +1391,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.period",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.period",
         "path": "ServiceRequest.identifier.period",
         "short": "Time period when id is/was valid for use",
         "definition": "Time period during which identifier is/was valid for use.",
@@ -1435,7 +1435,7 @@
         ]
       },
       {
-        "id": "ServiceRequest.identifier:fillerOrderId.assigner",
+        "id": "ServiceRequest.identifier:fillerOrderIdentifier.assigner",
         "path": "ServiceRequest.identifier.assigner",
         "short": "Organization that issued id (may be just text)",
         "definition": "Organization that issued/manages the identifier.",

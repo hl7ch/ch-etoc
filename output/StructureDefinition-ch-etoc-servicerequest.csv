@@ -34,8 +34,8 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 ","Identifiers assigned to this order","Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.","The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.","","","","","","","","",,,,,"","pattern:$this}
 ","",,"open","ServiceRequest.identifier",0,*,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","Request.identifier","ORC.2, ORC.3, RF1-6 / RF1-11,",".identifier","FiveWs.identifier","ClinicalStatement.identifier"
-"ServiceRequest.identifier","placerOrderId","","",0,*,"","","Y","Identifier {[]} {[]}
-","Placer Order Id","Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.","The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.","","","","","<valueIdentifier xmlns=""http://hl7.org/fhir"">
+"ServiceRequest.identifier","placerOrderIdentifier","","",0,*,"","","Y","Identifier {[]} {[]}
+","Placer Order Identifier","Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.","The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.","","","","","<valueIdentifier xmlns=""http://hl7.org/fhir"">
   <type>
     <coding>
       <system value=""http://terminology.hl7.org/CodeSystem/v2-0203""/>
@@ -69,7 +69,7 @@ ext-1:Must have either extensions or value[x], not both {extension.exists() != v
 "ServiceRequest.identifier.assigner","","","",0,1,"","","Y","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
 ","Organization that issued id (may be just text)","Organization that issued/manages the identifier.","The Identifier.assigner may omit the .reference element and only contain a .display element reflecting the name or other textual information about the assigning organization.","","","","","","","","",,,,,"",,,,"Identifier.assigner",0,1,"","ele-1:All FHIR elements must have a @value or children {hasValue() or (children().count() > id.count())}
 ","CX.4 / (CX.4,CX.9,CX.10)","II.assigningAuthorityName but note that this is an improper use by the definition of the field.  Also Role.scoper"
-"ServiceRequest.identifier","fillerOrderId","","",0,*,"","","Y","Identifier {[]} {[]}
+"ServiceRequest.identifier","fillerOrderIdentifier","","",0,*,"","","Y","Identifier {[]} {[]}
 ","Filler Order Id","Identifiers assigned to this order instance by the orderer and/or the receiver and/or order fulfiller.","The identifier.type element is used to distinguish between the identifiers assigned by the orderer (known as the 'Placer' in HL7 v2) and the producer of the observations in response to the order (known as the 'Filler' in HL7 v2).  For further discussion and examples see the resource notes section below.","","","","","<valueIdentifier xmlns=""http://hl7.org/fhir"">
   <type>
     <coding>

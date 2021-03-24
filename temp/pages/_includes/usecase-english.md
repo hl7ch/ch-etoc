@@ -2,23 +2,19 @@
 ### Transition of care letter
 The players are:
 
-    Order placer: Health professional Dr. O. Rderplacer who is a GP in group practice “Happy Doctors”
-    Order filler: Radiology department of “Happy Hospital”
-    Patient: Mr. S. Ufferer who needs a radiological exam
+* Referrer: Dr. O. Rderplacer, who is a family physician in the Happy Doctors group practice.
+* Hospital: Surgical department of Happy Hospital
+* Patient: Ms. S. Ufferer, who is in need of surgical intervention.
 
-Patient S. Ufferer h### Radiology Order We have the following players:
+Patient S. Ufferer has an appointment with Dr. O. Rderplacer who agrees with the patient that an operation is necessary, to be performed in the Surgical Department of Happy Hospital. Dr. O. Rderplacer writes a referral containing all the necessary information and sends it to Happy Hospital. This includes existing x-rays and reports, as well as lab results. He also asks that a copy of the report be sent to the patient.
 
-    Order placer: Health professional Dr. O. Rderplacer who is a GP in group practice “Happy Doctors”
-    Order filler: Surgical department of “Happy Hospital”
-    Patient: Mr. S. Ufferer who needs a surgical intervention.
+### Requesting results from earlier.
+The players are:
 
-Patient S. Ufferer has an appointment with Dr. O. Rderplacer in group practice "Happy Docotors". Dr. O. Rderplacer agreres with the patient that some surgery is necessary which will be made at the surgery department of “Happy Hospital". He writes a referral which contains all necessary information and sends it to the surgery department of “Happy Hospital”. This includes existing x-rays and reports as well as lab results. He furhter aks for a copy of the report to be sent to the patient.
+* Dr. O. Rderplacer, who is a family physician in the Happy Doctors group practice.
+* Surgical department in Happy Hospital.
+* Patient: Ms. S. Ufferer, who was at Happy Hospital 2 or 3 years ago for an operative procedure.
 
-### Request for Results from earlier
-We have the following players:
+Dr. O. Rderplacer requests the discharge report from Happy Hospital.
 
-* Order placer: Health professional Dr. O. Rderplacer who is a GP in group practice “Happy Doctors”
-* Order filler: Radiology department of “Happy Hospital”
-* Patient: Mr. S. Ufferer who had a radiological exam (following the order of his former family docotor) six months ago.
-
-Patient S. Ufferer has an appointment with his new family doctor Dr. O. Rderplacer in group practice "Happy Docotors". Dr. O. Rderplacer asks he patient if he had once a chest x-rax. Patient S. Ufferer tells, that one had been made six months ago at the x-ray department of “Happy Hospital”. Dr. O. Rderplacer writes a request for the results of this exam and sends it to the radiology department of “Happy Hospital”. He furhter aks for a copy of the report to be sent to the patient.
+<i>Although the primary care physician could be called something else (e.g., Dr. R. Equester; since in common usage it is a request rather than an order), we will stick with calling the primary care physician Dr. O. Rderplacer: conceptually, there is no difference between requesting a report, a referral, and an order (laboratory. radiology, etc.).<i>

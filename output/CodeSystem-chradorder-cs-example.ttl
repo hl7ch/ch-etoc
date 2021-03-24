@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "ChRadOrderCSExample"];
   fhir:CodeSystem.title [ fhir:value "CH RAD-Order CodeSystem Example"];
   fhir:CodeSystem.status [ fhir:value "active"];
-  fhir:CodeSystem.date [ fhir:value "2021-03-09T13:54:55+01:00"^^xsd:dateTime];
+  fhir:CodeSystem.date [ fhir:value "2021-03-24T22:35:14+01:00"^^xsd:dateTime];
   fhir:CodeSystem.publisher [ fhir:value "HL7 Switzerland"];
   fhir:CodeSystem.contact [
      fhir:index 0;
