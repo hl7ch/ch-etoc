@@ -1,8 +1,8 @@
 {
   "resourceType" : "Bundle",
-  "id" : "ac863cd1-7584-4262-9c1f-23ec77cbdcc4",
+  "id" : "46b2eeb2-db6f-44f5-9355-cd764a859a6e",
   "meta" : {
-    "lastUpdated" : "2021-03-24T22:35:14.555+01:00"
+    "lastUpdated" : "2021-03-24T22:50:20.329+01:00"
   },
   "type" : "collection",
   "entry" : [{
@@ -19,7 +19,7 @@
       "name" : "ChRadOrderVSExample",
       "title" : "CH RAD-Order ValueSet Example",
       "status" : "active",
-      "date" : "2021-03-24T22:35:14+01:00",
+      "date" : "2021-03-24T22:50:20+01:00",
       "publisher" : "HL7 Switzerland",
       "contact" : [{
         "name" : "HL7 Switzerland",
@@ -44,8 +44,8 @@
       }],
       "copyright" : "CC-BY-SA-4.0",
       "expansion" : {
-        "identifier" : "urn:uuid:7e17fb7b-a2eb-46aa-9880-d1c6ddfedbc4",
-        "timestamp" : "2021-03-24T22:35:36+01:00",
+        "identifier" : "urn:uuid:57195dc5-4ba0-41e2-9042-7e47bfded937",
+        "timestamp" : "2021-03-24T22:50:39+01:00",
         "total" : 1,
         "parameter" : [{
           "name" : "excludeNested",

@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "ChEtocAllergyIntolerance"];
   fhir:StructureDefinition.title [ fhir:value "CH eTOC AllergyIntolerance"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-03-24T22:35:14+01:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-03-24T22:50:20+01:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 Switzerland"];
   fhir:StructureDefinition.contact [
      fhir:index 0;

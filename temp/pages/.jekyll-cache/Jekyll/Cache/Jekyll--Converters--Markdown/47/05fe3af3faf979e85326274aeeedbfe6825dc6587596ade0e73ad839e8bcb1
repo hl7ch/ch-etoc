@@ -1,4 +1,4 @@
-I"í<p><!-- white space is critical inside of capture --></p>
+I"<p><!-- white space is critical inside of capture --></p>
 <div>
 <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
 </div>
@@ -14,7 +14,7 @@
 
 <p>Patient S. Ufferer has an appointment with Dr. O. Rderplacer who agrees with the patient that an operation is necessary, to be performed in the Surgical Department of Happy Hospital. Dr. O. Rderplacer writes a referral containing all the necessary information and sends it to Happy Hospital. This includes existing x-rays and reports, as well as lab results. He also asks that a copy of the report be sent to the patient.</p>
 
-<h3 id="requesting-results-from-earlier">Requesting results from earlier.</h3>
+<h3 id="requesting-a-discharge-letter-from-earlier">Requesting a discharge letter from earlier</h3>
 <p>The players are:</p>
 
 <ul>

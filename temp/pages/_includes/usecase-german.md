@@ -9,7 +9,7 @@ Die Beteiligten sind:
 
 Patientin S. Ufferer hat einen Termin bei Dr. O. Rderplacer. Dieser vereinbart mit der Patientin, dass eine Operation notwendig ist, die in der chirurgischen Abteilung des Happy Hospital durchgeführt werden soll. Dr. O. Rderplacer schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an das Happy Hospital. Dazu gehören vorhandene Röntgenbilder und Berichte sowie Laborergebnisse. Außerdem bittet er darum, der Patientin eine Kopie des Berichts zukommen zu lassen.
 
-### Anforderung von Ergebnissen von früher
+### Anforderung eines Austrittsberichtes von früher
 Die Beteiligten sind:
 
 * Dr. O. Rderplacer, der Hausarzt in der Gemeinschaftspraxis Happy Doctors ist.
