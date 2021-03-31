@@ -17,10 +17,7 @@
          <a href="#4">Terminology: Code Systems</a>
       </li>
       <li>
-         <a href="#5">Example: Example Instances</a>
-      </li>
-      <li>
-         <a href="#6">Other</a>
+         <a href="#5">Other</a>
       </li>
    </ul>
 </div>
@@ -38,8 +35,8 @@
          <tbody>
             <tr>
                <td style="column-width:30%">
-                  <a href="Questionnaire-RadiologyOrder.html"
-                     title="Questionnaire/RadiologyOrder">Questionnaire/RadiologyOrder</a>
+                  <a href="Questionnaire-QuestionnaireEtoc.html"
+                     title="Questionnaire/QuestionnaireEtoc">Questionnaire/QuestionnaireEtoc</a>
                </td>
             </tr>
          </tbody>
@@ -207,23 +204,6 @@
       </table>
    </p>
    <a name="5"> </a>
-   <h3>Example: Example Instances </h3>
-   <p>{% capture grouping_desc %}These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like{% endcapture %}
-    {{ grouping_desc | markdownify}}</p>
-   <p>
-      <table class="grid">
-         <col style="width:20%"/>
-         <tbody>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ServiceRequest-EtocServiceRequest.html"
-                     title="ServiceRequest/EtocServiceRequest">Example ServiceRequest - EtocServiceRequest</a>
-               </td>
-            </tr>
-         </tbody>
-      </table>
-   </p>
-   <a name="6"> </a>
    <h3>Other </h3>
    <p>{% capture grouping_desc %}These are resources that are used within this implementation guide that do not fit into one of the other categories{% endcapture %}
     {{ grouping_desc | markdownify}}</p>

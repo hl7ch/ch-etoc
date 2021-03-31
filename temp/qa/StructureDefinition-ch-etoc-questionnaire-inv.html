@@ -18,8 +18,6 @@
 <tr><td>ext-1</td><td>Questionnaire.extension:designNote</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>Questionnaire.extension:terminologyServer</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>ext-1</td><td>Questionnaire.extension:terminologyServer</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
-<tr><td>ele-1</td><td>Questionnaire.extension:targetStructureMap</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
-<tr><td>ext-1</td><td>Questionnaire.extension:targetStructureMap</td><td>Must have either extensions or value[x], not both<br/>: extension.exists() != value.exists()</td><td></td></tr>
 <tr><td>ele-1</td><td>Questionnaire.item</td><td>All FHIR elements must have a @value or children<br/>: hasValue() or (children().count() &gt; id.count())</td><td></td></tr>
 <tr><td>que-9</td><td>Questionnaire.item</td><td>Read-only can't be specified for &quot;display&quot; items<br/>: type!='display' or readOnly.empty()</td><td></td></tr>
 <tr><td>que-8</td><td>Questionnaire.item</td><td>Initial values can't be specified for groups or display items<br/>: (type!='group' and type!='display') or initial.empty()</td><td></td></tr>

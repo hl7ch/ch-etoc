@@ -412,14 +412,12 @@
         "extension": [
           {
             "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "ServiceRequest"
+            "valueString": "Questionnaire"
           }
         ],
         "reference": {
-          "reference": "ServiceRequest/EtocServiceRequest"
-        },
-        "name": "Example ServiceRequest - EtocServiceRequest",
-        "exampleCanonical": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"
+          "reference": "Questionnaire/QuestionnaireEtoc"
+        }
       },
       {
         "extension": [
@@ -444,17 +442,6 @@
         },
         "name": "CH eTOC Questionnaire",
         "description": "Definition for the Questionnaire resource in the context of electronic transition of care."
-      },
-      {
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
-            "valueString": "Questionnaire"
-          }
-        ],
-        "reference": {
-          "reference": "Questionnaire/RadiologyOrder"
-        }
       },
       {
         "extension": [

@@ -404,16 +404,11 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "ServiceRequest" ]
+         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.ch/ig/ch-etoc/ServiceRequest/EtocServiceRequest>;
-         fhir:Reference.reference [ fhir:value "ServiceRequest/EtocServiceRequest" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example ServiceRequest - EtocServiceRequest" ];
-       fhir:ImplementationGuide.definition.resource.exampleCanonical [
-         fhir:value "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest";
-         fhir:link <http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest>
+         fhir:link <http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc>;
+         fhir:Reference.reference [ fhir:value "Questionnaire/QuestionnaireEtoc" ]
        ]
      ], [
        fhir:index 6;
@@ -444,17 +439,6 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
-         fhir:Extension.valueString [ fhir:value "Questionnaire" ]
-       ];
-       fhir:ImplementationGuide.definition.resource.reference [
-         fhir:link <http://fhir.ch/ig/ch-etoc/Questionnaire/RadiologyOrder>;
-         fhir:Reference.reference [ fhir:value "Questionnaire/RadiologyOrder" ]
-       ]
-     ], [
-       fhir:index 9;
-       fhir:Element.extension [
-         fhir:index 0;
-         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [
@@ -464,7 +448,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC ServiceRequest" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the ServiceRequest resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 10;
+       fhir:index 9;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -477,7 +461,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH RAD-Order CodeSystem Example" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "CH RAD-Order CodeSystem Example" ]
      ], [
-       fhir:index 11;
+       fhir:index 10;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -490,7 +474,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC DiagnosticReport" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the DiagnosticReport resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 12;
+       fhir:index 11;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -501,7 +485,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/ORderplacer" ]
        ]
      ], [
-       fhir:index 13;
+       fhir:index 12;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -514,7 +498,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC Composition" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the Composition resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 14;
+       fhir:index 13;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -525,7 +509,7 @@
          fhir:Reference.reference [ fhir:value "Organization/PraxisORderplacer" ]
        ]
      ], [
-       fhir:index 15;
+       fhir:index 14;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -538,7 +522,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH RAD-Order ValueSet Example" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "CH RAD-Order ValueSet Example" ]
      ], [
-       fhir:index 16;
+       fhir:index 15;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -551,7 +535,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC Immunization" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the Immunization resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 17;
+       fhir:index 16;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -562,7 +546,7 @@
          fhir:Reference.reference [ fhir:value "Organization/SpitalORderfiller" ]
        ]
      ], [
-       fhir:index 18;
+       fhir:index 17;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -575,7 +559,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC QuestionnaireResponse" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the QuestionnaireResponse resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 19;
+       fhir:index 18;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -588,7 +572,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC DeviceUseStatement" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the DeviceUseStatement resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 20;
+       fhir:index 19;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -601,7 +585,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC DeviceObserver" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the DeviceObserver resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 21;
+       fhir:index 20;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -614,7 +598,7 @@
        fhir:ImplementationGuide.definition.resource.name [ fhir:value "CH eTOC MedicationStatement" ];
        fhir:ImplementationGuide.definition.resource.description [ fhir:value "Definition for the MedicationStatement resource in the context of electronic transition of care." ]
      ], [
-       fhir:index 22;
+       fhir:index 21;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
@@ -625,7 +609,7 @@
          fhir:Reference.reference [ fhir:value "Practitioner/ORderfiller" ]
        ]
      ], [
-       fhir:index 23;
+       fhir:index 22;
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];

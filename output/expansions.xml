@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="46b2eeb2-db6f-44f5-9355-cd764a859a6e"/>
+  <id value="6b932868-5b35-4602-bcc5-e4a66fb001f3"/>
   <meta>
-    <lastUpdated value="2021-03-24T22:50:20.329+01:00"/>
+    <lastUpdated value="2021-04-01T01:06:59.708+02:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -51,7 +51,7 @@
         <name value="ChRadOrderVSExample"/>
         <title value="CH RAD-Order ValueSet Example"/>
         <status value="active"/>
-        <date value="2021-03-24T22:50:20+01:00"/>
+        <date value="2021-04-01T01:06:59+02:00"/>
         <publisher value="HL7 Switzerland"/>
         <contact>
           <name value="HL7 Switzerland"/>
@@ -76,8 +76,8 @@
         </jurisdiction>
         <copyright value="CC-BY-SA-4.0"/>
         <expansion>
-          <identifier value="urn:uuid:57195dc5-4ba0-41e2-9042-7e47bfded937"/>
-          <timestamp value="2021-03-24T22:50:39+01:00"/>
+          <identifier value="urn:uuid:4cd32820-5626-4828-ad84-cd32bbbc42f4"/>
+          <timestamp value="2021-04-01T01:07:19+02:00"/>
           <total value="1"/>
           <parameter>
             <name value="excludeNested"/>

@@ -1,380 +1,59 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
 
+    
+     <a name="volume1"> </a><h4>Purpose</h4>
 
-    <p>This Implementation Guide uses FHIR defined resources – Composition Resource, Questionnaire Resource,
-    QuestionnaireResponse Resource, Patient Resource, PractitionerRole Resource, Practitioner Resource, Organization Resource, ServiceRequest Resource and Bundle Resource from
-    FHIR R4. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>.
+    <p>The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist,
+    from one hispital to another etc.
     </p>
-    <p>The CH-eTOC (CH-eTOC) Implementation Guide describes how forms for eReferrals from one healthcare provider to another (e.g. paratctioner to hospital, hospital to hospital etc.), 
-    shall be defined, deployed and used in order to achieve a syntactical and semantically consistent cross enterprise information exchange.
+
+    <p>CH eTOC is intended for use in directional communiation as well as for the use in the SWISS EPR.
+    </p>  
+
+  <a name="volume1"> </a><h4>Foundation</h4>
+    
+    <p>This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>
     </p>
-    <p>The Implementation Guide relies on FHIR e.g. the questionnaire resource. Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and
-    QuestionnaireResponse, forms are addressed here as Questionnaires.
+
+    <p>Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and QuestionnaireResponse, forms are addressed here as Questionnaires.
     </p>
+    
     <p>This Implementation Guide is derived from the Order &amp; Referral by Form (ORF) Implementation Guide  
-        <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a> which relies on HL7 Structured Data Capture Implementation Guide, see
+        <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a> which relies on HL7 Structured Data Capture Implementation Guide, see
         <a href="http://build.fhir.org/ig/HL7/sdc/">SDC IG</a> and uses the Swiss Core Profiles, see 
-        <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>.
+        <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>
     </p>
-    <p>Applications claiming for conformance with the eTOC Implementation Guide shall:
-    </p>
-    <ul>
-        <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the
-        user interface (e.g. on screen, in print). Grouping of items and the order of items within shall be adequately
-        reproduced according to the Questionnaire.</li>
-        <li>Be able to process all MUST SUPPORT items.</li>
-    </ul>
-    <p>Venders of applications with Questionnaire Filler/Questionnaire Receiver Actors are strongly recommended to implement
-    interfaces to other applications (such as HIS and PACS) for all MUST SUPPORT items.
-    <a name="volume1"> </a><h3>Content Modules</h3>
-    </p>
-    <p>This Implementation Guide covers the content of CH-eTOC based on CH-ORF. CH-eTOC is intended for use in directional communiation
-    as well as for the use in the SWISS EPR.  
-    </p>
-   <p> Actors, transcations and security considerations are covered in the corresponding sections of 
-      <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a>
-    </p>
-    <a name="volume3"> </a><h4>Questionnaire Content</h4>
-    <p>This section describes the content of a form. The following definitions apply:
-    </p>
-    <p>Request and responses consist of filled in questionnaires. Some elements of the questionnaire are generic 
-        elements (such as author, data entry person, receiver etc. and are always present in a questionnaire compliant to
-        the ORF Implementation Guide. In addition, a questionnaire will contain elements which are dependent on particular needs of 
-        the addressed use cased. Those eleements are named Healthcare Domain Specific Elements.
-    </p>
-    <a name="volume1"> </a><h4>Generic elements of a questionnaire</h4>
-    <p>A questionnaire shall have a set of generice elements (e.g. author, data entry person, receiver etc. 
-        <sup>[Table 7]</sup> lists the generic given elements
-    </p>
-     <table>
-        <tbody>
-            <tr>
-                <th><b>Name</b>
-                </th>
-                <th colspan="2"><b>Role taker</b>
-                </th>
-                <th><b>HL7 V3<br/> Equivalent</b>
-                </th>
-                <th><b>FHIR<br/> Representation</b>
-                </th>
-                <th><b>Comment</b>
-                </th>
-            </tr>
-            <tr>
-                <th>
-                </th>
-                <th><b>Human</b>
-                </th>
-                <th><b>Organization</b>
-                </th>
-                <th>
-                </th>
-                <th>
-                </th>
-                <th>
-                </th>
-            </tr>
-            <tr>
-                <td>Author
-                </td>
-                <td>X
-                </td>
-                <td>X
-                </td>
-                <td>Author
-                </td>
-                <td>PractitionerRole
-                </td>
-                <td>The person/organization responsible for the form content.
-                </td>
-            </tr>
-            <tr>
-                <td>Data Entry Person
-                </td>
-                <td>X
-                </td>
-                <td>X
-                </td>
-                <td>DataEnterer
-                </td>
-                <td>PractitionerRole
-                </td>
-                <td>The person/organization who has typed/filled in the form content.
-                </td>
-            </tr>
-            <tr>
-                <td>Urgent Notification Contact for this document
-                </td>
-                <td>X
-                </td>
-                <td>X
-                </td>
-                <td>PrimaryInformationRecipient
-                </td>
-                <td>PractitionerRole
-                </td>
-                <td>An information recipient to notify for urgent matters (e.g. in a radiology service, the radiologist 
-                    has to be called by phone right away at the time the doucment is received.)
-                </td>
-            </tr>
-            <tr>
-                <td>Urgent Notification Contact for the Response to this document
-                </td>
-                <td>X
-                </td>
-                <td>X
-                </td>
-                <td>PrimaryInformationRecipient
-                </td>
-                <td>PractitionerRole
-                </td>
-                <td>
-                    <p>An information recipient to notify for urgent matters about the response (e.g. in a clinical
-                        setting, the referring doctor has to be called by phone right away at the time the images and
-                        reports arrive).
-                    </p>
-                    <p>The Urgent Notification Contact for the Response can be specified already in the request. At the
-                        time the response is written, this element shall be populated to the Urgent Notification Contact
-                        element in the response.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>Request Receiver
-                </td>
-                <td>X
-                </td>
-                <td>X
-                </td>
-                <td>
-                </td>
-                <td>PractitionerRole
-                </td>
-                <td>Person/organization who receives the request.
-                </td>
-            </tr>
-            <tr>
-                <td>Response Receiver
-                </td>
-                <td>X
-                </td>
-                <td>X
-                </td>
-                <td>
-                </td>
-                <td>PractitionerRole
-                </td>
-                <td>Person/organization who receives the response.
-                </td>
-            </tr>
-            <tr>
-                <td>Patient
-                </td>
-                <td>X
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>Patient
-                </td>
-                <td>The principle target of a particular form content is one patient (for obstetrical and neonatal use
-                    cases see...).
-                </td>
-            </tr>
-            <tr>
-                <td>Precedent Document Id
-                </td>
-                <td>na
-                </td>
-                <td>na
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>This element provides a link to the preceding document in a thread (e.g. from a response to the
-                    request).
-                </td>
-            </tr>
-            <tr>
-                <td>Date
-                </td>
-                <td>na
-                </td>
-                <td>na
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>Date, the document was created.
-                </td>
-            </tr>
-            <tr>
-                <td>Priority
-                </td>
-                <td>na
-                </td>
-                <td>na
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>Order priority.
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <p><sup>[Table 7]</sup> <i>Generic elements in Questionnaires compliant to the ORF Implementation Guide</i>
-    </p>
-    <a name="volume1"> </a><h4>Healthcare domain specific elements of a questionnaire</h4>
-     <table>
-        <tbody>
-            <tr>
-                <th>Resource
-                </th>
-                <th>Description
-                </th>
-            </tr>
-            <tr>
-                <td>ServiceRequest
-                </td>
-                <td>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <p>There may be the need to provide a linkage between a particular files or between a particular file and an imaging
-        study (e.g. a link between a PDF-File containing a report and a DICOM study). Such links shall be expressed with
-        a DocumentReference as follows:
-    </p>
-     <table>
-        <tbody>
-            <tr>
-                <th>Resource
-                </th>
-                <th colspan="3">Elements
-                </th>
-                <th>Description
-                </th>
-            </tr>
-            <tr>
-                <td>DocumentReference
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>type
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>(e.g. LOINC 18748-4 for Diagnostic Imaging Study)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>content
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>attachment
-                </td>
-                <td>
-                </td>
-                <td>Attachment
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>contentType
-                </td>
-                <td>Mime Type
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>data
-                </td>
-                <td>Data inline, base64ed (contains the file; e.g. a PDF-Report)
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>context
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>related
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>
-                </td>
-                <td>Reference (ImagingStudy)
-                </td>
-                <td>ImagingStudyResource provides StudyInstanceUID etc.
-                </td>
-            </tr>
-        </tbody>
-    </table>
 
-    <a name="volume1"> </a><h4>FHIR Representation</h4>
-    <p>For questions regarding the FHIR representations please refer to the corresponding section of 
-      <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a>
+    <p>Applications claiming for conformance with the CH eTOC Implementation Guide shall:
     </p>
+
+        <ul>
+            <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire marked as 
+            "CH-mandatoy" in the user interface (e.g. on screen, in print). Grouping of items and the order of items within shall be adequately
+            reproduced according to the Questionnaire.</li>
+            <li>Be able to process all items denoted as "CH-mandatoy".</li>
+
+        </ul>
+   
+   <p>Currently, some items are marked as "MUST SUPPORT". This is due to the fact, that this IG is derived partly from the 
+   International Patient Summary (IPS). It is envisaged, that CH eTOC shall support all MUST SUPORT Items of IPS in
+   a future version. For the time now, this is not the case; the first DSTU requests only support of "CH-mandatoy" items: these are mainly free text entries. 
+    </p>
+
+    <p>As a consequence of this decision, the first version of CH eTOC does not claim to be confromant to IPS.
+    </p>
+
+    <p>Vendors of applications with Questionnaire Filler/Questionnaire Receiver Actors are strongly recommended to implement
+    interfaces to other applications (such as HIS and PACS) for all MUST SUPPORT items.
+    </p>
+    
+    <p> Actors, transcations and security considerations are covered in the corresponding sections of 
+        <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a>
+    </p>
+
+    <a name="volume3"> </a><h4>Terminology</h4>
+
+    <p>This section is not yet written.
+    </p> 
+
 </div>

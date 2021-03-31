@@ -1,10 +1,11 @@
 {
-  "RadiologyOrder": {
+  "QuestionnaireEtoc": {
     "index": 14,
-    "url": "http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder",
-    "path": "Questionnaire-RadiologyOrder.html",
+    "url": "http://fhir.ch/ig/ch-etoc/QuestionnaireEtoc",
+    "name": "QuestionnaireEtoc",
+    "path": "Questionnaire-QuestionnaireEtoc.html",
     "status": "active",
-    "date": "Wed Mar 24 22:50:20 CET 2021",
+    "date": "Wed Feb 24 00:00:00 CET 2021",
     "publisher": "HL7 Switzerland",
     "copyright": "CC-BY-SA-4.0"
   }

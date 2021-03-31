@@ -14,6 +14,13 @@
     "name": "CH_eTOC"
   },
   {
+    "id": "QuestionnaireEtoc",
+    "type": "Questionnaire",
+    "url": "http://fhir.ch/ig/ch-etoc/QuestionnaireEtoc",
+    "version": "0.0.1",
+    "name": "QuestionnaireEtoc"
+  },
+  {
     "id": "ch-etoc-allergyintolerance",
     "type": "StructureDefinition",
     "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-allergyintolerance",
@@ -117,11 +124,5 @@
     "url": "http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example",
     "version": "0.0.1",
     "name": "ChRadOrderVSExample"
-  },
-  {
-    "id": "RadiologyOrder",
-    "type": "Questionnaire",
-    "url": "http://fhir.ch/ig/ch-rad-order/Questionnaire/RadiologyOrder",
-    "version": "0.0.1"
   }
 ]

@@ -187,14 +187,6 @@
       },
       {
         "reference": {
-          "reference": "ServiceRequest/EtocServiceRequest"
-        },
-        "name": "Radiology Order",
-        "description": "Example for CH RAD-Order ServiceRequest",
-        "exampleCanonical": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"
-      },
-      {
-        "reference": {
           "reference": "Practitioner/ORderfiller"
         },
         "name": "Dr. O. Rderfiller",
@@ -219,18 +211,18 @@
       },
       {
         "reference": {
-          "reference": "Organization/RadiologieORderfiller"
+          "reference": "Questionnaire/QuestionnaireEtoc"
         },
-        "name": "Radiology Dept. Happy Hospital",
-        "description": "Example for Organization",
+        "name": "Questionniaire eTOC Order",
+        "description": "Example for Questionnaire",
         "exampleBoolean": true
       },
       {
         "reference": {
-          "reference": "Questionnaire/RadiologyOrder"
+          "reference": "Organization/RadiologieORderfiller"
         },
-        "name": "Questionniaire Radiology Order",
-        "description": "Example for Questionnaire",
+        "name": "Radiology Dept. Happy Hospital",
+        "description": "Example for Organization",
         "exampleBoolean": true
       },
       {
@@ -268,6 +260,11 @@
         {
           "nameUrl": "profiles.html",
           "title": "Profiles",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "Tempindex.html",
+          "title": "Tempindex",
           "generation": "html"
         },
         {

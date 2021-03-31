@@ -274,13 +274,11 @@
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="ServiceRequest"/>
+        <valueString value="Questionnaire"/>
       </extension>
       <reference>
-        <reference value="ServiceRequest/EtocServiceRequest"/>
+        <reference value="Questionnaire/QuestionnaireEtoc"/>
       </reference>
-      <name value="Example ServiceRequest - EtocServiceRequest"/>
-      <exampleCanonical value="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -299,14 +297,6 @@
       </reference>
       <name value="CH eTOC Questionnaire"/>
       <description value="Definition for the Questionnaire resource in the context of electronic transition of care."/>
-    </resource>
-    <resource>
-      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-        <valueString value="Questionnaire"/>
-      </extension>
-      <reference>
-        <reference value="Questionnaire/RadiologyOrder"/>
-      </reference>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">

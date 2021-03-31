@@ -93,10 +93,7 @@
 
 
 
-      <grouping id="_ex_example">
-         <name value="Example: Example Instances"/>
-         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like"/>
-      </grouping>
+
       <grouping id="_other">
          <name value="Other"/>
          <description value="These are resources that are used within this implementation guide that do not fit into one of the other categories"/>
@@ -171,17 +168,15 @@
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="ServiceRequest"/>
+            <valueString value="Questionnaire"/>
          </extension>
          <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="ServiceRequest-EtocServiceRequest.html"/>
+            <valueUri value="Questionnaire-QuestionnaireEtoc.html"/>
          </extension>
          <reference>
-            <reference value="ServiceRequest/EtocServiceRequest"/>
+            <reference value="Questionnaire/QuestionnaireEtoc"/>
          </reference>
-         <name value="Example ServiceRequest - EtocServiceRequest"/>
-         <exampleCanonical value="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest"/>
-         <groupingId value="_ex_example"/>
+         <groupingId value="_str_questionnaire"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -208,18 +203,6 @@
          <name value="CH eTOC Questionnaire"/>
          <description value="Definition for the Questionnaire resource in the context of electronic transition of care."/>
          <groupingId value="_str_profile"/>
-      </resource>
-      <resource>
-         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
-            <valueString value="Questionnaire"/>
-         </extension>
-         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
-            <valueUri value="Questionnaire-RadiologyOrder.html"/>
-         </extension>
-         <reference>
-            <reference value="Questionnaire/RadiologyOrder"/>
-         </reference>
-         <groupingId value="_str_questionnaire"/>
       </resource>
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -462,7 +445,7 @@
             <title value="Artifacts Summary"/>
             <generation value="html"/>
             <page>
-               <nameUrl value="Questionnaire-RadiologyOrder.html"/>
+               <nameUrl value="Questionnaire-QuestionnaireEtoc.html"/>
                <title value=""/>
                <generation value="generated"/>
             </page>
@@ -544,11 +527,6 @@
             <page>
                <nameUrl value="CodeSystem-chradorder-cs-example.html"/>
                <title value="CH RAD-Order CodeSystem Example"/>
-               <generation value="generated"/>
-            </page>
-            <page>
-               <nameUrl value="ServiceRequest-EtocServiceRequest.html"/>
-               <title value="Example ServiceRequest - EtocServiceRequest"/>
                <generation value="generated"/>
             </page>
             <page>
