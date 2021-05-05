@@ -1,0 +1,7 @@
+Instance: EtocServiceRequest
+InstanceOf: ChEtocServiceRequest
+Title: "eTOC Service Request"
+Description: "Example for eTOC ServiceRequest"
+* status = #active
+* intent = #original-order
+* subject = Reference(MartinaMuster)
