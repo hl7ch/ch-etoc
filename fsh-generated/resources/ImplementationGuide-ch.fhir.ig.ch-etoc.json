@@ -53,6 +53,12 @@
       "version": "current",
       "uri": "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
       "id": "hl7_fhir_uv_ips"
+    },
+    {
+      "packageId": "ch-allergyintolerance",
+      "version": "current",
+      "uri": "http://fhir.ch/ig/ch-allergyintolerance/ImplementationGuide/ch-allergyintolerance",
+      "id": "ch_allergyintolerance"
     }
   ],
   "definition": {
@@ -63,6 +69,14 @@
         },
         "name": "CH eTOC DiagnosticReport",
         "description": "Definition for the DiagnosticReport resource in the context of electronic transition of care.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/ch-etoc-allergyintolerance"
+        },
+        "name": "CH eTOC AllergyIntolerance",
+        "description": "Definition for the AllergyIntolerance resource in the context of electronic transition of care.",
         "exampleBoolean": false
       },
       {
