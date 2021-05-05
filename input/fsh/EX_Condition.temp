@@ -1,0 +1,7 @@
+Instance: EtocCondition
+InstanceOf: ChEtocCondition
+Title: "Condition"
+Description: "Example for CH eTOC Condition"
+* status = #active
+* intent = #original-order
+* subject = Reference(MartinaMuster)
