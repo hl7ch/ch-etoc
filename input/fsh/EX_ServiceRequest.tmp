@@ -1,7 +1,7 @@
 Instance: EtocServiceRequest
 InstanceOf: ChEtocServiceRequest
-Title: "Radiology Order"
-Description: "Example for CH RAD-Order ServiceRequest"
+Title: "eTOC Service Request"
+Description: "Example for eTOC ServiceRequest"
 * status = #active
 * intent = #original-order
 * subject = Reference(MartinaMuster)
