@@ -1,7 +1,0 @@
-          Links: <a style="color: #81BEF7" href="{{site.data.info.assets}}toc.html">Table of Contents</a> |
-                 <a style="color: #81BEF7" href="qa.html">QA Report</a>
-                 {% for feedbacklink in site.data.features.feedback %}{% if feedbacklink.dashboard %} | <a style="color: #81BEF7" target="_blank" href="{{feedbacklink.dashboard.url}}">{{feedbacklink.dashboard.label}}</a>{% endif %}{% endfor %}
-                
-{% if site.data.features.feedback.active %}
-| <a style="color: #81BEF7" target="_blank" href="{{site.data.features.feedback.formUrl}}&amp;entry%2E1353807103={{{site.data.fhir.packageId  | uri_escape }}%23{{site.data.fhir.igVer}}%20{{ page.url | uri_escape }}&amp;entry%2E247644557={{site.data.pages[page.path].title | uri_escape }}">Propose a change</a>
-{% endif %}
