@@ -51,6 +51,11 @@
     <packageId value="ch.fhir.ig.ch-orf"/>
     <version value="current"/>
   </dependsOn>
+  <dependsOn id="challergyintolerance">
+    <uri value="http://fhir.ch/ig/ch-allergyintolerance/ImplementationGuide/ch.fhir.ig.ch-allergyintolerance"/>
+    <packageId value="ch-allergyintolerance"/>
+    <version value="current"/>
+  </dependsOn>
   <dependsOn id="sdc">
     <uri value="http://hl7.org/fhir/uv/sdc/ImplementationGuide/sdc"/>
     <packageId value="hl7.fhir.uv.sdc"/>

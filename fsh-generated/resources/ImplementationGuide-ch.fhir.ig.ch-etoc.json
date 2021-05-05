@@ -67,14 +67,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ch-etoc-allergyintolerance"
-        },
-        "name": "CH eTOC AllergyIntolerance",
-        "description": "Definition for the AllergyIntolerance resource in the context of electronic transition of care.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/ch-etoc-composition"
         },
         "name": "CH eTOC Composition",

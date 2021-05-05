@@ -3,18 +3,12 @@
   <sch:ns prefix="f" uri="http://hl7.org/fhir"/>
   <sch:ns prefix="h" uri="http://www.w3.org/1999/xhtml"/>
   <!-- 
-    This file contains just the constraints for the profile AllergyIntoleranceUvIps
+    This file contains just the constraints for the profile AllergyIntolerance
     It includes the base constraints for the resource as well.
     Because of the way that schematrons and containment work, 
     you may need to use this schematron fragment to build a, 
     single schematron that validates contained resources (if you have any) 
   -->
-  <sch:pattern>
-    <sch:title>f:AllergyIntolerance</sch:title>
-    <sch:rule context="f:AllergyIntolerance">
-      <sch:assert test="count(f:extension[@url = 'http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips']) &lt;= 1">extension with URL = 'http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips': maximum cardinality of 'extension' is 1</sch:assert>
-    </sch:rule>
-  </sch:pattern>
   <sch:pattern>
     <sch:title>AllergyIntolerance</sch:title>
     <sch:rule context="f:AllergyIntolerance">
@@ -54,10 +48,8 @@
   <sch:pattern>
     <sch:title>AllergyIntolerance.extension</sch:title>
     <sch:rule context="f:AllergyIntolerance/f:extension">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])">Must have either extensions or value[x], not both</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
+      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -106,45 +98,12 @@
   <sch:pattern>
     <sch:title>AllergyIntolerance.code</sch:title>
     <sch:rule context="f:AllergyIntolerance/f:code">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:title>AllergyIntolerance.patient</sch:title>
     <sch:rule context="f:AllergyIntolerance/f:patient">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>AllergyIntolerance.patient.extension</sch:title>
-    <sch:rule context="f:AllergyIntolerance/f:patient/f:extension">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])">Must have either extensions or value[x], not both</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>AllergyIntolerance.patient.reference</sch:title>
-    <sch:rule context="f:AllergyIntolerance/f:patient/f:reference">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>AllergyIntolerance.patient.type</sch:title>
-    <sch:rule context="f:AllergyIntolerance/f:patient/f:type">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>AllergyIntolerance.patient.identifier</sch:title>
-    <sch:rule context="f:AllergyIntolerance/f:patient/f:identifier">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
-    </sch:rule>
-  </sch:pattern>
-  <sch:pattern>
-    <sch:title>AllergyIntolerance.patient.display</sch:title>
-    <sch:rule context="f:AllergyIntolerance/f:patient/f:display">
       <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -157,8 +116,7 @@
   <sch:pattern>
     <sch:title>AllergyIntolerance.onset[x] 1</sch:title>
     <sch:rule context="f:AllergyIntolerance/f:onset[x]">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
@@ -220,8 +178,7 @@
   <sch:pattern>
     <sch:title>AllergyIntolerance.reaction.manifestation</sch:title>
     <sch:rule context="f:AllergyIntolerance/f:reaction/f:manifestation">
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
-      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children</sch:assert>
+      <sch:assert test="@value|f:*|h:div">All FHIR elements must have a @value or children (inherited)</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>

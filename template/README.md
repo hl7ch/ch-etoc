@@ -4,7 +4,6 @@ this is a very basic fhir implementation guide template based on from the
 
 ## Features
 * Custom logos (see below)
-* History Page 
 * Propose a change with is routed through Google Forms to to github
 
 ## Using the ig template

@@ -20,7 +20,7 @@
   "name": "ChEtocServiceRequest",
   "title": "CH eTOC ServiceRequest",
   "status": "active",
-  "date": "2021-04-01T01:06:59+02:00",
+  "date": "2021-05-04T19:42:34+02:00",
   "publisher": "HL7 Switzerland",
   "contact": [
     {
@@ -1775,6 +1775,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid",
         "isSummary": true,
@@ -1840,6 +1841,7 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
+        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This element changes the interpretation of all descriptive attributes. For example \"the time the request is recommended to occur\" vs. \"the time the request is authorized to occur\" or \"who is recommended to perform the request\" vs. \"who is authorized to perform the request",
         "isSummary": true,
@@ -2626,7 +2628,7 @@
       {
         "id": "ServiceRequest.performer",
         "path": "ServiceRequest.performer",
-        "short": "Person/organization who receives the request",
+        "short": "Person/organization who receives the document",
         "definition": "The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc.",
         "comment": "If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](http://hl7.org/fhir/R4/extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B).",
         "alias": [

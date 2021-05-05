@@ -3,14 +3,24 @@
   "id": "ch-etoc-condition",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/R4/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ch-etoc-condition-definitions.html#Condition\">Condition</a><a name=\"Condition\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/uv/ips/STU1/StructureDefinition-Condition-uv-ips.html\">ConditionUvIps</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">CH eToc Condition</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <span style=\"text-decoration:line-through\">verificationStatus</span><a name=\"Condition.verificationStatus\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"text-decoration:line-through\"/><span style=\"text-decoration:line-through\">0</span><span style=\"text-decoration:line-through\">..</span><span style=\"text-decoration:line-through\">0</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ch-etoc-condition-definitions.html#Condition.category\">category</a><a name=\"Condition.category\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/uv/ips/STU1/StructureDefinition-CodeableConcept-uv-ips.html\" title=\"CodeableConcept\">CodeableConceptIPS</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">Concept - reference to a terminology or just  text</span><br/><span style=\"font-weight:bold\">Binding: </span><a href=\"ValueSet-chradorder-vs-example.html\">CH RAD-Order ValueSet Example</a> (<a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\">required</a>)</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/R4/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"><tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"The logical name of the element\">Name</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Information about the use of the element\">Flags</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Minimum and Maximum # of times the the element can appear in the instance\">Card.</a></th><th style=\"width: 100px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Reference to the type of the element\">Type</a></th><th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Additional information about the element\">Description &amp; Constraints</a><span style=\"float: right\"><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/R4/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/></a></span></th></tr><tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ch-etoc-condition-definitions.html#Condition\">Condition</a><a name=\"Condition\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a href=\"http://hl7.org/fhir/R4/condition.html\">Condition</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\">CH eToc Condition</td></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <span style=\"text-decoration:line-through\">verificationStatus</span><a name=\"Condition.verificationStatus\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"text-decoration:line-through\" title=\"This element must be supported\">S</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"text-decoration:line-through\"/><span style=\"text-decoration:line-through\">0</span><span style=\"text-decoration:line-through\">..</span><span style=\"text-decoration:line-through\">0</span></td><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/></tr>\r\n<tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"><img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/><img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/> <a href=\"StructureDefinition-ch-etoc-condition-definitions.html#Condition.category\">category</a><a name=\"Condition.category\"> </a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">0</span><span style=\"opacity: 0.5\">..</span><span style=\"opacity: 0.5\">*</span></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><a style=\"opacity: 0.5\" href=\"http://hl7.org/fhir/R4/datatypes.html#CodeableConcept\">CodeableConcept</a></td><td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"><span style=\"opacity: 0.5\">problem-list-item | encounter-diagnosis</span><br/><span style=\"font-weight:bold\">Binding: </span><a href=\"ValueSet-chradorder-vs-example.html\">CH RAD-Order ValueSet Example</a> (<a href=\"http://hl7.org/fhir/R4/terminologies.html#required\" title=\"To be conformant, the concept in this element SHALL be from the specified value set.\">required</a>)</td></tr>\r\n<tr><td colspan=\"5\" class=\"hierarchy\"><br/><a href=\"http://hl7.org/fhir/R4/formats.html#table\" title=\"Legend for this format\"><img src=\"http://hl7.org/fhir/R4/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/> Documentation for this format</a></td></tr></table></div>"
   },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Clinical.Summary"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
   "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-condition",
   "version": "0.0.1",
   "name": "ChEtocCondition",
   "title": "CH eTOC Condition",
   "status": "active",
-  "date": "2021-04-01T01:06:59+02:00",
+  "date": "2021-05-04T19:42:34+02:00",
   "publisher": "HL7 Switzerland",
   "contact": [
     {
@@ -80,7 +90,7 @@
   "kind": "resource",
   "abstract": false,
   "type": "Condition",
-  "baseDefinition": "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
   "derivation": "constraint",
   "snapshot": {
     "element": [
@@ -182,7 +192,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/DomainResource"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -571,10 +580,10 @@
       {
         "id": "Condition.clinicalStatus",
         "path": "Condition.clinicalStatus",
-        "short": "Concept - reference to a terminology or just  text",
-        "definition": "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
-        "comment": "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
-        "min": 1,
+        "short": "active | recurrence | relapse | inactive | remission | resolved",
+        "definition": "The clinical status of the condition.",
+        "comment": "The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Condition.clinicalStatus",
@@ -583,14 +592,13 @@
         },
         "type": [
           {
-            "code": "CodeableConcept",
-            "profile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
-            ]
+            "code": "CodeableConcept"
           }
         ],
         "condition": [
-          "ele-1"
+          "con-3",
+          "con-4",
+          "con-5"
         ],
         "constraint": [
           {
@@ -602,8 +610,9 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
-        "isModifier": false,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains codes that mark the condition as no longer active.",
+        "isSummary": true,
         "binding": {
           "extension": [
             {
@@ -617,29 +626,33 @@
         },
         "mapping": [
           {
-            "identity": "rim",
-            "map": "n/a"
+            "identity": "workflow",
+            "map": "Event.status"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.status"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 303105007 |Disease phases|"
           },
           {
             "identity": "v2",
-            "map": "CE/CNE/CWE"
+            "map": "PRB-14"
           },
           {
             "identity": "rim",
-            "map": "CD"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+            "map": "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"clinicalStatus\", moodCode=EVN].value"
           }
         ]
       },
       {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
-        "short": "Concept - reference to a terminology or just  text",
-        "definition": "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
-        "comment": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid.",
+        "short": "unconfirmed | provisional | differential | confirmed | refuted | entered-in-error",
+        "definition": "The verification status to support the clinical status of the condition.",
+        "comment": "verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.\nThe data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
         "min": 0,
         "max": "0",
         "base": {
@@ -649,14 +662,12 @@
         },
         "type": [
           {
-            "code": "CodeableConcept",
-            "profile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
-            ]
+            "code": "CodeableConcept"
           }
         ],
         "condition": [
-          "ele-1"
+          "con-3",
+          "con-5"
         ],
         "constraint": [
           {
@@ -669,7 +680,9 @@
           }
         ],
         "mustSupport": true,
-        "isModifier": false,
+        "isModifier": true,
+        "isModifierReason": "This element is labeled as a modifier because the status contains the code refuted and entered-in-error that mark the Condition as not currently valid.",
+        "isSummary": true,
         "binding": {
           "extension": [
             {
@@ -683,29 +696,37 @@
         },
         "mapping": [
           {
-            "identity": "rim",
-            "map": "n/a"
+            "identity": "workflow",
+            "map": "Event.status"
+          },
+          {
+            "identity": "w5",
+            "map": "FiveWs.status"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 410514004 |Finding context value|"
           },
           {
             "identity": "v2",
-            "map": "CE/CNE/CWE"
+            "map": "PRB-13"
           },
           {
             "identity": "rim",
-            "map": "CD"
+            "map": "Observation ACT\n.inboundRelationship[typeCode=COMP].source[classCode=OBS, code=\"verificationStatus\", moodCode=EVN].value"
           },
           {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+            "identity": "sct-attr",
+            "map": "408729009"
           }
         ]
       },
       {
         "id": "Condition.category",
         "path": "Condition.category",
-        "short": "Concept - reference to a terminology or just  text",
-        "definition": "A category assigned to the condition. In this profile, a health problem of the patient, therefore a 'problem-list-item'.\r\n",
-        "comment": "In this profile, Condition represents a health problem of the patient. Therefore one of the category value(s) must be problem-list-item.",
+        "short": "problem-list-item | encounter-diagnosis",
+        "definition": "A category assigned to the condition.",
+        "comment": "The categorization is often highly contextual and may appear poorly differentiated or not very useful in other contexts.",
         "min": 0,
         "max": "*",
         "base": {
@@ -715,14 +736,8 @@
         },
         "type": [
           {
-            "code": "CodeableConcept",
-            "profile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
-            ]
+            "code": "CodeableConcept"
           }
-        ],
-        "condition": [
-          "ele-1"
         ],
         "constraint": [
           {
@@ -734,37 +749,37 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
+        "isSummary": false,
         "binding": {
           "strength": "required",
           "valueSet": "http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example"
         },
         "mapping": [
           {
-            "identity": "rim",
-            "map": "n/a"
+            "identity": "w5",
+            "map": "FiveWs.class"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 404684003 |Clinical finding|"
           },
           {
             "identity": "v2",
-            "map": "CE/CNE/CWE"
+            "map": "'problem' if from PRB-3. 'diagnosis' if from DG1 segment in PV1 message"
           },
           {
             "identity": "rim",
-            "map": "CD"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+            "map": ".code"
           }
         ]
       },
       {
         "id": "Condition.severity",
         "path": "Condition.severity",
-        "short": "Concept - reference to a terminology or just  text",
-        "definition": "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
-        "comment": "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+        "short": "Subjective severity of condition",
+        "definition": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+        "comment": "Coding of the severity with a terminology is preferred, where possible.",
         "min": 0,
         "max": "1",
         "base": {
@@ -774,14 +789,8 @@
         },
         "type": [
           {
-            "code": "CodeableConcept",
-            "profile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
-            ]
+            "code": "CodeableConcept"
           }
-        ],
-        "condition": [
-          "ele-1"
         ],
         "constraint": [
           {
@@ -793,8 +802,8 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
+        "isSummary": false,
         "binding": {
           "extension": [
             {
@@ -803,45 +812,42 @@
             }
           ],
           "strength": "preferred",
-          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/condition-severity-uv-ips"
+          "description": "A subjective assessment of the severity of the condition as evaluated by the clinician.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/condition-severity"
         },
         "mapping": [
           {
-            "identity": "rim",
-            "map": "n/a"
+            "identity": "w5",
+            "map": "FiveWs.grade"
+          },
+          {
+            "identity": "sct-concept",
+            "map": "< 272141005 |Severities|"
           },
           {
             "identity": "v2",
-            "map": "CE/CNE/CWE"
+            "map": "PRB-26 / ABS-3"
           },
           {
             "identity": "rim",
-            "map": "CD"
+            "map": "Can be pre/post-coordinated into value.  Or ./inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"severity\"].value"
           },
           {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+            "identity": "sct-attr",
+            "map": "246112005"
           }
         ]
       },
       {
         "id": "Condition.code",
         "path": "Condition.code",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "pattern",
-              "path": "$this"
-            }
-          ],
-          "description": "Discriminated by the bound value set",
-          "rules": "open"
-        },
-        "short": "Concept - reference to a terminology or just  text",
-        "definition": "Identification of the condition, problem or diagnosis or recording of \"problem absent\" or of \"problems unknown\".",
-        "comment": "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+        "short": "Identification of the condition, problem or diagnosis",
+        "definition": "Identification of the condition, problem or diagnosis.",
         "requirements": "0..1 to account for primarily narrative only resources.",
-        "min": 1,
+        "alias": [
+          "type"
+        ],
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Condition.code",
@@ -850,10 +856,7 @@
         },
         "type": [
           {
-            "code": "CodeableConcept",
-            "profile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
-            ]
+            "code": "CodeableConcept"
           }
         ],
         "constraint": [
@@ -866,7 +869,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -879,144 +881,6 @@
           "strength": "example",
           "description": "Identification of the condition or diagnosis.",
           "valueSet": "http://hl7.org/fhir/ValueSet/condition-code"
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          },
-          {
-            "identity": "v2",
-            "map": "CE/CNE/CWE"
-          },
-          {
-            "identity": "rim",
-            "map": "CD"
-          },
-          {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
-          }
-        ]
-      },
-      {
-        "id": "Condition.code:problemGPSCode",
-        "path": "Condition.code",
-        "sliceName": "problemGPSCode",
-        "short": "Code for a problem from the SNOMED CT GPS code set",
-        "definition": "Code for a clinical problem that is selected from the SNOMED CT GPS code set.",
-        "requirements": "0..1 to account for primarily narrative only resources.",
-        "alias": [
-          "type"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "problemGPSCode"
-            }
-          ],
-          "strength": "required",
-          "description": "problemGPS",
-          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/core-problem-finding-situation-event-gps-uv-ips"
-        },
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.code"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.what[x]"
-          },
-          {
-            "identity": "sct-concept",
-            "map": "code 246090004 |Associated finding| (< 404684003 |Clinical finding| MINUS\n<< 420134006 |Propensity to adverse reactions| MINUS \n<< 473010000 |Hypersensitivity condition| MINUS \n<< 79899007 |Drug interaction| MINUS\n<< 69449002 |Drug action| MINUS \n<< 441742003 |Evaluation finding| MINUS \n<< 307824009 |Administrative status| MINUS \n<< 385356007 |Tumor stage finding|) \nOR < 413350009 |Finding with explicit context|\nOR < 272379006 |Event|"
-          },
-          {
-            "identity": "v2",
-            "map": "PRB-3"
-          },
-          {
-            "identity": "rim",
-            "map": ".value"
-          },
-          {
-            "identity": "sct-attr",
-            "map": "246090004"
-          }
-        ]
-      },
-      {
-        "id": "Condition.code:absentOrUnknownProblem",
-        "path": "Condition.code",
-        "sliceName": "absentOrUnknownProblem",
-        "short": "Code for absent problem or for unknown problem",
-        "definition": "Code representing the statement \"absent problem\" or the statement \"problems unknown\"",
-        "requirements": "0..1 to account for primarily narrative only resources.",
-        "alias": [
-          "type"
-        ],
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.code",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "absentOrUnknownProblem"
-            }
-          ],
-          "strength": "required",
-          "description": "Absent problem or unknown problem",
-          "valueSet": "http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-problems-uv-ips"
         },
         "mapping": [
           {
@@ -1048,9 +912,9 @@
       {
         "id": "Condition.bodySite",
         "path": "Condition.bodySite",
-        "short": "Concept - reference to a terminology or just  text",
-        "definition": "A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.",
-        "comment": "Not all terminology uses fit this general pattern. In some cases, models should not use CodeableConcept and use Coding directly and provide their own structure for managing text, codings, translations and the relationship between elements and pre- and post-coordination.",
+        "short": "Anatomical location, if relevant",
+        "definition": "The anatomical location where this condition manifests itself.",
+        "comment": "Only used if not implicit in code found in Condition.code. If the use case requires attributes from the BodySite resource (e.g. to identify and track separately) then use the standard extension [bodySite](http://hl7.org/fhir/R4/extension-bodysite.html).  May be a summary code, or a reference to a very precise definition of the location, or both.",
         "min": 0,
         "max": "*",
         "base": {
@@ -1060,14 +924,8 @@
         },
         "type": [
           {
-            "code": "CodeableConcept",
-            "profile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips"
-            ]
+            "code": "CodeableConcept"
           }
-        ],
-        "condition": [
-          "ele-1"
         ],
         "constraint": [
           {
@@ -1079,8 +937,8 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
+        "isSummary": true,
         "binding": {
           "extension": [
             {
@@ -1089,24 +947,21 @@
             }
           ],
           "strength": "example",
+          "description": "Codes describing anatomical locations. May include laterality.",
           "valueSet": "http://hl7.org/fhir/ValueSet/body-site"
         },
         "mapping": [
           {
-            "identity": "rim",
-            "map": "n/a"
-          },
-          {
-            "identity": "v2",
-            "map": "CE/CNE/CWE"
+            "identity": "sct-concept",
+            "map": "< 442083009  |Anatomical or acquired body structure|"
           },
           {
             "identity": "rim",
-            "map": "CD"
+            "map": ".targetBodySiteCode"
           },
           {
-            "identity": "orim",
-            "map": "fhir:CodeableConcept rdfs:subClassOf dt:CD"
+            "identity": "sct-attr",
+            "map": "363698007"
           }
         ]
       },
@@ -1130,7 +985,8 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"
+              "http://hl7.org/fhir/StructureDefinition/Patient",
+              "http://hl7.org/fhir/StructureDefinition/Group"
             ]
           }
         ],
@@ -1144,7 +1000,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1167,269 +1022,6 @@
           {
             "identity": "w5",
             "map": "FiveWs.subject"
-          }
-        ]
-      },
-      {
-        "id": "Condition.subject.id",
-        "path": "Condition.subject.id",
-        "representation": [
-          "xmlAttr"
-        ],
-        "short": "Unique id for inter-element referencing",
-        "definition": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Element.id",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUrl": "string"
-              }
-            ],
-            "code": "http://hl7.org/fhirpath/System.String"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Condition.subject.extension",
-        "path": "Condition.subject.extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "description": "Extensions are always sliced by (at least) url",
-          "rules": "open"
-        },
-        "short": "Additional content defined by implementations",
-        "definition": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
-        "comment": "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-        "alias": [
-          "extensions",
-          "user content"
-        ],
-        "min": 0,
-        "max": "*",
-        "base": {
-          "path": "Element.extension",
-          "min": 0,
-          "max": "*"
-        },
-        "type": [
-          {
-            "code": "Extension"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          },
-          {
-            "key": "ext-1",
-            "severity": "error",
-            "human": "Must have either extensions or value[x], not both",
-            "expression": "extension.exists() != value.exists()",
-            "xpath": "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "n/a"
-          }
-        ]
-      },
-      {
-        "id": "Condition.subject.reference",
-        "path": "Condition.subject.reference",
-        "short": "Literal reference, Relative, internal or absolute URL",
-        "definition": "A reference to a location at which the other resource is found. The reference may be a relative reference, in which case it is relative to the service base URL, or an absolute URL that resolves to the location where the resource is found. The reference may be version specific or not. If the reference is not to a FHIR RESTful server, then it should be assumed to be version specific. Internal fragment references (start with '#') refer to contained resources.",
-        "comment": "Using absolute URLs provides a stable scalable approach suitable for a cloud/web context, while using relative/logical references provides a flexible approach suitable for use when trading across closed eco-system boundaries.   Absolute URLs do not need to point to a FHIR RESTful server, though this is the preferred approach. If the URL conforms to the structure \"/[type]/[id]\" then it should be assumed that the reference is to a FHIR RESTful server.",
-        "min": 1,
-        "max": "1",
-        "base": {
-          "path": "Reference.reference",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "condition": [
-          "ref-1"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Condition.subject.type",
-        "path": "Condition.subject.type",
-        "short": "Type the reference refers to (e.g. \"Patient\")",
-        "definition": "The expected type of the target of the reference. If both Reference.type and Reference.reference are populated and Reference.reference is a FHIR URL, both SHALL be consistent.\n\nThe type is the Canonical URL of Resource Definition that is the type this reference refers to. References are URLs that are relative to http://hl7.org/fhir/StructureDefinition/ e.g. \"Patient\" is a reference to http://hl7.org/fhir/StructureDefinition/Patient. Absolute URLs are only allowed for logical models (and can only be used in references in logical models, not resources).",
-        "comment": "This element is used to indicate the type of  the target of the reference. This may be used which ever of the other elements are populated (or not). In some cases, the type of the target may be determined by inspection of the reference (e.g. a RESTful URL) or by resolving the target of the reference; if both the type and a reference is provided, the reference SHALL resolve to a resource of the same type as that specified.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.type",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "FHIRResourceTypeExt"
-            }
-          ],
-          "strength": "extensible",
-          "description": "Aa resource (or, for logical models, the URI of the logical model).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
-        },
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
-          }
-        ]
-      },
-      {
-        "id": "Condition.subject.identifier",
-        "path": "Condition.subject.identifier",
-        "short": "Logical reference, when literal reference is not known",
-        "definition": "An identifier for the target resource. This is used when there is no way to reference the other resource directly, either because the entity it represents is not available through a FHIR server, or because there is no way for the author of the resource to convert a known identifier to an actual location. There is no requirement that a Reference.identifier point to something that is actually exposed as a FHIR instance, but it SHALL point to a business concept that would be expected to be exposed as a FHIR instance, and that instance would need to be of a FHIR resource type allowed by the reference.",
-        "comment": "When an identifier is provided in place of a reference, any system processing the reference will only be able to resolve the identifier to a reference if it understands the business context in which the identifier is used. Sometimes this is global (e.g. a national identifier) but often it is not. For this reason, none of the useful mechanisms described for working with references (e.g. chaining, includes) are possible, nor should servers be expected to be able resolve the reference. Servers may accept an identifier based reference untouched, resolve it, and/or reject it - see CapabilityStatement.rest.resource.referencePolicy. \n\nWhen both an identifier and a literal reference are provided, the literal reference is preferred. Applications processing the resource are allowed - but not required - to check that the identifier matches the literal reference\n\nApplications converting a logical reference to a literal reference may choose to leave the logical reference present, or remove it.\n\nReference is intended to point to a structure that can potentially be expressed as a FHIR resource, though there is no need for it to exist as an actual FHIR resource instance - except in as much as an application wishes to actual find the target of the reference. The content referred to be the identifier must meet the logical constraints implied by any limitations on what resource types are permitted for the reference.  For example, it would not be legitimate to send the identifier for a drug prescription if the type were Reference(Observation|DiagnosticReport).  One of the use-cases for Reference.identifier is the situation where no FHIR representation exists (where the type is Reference (Any).",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.identifier",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": ".identifier"
-          }
-        ]
-      },
-      {
-        "id": "Condition.subject.display",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
-            "valueBoolean": true
-          }
-        ],
-        "path": "Condition.subject.display",
-        "short": "Text alternative for the resource",
-        "definition": "Plain text narrative that identifies the resource in addition to the resource reference.",
-        "comment": "This is generally not the same as the Resource.text of the referenced resource.  The purpose is to identify what's being referenced, not to fully describe it.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Reference.display",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "rim",
-            "map": "N/A"
           }
         ]
       },
@@ -1488,16 +1080,6 @@
       {
         "id": "Condition.onset[x]",
         "path": "Condition.onset[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "closed"
-        },
         "short": "Estimated or actual date,  date-time, or age",
         "definition": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
         "comment": "Age is generally used when the patient reports an age at which the Condition began to occur.",
@@ -1535,109 +1117,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.occurrence[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.init"
-          },
-          {
-            "identity": "v2",
-            "map": "PRB-16"
-          },
-          {
-            "identity": "rim",
-            "map": ".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at onset\"].value"
-          }
-        ]
-      },
-      {
-        "id": "Condition.onset[x]:onsetDateTime",
-        "path": "Condition.onset[x]",
-        "sliceName": "onsetDateTime",
-        "short": "Estimated or actual date,  date-time, or age",
-        "definition": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
-        "comment": "Age is generally used when the patient reports an age at which the Condition began to occur.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.onset[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": true,
-        "mapping": [
-          {
-            "identity": "workflow",
-            "map": "Event.occurrence[x]"
-          },
-          {
-            "identity": "w5",
-            "map": "FiveWs.init"
-          },
-          {
-            "identity": "v2",
-            "map": "PRB-16"
-          },
-          {
-            "identity": "rim",
-            "map": ".effectiveTime.low or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at onset\"].value"
-          }
-        ]
-      },
-      {
-        "id": "Condition.onset[x]:onsetPeriod",
-        "path": "Condition.onset[x]",
-        "sliceName": "onsetPeriod",
-        "short": "Estimated or actual date,  date-time, or age",
-        "definition": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician.",
-        "comment": "Age is generally used when the patient reports an age at which the Condition began to occur.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.onset[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Period"
-          }
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -1662,16 +1141,6 @@
       {
         "id": "Condition.abatement[x]",
         "path": "Condition.abatement[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "ordered": false,
-          "rules": "closed"
-        },
         "short": "When in resolution/remission",
         "definition": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
         "comment": "There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.",
@@ -1712,99 +1181,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "w5",
-            "map": "FiveWs.done[x]"
-          },
-          {
-            "identity": "rim",
-            "map": ".effectiveTime.high or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at remission\"].value or .inboundRelationship[typeCode=SUBJ]source[classCode=CONC, moodCode=EVN].status=completed"
-          }
-        ]
-      },
-      {
-        "id": "Condition.abatement[x]:abatementDateTime",
-        "path": "Condition.abatement[x]",
-        "sliceName": "abatementDateTime",
-        "short": "When in resolution/remission",
-        "definition": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
-        "comment": "There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.abatement[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "dateTime"
-          }
-        ],
-        "condition": [
-          "con-4"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "isSummary": false,
-        "mapping": [
-          {
-            "identity": "w5",
-            "map": "FiveWs.done[x]"
-          },
-          {
-            "identity": "rim",
-            "map": ".effectiveTime.high or .inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=\"age at remission\"].value or .inboundRelationship[typeCode=SUBJ]source[classCode=CONC, moodCode=EVN].status=completed"
-          }
-        ]
-      },
-      {
-        "id": "Condition.abatement[x]:abatementPeriod",
-        "path": "Condition.abatement[x]",
-        "sliceName": "abatementPeriod",
-        "short": "When in resolution/remission",
-        "definition": "The date or estimated date that the condition resolved or went into remission. This is called \"abatement\" because of the many overloaded connotations associated with \"remission\" or \"resolution\" - Conditions are never really resolved, but they can abate.",
-        "comment": "There is no explicit distinction between resolution and remission because in many cases the distinction is not clear. Age is generally used when the patient reports an age at which the Condition abated.  If there is no abatement element, it is unknown whether the condition has resolved or entered remission; applications and users should generally assume that the condition is still valid.  When abatementString exists, it implies the condition is abated.",
-        "min": 0,
-        "max": "1",
-        "base": {
-          "path": "Condition.abatement[x]",
-          "min": 0,
-          "max": "1"
-        },
-        "type": [
-          {
-            "code": "Period"
-          }
-        ],
-        "condition": [
-          "con-4"
-        ],
-        "constraint": [
-          {
-            "key": "ele-1",
-            "severity": "error",
-            "human": "All FHIR elements must have a @value or children",
-            "expression": "hasValue() or (children().count() > id.count())",
-            "xpath": "@value|f:*|h:div",
-            "source": "http://hl7.org/fhir/StructureDefinition/Element"
-          }
-        ],
-        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -1912,7 +1288,7 @@
         "id": "Condition.asserter",
         "path": "Condition.asserter",
         "short": "Person who asserts this condition",
-        "definition": "Individual who is making the condition statement.\r\nInformation source.",
+        "definition": "Individual who is making the condition statement.",
         "min": 0,
         "max": "1",
         "base": {
@@ -1941,7 +1317,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "mapping": [
@@ -2631,7 +2006,8 @@
       {
         "id": "Condition.verificationStatus",
         "path": "Condition.verificationStatus",
-        "max": "0"
+        "max": "0",
+        "mustSupport": true
       },
       {
         "id": "Condition.category",

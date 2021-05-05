@@ -10,7 +10,7 @@
   "name": "CheTocQuestionnaire",
   "title": "CH eTOC Questionnaire",
   "status": "active",
-  "date": "2021-04-01T01:06:59+02:00",
+  "date": "2021-05-04T19:42:34+02:00",
   "publisher": "HL7 Switzerland",
   "contact": [
     {
@@ -3214,7 +3214,7 @@
             "code": "uri"
           }
         ],
-        "mustSupport": true,
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -3246,13 +3246,19 @@
         "condition": [
           "que-3"
         ],
-        "mustSupport": true,
+        "mustSupport": false,
         "isModifier": false,
         "isSummary": false,
         "binding": {
-          "strength": "extensible",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+              "valueString": "QuestionnaireConcept"
+            }
+          ],
+          "strength": "example",
           "description": "Codes for questionnaires, groups and individual questions.",
-          "valueSet": "http://fhir.ch/ig/ch-orf/ValueSet/minimaldataset"
+          "valueSet": "http://hl7.org/fhir/ValueSet/questionnaire-questions"
         },
         "mapping": [
           {

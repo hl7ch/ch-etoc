@@ -26,7 +26,7 @@
   fhir:StructureDefinition.name [ fhir:value "ChEtocServiceRequest"];
   fhir:StructureDefinition.title [ fhir:value "CH eTOC ServiceRequest"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-04-01T01:06:59+02:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-05-04T19:42:34+02:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 Switzerland"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -1864,6 +1864,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifierReason [ fhir:value "This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid" ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
@@ -1931,6 +1932,7 @@
            fhir:link <http://hl7.org/fhir/StructureDefinition/Element>
          ]
        ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "true"^^xsd:boolean ];
        fhir:ElementDefinition.isModifierReason [ fhir:value "This element changes the interpretation of all descriptive attributes. For example \"the time the request is recommended to occur\" vs. \"the time the request is authorized to occur\" or \"who is recommended to perform the request\" vs. \"who is authorized to perform the request" ];
        fhir:ElementDefinition.isSummary [ fhir:value "true"^^xsd:boolean ];
@@ -2746,7 +2748,7 @@
        fhir:index 48;
        fhir:Element.id [ fhir:value "ServiceRequest.performer" ];
        fhir:ElementDefinition.path [ fhir:value "ServiceRequest.performer" ];
-       fhir:ElementDefinition.short [ fhir:value "Person/organization who receives the request" ];
+       fhir:ElementDefinition.short [ fhir:value "Person/organization who receives the document" ];
        fhir:ElementDefinition.definition [ fhir:value "The desired performer for doing the requested service.  For example, the surgeon, dermatopathologist, endoscopist, etc." ];
        fhir:ElementDefinition.comment [ fhir:value "If multiple performers are present, it is interpreted as a list of *alternative* performers without any preference regardless of order.  If order of preference is needed use the [request-performerOrder extension](http://hl7.org/fhir/R4/extension-request-performerorder.html).  Use CareTeam to represent a group of performers (for example, Practitioner A *and* Practitioner B)." ];
        fhir:ElementDefinition.alias [

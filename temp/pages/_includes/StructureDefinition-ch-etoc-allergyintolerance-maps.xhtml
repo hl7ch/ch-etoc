@@ -3,26 +3,18 @@
  <tr><td>AllergyIntolerance</td><td>Entity. Role, or Act, Observation[classCode=OBS, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;text</td><td>Act.text?</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;contained</td><td>N/A</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;extension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>id</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>n/a, CD</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;verificationStatus</td><td>n/a, CD</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>Observation ACT .inboundRelationship[typeCode=COMP].source[classCode=OBS, code=&quot;clinicalStatus&quot;, moodCode=EVN].value</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;verificationStatus</td><td>Observation ACT .inboundRelationship[typeCode=COMP].source[classCode=OBS, code=&quot;verificationStatus&quot;, moodCode=EVN].value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>value &lt; IntoleranceValue (Agent)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;criticality</td><td>inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>n/a, CD</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code (allergyIntoleranceGPSCode)</td><td>n/a, CD</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code (absentOrUnknownAllergyIntolerance)</td><td>n/a, CD</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>substance/product:.participation[typeCode=CAGNT].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]negated/excluded substance/product:.participation[typeCode=CAGNT, negationInd=true].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]positive or negated/excluded condition/situation:Observation.code=ASSERTION; Observation.value</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>.participation[typeCode=SBJ].role[classCode=PAT]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>.inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;onset[x]</td><td>effectiveTime.low</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;onset[x] (onsetDateTime)</td><td>effectiveTime.low</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedDate</td><td>.participation[typeCode=AUT].time</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorder</td><td>.participation[typeCode=AUT].role</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;asserter</td><td>.participation[typeCode=INF].role</td> </tr>
@@ -33,8 +25,7 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;modifierExtension</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;substance</td><td>outBoundRelationship[typeCode=SAS].target[classCode=SBADM, code &lt;= ExposureCode].participation[typeCode=CSM].role[classCode=ADMM].player[classCode=MAT, determinerCode=KIND, code &lt;= ExposureAgentEntityType]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td>n/a, CD</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation (allergyIntoleranceReactionManifestationGPSCode)</td><td>n/a, CD</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td>code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;description</td><td>text</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onset</td><td>effectiveTime.low</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;severity</td><td>inboundRelationship[typeCode=SUBJ].source[classCode=OBS, moodCode=EVN, code=SEV, value &lt;= SeverityObservation (Severity Level)]</td> </tr>
@@ -45,13 +36,15 @@
  <tr><td colspan="3"><b>ChEtocAllergyIntolerance</b></td></tr>
  <tr><td>AllergyIntolerance</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>FiveWs.status</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;verificationStatus</td><td>FiveWs.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>FiveWs.class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>FiveWs.class</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;criticality</td><td>FiveWs.grade</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>FiveWs.what[x]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;onset[x]</td><td>FiveWs.init</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;onset[x] (onsetDateTime)</td><td>FiveWs.init</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedDate</td><td>FiveWs.recorded</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorder</td><td>FiveWs.author</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;asserter</td><td>FiveWs.source</td> </tr>
@@ -60,20 +53,15 @@
  <tr><td colspan="3"><b>ChEtocAllergyIntolerance</b></td></tr>
  <tr><td>AllergyIntolerance</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>IAM-7</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;clinicalStatus</td><td>CE/CNE/CWE</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;verificationStatus</td><td>CE/CNE/CWE</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;type</td><td>IAM-9</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;category</td><td>AL1-2</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;criticality</td><td>AL1-4</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>CE/CNE/CWE</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code (allergyIntoleranceGPSCode)</td><td>CE/CNE/CWE</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;code (absentOrUnknownAllergyIntolerance)</td><td>CE/CNE/CWE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;code</td><td>AL1-3 / IAM-3</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>(PID-3)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedDate</td><td>IAM-13</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;asserter</td><td>IAM-14 (if patient) / IAM-18 (if practitioner)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reaction</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td>CE/CNE/CWE</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation (allergyIntoleranceReactionManifestationGPSCode)</td><td>CE/CNE/CWE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manifestation</td><td>AL1-5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onset</td><td>AL1-6</td> </tr>
 </table>
 {% endraw %}

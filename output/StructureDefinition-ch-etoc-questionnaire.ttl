@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "CheTocQuestionnaire"];
   fhir:StructureDefinition.title [ fhir:value "CH eTOC Questionnaire"];
   fhir:StructureDefinition.status [ fhir:value "active"];
-  fhir:StructureDefinition.date [ fhir:value "2021-04-01T01:06:59+02:00"^^xsd:dateTime];
+  fhir:StructureDefinition.date [ fhir:value "2021-05-04T19:42:34+02:00"^^xsd:dateTime];
   fhir:StructureDefinition.publisher [ fhir:value "HL7 Switzerland"];
   fhir:StructureDefinition.contact [
      fhir:index 0;
@@ -3241,7 +3241,7 @@
          fhir:index 0;
          fhir:ElementDefinition.type.code [ fhir:value "uri" ]
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.mapping [
@@ -3272,15 +3272,20 @@
          fhir:value "que-3";
          fhir:index 0
        ];
-       fhir:ElementDefinition.mustSupport [ fhir:value "true"^^xsd:boolean ];
+       fhir:ElementDefinition.mustSupport [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isModifier [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.isSummary [ fhir:value "false"^^xsd:boolean ];
        fhir:ElementDefinition.binding [
-         fhir:ElementDefinition.binding.strength [ fhir:value "extensible" ];
+         fhir:Element.extension [
+           fhir:index 0;
+           fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName" ];
+           fhir:Extension.valueString [ fhir:value "QuestionnaireConcept" ]
+         ];
+         fhir:ElementDefinition.binding.strength [ fhir:value "example" ];
          fhir:ElementDefinition.binding.description [ fhir:value "Codes for questionnaires, groups and individual questions." ];
          fhir:ElementDefinition.binding.valueSet [
-           fhir:value "http://fhir.ch/ig/ch-orf/ValueSet/minimaldataset";
-           fhir:link <http://fhir.ch/ig/ch-orf/ValueSet/minimaldataset>
+           fhir:value "http://hl7.org/fhir/ValueSet/questionnaire-questions";
+           fhir:link <http://hl7.org/fhir/ValueSet/questionnaire-questions>
          ]
        ];
        fhir:ElementDefinition.mapping [

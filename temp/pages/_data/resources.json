@@ -23,7 +23,7 @@
     "name": "ChEtocDocument",
     "title": "CH eTOC Document",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -39,7 +39,7 @@
     "name": "ChEtocProcedure",
     "title": "CH eTOC Procedure",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -55,7 +55,7 @@
     "name": "ChEtocAllergyIntolerance",
     "title": "CH eTOC AllergyIntolerance",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -71,7 +71,7 @@
     "name": "ChEtocDevice",
     "title": "CH eTOC Device",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -112,7 +112,7 @@
     "name": "CheTocQuestionnaire",
     "title": "CH eTOC Questionnaire",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -128,7 +128,7 @@
     "name": "ChEtocServiceRequest",
     "title": "CH eTOC ServiceRequest",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -144,7 +144,7 @@
     "name": "ChRadOrderCSExample",
     "title": "CH RAD-Order CodeSystem Example",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -160,7 +160,7 @@
     "name": "ChEtocADiagnosticReport",
     "title": "CH eTOC DiagnosticReport",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -181,7 +181,7 @@
     "name": "ChEtocComposition",
     "title": "CH eTOC Composition",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -202,7 +202,7 @@
     "name": "ChRadOrderVSExample",
     "title": "CH RAD-Order ValueSet Example",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -218,7 +218,7 @@
     "name": "ChEtocImmunization",
     "title": "CH eTOC Immunization",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -239,7 +239,7 @@
     "name": "ChEtocQuestionnaireResponse",
     "title": "CH eTOC QuestionnaireResponse",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -255,7 +255,7 @@
     "name": "ChEtocDeviceUseStatement",
     "title": "CH eTOC DeviceUseStatement",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -271,7 +271,7 @@
     "name": "ChEtocDeviceObserver",
     "title": "CH eTOC DeviceObserver",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -287,7 +287,7 @@
     "name": "ChEtocMedicationStatement",
     "title": "CH eTOC MedicationStatement",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",
@@ -308,7 +308,7 @@
     "name": "ChEtocCondition",
     "title": "CH eTOC Condition",
     "version": "0.0.1",
-    "date": "2021-04-01T01:06:59+02:00",
+    "date": "2021-05-04T19:42:34+02:00",
     "status": {
       "class": "colstu",
       "owner": "HL7 Switzerland",

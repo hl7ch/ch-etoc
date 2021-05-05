@@ -14,8 +14,8 @@
   "toolingVersionFull": "4.5.0 (3)",
   "totalFiles": 24,
   "processedFiles": 59,
-  "genDate": "Thu, Apr 1, 2021 01:06+0200",
-  "genDay": "01/04/2021",
+  "genDate": "Tue, May 4, 2021 19:42+0200",
+  "genDay": "04/05/2021",
   "ig": {
     "id": "ch.fhir.ig.ch-etoc",
     "name": "CH_eTOC",
@@ -49,7 +49,7 @@
   "ver": {
     "chcore": "./output",
     "chorf": "https://build.fhir.org/ig/hl7ch/ch-orf/",
-    "ch.fhir.ig.ch-core": "https://build.fhir.org/ig/hl7ch/ch-core/",
+    "ch.fhir.ig.ch-core": "http://fhir.ch/ig/ch-core",
     "hl7.fhir.uv.sdc": "http://hl7.org/fhir/uv/sdc/2019May",
     "sdc": "http://hl7.org/fhir/uv/sdc/2019May",
     "ips": "http://hl7.org/fhir/uv/ips/STU1"

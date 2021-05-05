@@ -15,7 +15,6 @@
     <link href="fhir.css" rel="stylesheet"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet"/>
     <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
 
     <!-- Project extras -->
@@ -42,7 +41,7 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
-  <body onload="document.body.style.opacity='1'">
+  <body>
 
 	  <script src="assets/js/prism.js"></script>
 
@@ -138,7 +137,7 @@
       </div>  <!-- /container -->
     </div>  <!-- /segment-breadcrumb -->
 
-    <div id="segment-content">  <!-- segment-content -->
+    <div id="segment-content" class="segment">  <!-- segment-content -->
       <div class="container">  <!-- container -->
         <div class="row">
           <div class="inner-wrapper">
@@ -369,7 +368,7 @@ Lifecycle status of the questionnaire response.</p>
   <tr><td>Definition</td><td><p>The subject of the questionnaire response.  This could be a patient, organization, practitioner, device, etc.  This is who/what the answers apply to, but is not necessarily the source of information.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a>)</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
   <tr><td>Requirements</td><td><p>Allows linking the answers to the individual the answers describe.  May also affect access control.</p>
 </td></tr>
@@ -382,7 +381,7 @@ Lifecycle status of the questionnaire response.</p>
   <tr><td>Definition</td><td><p>The Encounter during which this questionnaire response was created or to which the creation of this record is tightly associated.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-encounter.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-encounter">CHCoreEncounter</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-encounter.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-encounter">CHCoreEncounter</a>)</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
   <tr><td>Requirements</td><td><p>Provides context for the information that was captured.  May also affect access control.</p>
 </td></tr>
@@ -408,7 +407,7 @@ Lifecycle status of the questionnaire response.</p>
   <tr><td>Definition</td><td><p>Person who received the answers to the questions in the QuestionnaireResponse and recorded them in the system.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://hl7.org/fhir/R4/device.html" title="http://hl7.org/fhir/StructureDefinition/Device">Device</a> | <a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-practitioner.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner">CHCorePractitioner</a> | <a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a> | <a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a> | <a href="http://hl7.org/fhir/R4/relatedperson.html" title="http://hl7.org/fhir/StructureDefinition/RelatedPerson">RelatedPerson</a> | <a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-organization.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization">CHCoreOrganization</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://hl7.org/fhir/R4/device.html" title="http://hl7.org/fhir/StructureDefinition/Device">Device</a> | <a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-practitioner.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner">CHCorePractitioner</a> | <a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a> | <a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a> | <a href="http://hl7.org/fhir/R4/relatedperson.html" title="http://hl7.org/fhir/StructureDefinition/RelatedPerson">RelatedPerson</a> | <a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-organization.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization">CHCoreOrganization</a>)</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Must Support Types</a></td><td>No must-support rules about the choice of types/profiles</td></tr>
   <tr><td>Requirements</td><td><p>Need to know who interpreted the subject's answers to the questions in the questionnaire, and selected the appropriate options for answers.</p>
@@ -422,7 +421,7 @@ Lifecycle status of the questionnaire response.</p>
   <tr><td>Definition</td><td><p>The person who answered the questions about the subject.</p>
 </td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#conformance">Control</a></td><td>0..1</td></tr>
-  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a> | <a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-practitioner.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner">CHCorePractitioner</a> | <a href="https://build.fhir.org/ig/hl7ch/ch-core//StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a> | <a href="http://hl7.org/fhir/R4/relatedperson.html" title="http://hl7.org/fhir/StructureDefinition/RelatedPerson">RelatedPerson</a>)</td></tr>
+  <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Type</a></td><td><a href="http://hl7.org/fhir/R4/references.html#Reference">Reference</a>(<a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-patient.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient">CHCorePatient</a> | <a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-practitioner.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner">CHCorePractitioner</a> | <a href="http://fhir.ch/ig/ch-core/StructureDefinition-ch-core-practitionerrole.html" title="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole">CHCorePractitionerRole</a> | <a href="http://hl7.org/fhir/R4/relatedperson.html" title="http://hl7.org/fhir/StructureDefinition/RelatedPerson">RelatedPerson</a>)</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/conformance-rules.html#mustSupport">Must Support</a></td><td>true</td></tr>
   <tr><td><a href="http://hl7.org/fhir/R4/datatypes.html">Must Support Types</a></td><td>No must-support rules about the choice of types/profiles</td></tr>
   <tr><td>Requirements</td><td><p>When answering questions about a subject that is minor, incapable of answering or an animal, another human source may answer the questions.</p>
@@ -631,7 +630,7 @@ Code indicating the response provided for a question.</p>
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2020+ <a style="color: #81BEF7" href="https://www.hl7.ch/">HL7 Switzerland</a>.  Package ch.fhir.ig.ch-etoc#0.0.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Thu, Apr 1, 2021 01:06+0200">2021-04-01</span>
+          IG &#169; 2020+ <a style="color: #81BEF7" href="https://www.hl7.ch/">HL7 Switzerland</a>.  Package ch.fhir.ig.ch-etoc#0.0.1 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, May 4, 2021 19:42+0200">2021-05-04</span>
           <br/>
           <span style="color: #FFFF77">
                       Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |

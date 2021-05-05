@@ -1,5 +1,5 @@
 Profile: ChEtocCondition
-Parent: Condition-uv-ips
+Parent: Condition
 Id: ch-etoc-condition
 Title: "CH eTOC Condition"
 Description: "Definition for the Condition resource in the context of electronic transition of care."
@@ -8,7 +8,7 @@ Description: "Definition for the Condition resource in the context of electronic
 * category from ChRadOrderVSExample (required)
 
 Profile: ChEtocMedicationStatement
-Parent: MedicationStatementIPS
+Parent: MedicationStatement
 Id: ch-etoc-medicationstatement
 Title: "CH eTOC MedicationStatement"
 Description: "Definition for the MedicationStatement resource in the context of electronic transition of care."
@@ -16,7 +16,7 @@ Description: "Definition for the MedicationStatement resource in the context of 
 * category from ChRadOrderVSExample (required)
 
 Profile: ChEtocAllergyIntolerance
-Parent: AllergyIntoleranceUvIps
+Parent: CHAllergyIntolerance
 Id: ch-etoc-allergyintolerance
 Title: "CH eTOC AllergyIntolerance"
 Description: "Definition for the AllergyIntolerance resource in the context of electronic transition of care."
@@ -24,7 +24,7 @@ Description: "Definition for the AllergyIntolerance resource in the context of e
 * text MS
 
 Profile: ChEtocImmunization
-Parent: ImmunizationUvIps
+Parent: Immunization
 Id: ch-etoc-immunization
 Title: "CH eTOC Immunization"
 Description: "Definition for the Immunization resource in the context of electronic transition of care."
@@ -47,21 +47,21 @@ Description: "Definition for the DeviceObserver resource in the context of elect
 * . ^short = "CH eToc DeviceObserver"
 
 Profile: ChEtocDeviceUseStatement
-Parent: DeviceUseStatementUvIps
+Parent: DeviceUseStatement
 Id: ch-etoc-deviceusestatement
 Title: "CH eTOC DeviceUseStatement"
 Description: "Definition for the DeviceUseStatement resource in the context of electronic transition of care."
 * . ^short = "CH eToc DeviceUseStatement"
 
 Profile: ChEtocDevice
-Parent: DeviceUvIps
+Parent: Device
 Id: ch-etoc-device
 Title: "CH eTOC Device"
 Description: "Definition for the Device resource in the context of electronic transition of care."
 * . ^short = "CH eToc Device"
 
 Profile: ChEtocADiagnosticReport
-Parent: DiagnosticReportUvIps
+Parent: DiagnosticReport
 Id: ch-etoc-diagnosticreport
 Title: "CH eTOC DiagnosticReport"
 Description: "Definition for the DiagnosticReport resource in the context of electronic transition of care."

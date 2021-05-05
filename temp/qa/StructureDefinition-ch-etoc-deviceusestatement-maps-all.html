@@ -19,23 +19,14 @@
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>Event.basedOn</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Event.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>Event.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;timing[x]</td><td>Event.occurrence[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedOn</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;source</td><td>Event.performer.actor</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;device</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td>Event.reasonCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>Event.reasonReference</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>Event.note</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td>Event.note</td> </tr>
 </table>
 <a name="quick"> </a><h3>Mappings for Quality Improvement and Clinical Knowledge (QUICK) (http://siframework.org/cqf)</h3><table class="grid">
@@ -53,17 +44,8 @@
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>…status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>ClinicalStatement.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;timing[x]</td><td>DeviceUse.applicationSchedule</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedOn</td><td>ClinicalStatement.statementDateTime</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;source</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;device</td><td>DeviceUse.device</td> </tr>
@@ -87,17 +69,8 @@
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;timing[x]</td><td>FiveWs.done[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedOn</td><td>FiveWs.recorded</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;source</td><td>FiveWs.actor</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;device</td><td>FiveWs.actor</td> </tr>
@@ -121,23 +94,14 @@
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>ORC in proximity to EVN segment</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;timing[x]</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedOn</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;source</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;device</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>EVN.4 or by domain</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>CE/CNE/CWE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
 </table>
 <a name="rim"> </a><h3>Mappings for RIM Mapping (<a href="http://hl7.org/comparison-v3.html">http://hl7.org/v3</a>)</h3><table class="grid">
@@ -155,23 +119,14 @@
  <tr><td>&nbsp;&nbsp;&nbsp;basedOn</td><td>.outboundRelationship[typeCode=FLFS].target</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>.statusCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;subject</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;derivedFrom</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;timing[x]</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td>ANY.nullFlavor</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recordedOn</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;source</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;device</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonCode</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reasonReference</td><td>.outboundRelationship[typeCode=RSON].target</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>n/a, CD</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;bodySite</td><td>targetSiteCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;note</td><td></td> </tr>
 </table>
 </body>

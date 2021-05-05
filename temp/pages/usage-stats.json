@@ -92,10 +92,10 @@
     "http://fhir.ch/ig/ch-core/StructureDefinition/ch-ext-epr-dataenterer": [
       "Composition"
     ],
-    "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-precedentdocument": [
+    "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver": [
       "Composition"
     ],
-    "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-responsereceiver": [
+    "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-precedentdocument": [
       "Composition"
     ],
     "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-urgentnoficationcontactfortheresponsetothisdocument": [
@@ -108,10 +108,6 @@
       "Questionnaire"
     ],
     "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
-      "DeviceUseStatement.timing[x]",
-      "DiagnosticReport.effective[x]",
-      "Immunization.occurrence[x]",
-      "MedicationStatement.effective[x]",
       "Procedure.performed[x]"
     ],
     "http://hl7.org/fhir/StructureDefinition/designNote": [
@@ -149,9 +145,6 @@
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
       "StructureDefinition"
     ],
-    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
-      "StructureDefinition.snapshot.element"
-    ],
     "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
       "StructureDefinition.snapshot.element"
     ],
@@ -175,9 +168,6 @@
     ],
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
-    ],
-    "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips": [
-      "AllergyIntolerance"
     ],
     "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression": [
       "Questionnaire.item"

@@ -2,10 +2,10 @@
 =========================================
 
 err = 12, warn = 9, info = 3
-IG Publisher Version: 1.1.59 Out of date - current version is 1.1.65
-Generated Thu Apr 01 01:07:38 CEST 2021. FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = http://fhir.ch/ig/ch-etoc)
+IG Publisher Version: 1.1.59 Out of date - current version is 1.1.68
+Generated Tue May 04 19:43:15 CEST 2021. FHIR version 4.0.1 for ch.fhir.ig.ch-etoc#0.0.1 (canonical = http://fhir.ch/ig/ch-etoc)
 
- Build Errors : 14 / 8 / 1
+ Build Errors : 15 / 8 / 1
  /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/CodeSystem-chradorder-cs-example : 0 / 0 / 1
  /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-PraxisORderplacer : 0 / 0 / 2
  /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-RadiologieORderfiller : 0 / 0 / 2
@@ -48,13 +48,14 @@ ERROR: Unable to find ImplementationGuide.definition.resource.name for the resou
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Organization/SpitalORderfiller.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
 ERROR: Unable to find ImplementationGuide.definition.resource.name for the resource Practitioner/ORderfiller.  Name is mandatory if it cannot be inferred from the resource to allow proper population of the artifact list.
 WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Practitioner/ORderfiller.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 380, column 116: The link '' for "DocumentEntryTypeCode" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 393, column 116: The link '' for "DocumentEntryClassCode" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1011, column 141: The link '??' for "DocumentEntryTypeCode (missing link)" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1012, column 145: The link '??' for "DocumentEntryClassCode (missing link)" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 632, column 262: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 384, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
-ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 659, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 379, column 116: The link '' for "DocumentEntryTypeCode" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 392, column 116: The link '' for "DocumentEntryClassCode" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1050, column 141: The link '??' for "DocumentEntryTypeCode (missing link)" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-composition.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 1051, column 145: The link '??' for "DocumentEntryClassCode (missing link)" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-deviceusestatement-definitions.html#/html/body/div/div/div/div/div/table/tr/td/p/a at Line 401, column 200: The link 'http://hl7.org/fhir/R4/null.html' for "http://hl7.org/fhir/StructureDefinition/bodySite" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest-definitions.html#/html/body/div/div/div/div/div/table/tr/td/a at Line 633, column 262: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 383, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
+ERROR: /Users/bleuer/Documents/GitHub/ch-etoc/output/StructureDefinition-ch-etoc-servicerequest.html#/html/body/div/div/div/div/div/div/div/div/div/table/tr/td/a at Line 660, column 2412: The link 'valueset-diagnostic-requests.html' for "here" cannot be resolved
 == /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/CodeSystem-chradorder-cs-example.json ==
 INFORMATION: CodeSystem/chradorder-cs-example: CodeSystem: Validate resource against profile http://hl7.org/fhir/StructureDefinition/CodeSystem
 == /Users/bleuer/Documents/GitHub/ch-etoc/fsh-generated/resources/Organization-PraxisORderplacer.json ==

@@ -11,7 +11,7 @@
   <name value="CheTocQuestionnaire"/>
   <title value="CH eTOC Questionnaire"/>
   <status value="active"/>
-  <date value="2021-04-01T01:06:59+02:00"/>
+  <date value="2021-05-04T19:42:34+02:00"/>
   <publisher value="HL7 Switzerland"/>
   <contact>
     <name value="HL7 Switzerland"/>
@@ -2608,7 +2608,7 @@
       <type>
         <code value="uri"/>
       </type>
-      <mustSupport value="true"/>
+      <mustSupport value="false"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <mapping>
@@ -2633,13 +2633,16 @@
         <code value="Coding"/>
       </type>
       <condition value="que-3"/>
-      <mustSupport value="true"/>
+      <mustSupport value="false"/>
       <isModifier value="false"/>
       <isSummary value="false"/>
       <binding>
-        <strength value="extensible"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="QuestionnaireConcept"/>
+        </extension>
+        <strength value="example"/>
         <description value="Codes for questionnaires, groups and individual questions."/>
-        <valueSet value="http://fhir.ch/ig/ch-orf/ValueSet/minimaldataset"/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/questionnaire-questions"/>
       </binding>
       <mapping>
         <identity value="rim"/>

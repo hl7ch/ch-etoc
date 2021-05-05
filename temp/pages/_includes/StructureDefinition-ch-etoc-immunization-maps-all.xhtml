@@ -12,22 +12,10 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>Event.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>Event.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>Event.statusReason</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (vaccineGPSCode)</td><td>Event.code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (atcClass)</td><td>Event.code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (absentOrUnknownImmunization)</td><td>Event.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>Event.code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>Event.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>Event.context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>Event.occurrence[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td></td> </tr>
@@ -73,7 +61,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authority</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease (targetDiseaseGPSCode)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doseNumber[x]</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seriesDoses[x]</td><td></td> </tr>
 </table>
@@ -91,22 +78,10 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>CE/CNE/CWE</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (vaccineGPSCode)</td><td>RXA-5</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (atcClass)</td><td>RXA-5</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (absentOrUnknownImmunization)</td><td>RXA-5</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>RXA-5</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>PID-3</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>PV1-19</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>RXA-3</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>RXA-9</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>RXA-9</td> </tr>
@@ -114,8 +89,8 @@
  <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>RXA-17</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>RXA-15</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;expirationDate</td><td>RXA-16</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>CE/CNE/CWE</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>CE/CNE/CWE</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>RXR-2</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>RXR-1</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;doseQuantity</td><td>RXA-6 / RXA-7</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>ORC-12 / RXA-10</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
@@ -152,7 +127,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authority</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease (targetDiseaseGPSCode)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doseNumber[x]</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seriesDoses[x]</td><td></td> </tr>
 </table>
@@ -170,22 +144,10 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>.id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>statusCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td>.inboundRelationship[typeCode=SUBJ].source[classCode=CACT, moodCode=EVN].reasonCOde</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>n/a, CD</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (vaccineGPSCode)</td><td>.code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (atcClass)</td><td>.code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (absentOrUnknownImmunization)</td><td>.code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>.code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>.partipication[ttypeCode=].role</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td>.identifier</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>component-&gt;EncounterEvent</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>.effectiveTime</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td>n/a</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td>ANY.nullFlavor</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>.participation[typeCode=AUT].time</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>immunization.uncertaintycode (if primary source=false, uncertainty=U)</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>.participation[typeCode=INF].role[classCode=PAT] (this syntax for self-reported) .participation[typeCode=INF].role[classCode=LIC] (this syntax for health care professional) .participation[typeCode=INF].role[classCode=PRS] (this syntax for family member)</td> </tr>
@@ -193,8 +155,8 @@
  <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=ORG]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;expirationDate</td><td>.participation[typeCode=CSM].role[classCode=INST].scopedRole.scoper[classCode=MMAT].expirationTime</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>n/a, CD</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>n/a, CD</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>observation.targetSiteCode</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>.routeCode</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;doseQuantity</td><td>.doseQuantity</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td>.participation[typeCode=PRF].role[scoper.determinerCode=INSTANCE]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td>n/a</td> </tr>
@@ -231,7 +193,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authority</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease</td><td>N/A</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease (targetDiseaseGPSCode)</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doseNumber[x]</td><td>N/A</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seriesDoses[x]</td><td>N/A</td> </tr>
 </table>
@@ -249,22 +210,10 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>FiveWs.identifier</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td>FiveWs.status</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (vaccineGPSCode)</td><td>FiveWs.what[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (atcClass)</td><td>FiveWs.what[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (absentOrUnknownImmunization)</td><td>FiveWs.what[x]</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>FiveWs.what[x]</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td>FiveWs.subject[x], FiveWs.subject</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td>FiveWs.context</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>FiveWs.done[x]</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td>FiveWs.recorded</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td>FiveWs.source</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td>FiveWs.source</td> </tr>
@@ -310,7 +259,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authority</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease (targetDiseaseGPSCode)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doseNumber[x]</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seriesDoses[x]</td><td></td> </tr>
 </table>
@@ -328,22 +276,10 @@
  <tr><td>&nbsp;&nbsp;&nbsp;identifier</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/id</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;status</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;statusReason</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (vaccineGPSCode)</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/realmCode/code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (atcClass)</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/realmCode/code</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode (absentOrUnknownImmunization)</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/realmCode/code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;vaccineCode</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/realmCode/code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;patient</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;reference</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;identifier</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;encounter</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;occurrence[x]</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/effectiveTime/value</td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;extension (data-absent-reason)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;recorded</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;primarySource</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;reportOrigin</td><td></td> </tr>
@@ -351,8 +287,8 @@
  <tr><td>&nbsp;&nbsp;&nbsp;manufacturer</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacuturerOrganization/name</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;lotNumber</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/consumable/manfacturedProduct/manufacturedMaterial/lotNumberText</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;expirationDate</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;site</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;route</td><td></td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;site</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/approachSiteCode/code</td> </tr>
+ <tr><td>&nbsp;&nbsp;&nbsp;route</td><td>ClinicalDocument/component/StructuredBody/component/section/entry/substanceAdministration/routeCode/code</td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;doseQuantity</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;performer</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id</td><td></td> </tr>
@@ -389,7 +325,6 @@
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;series</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;authority</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease</td><td></td> </tr>
- <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;targetDisease (targetDiseaseGPSCode)</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;doseNumber[x]</td><td></td> </tr>
  <tr><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;seriesDoses[x]</td><td></td> </tr>
 </table>
