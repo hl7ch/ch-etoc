@@ -1,0 +1,12 @@
+{
+  "QuestionnaireEtoc": {
+    "index": 14,
+    "url": "http://fhir.ch/ig/ch-etoc/QuestionnaireEtoc",
+    "name": "QuestionnaireEtoc",
+    "path": "Questionnaire-QuestionnaireEtoc.html",
+    "status": "active",
+    "date": "Wed Feb 24 00:00:00 CET 2021",
+    "publisher": "HL7 Switzerland",
+    "copyright": "CC-BY-SA-4.0"
+  }
+}

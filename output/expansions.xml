@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="16efe846-9b45-4552-ade0-61dd39ed07ef"/>
+  <meta>
+    <lastUpdated value="2021-05-05T14:41:01.931+02:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example"/>
+    <resource>
+      <ValueSet>
+        <id value="chradorder-vs-example"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 1 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-chradorder-cs-example.html">CH RAD-Order CodeSystem Example v0.0.1 (CodeSystem)</a>
+            </p>
+            <p>All codes from system 
+              <a href="CodeSystem-chradorder-cs-example.html">
+                <code>http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---fhir.ch-ig-ch-etoc-CodeSystem-chradorder-cs-example-bsp"> </a>
+                  <a href="CodeSystem-chradorder-cs-example.html#chradorder-cs-example-bsp">bsp</a>
+                </td>
+                <td>Beispiel</td>
+                <td/>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example"/>
+        <version value="0.0.1"/>
+        <name value="ChRadOrderVSExample"/>
+        <title value="CH RAD-Order ValueSet Example"/>
+        <status value="active"/>
+        <date value="2021-05-05T14:41:01+02:00"/>
+        <publisher value="HL7 Switzerland"/>
+        <contact>
+          <name value="HL7 Switzerland"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.hl7.ch/"/>
+          </telecom>
+        </contact>
+        <contact>
+          <name value="Juer P. Bleuer"/>
+          <telecom>
+            <system value="email"/>
+            <value value="bleuer@healthevidence.ch"/>
+          </telecom>
+        </contact>
+        <description value="CH RAD-Order ValueSet Example"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="CH"/>
+          </coding>
+        </jurisdiction>
+        <copyright value="CC-BY-SA-4.0"/>
+        <expansion>
+          <identifier value="urn:uuid:28330079-9abb-466c-8944-60a125b379de"/>
+          <timestamp value="2021-05-05T14:41:30+02:00"/>
+          <total value="1"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example|0.0.1"/>
+          </parameter>
+          <contains>
+            <system value="http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example"/>
+            <code value="bsp"/>
+            <display value="Beispiel"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

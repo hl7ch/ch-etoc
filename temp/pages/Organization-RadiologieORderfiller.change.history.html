@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Organization' id='RadiologieORderfiller' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Radiology Dept. Happy Hospital - Change History</h2>
+  <p>History of changes for RadiologieORderfiller {{type | downcase}}.</p>
+
+  {%include Organization-RadiologieORderfiller-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

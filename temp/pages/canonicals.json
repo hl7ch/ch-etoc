@@ -1,0 +1,128 @@
+[
+  {
+    "id": "chradorder-cs-example",
+    "type": "CodeSystem",
+    "url": "http://fhir.ch/ig/ch-etoc/CodeSystem/chradorder-cs-example",
+    "version": "0.0.1",
+    "name": "ChRadOrderCSExample"
+  },
+  {
+    "id": "ch.fhir.ig.ch-etoc",
+    "type": "ImplementationGuide",
+    "url": "http://fhir.ch/ig/ch-etoc/ImplementationGuide/ch.fhir.ig.ch-etoc",
+    "version": "0.0.1",
+    "name": "CH_eTOC"
+  },
+  {
+    "id": "QuestionnaireEtoc",
+    "type": "Questionnaire",
+    "url": "http://fhir.ch/ig/ch-etoc/QuestionnaireEtoc",
+    "version": "0.0.1",
+    "name": "QuestionnaireEtoc"
+  },
+  {
+    "id": "ch-etoc-allergyintolerance",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-allergyintolerance",
+    "version": "0.0.1",
+    "name": "ChEtocAllergyIntolerance"
+  },
+  {
+    "id": "ch-etoc-composition",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition",
+    "version": "0.0.1",
+    "name": "ChEtocComposition"
+  },
+  {
+    "id": "ch-etoc-condition",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-condition",
+    "version": "0.0.1",
+    "name": "ChEtocCondition"
+  },
+  {
+    "id": "ch-etoc-device",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-device",
+    "version": "0.0.1",
+    "name": "ChEtocDevice"
+  },
+  {
+    "id": "ch-etoc-deviceobserver",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-deviceobserver",
+    "version": "0.0.1",
+    "name": "ChEtocDeviceObserver"
+  },
+  {
+    "id": "ch-etoc-deviceusestatement",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-deviceusestatement",
+    "version": "0.0.1",
+    "name": "ChEtocDeviceUseStatement"
+  },
+  {
+    "id": "ch-etoc-diagnosticreport",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-diagnosticreport",
+    "version": "0.0.1",
+    "name": "ChEtocADiagnosticReport"
+  },
+  {
+    "id": "ch-etoc-document",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-document",
+    "version": "0.0.1",
+    "name": "ChEtocDocument"
+  },
+  {
+    "id": "ch-etoc-immunization",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-immunization",
+    "version": "0.0.1",
+    "name": "ChEtocImmunization"
+  },
+  {
+    "id": "ch-etoc-medicationstatement",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-medicationstatement",
+    "version": "0.0.1",
+    "name": "ChEtocMedicationStatement"
+  },
+  {
+    "id": "ch-etoc-procedure",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-procedure",
+    "version": "0.0.1",
+    "name": "ChEtocProcedure"
+  },
+  {
+    "id": "ch-etoc-questionnaire",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-questionnaire",
+    "version": "0.0.1",
+    "name": "CheTocQuestionnaire"
+  },
+  {
+    "id": "ch-etoc-questionnaireresponse",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-questionnaireresponse",
+    "version": "0.0.1",
+    "name": "ChEtocQuestionnaireResponse"
+  },
+  {
+    "id": "ch-etoc-servicerequest",
+    "type": "StructureDefinition",
+    "url": "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest",
+    "version": "0.0.1",
+    "name": "ChEtocServiceRequest"
+  },
+  {
+    "id": "chradorder-vs-example",
+    "type": "ValueSet",
+    "url": "http://fhir.ch/ig/ch-etoc/ValueSet/chradorder-vs-example",
+    "version": "0.0.1",
+    "name": "ChRadOrderVSExample"
+  }
+]
