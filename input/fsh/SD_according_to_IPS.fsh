@@ -16,7 +16,8 @@ Description: "Definition for the MedicationStatement resource in the context of 
 * category from ChRadOrderVSExample (required)
 
 Profile: ChEtocAllergyIntolerance
-Parent: CHAllergyIntolerance
+//Parent: ChAllergyIntolerance
+Parent: AllergyIntolerance // Workaround
 Id: ch-etoc-allergyintolerance
 Title: "CH eTOC AllergyIntolerance"
 Description: "Definition for the AllergyIntolerance resource in the context of electronic transition of care."
@@ -33,14 +34,14 @@ Description: "Definition for the Immunization resource in the context of electro
 * . ^short = "CH eToc Immunization"
 
 Profile: ChEtocProcedure
-Parent: ProcedureUvIps
+Parent: Procedure
 Id: ch-etoc-procedure
 Title: "CH eTOC Procedure"
 Description: "Definition for the Procedure resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
 
 Profile: ChEtocDeviceObserver
-Parent: DeviceObserverUvIps
+Parent: Device
 Id: ch-etoc-deviceobserver
 Title: "CH eTOC DeviceObserver"
 Description: "Definition for the DeviceObserver resource in the context of electronic transition of care."

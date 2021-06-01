@@ -1,3 +1,4 @@
+
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <!--<li>
     <a href="toc.html">Table of Contents</a>
@@ -6,17 +7,23 @@
     <a href="index.html">Home</a>
   </li>
   <li class="dropdown">
-    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Case<b class="caret">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases<b class="caret">
       </b>
     </a>
     <ul class="dropdown-menu">
       <li>
+        <a href="usecase-english.html">English</a>
+      </li>
+      <li>
         <a href="usecase-german.html">German</a>
       </li>
       <li>
-        <a href="usecase-english.html">English</a>
+        <a href="usecase-french.html">French</a>
       </li>
     </ul>
+  </li>
+  <li>
+    <a href="questionnaire.html">Questionnaire</a>
   </li>
   <li>
     <a href="profiles.html">Profiles</a>
