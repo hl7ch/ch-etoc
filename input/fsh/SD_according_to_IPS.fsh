@@ -16,8 +16,8 @@ Description: "Definition for the MedicationStatement resource in the context of 
 * category from ChRadOrderVSExample (required)
 
 Profile: ChEtocAllergyIntolerance
-//Parent: ChAllergyIntolerance
-Parent: AllergyIntolerance // Workaround
+Parent: ChAllergyIntolerance
+// Parent: AllergyIntolerance // Workaround
 Id: ch-etoc-allergyintolerance
 Title: "CH eTOC AllergyIntolerance"
 Description: "Definition for the AllergyIntolerance resource in the context of electronic transition of care."

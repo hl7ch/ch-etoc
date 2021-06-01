@@ -24,9 +24,11 @@ contact:
   telecom:
     system: url
     value: https://www.hl7.ch
+
 dependencies:
   ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: 2.0.0
+  ch.fhir.ig.ch-allergyintolerance: current
 
 pages:
   index.html:
