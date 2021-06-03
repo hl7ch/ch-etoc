@@ -237,7 +237,7 @@ Description: "Definition for the Expected Delivery Date Observation resource in 
 * effectiveDateTime MS
 * dataAbsentReason from DataAbsentReason (required)
 
-// -------- Corresponds to IPS Social History ---------
+// -------- Corresponds to IPS Social History --------- Ready for 1. Ballot
 Profile: ChEtocSocialHistoryCondition
 /* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. eToc considers  Social History as
 as broader; consecutverly entries are defined as conditions. tobaco and alcohol abuse shall be listed in problem list*/
