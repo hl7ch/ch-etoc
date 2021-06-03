@@ -29,6 +29,8 @@ Alias:   SNOMEDCTSwissExtension =       urn:oid:2.16.756.5.30.1.127.3.4
 
 // CH SD
 Alias:   ChAllergyIntolerance =          http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance
+Alias:   ChEmedMedicationStatement =     http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement-card
+
 
 // CH Core SD
 Alias:   ChCorePatient =                http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient
@@ -46,7 +48,7 @@ Alias:   ChOrfAppointment =             http://fhir.ch/ig/ch-orf/StructureDefini
 Alias:   ChOrfLocation =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location
 Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype
 
-
+// 
 Alias:   HL7BodyHeight =                http://hl7.org/fhir/StructureDefinition/bodyheight
 Alias:   HL7BodyWeight =                http://hl7.org/fhir/StructureDefinition/bodyweight
 Alias:   ObservationCategory =          http://terminology.hl7.org/CodeSystem/observation-category

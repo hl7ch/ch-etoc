@@ -722,3 +722,351 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 
+
+
+
+
+
+// ================== Noch anzupassen
+// Questionnaire from Rad Order
+
+I
+/* ----- Beschreibung des Kerninhaltes der etoc ----------------------
+*/
+
+
+/*------------------------------------------------------------------------
+1. Was wird gewünscht (nur 1 Wert)             
+
+* item[+].linkId = "requestedService"
+* item[=].text = "Angeforderte Leistung"
+* item[=].type = #group
+* item[=].required = true
+
+* item[=].item[+].linkId = "requestedService.service"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.category.coding"
+* item[=].item[=].text = "Leistung"                 
+* item[=].item[=].required = true
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-requested-service"
+*/
+
+/*------------------------------------------------------------------------
+2. Fragestellung (mehrere Werte)
+Codierung vorderhand nicht vorgesehen)
+*/
+* item[+].linkId = "reason"
+* item[=].text = "Grund der Zuweisung / Fragestellung"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "reason.question"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
+* item[=].item[=].text = "Fragestellung"                
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+
+/*-----------------------------------------------------------------------
+3. Angabe der Untersuchung (nur 1 Wert):
+    CT / MRI / US / dual energy absorptiomety / Mammografie, PET-CT /
+    Nuklearmed. Bildgung / Positron emiss. Tomographie / Konventinelles RX / Fluoroskopie / SPECT-CT / Andere
+
+* item[+].linkId = "imagingService"
+* item[=].text = "Bildgebendes Verfahren"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "imagingService.type"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.coding:RdlxModType"
+* item[=].item[=].text = "Art"                 
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-modality-type"
+*/
+
+/*------------------------------------------------------------------------ 
+4. Order Detail
+
+* item[+].linkId = "orderDetail"
+* item[=].text = "Weitere Angaben zur Bildgebung"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "orderDetail.imagingRegion"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail:imagingRegion"
+* item[=].item[=].text = "Region"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-imaging-region"
+
+* item[=].item[+].linkId = "orderDetail.imagingFocus"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.bodySite"
+* item[=].item[=].text = "Fokus"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-imaging-focus"
+
+* item[=].item[+].linkId = "orderDetail.laterality"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail:laterality"
+* item[=].item[=].text = "Seitenangabe"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-laterality"
+
+* item[=].item[+].linkId = "orderDetail.viewType"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail:viewType"
+* item[=].item[=].text = "Ansicht"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-view-type"
+
+* item[=].item[+].linkId = "orderDetail.maneuverType"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail:maneuverType"
+* item[=].item[=].text = "Manöver"
+* item[=].item[=].type = #choice
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-maneuver-type"
+
+* item[=].item[+].linkId = "orderDetail.guidanceForAction"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail:guidanceForAction"
+* item[=].item[=].text = "Handlungsanleitung"
+* item[=].item[=].type = #choice
+* item[=].item[=].enableWhen[+].question = "requestedService.service"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = ChRadOrderRequestedService#RadIntervention
+* item[=].item[=].enableWhen[+].question = "requestedService.service"
+* item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].enableWhen[=].answerCoding = ChRadOrderRequestedService#ImagingRequestWithIntervention
+* item[=].item[=].enableBehavior = #any
+* item[=].item[=].repeats = true
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-guidance-for-action"
+
+*/
+/*----------------------------------------------------------------------
+Gewünschter Radiologe: Noch offen, wie die Auswahlliste gemacht werden soll
+
+* item[+].linkId = "desiredRadiologist"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.performer"
+* item[=].text = "Gewünschter Radiologe für die Befundung / für die Intervention"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "desiredRadiologist.familyName"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.family"
+* item[=].item[=].text = "Name"
+* item[=].item[=].type = #string
+
+* item[=].item[+].linkId = "desiredRadiologist.givenName"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner#Practitioner.name.given"
+* item[=].item[=].text = "Vorname"
+* item[=].item[=].type = #string
+*/
+
+/*----------------------------------------------------------------------
+Darstellung der Diagnosen und Befunde
+*/
+* item[+].linkId = "diagnosisList"
+* item[=].text = "Diagnosen und Befunde"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonReference"
+* item[=].item[=].text = "Hauptdiagnosen"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:diagnosis"
+* item[=].item[=].text = "Nebendiagnosen"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "diagnosisList.bodyHeight"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyHeight"
+* item[=].item[=].text = "Grösse (cm)"   
+* item[=].item[=].type = #quantity
+* item[=].item[=].repeats = false
+
+* item[=].item[+].linkId = "diagnosisList.bodyWeight"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyWeight"
+* item[=].item[=].text = "Gewicht (kg)"   
+* item[=].item[=].type = #quantity
+* item[=].item[=].repeats = false
+
+/*----------------------------------------------------------------------
+Caveats   
+
+* item[+].linkId = "caveat" 
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:caveats" 
+* item[=].text = "Caveats"
+* item[=].type = #group
+ */
+* item[=].item[+].linkId = "caveat.bloodCoagulation"   
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Beinträchtigte Blutgerinnung"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.INR" 
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.evidence.detail"
+* item[=].item[=].item[=].text = "INR"   
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "caveat.bloodCoagulation"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.INR.quantity"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-INR-observation#Observation.valueQuantity"
+* item[=].item[=].item[=].item[=].text = "Wert (INR)"   
+* item[=].item[=].item[=].item[=].type = #quantity
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.INR.dateTime"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-INR-observation#Observation.effectiveDateTime"
+* item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
+* item[=].item[=].item[=].item[=].type = #dateTime
+
+* item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.platelets"    
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.evidence.detail"    
+* item[=].item[=].item[=].text = "Thrombozyten"   
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "caveat.bloodCoagulation"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.platelets.quantity"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-platelets-observation#Observation.valueQuantity"
+* item[=].item[=].item[=].item[=].text = "Wert (10^3/µl)"   
+* item[=].item[=].item[=].item[=].type = #quantity
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.bloodCoagulation.platelets.dateTime"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-platelets-observation#Observation.effectiveDateTime"
+* item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
+* item[=].item[=].item[=].item[=].type = #dateTime
+
+* item[=].item[+].linkId = "caveat.renalInsufficiency"    
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"   
+* item[=].item[=].text = "Niereninsuffizienz"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinineClearance" 
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.evidence.detail"
+* item[=].item[=].item[=].text = "Creatinin-Clearance"   
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "caveat.renalInsufficiency"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinineClearance.quantity"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-creatinineclearance-observation#Observation.valueQuantity"
+* item[=].item[=].item[=].item[=].text = "Wert (ml/min)"   
+* item[=].item[=].item[=].item[=].type = #quantity
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinineClearance.dateTime"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-creatinineclearance-observation#Observation.effectiveDateTime"
+* item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
+* item[=].item[=].item[=].item[=].type = #dateTime
+
+* item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinine"    
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.evidence.detail"    
+* item[=].item[=].item[=].text = "Creatinin"   
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].enableWhen[+].question = "caveat.renalInsufficiency"
+* item[=].item[=].item[=].enableWhen[=].operator = #=
+* item[=].item[=].item[=].enableWhen[=].answerBoolean = true
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinine.quantity"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-creatinine-observation#Observation.valueQuantity"
+* item[=].item[=].item[=].item[=].text = "Wert (µmol/l)"   
+* item[=].item[=].item[=].item[=].type = #quantity
+
+* item[=].item[=].item[=].item[+].linkId = "caveat.renalInsufficiency.creatinine.dateTime"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-creatinine-observation#Observation.effectiveDateTime"
+* item[=].item[=].item[=].item[=].text = "Zeitpunkt der Bestimmung"   
+* item[=].item[=].item[=].item[=].type = #dateTime
+
+* item[=].item[+].linkId = "caveat.claustrophobia"    
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"   
+* item[=].item[=].text = "Klaustrophobie"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[+].linkId = "caveat.bodyPiercing"     
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Körperpiercing"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[+].linkId = "caveat.device"     
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Device (Herzschrittmacher, Herzklappenersatz, Insulinpumpe etc.)"   
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-caveat-device"
+* item[=].item[=].repeats = true
+
+* item[=].item[+].linkId = "caveat.hyperthyroidism"     
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Hyperthyreose"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[+].linkId = "caveat.diabetes"    
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"   
+* item[=].item[=].text = "Diabetes mellitus"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[+].linkId = "caveat.gravida"     
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Schwangerschaft"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[+].linkId = "caveat.contrastMediaAllergy"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Kontrastmittelallergie"   
+* item[=].item[=].type = #boolean
+
+* item[=].item[+].linkId = "caveat.drugPrescription"     
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-caveat-condition#Condition.code"  
+* item[=].item[=].text = "Relevante Medikamente, z.B. Metformin"   
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-etoc/ValueSet/ch-etoc-caveat-substance"
+* item[=].item[=].repeats = true
+
+
+/* ---------------------------------------------------------------------------
+Vorherige Untersuchungsresultat:
+Angaben zu Bildern bzw. allfällige Vorbildern und Reports, auf die verwiesen wird  
+mittels ImagingStudy Resource (DICOM WADO) oder die mitgegeben werden in der Media Resource.
+*/
+* item[+].linkId = "previousResults"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:previousImagingResults"
+* item[=].text = "Vorherige Untersuchungsresultate"
+* item[=].type = #group
+
+/*
+* item[=].item[+].linkId = "previousResults.available"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:previousImagingResults"
+* item[=].item[=].text = "Verfügbar"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerOption[+].valueCoding = SCT#373066001 "Ja"
+* item[=].item[=].answerOption[=].initialSelected = true
+* item[=].item[=].answerOption[+].valueCoding = SCT#373067005 "Nein"
+*/
+
+* item[=].item[+].linkId = "previousResults.attachment"
+* item[=].item[=].text = "Anhang"
+* item[=].item[=].type = #group
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "previousResults.attachtment.title"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.title"
+* item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "previousResults.attachment.data"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.data"
+* item[=].item[=].item[=].text = "Daten"
+* item[=].item[=].item[=].type = #string
+
+
+// -------- Service Request Notes ------
+* item[+].linkId = "note"
+* item[=].text = "Bemerkungen"
+* item[=].type = #group
+* item[=].repeats = true
+
+* item[=].item[+].linkId = "note.text"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.note.text"
+* item[=].item[=].text = "Kommentar" 
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
