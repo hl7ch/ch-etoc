@@ -730,7 +730,6 @@ Description: "Example for Questionnaire"
 // ================== Noch anzupassen
 // Questionnaire from Rad Order
 
-I
 /* ----- Beschreibung des Kerninhaltes der etoc ----------------------
 */
 

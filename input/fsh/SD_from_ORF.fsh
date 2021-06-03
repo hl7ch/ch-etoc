@@ -5,12 +5,7 @@ Id: ch-etoc-questionnaire
 Description: "Definition for the Questionnaire resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Questionnaire"
 */
-Profile: ChEtocServiceRequest
-Parent: ChOrfServiceRequest
-Id: ch-etoc-servicerequest
-Title: "CH eTOC ServiceRequest"
-Description: "Definition for the ServiceRequest resource in the context of electronic transition of care."
-* . ^short = "CH eToc ServiceRequest"
+
 
 Profile: ChEtocQuestionnaireResponse
 Parent: ChOrfQuestionnaireResponse
@@ -19,47 +14,28 @@ Title: "CH eTOC QuestionnaireResponse"
 Description: "Definition for the QuestionnaireResponse resource in the context of electronic transition of care."
 * . ^short = "CH eToc QuestionnaireResponse"
 
-Profile: ChEtocDocument
-Parent: ChOrfDocument
-Id: ch-etoc-document
-Title: "CH eTOC Document"
-Description: "Definition for the Document resource in the context of electronic transition of care."
-* . ^short = "CH eToc Document"
-
-Profile: ChEtocComposition
-Parent: ChOrfComposition
-Id: ch-etoc-composition
-Title: "CH eTOC Composition"
-Description: "Definition for the Composition resource in the context of electronic transition of care."
-* . ^short = "<p style=\"color:#FF0000\" ;>EPR</p> CH eToc Composition"
 
 
 
 
 
-// ========== Nch anzupassen =====
+
+
+// ========== Noch anzupassen =====
 // From etoc
 // CH etoc Structure Defintions derived from CH ORF
 
 Profile: ChEtocServiceRequest
 Parent: ChOrfServiceRequest
 Id: ch-etoc-servicerequest
-Title: "CH etoc ServiceRequest"
-Description: "Definition for the ServiceRequest resource in the context of CH etoc."
-* . ^short = "CH etoc ServiceRequest"
-* . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
-An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
-(which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
-Consequently one CH etoc Document contains one CH etoc ServiceRequest which depicts one Placer Order 
-equal one Filler Order equal one Imaging Service Request."
+Title: "CH eTOC ServiceRequest"
+Description: "Definition for the ServiceRequest resource in the context of electronic transition of care."
+* . ^short = "CH eToc ServiceRequest"
 * intent MS
 //------- category -------
 * category 1..1 MS
-* category from ChEtocRequestedService
 //------- code -------
-/* !!!!!!!!!! CH etoc UNTERSTUETZT LOINC/RSNA PLAYBOOK WIE FOLGT: ANSELLE DER ITEMS [4] - [7] WIRD IN
-              ServiceRequest.code DER PLAYBOOK CODE ANGEGBEN. VOM QUESTIONNAIRE WIRD DAS NICHT UNTERSTÜTZT, DA NUR RELEVANT, WENN
-              ZWISCHEN SENDER UND EMPFÄNGER VEREINBART.*/
+
 * code MS
 * code ^short = "Use 'RSNA/LOINC Playbook (Full Version support)' OR Codes from 'ChEtocModalityType' but NOT both. 
 In case of 'ChEtocModalityType' specify Imaging Request Details by means of orderDetail."
@@ -72,7 +48,7 @@ In case of 'ChEtocModalityType' specify Imaging Request Details by means of orde
 * code.coding[LncPlbFull] MS
 * code.coding[LncPlbFull] from LNCPLAYBFULL
 * code.coding[RdlxModType] MS
-* code.coding[RdlxModType] from ChEtocModalityType 
+//* code.coding[RdlxModType] from ChEtocModalityType 
 //------- orderDetail -------
 * orderDetail MS
 * orderDetail.extension contains ChEtocOrderDetailType named orderDetailType 1..1 MS
@@ -86,15 +62,15 @@ In case of 'ChEtocModalityType' specify Imaging Request Details by means of orde
     maneuverType 0..* and
     guidanceForAction 0..* 
 * orderDetail[imagingRegion] MS
-* orderDetail[imagingRegion] from ChEtocImagingRegion
+//* orderDetail[imagingRegion] from ChEtocImagingRegion
 * orderDetail[laterality] MS
-* orderDetail[laterality] from ChEtocLaterality
+//* orderDetail[laterality] from ChEtocLaterality
 * orderDetail[viewType] MS
-* orderDetail[viewType] from ChEtocViewType
+//* orderDetail[viewType] from ChEtocViewType
 * orderDetail[maneuverType] MS
-* orderDetail[maneuverType] from ChEtocManeuverType
+//* orderDetail[maneuverType] from ChEtocManeuverType
 * orderDetail[guidanceForAction] MS
-* orderDetail[guidanceForAction] from ChEtocGuidanceForAction
+//* orderDetail[guidanceForAction] from ChEtocGuidanceForAction
 //------- performer (desiredRadiologist) -------
 * performer ..1 MS
 * performer ^short = "Desired radiologist for diagnostic / for intervention"
@@ -130,15 +106,15 @@ In case of 'ChEtocModalityType' specify Imaging Request Details by means of orde
 * supportingInfo[diagnosis] only Reference(ChEtocDiagnosisCondition)
 * supportingInfo[diagnosis] ^short = "Additional problem / secondary diagnosis"
 * supportingInfo[caveats] MS
-* supportingInfo[caveats] only Reference(ChEtocCaveatCondition)
+//* supportingInfo[caveats] only Reference(ChEtocCaveatCondition)
 * supportingInfo[previousImagingResults] MS
 * supportingInfo[previousImagingResults] ^short = "The ImagingStudy Resource supports DICOM WADO-RS and formats defined 
                                                   elsewhere (e.g. DICOM, JPEG ..)"
-* supportingInfo[previousImagingResults] only Reference(ChEtocImagingStudy or ChEtocMedia)
+//* supportingInfo[previousImagingResults] only Reference(ChEtocImagingStudy or ChEtocMedia)
 
 //------- bodySite -------
 * bodySite MS
-* bodySite from ChEtocImagingFocus
+//* bodySite from ChEtocImagingFocus
 //------- note -------
 * note MS
 * note.text MS
@@ -151,7 +127,7 @@ Description: "Extension to define the Type of Order Detail in context of CH etoc
 * value[x] 1..1
 * value[x] only Coding
 * value[x] ^short = "Type of Order Detail"
-* value[x] from ChEtocOrderDetailType
+//* value[x] from ChEtocOrderDetailType
 
 
 Extension: ChEtocCaveatType
@@ -161,7 +137,7 @@ Description: "Extension to define the Type of Caveat in context of CH etoc."
 * value[x] 1..1
 * value[x] only Coding
 * value[x] ^short = "Type of Caveat"
-* value[x] from ChEtocCaveatType
+//* value[x] from ChEtocCaveatType
 
 
 Profile: ChEtocDocument
@@ -170,7 +146,7 @@ Id: ch-etoc-document
 Title: "CH etoc Document"
 Description: "Definition for the Bundle (document) resource in the context of CH etoc."
 * . ^short = "CH eTOCBundle (document)"
-* . ^definition = "Clinical part is modelled wirh the International Patient Summary (IPS)in Mind."
+* . ^definition = "Clinical part is modelled with the International Patient Summary (IPS)in Mind."
 // ---------- Bundle.entry:Composition ----------
 * entry[Composition].resource ^type.profile = Canonical(ChEtocComposition)
 
@@ -183,37 +159,3 @@ Description: "Definition for the Composition resource in the context of CH etoc.
 * . ^short = "CH eTOC Composition"
 // ---------- Composition.section.entry:ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
-
-Profile: ChEtocBodyHeightObservation
-Parent: HL7BodyHeight
-Id: ch-etoc-bodyheight-observation
-Title: "CH eTOC Body Height Observation"
-Description: "Definition for the Body Height Observation resource in the context of CH eTOC."
-* . ^short = "CH eTOC Body Height Observation"
-* status MS
-* code and code.coding[BodyHeightCode] and code.coding[BodyHeightCode].system and code.coding[BodyHeightCode].code MS
-* subject MS 
-* subject only Reference(ChCorePatient) 
-* effectiveDateTime MS
-* valueQuantity MS
-* valueQuantity.unit ^fixedString = "cm"
-* valueQuantity.code ^fixedCode = #cm
-* dataAbsentReason MS
-* component 0..0
-
-Profile: ChEtocBodyWeightObservation
-Parent: HL7BodyWeight
-Id: ch-etoc-bodyweight-observation
-Title: "CH eTOC Body Weight Observation"
-Description: "Definition for the Body Weight Observation resource in the context of CH eTOC."
-* . ^short = "CH ETOC Body Weight Observation"
-* status MS
-* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
-* subject MS 
-* subject only Reference(ChCorePatient) 
-* effectiveDateTime MS
-* valueQuantity MS
-* valueQuantity.unit ^fixedString = "kg"
-* valueQuantity.code ^fixedCode = #kg
-* dataAbsentReason MS
-* component 0..0
