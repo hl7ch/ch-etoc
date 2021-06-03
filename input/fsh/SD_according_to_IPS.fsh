@@ -5,30 +5,37 @@
 Profile: ChEtocMedicationStatement
 Parent: ChEmedMedicationStatement
 Id: ch-etoc-medicationstatement
-Title: "CH EToc MedicationStatement"
+Title: "CH eToc MedicationStatement"
 Description: "Definition for the MedicationStatement resource in the context of electronic transition of care."
 * . ^short = "CH eToc MedicationStatement"
+* status MS
+
 
 
 // FHIR Medication Resource will not be used because it does not allow documentation of dosage
 
-// -------- Corresponds to IPS Allergies and Intolerances ---------
+// -------- Corresponds to IPS Allergies and Intolerances --------- Ready for 1. Ballot 
 Profile: ChEtocAllergyIntolerance
 //Parent: ChAllergyIntolerance
 Parent: AllergyIntolerance // Workaround
 Id: ch-etoc-allergyintolerance
-Title: "CH EToc AllergyIntolerance"
-Description: "Definition for the AllergyIntolerance resource in the context of electronic transition of care."
-* . ^short = "CH eToc AllergyIntolerance"
-* text MS
+Title: "CH eToc Allergy Intolerance"
+Description: "Definition for the Allergy Intolerance resource in the context of electronic transition of care."
+* . ^short = "CH eToc Allergy Intolerance"
+* code MS
+* code.text MS
+* reaction.substance MS
+* reaction.substance.text MS
+* reaction.manifestation MS
+* reaction.manifestation.text MS
 
-// -------- Corresponds to IPS Problem List ---------
+// -------- Corresponds to IPS Problem List --------- Ready for 1. Ballot
 Profile: ChEtocDiagnosisCondition
 Parent: Condition
 Id: ch-etoc-diagnosis-condition
-Title: "CH EToc Diagnosis Condition"
+Title: "CH eToc Diagnosis Condition"
 Description: "Definition for the Diagnosis Condition resource in the context of CH RAD-Order."
-* . ^short = "CH EToc Diagnosis Condition"
+* . ^short = "CH eToc Diagnosis Condition"
 * category 1..1 MS
 * category = ConditionCategory#problem-list-item
 * category ^short = "Problem List Item"
@@ -37,47 +44,62 @@ Description: "Definition for the Diagnosis Condition resource in the context of 
 * subject MS
 * subject only Reference(ChCorePatient) 
 
-// -------- Corresponds to IPS Immunizations ---------
+// -------- Corresponds to IPS Immunizations --------- Ready for 1. Ballot 
 Profile: ChEtocImmunizationSection
 Parent: ChVacdImmunizationSection
 Id: ch-etoc-immunizationsection
-Title: "CH EToc Immunization Section"
+Title: "CH eToc Immunization Section"
 Description: "Definition for the Immunization Section resource in the context of electronic transition of care."
 //* isSubpotent MS
 * . ^short = "CH eToc Immunization Section"
+* vaccineCode MS
+* vaccineCode.text MS
+* occurrenceDateTime MS
+* occurrenceString MS
 
 
 // -------- Corresponds to IPS History of Procedures ---------
 Profile: ChEtocProcedure
 Parent: Procedure
 Id: ch-etoc-procedure
-Title: "CH EToc Procedure"
+Title: "CH eToc Procedure"
 Description: "Definition for the Procedure resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
 
-// -------- Corresponds to IPSMedical Devices ---------
+// -------- Corresponds to IPSMedical Devices --------- Ready for 1. Ballot 
 Profile: ChEtocDevice
 Parent: Device
 Id: ch-etoc-device
-Title: "CH EToc Device"
+Title: "CH eToc Device"
 Description: "Definition for the Device resource in the context of electronic transition of care."
 * . ^short = "CH eToc Device"
+* deviceName MS
+* deviceName.name MS
+* deviceName.type MS
 
 
-// -------- Corresponds to IPS Diagnostic Results ---------
+// -------- Corresponds to IPS Diagnostic Results --------- Ready for 1. Ballot 
 Profile: ChEtocADiagnosticReport
 Parent: DiagnosticReport
 Id: ch-etoc-diagnosticreport
-Title: "CH EToc DiagnosticReport"
-Description: "Definition for the DiagnosticReport resource in the context of electronic transition of care."
-* . ^short = "CH eToc DiagnosticReport"
+Title: "CH eToc Diagnostic Report"
+Description: "Definition for the Diagnostic Report resource in the context of electronic transition of care."
+* . ^short = "CH eToc Diagnostic Report"
+* status MS
+* category MS 
+* category from HL7DiagnosticServiceSection (required)
+* code ^short = "Currently not used; leave coding and text empty."
+* presentedForm MS
+* presentedForm.title MS
+* presentedForm.data MS
 
+/* to be supported later ------
 Profile: ChEtocLabObservation
 Parent: Observation
 Id: ch-etoc-lab-observation
-Title: "CH EToc Lab Observation"
-Description: "Definition for the Lab Observation resource in the context of CH EToc."
-* . ^short = "CH ETOC Lab Observation"
+Title: "CH eToc Lab Observation"
+Description: "Definition for the Lab Observation resource in the context of CH eToc."
+* . ^short = "CH eTOC Lab Observation"
 * status MS
 //* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
 * subject MS 
@@ -92,9 +114,9 @@ Description: "Definition for the Lab Observation resource in the context of CH E
 Profile: ChEtocPathologyObservation
 Parent: Observation
 Id: ch-etoc-pahtology-observation
-Title: "CH EToc Pathology Observation"
-Description: "Definition for the Pathology Observation resource in the context of CH EToc."
-* . ^short = "CH ETOC Pathology Observation"
+Title: "CH eToc Pathology Observation"
+Description: "Definition for the Pathology Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Pathology Observation"
 * status MS
 //* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
 * subject MS 
@@ -109,9 +131,9 @@ Description: "Definition for the Pathology Observation resource in the context o
 Profile: ChEtocRadiologyObservation
 Parent: Observation
 Id: ch-etoc-radiolology-observation
-Title: "CH EToc Radiology Observation"
-Description: "Definition for the Radiology Observation resource in the context of CH EToc."
-* . ^short = "CH ETOC Radiolology Observation"
+Title: "CH eToc Radiology Observation"
+Description: "Definition for the Radiology Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Radiolology Observation"
 * status MS
 //* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
 * subject MS 
@@ -122,54 +144,51 @@ Description: "Definition for the Radiology Observation resource in the context o
 * valueQuantity.code ^fixedCode = #kg
 * dataAbsentReason MS
 * component 0..0
+*---------------
 
-// -------- Corresponds to IPS Vital Signs ---------
+// -------- Corresponds to IPS Vital Signs --------- Ready for 1. Ballot
 /*Profile: ChEtocFVitalSigns
 Parent: Vitalsigns
 Id: ch-etoc-vital-signs
-Title: "CH EToc Vital Signs"
+Title: "CH eToc Vital Signs"
 Description: "Definition for the Vital Signs resource in the context of electronic transition of care."
 * . ^short = "CH eToc FVital Signs"*/
 
 Profile: ChEtocBodyHeightObservation
 Parent: HL7BodyHeight
 Id: ch-etoc-bodyheight-observation
-Title: "CH EToc Body Height Observation"
-Description: "Definition for the Body Height Observation resource in the context of CH EToc."
-* . ^short = "CH EToc Body Height Observation"
+Title: "CH eToc Body Height Observation"
+Description: "Definition for the Body Height Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Body Height Observation"
 * status MS
 * code and code.coding[BodyHeightCode] and code.coding[BodyHeightCode].system and code.coding[BodyHeightCode].code MS
 * subject MS 
 * subject only Reference(ChCorePatient) 
-* effectiveDateTime MS
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "cm"
 * valueQuantity.code ^fixedCode = #cm
-* dataAbsentReason MS
 * component 0..0
 
 Profile: ChEtocBodyWeightObservation
 Parent: HL7BodyWeight
 Id: ch-etoc-bodyweight-observation
-Title: "CH EToc Body Weight Observation"
-Description: "Definition for the Body Weight Observation resource in the context of CH EToc."
-* . ^short = "CH ETOC Body Weight Observation"
+Title: "CH eToc Body Weight Observation"
+Description: "Definition for the Body Weight Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Body Weight Observation"
 * status MS
 * code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
 * subject MS 
 * subject only Reference(ChCorePatient) 
-* effectiveDateTime MS
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "kg"
 * valueQuantity.code ^fixedCode = #kg
-* dataAbsentReason MS
 * component 0..0
 
-// -------- Corresponds to IPS Past history of illnesses ---------
+// -------- Corresponds to IPS Past history of illnesses --------- 
 Profile: ChEtocPastHistoryofIllnessesCondition
 Parent: Condition
 Id: ch-etoc-past-history-of-illnesses-condition
-Title: "CH EToc Pst History of Illnesses Condition"
+Title: "CH eToc Pst History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Past History of Illness Condition"
 * verificationStatus 0..0 MS
@@ -179,11 +198,11 @@ Description: "Definition for the Past History of Illnesses Condition resource in
 Profile: ChEtocPregnancyStatusObservation
 Parent: Observation
 Id: ch-etoc-pregnancystatus-observation
-Title: "CH EToc Pregnancy Status Observation"
-Description: "Definition for the Pregnancy Status Observation resource in the context of CH EToc."
-* . ^short = "CH ETOC Pregnancy Status Observation"
+Title: "CH eToc Pregnancy Status Observation"
+Description: "Definition for the Pregnancy Status Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Pregnancy Status Observation"
 * status MS
-//* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
+
 * subject MS 
 * subject only Reference(ChCorePatient) 
 * effectiveDateTime MS
@@ -195,31 +214,38 @@ Description: "Definition for the Pregnancy Status Observation resource in the co
 
 // -------- Corresponds to IPS Social History ---------
 Profile: ChEtocSocialHistoryCondition
-/* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. EToc considers  Social History as
+/* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. eToc considers  Social History as
 as broader; consecutverly entries are defined as conditions. tobaco and alcohol abuse shall be listed in problem list*/
 Parent: Condition
 Id: ch-etoc-social-history-condition
-Title: "CH EToc Social History Condition"
+Title: "CH eToc Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Social History Condition"
 * verificationStatus 0..0 MS
 * category from ChRadOrderVSExample (required)
 
-// -------- Corresponds to IPS IFunctional Status  ---------
+// -------- Corresponds to IPS IFunctional Status  --------- Ready for 1. Ballot
 Profile: ChEtocFunctionalStatusCondition
 Parent: Condition
 Id: ch-etoc-functional-status-condition
-Title: "CH EToc Functional Status Condition"
+Title: "CH eToc Functional Status Condition"
 Description: "Definition for the Functional Status Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Functional Status Condition"
-* verificationStatus 0..0 MS
-* category from ChRadOrderVSExample (required)
+* category 1..1 MS
+* category = ConditionCategory#problem-list-item
+* category ^short = "Funktionsfähigkeit, Behinderung"
+* code 1.. MS 
+* code.text 1.. MS
+* subject MS
+* subject only Reference(ChCorePatient) 
+
+
 
 // -------- Corresponds to IPS Plan of Care ---------
 Profile: ChEtocCarePlan
 Parent: CarePlan
 Id: ch-etoc-careplan
-Title: "CH EToc Care Plan"
+Title: "CH eToc Care Plan"
 Description: "Definition for the Care Plan resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
 
