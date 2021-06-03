@@ -1,18 +1,25 @@
 /* Clinical part is modelled with the International Patient Summary (IPS)in Mind.*/
 
 
-// -------- Corresponds to IPS Medication Summary ---------
-Profile: ChEtocMedicationStatement
+// -------- Corresponds to IPS Medication Summary ---------  Ready for 1. Ballot 
+Profile: ChEtocMedicatiionCard
+Parent: ChEmedMedicationCard
+Id: ch-etoc-medicationcard
+Title: "CH eToc Medication Card"
+Description: "Definition for the Medication Card resource in the context of electronic transition of care."
+* . ^short = "CH eToc Medication Card"
+* medicationReference MS
+* dosage MS
+* dosage[nonstructured] MS
+
+Profile: ChEtocMedicatiionStatement
 Parent: ChEmedMedicationStatement
 Id: ch-etoc-medicationstatement
-Title: "CH eToc MedicationStatement"
-Description: "Definition for the MedicationStatement resource in the context of electronic transition of care."
-* . ^short = "CH eToc MedicationStatement"
-* status MS
-
-
-
-// FHIR Medication Resource will not be used because it does not allow documentation of dosage
+Title: "CH eToc Medication Statement"
+Description: "Definition for the Medication Statement resource in the context of electronic transition of care."
+* . ^short = "CH eToc Medication Statement"
+* code MS
+* code.text MS
 
 // -------- Corresponds to IPS Allergies and Intolerances --------- Ready for 1. Ballot 
 Profile: ChEtocAllergyIntolerance
@@ -58,13 +65,16 @@ Description: "Definition for the Immunization Section resource in the context of
 * occurrenceString MS
 
 
-// -------- Corresponds to IPS History of Procedures ---------
+// -------- Corresponds to IPS History of Procedures --------- Ready for 1. Ballot
 Profile: ChEtocProcedure
 Parent: Procedure
 Id: ch-etoc-procedure
 Title: "CH eToc Procedure"
 Description: "Definition for the Procedure resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
+* status MS
+* code MS
+* code.text MS
 
 // -------- Corresponds to IPSMedical Devices --------- Ready for 1. Ballot 
 Profile: ChEtocDevice
@@ -184,17 +194,22 @@ Description: "Definition for the Body Weight Observation resource in the context
 * valueQuantity.code ^fixedCode = #kg
 * component 0..0
 
-// -------- Corresponds to IPS Past history of illnesses --------- 
+// -------- Corresponds to IPS Past history of illnesses --------- Ready for 1. Ballot
 Profile: ChEtocPastHistoryofIllnessesCondition
 Parent: Condition
 Id: ch-etoc-past-history-of-illnesses-condition
 Title: "CH eToc Pst History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Past History of Illness Condition"
-* verificationStatus 0..0 MS
-* category from ChRadOrderVSExample (required)
+* category 1..1 MS
+* category = ConditionCategory#problem-list-item
+* category ^short = "Problem List Item"
+* code 1.. MS 
+* code.text 1.. MS
+* subject MS
+* subject only Reference(ChCorePatient) 
 
-// -------- Corresponds to IPS Pregnancy ---------
+// -------- Corresponds to IPS Pregnancy ---------  Ready for 1. Ballot
 Profile: ChEtocPregnancyStatusObservation
 Parent: Observation
 Id: ch-etoc-pregnancystatus-observation
@@ -202,15 +217,25 @@ Title: "CH eToc Pregnancy Status Observation"
 Description: "Definition for the Pregnancy Status Observation resource in the context of CH eToc."
 * . ^short = "CH eToc Pregnancy Status Observation"
 * status MS
-
-* subject MS 
+* code MS
+* code = LNC#82810-3
 * subject only Reference(ChCorePatient) 
 * effectiveDateTime MS
 * valueQuantity MS
-* valueQuantity.unit ^fixedString = "kg"
-* valueQuantity.code ^fixedCode = #kg
-* dataAbsentReason MS
-* component 0..0
+* dataAbsentReason from DataAbsentReason (required)
+
+Profile: ChEtocPregnancyExpectedDeliveryDateObservation
+Parent: Observation
+Id: ch-etoc-expecteddeliverydate-observation
+Title: "CH eToc Expected Delivery Date Observation"
+Description: "Definition for the Expected Delivery Date Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Expected Delivery Date Observation"
+* status MS
+* code MS
+* code from PregnancyExpectedDeliveryDateMethod (required)
+* subject only Reference(ChCorePatient) 
+* effectiveDateTime MS
+* dataAbsentReason from DataAbsentReason (required)
 
 // -------- Corresponds to IPS Social History ---------
 Profile: ChEtocSocialHistoryCondition
@@ -221,8 +246,13 @@ Id: ch-etoc-social-history-condition
 Title: "CH eToc Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Social History Condition"
-* verificationStatus 0..0 MS
-* category from ChRadOrderVSExample (required)
+* category 1..1 MS
+* category = ConditionCategory#problem-list-item
+* category ^short = "Problem List Item"
+* code 1.. MS 
+* code.text 1.. MS
+* subject MS
+* subject only Reference(ChCorePatient) 
 
 // -------- Corresponds to IPS IFunctional Status  --------- Ready for 1. Ballot
 Profile: ChEtocFunctionalStatusCondition
@@ -239,15 +269,28 @@ Description: "Definition for the Functional Status Condition resource in the con
 * subject MS
 * subject only Reference(ChCorePatient) 
 
-
-
-// -------- Corresponds to IPS Plan of Care ---------
+// -------- Corresponds to IPS Plan of Care --------- Ready for 1. Ballot
 Profile: ChEtocCarePlan
 Parent: CarePlan
 Id: ch-etoc-careplan
 Title: "CH eToc Care Plan"
 Description: "Definition for the Care Plan resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
+* status MS
+* intent MS
+* category MS
+* category from ChEtocCarePlanContributors
+* title MS
+* activity MS
+* activity.outcomeCodeableConcept MS
+* activity.outcomeCodeableConcept.text MS
+* activity.detail MS
+* activity.detail.code MS
+* activity.detail.code.text MS
+
+
+
+
 
 // -------- Corresponds to Advance Directives ---------
 // Not supported yet
