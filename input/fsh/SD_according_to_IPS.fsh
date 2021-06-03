@@ -198,7 +198,7 @@ Description: "Definition for the Body Weight Observation resource in the context
 Profile: ChEtocPastHistoryofIllnessesCondition
 Parent: Condition
 Id: ch-etoc-past-history-of-illnesses-condition
-Title: "CH eToc Pst History of Illnesses Condition"
+Title: "CH eToc Past History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Past History of Illness Condition"
 * category 1..1 MS
