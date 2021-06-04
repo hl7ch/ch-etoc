@@ -100,6 +100,7 @@ Currently no use intended
 
 * supportingInfo[medication] MS
 * supportingInfo[medication] only Reference(ChEtocMedicationCard)
+* supportingInfo[medication] ^short = "Medication Card contains n medications with dosages"
 * supportingInfo[allegiesIntolerances] MS
 * supportingInfo[allegiesIntolerances] only Reference(ChEtocAllergyIntolerance)
 * supportingInfo[immunization] MS
