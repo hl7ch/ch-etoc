@@ -2,7 +2,7 @@
 
 
 // -------- Corresponds to IPS Medication Summary ---------  Ready for 1. Ballot 
-Profile: ChEtocMedicatiionCard
+Profile: ChEtocMedicationCard
 Parent: ChEmedMedicationCard
 Id: ch-etoc-medicationcard
 Title: "CH eToc Medication Card"
@@ -103,7 +103,6 @@ Description: "Definition for the Diagnostic Report resource in the context of el
 * presentedForm.title MS
 * presentedForm.data MS
 
-/* to be supported later ------
 Profile: ChEtocLabObservation
 Parent: Observation
 Id: ch-etoc-lab-observation
@@ -154,7 +153,7 @@ Description: "Definition for the Radiology Observation resource in the context o
 * valueQuantity.code ^fixedCode = #kg
 * dataAbsentReason MS
 * component 0..0
-*---------------
+
 
 // -------- Corresponds to IPS Vital Signs --------- Ready for 1. Ballot
 /*Profile: ChEtocFVitalSigns
