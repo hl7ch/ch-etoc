@@ -62,20 +62,21 @@ Currently no use intended
     historyofIllnesses 0..* and
     historyofProcedures 0..* and
     devices 0..* and
-    socialHistory 0..* and
+    socialHistory 0..1 and
     functionalStatus 0..* and    
 
-    medication 0..1 and // Medication Card contains n medications with dosages
+    medicationcard 0..1 and // Medication Card contains n medications with dosages
     allegiesIntolerances 0..* and
-    immunization 0..* and
+    immunizations 0..* and
 
     labresults 0..* and
     pathologyresults 0..* and
-    radiologyresults 0..* and
+    imagingresults 0..* and
+    cardiologyresults 0..* and
 
-    diagnosticReports 0..* and
-
-    carePlans 0..*
+ //   diagnosticReports 0..* and  // not used
+    medicalCarePlans 0..* and 
+    nursingCarePlans 0..
 
 * supportingInfo[diagnosis] MS
 * supportingInfo[diagnosis] only Reference(ChEtocDiagnosisCondition) 
@@ -98,26 +99,31 @@ Currently no use intended
 * supportingInfo[functionalStatus] MS
 * supportingInfo[functionalStatus] only Reference(ChEtocFunctionalStatusCondition)
 
-* supportingInfo[medication] MS
-* supportingInfo[medication] only Reference(ChEtocMedicationCard)
-* supportingInfo[medication] ^short = "Medication Card contains n medications with dosages"
+* supportingInfo[medicationcard] MS
+* supportingInfo[medicationcard] only Reference(ChEtocMedicationCard)
+* supportingInfo[medicationcard] ^short = "Medication Card contains n medications with dosages"
 * supportingInfo[allegiesIntolerances] MS
 * supportingInfo[allegiesIntolerances] only Reference(ChEtocAllergyIntolerance)
-* supportingInfo[immunization] MS
-* supportingInfo[immunization] only Reference(ChEtocImmunizationSection)
+* supportingInfo[immunizations] MS
+* supportingInfo[immunizations] only Reference(ChEtocImmunizationSection)
 
 * supportingInfo[labresults] MS
 * supportingInfo[labresults] only Reference(ChEtocLabObservation)
 * supportingInfo[pathologyresults] MS
 * supportingInfo[pathologyresults] only Reference(ChEtocPathologyObservation)
-* supportingInfo[radiologyresults] MS
-* supportingInfo[radiologyresults] only Reference(ChEtocRadiologyObservation)
+* supportingInfo[imagingresults] MS
+* supportingInfo[imagingresults] only Reference(ChEtocRadiologyObservation)
+* supportingInfo[cardiologyresults] MS
+* supportingInfo[cardiologyresults] only Reference(ChEtocCardiologyObservation)
 
-* supportingInfo[diagnosticReports] MS
-* supportingInfo[diagnosticReports] only Reference(ChEtocADiagnosticReport)
+//* supportingInfo[diagnosticReports] MS
+//* supportingInfo[diagnosticReports] only Reference(ChEtocDiagnosticReport) //not used
 
-* supportingInfo[carePlans] MS
-* supportingInfo[carePlans] only Reference(ChEtocCarePlan)
+* supportingInfo[medicalCarePlans] MS
+* supportingInfo[medicalCarePlans] only Reference(ChEtocMedicalCarePlan)
+
+* supportingInfo[nursingCarePlans] MS
+* supportingInfo[nursingCarePlans] only Reference(ChEtocNursingCarePlan)
 
 /* ------- bodySite -------
 Currently no use intended

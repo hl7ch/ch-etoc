@@ -39,7 +39,7 @@ Description: "Definition for the Allergy Intolerance resource in the context of 
 // -------- Corresponds to IPS Problem List --------- Ready for 1. Ballot
 Profile: ChEtocDiagnosisCondition
 Parent: Condition
-Id: ch-etoc-diagnosis-condition
+Id: ch-etoc-diagnosis
 Title: "CH eToc Diagnosis Condition"
 Description: "Definition for the Diagnosis Condition resource in the context of CH RAD-Order."
 * . ^short = "CH eToc Diagnosis Condition"
@@ -89,7 +89,7 @@ Description: "Definition for the Device resource in the context of electronic tr
 
 
 // -------- Corresponds to IPS Diagnostic Results --------- Ready for 1. Ballot 
-Profile: ChEtocADiagnosticReport
+/*Profile: ChEtocADiagnosticReport
 Parent: DiagnosticReport
 Id: ch-etoc-diagnosticreport
 Title: "CH eToc Diagnostic Report"
@@ -102,6 +102,7 @@ Description: "Definition for the Diagnostic Report resource in the context of el
 * presentedForm MS
 * presentedForm.title MS
 * presentedForm.data MS
+*/
 
 Profile: ChEtocLabObservation
 Parent: Observation
@@ -134,7 +135,6 @@ Description: "Definition for the Pathology Observation resource in the context o
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "kg"
 * valueQuantity.code ^fixedCode = #kg
-* dataAbsentReason MS
 * component 0..0
 
 Profile: ChEtocRadiologyObservation
@@ -151,10 +151,24 @@ Description: "Definition for the Radiology Observation resource in the context o
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "kg"
 * valueQuantity.code ^fixedCode = #kg
-* dataAbsentReason MS
 * component 0..0
 
-
+Profile: ChEtocCardiologyObservation
+Parent: Observation
+Id: ch-etoc-cardiolology-observation
+Title: "CH eToc Cardiology Observation"
+Description: "Definition for the Cardiology Observation resource in the context of CH eToc."
+* . ^short = "CH eToc Cardiolology Observation"
+// Supplementary to IPS
+* status MS
+//* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
+* subject MS 
+* subject only Reference(ChCorePatient) 
+* effectiveDateTime MS
+* valueQuantity MS
+* valueQuantity.unit ^fixedString = "kg"
+* valueQuantity.code ^fixedCode = #kg
+* component 0..0
 // -------- Corresponds to IPS Vital Signs --------- Ready for 1. Ballot
 /*Profile: ChEtocFVitalSigns
 Parent: Vitalsigns
@@ -196,7 +210,7 @@ Description: "Definition for the Body Weight Observation resource in the context
 // -------- Corresponds to IPS Past history of illnesses --------- Ready for 1. Ballot
 Profile: ChEtocPastHistoryofIllnessesCondition
 Parent: Condition
-Id: ch-etoc-past-history-of-illnesses-condition
+Id: ch-etoc-illness
 Title: "CH eToc Past History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Past History of Illness Condition"
@@ -211,7 +225,7 @@ Description: "Definition for the Past History of Illnesses Condition resource in
 // -------- Corresponds to IPS Pregnancy ---------  Ready for 1. Ballot
 Profile: ChEtocPregnancyStatusObservation
 Parent: Observation
-Id: ch-etoc-pregnancystatus-observation
+Id: ch-etoc-pregnancystatus
 Title: "CH eToc Pregnancy Status Observation"
 Description: "Definition for the Pregnancy Status Observation resource in the context of CH eToc."
 * . ^short = "CH eToc Pregnancy Status Observation"
@@ -225,7 +239,7 @@ Description: "Definition for the Pregnancy Status Observation resource in the co
 
 Profile: ChEtocPregnancyExpectedDeliveryDateObservation
 Parent: Observation
-Id: ch-etoc-expecteddeliverydate-observation
+Id: ch-etoc-expecteddeliverydate
 Title: "CH eToc Expected Delivery Date Observation"
 Description: "Definition for the Expected Delivery Date Observation resource in the context of CH eToc."
 * . ^short = "CH eToc Expected Delivery Date Observation"
@@ -241,7 +255,7 @@ Profile: ChEtocSocialHistoryCondition
 /* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. eToc considers  Social History as
 as broader; consecutverly entries are defined as conditions. tobaco and alcohol abuse shall be listed in problem list*/
 Parent: Condition
-Id: ch-etoc-social-history-condition
+Id: ch-etoc-socialhistory
 Title: "CH eToc Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Social History Condition"
@@ -256,7 +270,7 @@ Description: "Definition for the Social History Condition resource in the contex
 // -------- Corresponds to IPS IFunctional Status  --------- Ready for 1. Ballot
 Profile: ChEtocFunctionalStatusCondition
 Parent: Condition
-Id: ch-etoc-functional-status-condition
+Id: ch-etoc-functionalstatus
 Title: "CH eToc Functional Status Condition"
 Description: "Definition for the Functional Status Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Functional Status Condition"
@@ -269,16 +283,36 @@ Description: "Definition for the Functional Status Condition resource in the con
 * subject only Reference(ChCorePatient) 
 
 // -------- Corresponds to IPS Plan of Care --------- Ready for 1. Ballot
-Profile: ChEtocCarePlan
+
+Profile: ChEtocMedicalCarePlan
 Parent: CarePlan
-Id: ch-etoc-careplan
+Id: ch-etoc-medical-careplan
 Title: "CH eToc Care Plan"
 Description: "Definition for the Care Plan resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
 * status MS
 * intent MS
 * category MS
-* category from ChEtocCarePlanContributors
+// * category from ChEtocCarePlanContributors // not used
+* title MS
+* activity MS
+* activity.outcomeCodeableConcept MS
+* activity.outcomeCodeableConcept.text MS
+* activity.detail MS
+* activity.detail.code MS
+* activity.detail.code.text MS
+
+
+Profile: ChEtocNursingCarePlan
+Parent: CarePlan
+Id: ch-etoc-ursing-careplan
+Title: "CH eToc Care Plan"
+Description: "Definition for the Care Plan resource in the context of electronic transition of care."
+* . ^short = "CH eToc Procedure"
+* status MS
+* intent MS
+* category MS
+// * category from ChEtocCarePlanContributors // not used
 * title MS
 * activity MS
 * activity.outcomeCodeableConcept MS
