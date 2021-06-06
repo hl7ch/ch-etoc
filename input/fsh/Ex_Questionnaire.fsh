@@ -871,7 +871,7 @@ Allergien und Intoleranzen
 * item[=].type = #group
 
 * item[=].item[+].linkId = "allergy.allegiesIntolerances"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:llegiesIntolerances"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
 * item[=].item[=].text = "Allergie / Intoleranz"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
@@ -884,7 +884,7 @@ Impfungen
 * item[=].type = #group
 
 * item[=].item[+].linkId = "immunizationstatus.immunizations"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:limmunizations"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
 * item[=].item[=].text = "Bisherige Impfungen"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true

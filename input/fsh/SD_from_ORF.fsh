@@ -66,7 +66,7 @@ Currently no use intended
     functionalStatus 0..* and    
 
     medicationcard 0..1 and // Medication Card contains n medications with dosages
-    allegiesIntolerances 0..* and
+    allergiesIntolerances 0..* and
     immunizations 0..* and
 
     labresults 0..* and
@@ -102,8 +102,8 @@ Currently no use intended
 * supportingInfo[medicationcard] MS
 * supportingInfo[medicationcard] only Reference(ChEtocMedicationCard)
 * supportingInfo[medicationcard] ^short = "Medication Card contains n medications with dosages"
-* supportingInfo[allegiesIntolerances] MS
-* supportingInfo[allegiesIntolerances] only Reference(ChEtocAllergyIntolerance)
+* supportingInfo[allergiesIntolerances] MS
+* supportingInfo[allergiesIntolerances] only Reference(ChEtocAllergyIntolerance)
 * supportingInfo[immunizations] MS
 * supportingInfo[immunizations] only Reference(ChEtocImmunizationSection)
 
