@@ -858,7 +858,7 @@ Medikation
 * item[=].type = #group
 
 * item[=].item[+].linkId = "medication.medicationcard"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
 * item[=].item[=].text = "Medikation"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
@@ -871,7 +871,7 @@ Allergien und Intoleranzen
 * item[=].type = #group
 
 * item[=].item[+].linkId = "allergy.allegiesIntolerances"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
 * item[=].item[=].text = "Allergie / Intoleranz"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
@@ -884,7 +884,7 @@ Impfungen
 * item[=].type = #group
 
 * item[=].item[+].linkId = "immunizationstatus.immunizations"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
 * item[=].item[=].text = "Bisherige Impfungen"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
@@ -898,7 +898,7 @@ Labor
 * item[=].item[+].linkId = "lab.labresults"
 
 * item[=].item[=].text = "Laborresultat"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
@@ -911,7 +911,7 @@ Pathologie
 
 * item[=].item[+].linkId = "pathology.pathologyresults"
 * item[=].item[=].text = "Pathologiebefund"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:pathologyresults"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pathologyresults"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = true
 
@@ -923,7 +923,7 @@ Bildgebung
 * item[=].type = #group
 
 * item[=].item[+].linkId = "imaging.imagingresults"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:imagingresults"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:imagingresults"
 * item[=].item[=].text = "Befund aus der Bildgebung"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = true
@@ -937,7 +937,7 @@ Kardiologie
 * item[=].type = #group
 
 * item[=].item[+].linkId = "cardiology.cardiologyresults"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].item[=].text = "EKG / Kardiologischer Befund"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = true
@@ -951,13 +951,13 @@ Pflege: Bisheriger und weiterer Verlauf
 
 * item[=].item[+].linkId = "carePlans"
 * item[=].item[=].text = "Ärztlicher Bericht"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:medicalCarePlan"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicalCarePlan"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "carePlans"
 * item[=].item[=].text = "Pflegebericht"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/h-etoc-servicerequest#ServiceRequest.supportingInfo:nursingCarePlan"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:nursingCarePlan"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = true
 

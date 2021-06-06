@@ -3,6 +3,5 @@
 
     <div>
     {% include Questionnaire-QuestionnaireEtoc-html.xhtml %}
-    <!--  Case Error Corrected -->
     </div>
 </div>

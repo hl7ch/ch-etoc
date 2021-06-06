@@ -5,7 +5,7 @@ Profile: ChEtocServiceRequest
 Parent: ChOrfServiceRequest
 Id: ch-etoc-servicerequest
 Title: "CH eToc Service Request"
-Description: "Definition for the ServiceRequest resource in the context of electronic transition of care.."
+Description: "Definition for the ServiceRequest resource in the context of electronic transition of care."
 * . ^short = "CH eToc Service Request"
 * . ^definition = "This IG adheres to the FHIR International Patient Summary (IPS) Implementation Guide. Clinical content uses
 mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions are however constrained from FHIR base definitions and Swiss Core definitions 
@@ -134,14 +134,33 @@ Currently no use intended
 
 
 
-//============================
-/*Profile: CheTocQuestionnaire
-Parent: ChOrfQuestionnaire
-Title: "CH eTOC Questionnaire"
-Id: ch-etoc-questionnaire
-Description: "Definition for the Questionnaire resource in the context of electronic transition of care."
-* . ^short = "CH eTOC Questionnaire"
-*/
+Profile: ChEtocDocument
+Parent: ChOrfDocument
+Id: ch-etoc-document
+Title: "CH Etoc Document"
+Description: "Definition for the Bundle (document) resource in the context of electronic transition of care."
+* . ^short = "CH Etoc Bundle (document)"
+* . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
+An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
+(which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
+Consequently one CH RAD-Order Document contains one CH RAD-Order ServiceRequest which depicts one Placer Order 
+equal one Filler Order equal one Imaging Service Request."
+// ---------- Bundle.entry:Composition ----------
+* entry[Composition].resource ^type.profile = Canonical(ChEtocComposition)
+
+
+Profile: ChEtocComposition
+Parent: ChOrfComposition
+Id: ch-etoc-composition
+Title: "CH Etoc Composition"
+Description: "Definition for the Composition resource in the context of electronic transition of care."
+* . ^short = "CH Etoc Composition"
+// ---------- Composition.section.entry:ServiceRequest ----------
+* section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
+
+
+
+
 
 
 Profile: ChEtocQuestionnaireResponse
@@ -150,3 +169,5 @@ Id: ch-etoc-questionnaireresponse
 Title: "CH eTOC Questionnaire Response"
 Description: "Definition for the QuestionnaireResponse resource in the context of electronic transition of care."
 * . ^short = "CH eToc Questionnaire Response"
+
+
