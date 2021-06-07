@@ -284,7 +284,6 @@ Description: "Example for Questionnaire"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].repeats = true
 
-
 * item[=].item[=].item[+].linkId = "patient.contactperson.email"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
 * item[=].item[=].item[=].text = "E-Mail"
@@ -293,18 +292,17 @@ Description: "Example for Questionnaire"
 // ---------- Encounter Class (Ambulant / Stationär / Notfall) & Zimmerkategorie ----------
 * item[+].linkId = "requestedEncounter"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.extension:requestedencounterdetails"
-* item[=].text = "Gewünschter Aufenthalt"
+* item[=].text = "Patientenaufnahme"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "requestedEncounter.class"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.class"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-* item[=].item[=].text = "Versicherungsklasse"
+* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
 * item[=].item[=].answerOption[+].valueCoding = V3ActCode#AMB "Ambulant"
 * item[=].item[=].answerOption[+].valueCoding = V3ActCode#IMP "Stationär"
 * item[=].item[=].answerOption[+].valueCoding = V3ActCode#EMER "Notfall"
-
 
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.extension:desiredaccommodation"
