@@ -29,6 +29,9 @@ dependencies:
   ch.fhir.ig.ch-core: 2.0.0
   ch.fhir.ig.ch-emed: 0.2.0
   ch.fhir.ig.ch-vacd: 0.1.0
+  ch.fhir.ig.ch-epr-term: 2.0.5
+  hl7.fhir.uv.ips: 1.0.0 
+
 
 pages:
   index.html:

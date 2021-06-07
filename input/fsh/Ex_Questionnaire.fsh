@@ -176,7 +176,6 @@ Description: "Example for Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = RequestPriority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
 * item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
-
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
 // patient is not required because patient may not be known e.g. anonymized in case of research or name unknown in emergency
 * item[+].linkId = "patient"
@@ -229,6 +228,7 @@ Description: "Example for Questionnaire"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.telecom.value"
 * item[=].item[=].text = "Telefon"
 * item[=].item[=].type = #string
+* item[=].item[=].repeats = true
 
 * item[=].item[+].linkId = "patient.email"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.telecom.value"
@@ -256,6 +256,39 @@ Description: "Example for Questionnaire"
 * item[=].item[=].text = "Land"
 * item[=].item[=].type = #string
 
+// ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
+
+* item[=].item[+].linkId = "patient.contactperson"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.subject"
+* item[=].item[=].text = "Patient"
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.relationship"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.relationship.text"
+* item[=].item[=].item[=].text = "Beziehung"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.familyName"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.family"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.givenName"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.name.given"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.phone"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = true
+
+
+* item[=].item[=].item[+].linkId = "patient.contactperson.email"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact.telecom.value"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].type = #string
 
 // ---------- Encounter Class (Ambulant / Stationär / Notfall) & Zimmerkategorie ----------
 * item[+].linkId = "requestedEncounter"

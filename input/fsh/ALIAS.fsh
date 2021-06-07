@@ -58,9 +58,7 @@ Alias:   HL7ObservationCategory =       http://terminology.hl7.org/CodeSystem/ob
 Alias:   HL7DiagnosticServiceSection =  http://hl7.org/fhir/ValueSet/diagnostic-service-sections
 
 // IPS
-Alias:   PregnancyExpectedDeliveryDateMethod = UVIPShttp://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips
-
-
+Alias:   PregnancyExpectedDeliveryDateMethod = http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips                                               
 
 
 /* // External Code Systems
