@@ -29,17 +29,23 @@
     </p>
 
         <ul>
-            <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire marked as 
-            "CH-mandatoy" in the user interface (e.g. on screen, in print). Grouping of items and the order of items within shall be adequately
-            reproduced according to the Questionnaire.</li>
-            <li>Be able to process all items denoted as "CH-mandatoy".</li>
-
+            <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the user interface
+            (e.g. on screen, in print).</li> 
+            
+            <li>For Clinical Information: Grouping of items and the order of items within shall be adequately reproduced according to the Questionnaire.</li>
         </ul>
    
-   <p>Currently, some items are marked as "MUST SUPPORT". This is due to the fact, that this IG is derived partly from the 
-   International Patient Summary (IPS). It is envisaged, that CH eTOC shall support all MUST SUPORT Items of IPS in
-   a future version. For the time now, this is not the case; the first DSTU requests only support of "CH-mandatoy" items: these are mainly free text entries. 
-    </p>
+   <p>This IG adheres to the FHIR International Patient Summary (IPS) Implementation Guide. Clinical content uses
+    mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions 
+    are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS. 
+    This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
+    Swiss Core. eToc adds a ServiceReequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
+    service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest
+    resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) 
+    and follow the definition in the ORF Implementation Guide.  
+
+    This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives gudiance for 
+    the implementaion of the user interface.</p>
 
     <p>As a consequence of this decision, the first version of CH eTOC does not claim to be confromant to IPS.
     </p>

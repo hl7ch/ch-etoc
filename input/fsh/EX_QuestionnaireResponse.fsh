@@ -254,57 +254,6 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
 
 
-/*------ Appointment ------------------------------ 
-* item[+].linkId = "appointment"
-* item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
-
-* item[=].item[+].linkId = "appointment.location"
-* item[=].item[=].text = "Ort der Durchführung"
-
-* item[=].item[=].item[+].linkId = "appointment.location.name"
-* item[=].item[=].item[=].text = "Name"
-* item[=].item[=].item[=].answer.valueString = "Radiologie"
-
-* item[=].item[=].item[+].linkId = "appointment.location.phone"
-* item[=].item[=].item[=].text = "Telefon"
-* item[=].item[=].item[=].answer.valueString = "+41 44 412 65 56"
-
-* item[=].item[=].item[+].linkId = "appointment.location.streetAddressLine"
-* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[+].valueString = "Seestrasse 133"
-* item[=].item[=].item[=].answer[+].valueString = "Röntgen"
-
-* item[=].item[=].item[+].linkId = "appointment.location.postalCode"
-* item[=].item[=].item[=].text = "PLZ"
-* item[=].item[=].item[=].answer.valueString = "8000"
-
-* item[=].item[=].item[+].linkId = "appointment.location.city"
-* item[=].item[=].item[=].text = "Ort"
-* item[=].item[=].item[=].answer.valueString = "Zürich"
-
-* item[=].item[=].item[+].linkId = "appointment.location.country"
-* item[=].item[=].item[=].text = "Land"
-* item[=].item[=].item[=].answer.valueString = "Schweiz"
-
-* item[=].item[+].linkId = "appointment.requestedPeriod"
-* item[=].item[=].text = "Datum und Zeit, wann der Termin bevorzugt geplant werden soll"
-
-* item[=].item[=].item[+].linkId = "appointment.requestedPeriod.start"
-* item[=].item[=].item[=].text = "Von"
-* item[=].item[=].item[=].answer.valueDateTime = "2019-04-01T15:00:00.000+00:00"
-
-* item[=].item[=].item[+].linkId = "appointment.requestedPeriod.end"
-* item[=].item[=].item[=].text = "Bis"
-* item[=].item[=].item[=].answer.valueDateTime = "2019-04-01T15:30:00.000+00:00"
-
-* item[=].item[+].linkId = "appointment.status"
-* item[=].item[=].text = "Status"
-* item[=].item[=].answer.valueCoding = AppointmentStatus#proposed
-
-* item[=].item[+].linkId = "appointment.patientInstruction"
-* item[=].item[=].text = "Patienteninformation für diesen Termin"
-* item[=].item[=].answer.valueString = "Wunschtermin der Patientin"
-*/
 /* ============ Kerninhaltes der Rad-Order ==============================
 */
 
@@ -316,13 +265,11 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[+].linkId = "purpose.aim"
 * item[=].item[=].text = "Ziel"                
-* item[=].item[=].answer.valueString = ""
+* item[=].item[=].answer.valueString = "Abklärung akuter Thoraxschmerzen"
 
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].text = "Begründung"  
-* item[=].item[=].answer.valueString = ""
-
-
+* item[=].item[=].answer.valueString = "Verdacht auf Myokardinfarkt"
 
 /*----------------------------------------------------------------------
 Darstellung der Diagnosen und Befunde
@@ -332,12 +279,12 @@ Darstellung der Diagnosen und Befunde
 
 * item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"  
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
-* item[=].item[=].answer[+].valueString = "Primary Diagnosis"
+* item[=].item[=].answer[+].valueString = "St. nach Bypass 2007"
 
 * item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
-* item[=].item[=].answer[+].valueString = "Secondary Diagnosis 1"
-* item[=].item[=].answer[+].valueString = "Secondary Diagnosis 2"
+* item[=].item[=].answer[+].valueString = "Hypertonie (Syst um 180 mm HG)"
+* item[=].item[=].answer[+].valueString = "Hypercholesterinämie"
 
 * item[=].item[+].linkId = "diagnosisList.bodyHeight"
 * item[=].item[=].text = "Grösse (cm)"   
@@ -347,6 +294,27 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[=].text = "Gewicht (kg)"   
 * item[=].item[=].answer.valueQuantity = 99 'kg' "kg"
 
+/*----------------------------------------------------------------------
+Anamnese
+ */
+* item[+].linkId = "anamnesis" 
+* item[=].text = "Anamnese"
+
+* item[=].item[+].linkId = "anamnesis.historyofillnesses"   
+* item[=].item[=].text = "Bisherige Krankheiten und Unfälle"   
+* item[=].item[=].answer[+].valueString = "Endokarditis 1999"
+
+/* ---------------------------------------------------------------------------
+Medikation
+*/
+* item[+].linkId = "medication"
+* item[=].text = "Aktuelle Medikation"
+
+* item[=].item[+].linkId = "medication.medicationcard"
+* item[=].item[=].text = "Medikation"
+* item[=].item[=].answer[+].valueString = "Erdabyclor 20/25 mg 1/2-0-0-0"
+* item[=].item[=].answer[+].valueString = "Morphin 5 mg i.v.; 16h30"
+* item[=].item[=].answer[+].valueString = "Nitroglycerin 0.8 mg s.L.; 16h15"
 
 /* -----------------------------------------------------------------------------
 Service Request Notes 
@@ -356,4 +324,19 @@ Service Request Notes
 
 * item[=].item[+].linkId = "note.text"
 * item[=].item[=].text = "Kommentar" 
-* item[=].item[=].answer.valueString = "BPatient ist sehr ängstlich"
+* item[=].item[=].answer.valueString = "Patient ist sehr ängstlich"
+
+/* ---------------------------------------------------------------------------
+Berichte
+*/
+
+* item[=].item[+].linkId = "attachments"
+* item[=].item[=].text = "Anhang"
+
+* item[=].item[=].item[+].linkId = "attachtment.title" 
+* item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].item[=].item[=].answer.valueString = ""
+
+* item[=].item[=].item[+].linkId = "attachment.data"
+* item[=].item[=].item[=].text = "Daten"
+* item[=].item[=].item[=].answer.valueString = ""

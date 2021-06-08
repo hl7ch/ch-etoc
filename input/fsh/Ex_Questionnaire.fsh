@@ -816,7 +816,7 @@ Darstellung der Diagnosen und Befunde
 
 * item[=].item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis.item"  
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:diagnosis"
-* item[=].item[=].item[=].text = "Nebendiagnosen / Nebenprobleme"
+* item[=].item[=].item[=].text = "Nebendiagnose / Problem"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].repeats = true
 

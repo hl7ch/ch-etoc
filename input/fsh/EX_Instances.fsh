@@ -10,13 +10,12 @@ Description: "Example for ServiceRequest"
 * intent = #order
 * priority = #routine
 
-* code.text              = "Abklärung akuter Thoraxschmerz"
+* code.text              = "Abklärung akuter Thoraxschmerzen"
 * reasonCode.text        = "Verdacht auf Myokardinfarkt"
 * reasonReference[+] = Reference(PrimaryDiagnosis)
 
 * subject = Reference(SUfferer)
 * requester = Reference(ORderplacerHappyDoctors)
-* performer = Reference(ORderfillerHappyHospital) // desiredRadiologist
 
 * insurance = Reference(CoverageKVG)
 
@@ -32,7 +31,6 @@ InstanceOf: ChEtocPastHistoryofIllnessesCondition
 Title: "PastHistoryofIllnesses Medical Referral"
 Description: "tHistoryofIllnessesCondition"
 * subject = Reference(SUfferer)
-
 * code.text = "Endokarditis 1999"
  
 Instance: MedicationStatementEtoc1
@@ -51,7 +49,7 @@ Instance: MedicationStatementEtoc3
 InstanceOf: ChEmedMedicationStatement
 Title: "Medication Card  Medical Referral"
 Description: "MedicationStatement"
-* code.text = "Nitroglycerin 0.8 mg s.L. ; 16h15"
+* code.text = "Nitroglycerin 0.8 mg s.L.; 16h15"
 
 
 Instance: CompositionEtoc
@@ -69,9 +67,9 @@ Description: "Example for Composition"
 * extension[copyReceiver].valueReference = Reference(SUffererCopyReceiver)
 * status = #final
 // fixer Wert aus DocumentEntry.typeCode
-* type = SNOMEDCTSwissExtension#2161000195103 "Imaging order (record artifact)"
+* type = SNOMEDCTSwissExtension#419891008 "Nicht näher bezeichnetes Dokument"
 // fixer Wert aus DocumentEntry.classCode
-* category = SCT#721963009 "Order (record artifact)"
+* category = SCT#721927009 "Zuweisungsschreiben"
 * subject = Reference(SUfferer)
 * date = "2019-04-01T20:18:41.341+00:00"
 * author = Reference(ORderplacerHappyDoctors)
@@ -125,14 +123,17 @@ Description: "Example for Bundle"
 //------------- more -------------
 * entry[+].fullUrl = "http://example.com/fhir/Condition/PrimaryDiagnosis"
 * entry[=].resource = PrimaryDiagnosis
-* entry[+].fullUrl = "http://example.com/fhir/Observation/BodyHeight"
-* entry[=].resource = BodyHeight
-* entry[+].fullUrl = "http://example.com/fhir/Observation/BodyWeight"
-* entry[=].resource = BodyWeight
 * entry[+].fullUrl = "http://example.com/fhir/Condition/SecondaryDiagnosis1"
 * entry[=].resource = SecondaryDiagnosis1
 * entry[+].fullUrl = "http://example.com/fhir/Condition/SecondaryDiagnosis2"
 * entry[=].resource = SecondaryDiagnosis2
+* entry[+].fullUrl = "http://example.com/fhir/Observation/BodyHeight"
+* entry[=].resource = BodyHeight
+* entry[+].fullUrl = "http://example.com/fhir/Observation/BodyWeight"
+* entry[=].resource = BodyWeight
+
+
+
 * entry[+].fullUrl = "http://example.com/fhir/Coverage/CoverageKVG"
 * entry[=].resource = CoverageKVG
 //
