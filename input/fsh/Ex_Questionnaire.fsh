@@ -990,13 +990,13 @@ Pflege: Bisheriger und weiterer Verlauf
 * item[=].text = "Verlauf"
 * item[=].type = #group
 
-* item[=].item[+].linkId = "carePlans"
+* item[=].item[+].linkId = "carePlans.medical"
 * item[=].item[=].text = "Ärztlicher Bericht"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicalCarePlan"
 * item[=].item[=].type = #text
 * item[=].item[=].repeats = true
 
-* item[=].item[+].linkId = "carePlans"
+* item[=].item[+].linkId = "carePlans.nursing"
 * item[=].item[=].text = "Pflegebericht"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:nursingCarePlan"
 * item[=].item[=].type = #text

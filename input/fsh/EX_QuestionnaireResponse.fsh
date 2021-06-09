@@ -335,8 +335,8 @@ Berichte
 
 * item[=].item[=].item[+].linkId = "attachtment.title" 
 * item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
-* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].answer.valueString = "EKG_09062021.pdf"
 
 * item[=].item[=].item[+].linkId = "attachment.data"
 * item[=].item[=].item[=].text = "Daten"
-* item[=].item[=].item[=].answer.valueString = ""
+* item[=].item[=].item[=].answer.valueString = "asdfadsf12"
