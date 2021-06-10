@@ -30,7 +30,7 @@ dependencies:
   ch.fhir.ig.ch-emed: 0.2.0
   ch.fhir.ig.ch-vacd: 0.1.0
   ch.fhir.ig.ch-epr-term: 2.0.5
-  
+  ch.fhir.ig.ch-allergyintolerance: current  
   hl7.fhir.uv.ips: 1.0.0 
 
 

@@ -25,8 +25,7 @@ Description: "Definition for the Medication Statement resource in the context of
 
 // -------- Corresponds to IPS Allergies and Intolerances --------- 
 Profile: ChEtocAllergyIntolerance
-//Parent: ChAllergyIntolerance
-Parent: AllergyIntolerance // Workaround
+Parent: ChAllergyIntolerance
 Id: ch-etoc-allergyintolerance
 Title: "CH eToc Allergy Intolerance"
 Description: "Definition for the Allergy Intolerance resource in the context of electronic transition of care."
