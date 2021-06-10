@@ -209,7 +209,6 @@ Description: "Definition for the Pregnancy Status Observation resource in the co
 * subject only Reference(ChCorePatient) 
 * effectiveDateTime MS
 * valueQuantity MS
-* dataAbsentReason from DataAbsentReason (required)
 
 
 Profile: ChEtocPregnancyExpectedDeliveryDateObservation
@@ -219,11 +218,10 @@ Title: "CH eToc Expected Delivery Date Observation"
 Description: "Definition for the Expected Delivery Date Observation resource in the context of CH eToc."
 * . ^short = "CH eToc Expected Delivery Date Observation"
 * status MS
-* code MS
-* code from PregnancyExpectedDeliveryDateMethod (required)
+//* code MS
+//* code from PregnancyExpectedDeliveryDateMethod (required)
 * subject only Reference(ChCorePatient) 
 * effectiveDateTime MS
-* dataAbsentReason from DataAbsentReason (required)
 
 
 // -------- Corresponds to IPS Social History --------- 

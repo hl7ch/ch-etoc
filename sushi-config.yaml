@@ -33,8 +33,6 @@ dependencies:
   ch.fhir.ig.ch-allergyintolerance: current  
   hl7.fhir.uv.ips: 1.0.0 
 
-
-
 pages:
   index.html:
     title: Home
