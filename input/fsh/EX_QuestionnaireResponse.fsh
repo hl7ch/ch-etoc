@@ -253,12 +253,18 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
 
+// ---------- Encounter Class (Ambulant / Stationär / Notfall) & Zimmerkategorie ----------
+* item[+].linkId = "requestedEncounter"
+* item[=].text = "Patientenaufnahme"
+
+* item[=].item[+].linkId = "requestedEncounter.class"
+* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
+* item[=].item[=].answer[+].valueCoding = V3ActCode#EMER "Notfall"
 
 /* ============ Kerninhaltes der Rad-Order ==============================
-*/
 
 /*------------------------------------------------------------------------
-2. Fragestellung (mehrere Werte)
+Wozu wird der Patient zugewiesen
 */
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
@@ -269,7 +275,7 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].text = "Begründung"  
-* item[=].item[=].answer.valueString = "Verdacht auf Myokardinfarkt"
+* item[=].item[=].answer.valueString = "Verdacht auf Vorderwandinfarkt"
 
 /*----------------------------------------------------------------------
 Darstellung der Diagnosen und Befunde
@@ -277,22 +283,38 @@ Darstellung der Diagnosen und Befunde
 * item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
 
-* item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"  
+* item[=].item[+].linkId = "diagnosisList.primarydiagnosis"
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
-* item[=].item[=].answer[+].valueString = "St. nach Bypass 2007"
 
-* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"
+* item[=].item[=].item[+].linkId = "diagnosisList.primaryDiagnosis.item"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonReference"
+* item[=].item[=].item[=].text = "Hauptdiagnose / Problem"
+* item[=].item[=].item[=].answer[+].valueString = "St. nach Bypass 2007"
+
+* item[=].item[+].linkId = "diagnosisList.secondarydiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
-* item[=].item[=].answer[+].valueString = "Hypertonie (Syst um 180 mm HG)"
-* item[=].item[=].answer[+].valueString = "Hypercholesterinämie"
+
+* item[=].item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis.item"  
+* item[=].item[=].item[=].text = "Nebendiagnose / Problem"
+* item[=].item[=].item[=].answer[+].valueString = "Hypertonie (Syst um 180 mm HG)"
+* item[=].item[=].item[=].answer[+].valueString = "Hypercholesterinämie seit Jahren"
 
 * item[=].item[+].linkId = "diagnosisList.bodyHeight"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyHeight"
 * item[=].item[=].text = "Grösse (cm)"   
-* item[=].item[=].answer.valueQuantity = 176 'cm' "cm"
+
 
 * item[=].item[+].linkId = "diagnosisList.bodyWeight"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyWeight"
 * item[=].item[=].text = "Gewicht (kg)"   
-* item[=].item[=].answer.valueQuantity = 99 'kg' "kg"
+
+* item[=].item[+].linkId = "diagnosisList.pregnancy"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+* item[=].item[=].text = "Schwangerschaft"   
+
+* item[=].item[=].item[+].linkId = "diagnosisList.pregnancy.expectedDeliveryDate"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+* item[=].item[=].item[=].text = "Erwarteter Geburtstermin"   
 
 /*----------------------------------------------------------------------
 Anamnese
@@ -301,8 +323,25 @@ Anamnese
 * item[=].text = "Anamnese"
 
 * item[=].item[+].linkId = "anamnesis.historyofillnesses"   
-* item[=].item[=].text = "Bisherige Krankheiten und Unfälle"   
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofIllnesses"  
+* item[=].item[=].text = "Bisherige Krankheiten und Unfälle" 
 * item[=].item[=].answer[+].valueString = "Endokarditis 1999"
+
+* item[=].item[+].linkId = "anamnesis.historyofprocedures"   
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofProcedures"  
+* item[=].item[=].text = "Bisherige Abklärungen und Eingriffe"   
+
+* item[=].item[+].linkId = "anamnesis.devices"   
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:devices"  
+* item[=].item[=].text = "Implantate, Schrittmacher, Neurostimulatoren etc."   
+
+* item[=].item[+].linkId = "anamnesis.socialhistory"   
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:socialHistory"  
+* item[=].item[=].text = "Sozialanamnese"  
+
+* item[=].item[+].linkId = "anamnesis.functionalStatus"   
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:functionalStatus"  
+* item[=].item[=].text = "Funktion, Behinderungen"   
 
 /* ---------------------------------------------------------------------------
 Medikation
@@ -311,32 +350,101 @@ Medikation
 * item[=].text = "Aktuelle Medikation"
 
 * item[=].item[+].linkId = "medication.medicationcard"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
 * item[=].item[=].text = "Medikation"
 * item[=].item[=].answer[+].valueString = "Erdabyclor 20/25 mg 1/2-0-0-0"
 * item[=].item[=].answer[+].valueString = "Morphin 5 mg i.v.; 16h30"
 * item[=].item[=].answer[+].valueString = "Nitroglycerin 0.8 mg s.L.; 16h15"
 
-/* -----------------------------------------------------------------------------
-Service Request Notes 
+/* ---------------------------------------------------------------------------
+Allergien und Intoleranzen
 */
-* item[+].linkId = "note"
-* item[=].text = "Bemerkungen"
+* item[+].linkId = "allergy"
+* item[=].text = "Allergien und Intoleranzen"
 
-* item[=].item[+].linkId = "note.text"
-* item[=].item[=].text = "Kommentar" 
-* item[=].item[=].answer.valueString = "Patient ist sehr ängstlich"
+* item[=].item[+].linkId = "allergy.allegiesIntolerances"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
+* item[=].item[=].text = "Allergie / Intoleranz"
+
+/* ---------------------------------------------------------------------------
+Impfungen
+*/
+* item[+].linkId = "immunizationstatus"
+* item[=].text = "Impfungen"
+
+* item[=].item[+].linkId = "immunizationstatus.immunizations"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
+* item[=].item[=].text = "Bisherige Impfungen"
+
+/* ---------------------------------------------------------------------------
+Labor
+*/
+* item[+].linkId = "lab"
+* item[=].text = "Labor"
+
+* item[=].item[+].linkId = "lab.labresults"
+* item[=].item[=].text = "Laborresultat"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
+
+/* ---------------------------------------------------------------------------
+Pathologie
+*/
+* item[+].linkId = "pathology"
+* item[=].text = "Pathologie"
+
+* item[=].item[+].linkId = "pathology.pathologyresults"
+* item[=].item[=].text = "Pathologiebefunde"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pathologyresults"
+
+/* ---------------------------------------------------------------------------
+Bildgebung
+*/
+* item[+].linkId = "imaging"
+* item[=].text = "Bildgebung"
+
+* item[=].item[+].linkId = "imaging.imagingresults"
+* item[=].item[=].text = "Befund aus der Bildgebung"
+
+/* ---------------------------------------------------------------------------
+Kardiologie
+*/
+* item[+].linkId = "cardiology"
+* item[=].text = "Kardiologie"
+
+* item[=].item[+].linkId = "cardiology.cardiologyresults"
+* item[=].item[=].text = "EKG / Kardiologischer Befund"
+* item[=].item[=].answer[+].valueString = "ST-Hebungen V1-V5"
+
+/* ---------------------------------------------------------------------------
+Bisheriger und weiterer Verlauf
+*/
+* item[+].linkId = "carePlans"
+* item[=].text = "Verlauf"
+
+* item[=].item[+].linkId = "carePlans.medical" // Aerztlich
+* item[=].item[=].text = "Ärztlicher Bericht"
+
+* item[=].item[+].linkId = "carePlans.nursing" // Pflege
+* item[=].item[=].text = "Pflegebericht"
 
 /* ---------------------------------------------------------------------------
 Berichte
 */
-
 * item[=].item[+].linkId = "attachments"
 * item[=].item[=].text = "Anhang"
 
-* item[=].item[=].item[+].linkId = "attachtment.title" 
+* item[=].item[=].item[+].linkId = "attachtment.title"  
 * item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
-* item[=].item[=].item[=].answer.valueString = "EKG_09062021.pdf"
+* item[=].item[=].item[=].answer[+].valueString = "EKG_09062021.pdf"
 
-* item[=].item[=].item[+].linkId = "attachment.data"
+* item[=].item[=].item[+].linkId = "attachment.data"  
 * item[=].item[=].item[=].text = "Daten"
-* item[=].item[=].item[=].answer.valueString = "asdfadsf12"
+* item[=].item[=].item[=].answer[+].valueString = "324nnvsdafw3qwef3"
+
+// -------- Service Request Notes ------
+* item[+].linkId = "note"
+* item[=].text = "Bemerkungen"
+
+* item[=].item[+].linkId = "note.text"
+* item[=].item[=].text = "Text" 
+* item[=].item[=].answer[+].valueString = "Patient ist sehr ängstlich"

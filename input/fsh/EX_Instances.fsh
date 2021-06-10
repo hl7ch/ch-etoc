@@ -12,19 +12,20 @@ Description: "Example for ServiceRequest"
 
 * code.text              = "Abklärung akuter Thoraxschmerzen"
 * reasonCode.text        = "Verdacht auf Myokardinfarkt"
-* reasonReference[+] = Reference(PrimaryDiagnosis)
+* reasonReference[+]     = Reference(PrimaryDiagnosis)
 
-* subject = Reference(SUfferer)
-* requester = Reference(ORderplacerHappyDoctors)
+* subject                = Reference(SUfferer)
+* requester              = Reference(ORderplacerHappyDoctors)
 
-* insurance = Reference(CoverageKVG)
+* insurance              = Reference(CoverageKVG)
 
-* supportingInfo[bodyHeight][+] = Reference(BodyHeight)
-* supportingInfo[bodyWeight][+] = Reference(BodyWeight)
-* supportingInfo[diagnosis][+] = Reference(SecondaryDiagnosis1)
-* supportingInfo[diagnosis][+] = Reference(SecondaryDiagnosis2)
+* supportingInfo[bodyHeight][+]         = Reference(BodyHeight)
+* supportingInfo[bodyWeight][+]         = Reference(BodyWeight)
+* supportingInfo[secondarydiagnosis][+] = Reference(SecondaryDiagnosis1)
+* supportingInfo[secondarydiagnosis][+] = Reference(SecondaryDiagnosis2)
 
 * note.text = "Patient ist sehr ängstlich"
+
 
 Instance: PastHistoryofIllnessesConditionEtoc
 InstanceOf: ChEtocPastHistoryofIllnessesCondition
@@ -33,6 +34,7 @@ Description: "tHistoryofIllnessesCondition"
 * subject = Reference(SUfferer)
 * code.text = "Endokarditis 1999"
  
+
 Instance: MedicationStatementEtoc1
 InstanceOf: ChEmedMedicationStatement
 Title: "Medication Card  Medical Referral"
@@ -44,6 +46,7 @@ InstanceOf: ChEmedMedicationStatement
 Title: "Medication Card  Medical Referral"
 Description: "MedicationStatement"
 * code.text = "Morphin 5 mg i.v.; 16h30"
+
 
 Instance: MedicationStatementEtoc3
 InstanceOf: ChEmedMedicationStatement
@@ -67,7 +70,7 @@ Description: "Example for Composition"
 * extension[copyReceiver].valueReference = Reference(SUffererCopyReceiver)
 * status = #final
 // fixer Wert aus DocumentEntry.typeCode
-* type = SNOMEDCTSwissExtension#419891008 "Nicht näher bezeichnetes Dokument"
+* type = SCT#419891008 "Nicht näher bezeichnetes Dokument"
 // fixer Wert aus DocumentEntry.classCode
 * category = SCT#721927009 "Zuweisungsschreiben"
 * subject = Reference(SUfferer)
@@ -132,11 +135,9 @@ Description: "Example for Bundle"
 * entry[+].fullUrl = "http://example.com/fhir/Observation/BodyWeight"
 * entry[=].resource = BodyWeight
 
-
-
 * entry[+].fullUrl = "http://example.com/fhir/Coverage/CoverageKVG"
 * entry[=].resource = CoverageKVG
-//
+
 * entry[+].fullUrl = "http://example.com/fhir/Appointment/AppointmentHospitalStay"
 * entry[=].resource = AppointmentHospitalStay
 * entry[+].fullUrl = "http://example.com/fhir/Location/LocationHospitalStay"
@@ -165,9 +166,13 @@ Description: "Example for Patient"
 * telecom[0].system = #phone
 * telecom[0].value = "+41 79 979 79 79"
 * telecom[1].system = #email
+
 * telecom[1].value = "susanna@ufferer.ch"
+
 * gender = #female 
+
 * birthDate = "1970-03-14"
+
 * address.use = #home
 * address.line[0] = "Musterweg"
 * address.line[1] = "6a"
@@ -274,22 +279,14 @@ Description: "Example for Organization"
 * address.postalCode = "8000"
 * address.country = "Schweiz" 
 
+
 Instance: ORderfiller
 InstanceOf: ChCorePractitioner
 Title: "Otto Rderfiller"
 Description: "Example for Practitioner"
-// * identifier.system = "urn:oid:2.51.1.3"
-// * identifier.value = "7601000066878"
 * name.use = #official
 * name.family = "Rderfiller"
 * name.given = "Otto"
-// * name.prefix = "Dr. med."
-// * name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
-// * name.prefix.extension.valueCode = #AC
-// * telecom[0].system = #phone
-// * telecom[0].value = "+41 44 412 00 99"
-// * telecom[1].system = #email
-// * telecom[1].value = "o.rderfiller@happyhospital.ch"
 
 
 //-------------  Time and Location -------------
@@ -297,8 +294,6 @@ Instance: AppointmentHospitalStay
 InstanceOf: ChOrfAppointment
 Title: "Appointment Hospital Stay"
 Description: "Example for Appointment"
-// * identifier.system = "http://example.com/identifierdomain"
-// * identifier.value = "384209.38"
 * status = #proposed
 * patientInstruction = "Wunschtermin der Patientin"
 * participant[+].actor = Reference(LocationHospitalStay)
@@ -309,10 +304,10 @@ Description: "Example for Appointment"
 
 //------------- diagnosisList -------------
 Instance: PrimaryDiagnosis
-InstanceOf: ChEtocDiagnosisCondition
+InstanceOf: ChEtocPrimaryDiagnosisCondition
 Title: "Primary Diagnosis"
-Description: "Example for Diagnosis Condition"
-* category = ConditionCategory#problem-list-item "Problem List Item"
+Description: "Example for Primary Diagnosis Condition"
+* category = ChEtocConditionCategory#primary-diagnosis "Primary Diagnosis"
 * code.text = "St. nach Bypass 2007"
 * subject = Reference(SUfferer)
 
@@ -342,24 +337,24 @@ Description: "Example for Body Weight Observation"
 
 
 Instance: SecondaryDiagnosis1
-InstanceOf: ChEtocDiagnosisCondition
+InstanceOf: ChEtocSecondaryDiagnosisCondition
 Title: "Secondary Diagnosis 1"
-Description: "Example for Diagnosis Condition"
-* category = ConditionCategory#problem-list-item "Problem List Item"
+Description: "Example for Secondary Diagnosis Condition"
+* category = ChEtocConditionCategory#secondary-diagnosis "Secondary Diagnosis"
 * code.text = "Hypertonie (Syst um 180 mm HG)"
 * subject = Reference(SUfferer)
 
 
 Instance: SecondaryDiagnosis2
-InstanceOf: ChEtocDiagnosisCondition
+InstanceOf: ChEtocSecondaryDiagnosisCondition
 Title: "Secondary Diagnosis 2"
 Description: "Example for Diagnosis Condition"
-* category = ConditionCategory#problem-list-item "Problem List Item"
+* category = ChEtocConditionCategory#secondary-diagnosis "Secondary Diagnosis"
 * code.text = "Hypercholesterinämie"
 * subject = Reference(SUfferer)
 
 
-//------------- coverage -------------
+//------------- Coverage -------------
 Instance: CoverageKVG
 InstanceOf: ChOrfCoverage
 Title: "Coverage KVG"
@@ -372,6 +367,7 @@ Description: "Example for Coverage"
 * beneficiary = Reference(SUfferer)
 * payor = Reference(Sanitas)
 
+
 Instance: Sanitas
 InstanceOf: ChCoreOrganization
 Title: "Sanitas"
@@ -379,7 +375,8 @@ Description: "Example for Organization"
 Usage: #inline
 * name = "Sanitas"
 
-//------------- previousResults -------------
+
+//------------- Previous Results -------------
 Instance: MediaRx
 InstanceOf: ChEtocMedia
 Title: "Media Previous Rx"

@@ -3,19 +3,10 @@
 Alias:   LNC =          http://loinc.org
 Alias:   NMU =          http://hl7.org/fhir/name-use
 
-
-//Alias:   LNCPLAYBCORE = https://fhir.loinc.org/ValueSet/$expand?url=http://loinc.org/vs/loinc-rsna-radiology-playbook-core
-Alias:   LNCPLAYBFULL = http://loinc.org/vs/loinc-rsna-radiology-playbook
-// see https://chat.fhir.org/#narrow/stream/179202-terminology/topic/radlex
-
-//Alias:   RDLX = http://radlex.org/RID/RID1
-Alias:   RDLX =         http://www.radlex.org/RID
 // see https://www.hl7.org/fhir/terminologies-systems.html -> External CS
-
-
 Alias:   SCT =                              http://snomed.info/sct
 Alias:   UCUM =                             http://unitsofmeasure.org
-Alias:   ConditionCategory =                http://terminology.hl7.org/CodeSystem/condition-category
+Alias:   HL7ConditionCategory =             http://terminology.hl7.org/ValueSet/condition-category
 Alias:   AdministrativeGender =             http://hl7.org/fhir/administrative-gender
 Alias:   RequestPriority =                  http://hl7.org/fhir/request-priority
 Alias:   V3ActCode =                        http://terminology.hl7.org/CodeSystem/v3-ActCode
@@ -57,7 +48,7 @@ Alias:   CSCoverageIdentifierType =     http://fhir.ch/ig/ch-orf/CodeSystem/ch-o
 // HL7 / FHIR
 Alias:   HL7BodyHeight =                http://hl7.org/fhir/StructureDefinition/bodyheight
 Alias:   HL7BodyWeight =                http://hl7.org/fhir/StructureDefinition/bodyweight
-Alias:   ObservationCategory =       http://terminology.hl7.org/CodeSystem/observation-category
+Alias:   ObservationCategory =          http://terminology.hl7.org/CodeSystem/observation-category
 Alias:   HL7DiagnosticServiceSection =  http://hl7.org/fhir/ValueSet/diagnostic-service-sections
 
 // IPS

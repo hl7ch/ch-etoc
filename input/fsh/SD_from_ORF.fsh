@@ -25,25 +25,16 @@ Reserved for specification of a particular form für referrals to clinical subsp
 
 //------- code -------
 * code MS
+* code ^short = "Ziel"
 * code.text MS
-* code ^short = "Currently intended as freetext"
-
-/*------- orderDetail -------
-Currently no use intended
-*/
-
-/*------- performer (desiredRadiologist) -------
-Currently no use intended
-*/
-
 //------- reasonCode -------
 * reasonCode MS
-* reasonCode ^short = "Diagnostic Question in free text: Coding of all diagnostic questions will be defined later."
-* reasonCode.text 1.. MS
+* reasonCode ^short = "Begründung"
+* reasonCode.text MS
 //------- reasonReference -------
 * reasonReference MS
 * reasonReference ^short = "Reason for the referral (primary diagnosis)"
-* reasonReference only Reference(ChEtocDiagnosisCondition) 
+* reasonReference only Reference(ChEtocPrimaryDiagnosisCondition) 
 //------- insurance -------
 * insurance MS
 * insurance only Reference(ChOrfCoverage)
@@ -53,7 +44,7 @@ Currently no use intended
 * supportingInfo ^slicing.discriminator.path = "resolve()"
 * supportingInfo ^slicing.rules = #open
 * supportingInfo contains
-    diagnosis 0..* and 
+    secondarydiagnosis 0..* and 
     bodyHeight 0..1 and
     bodyWeight 0..1 and
     pregnancy 0..1 and
@@ -77,9 +68,9 @@ Currently no use intended
     medicalCarePlans 0..* and 
     nursingCarePlans 0..
 
-* supportingInfo[diagnosis] MS
-* supportingInfo[diagnosis] only Reference(ChEtocDiagnosisCondition) 
-* supportingInfo[diagnosis] ^short = "Additional problem / secondary diagnosis"
+* supportingInfo[secondarydiagnosis] MS
+* supportingInfo[secondarydiagnosis] only Reference(ChEtocSecondaryDiagnosisCondition) 
+* supportingInfo[secondarydiagnosis] ^short = "Additional problem / secondary diagnosis"
 * supportingInfo[bodyHeight] MS
 * supportingInfo[bodyHeight] only Reference(ChEtocBodyHeightObservation)
 * supportingInfo[bodyWeight] MS
@@ -115,9 +106,6 @@ Currently no use intended
 * supportingInfo[cardiologyresults] MS
 * supportingInfo[cardiologyresults] only Reference(ChEtocCardiologyObservation)
 
-//* supportingInfo[diagnosticReports] MS
-//* supportingInfo[diagnosticReports] only Reference(ChEtocDiagnosticReport) //not used
-
 * supportingInfo[medicalCarePlans] MS
 * supportingInfo[medicalCarePlans] only Reference(ChEtocMedicalCarePlan)
 
@@ -130,7 +118,6 @@ Currently no use intended
 //------- note -------
 * note MS
 * note.text MS
-
 
 
 Profile: ChEtocDocument

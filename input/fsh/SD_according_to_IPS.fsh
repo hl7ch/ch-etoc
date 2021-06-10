@@ -40,15 +40,30 @@ Description: "Definition for the Allergy Intolerance resource in the context of 
 
 
 // -------- Corresponds to IPS Problem List --------- 
-Profile: ChEtocDiagnosisCondition
+Profile: ChEtocPrimaryDiagnosisCondition
 Parent: Condition
-Id: ch-etoc-diagnosis
-Title: "CH eToc Diagnosis Condition"
-Description: "Definition for the Diagnosis Condition resource in the context of CH RAD-Order."
-* . ^short = "CH eToc Diagnosis Condition"
+Id: ch-etoc-primary-diagnosis
+Title: "CH eToc Primary Diagnosis Condition"
+Description: "Definition for the Primary Diagnosis Condition resource in the context of CH RAD-Order."
+* . ^short = "CH eToc Primary Diagnosis Condition"
 * category 1..1 MS
-* category = ConditionCategory#problem-list-item
-* category ^short = "Problem List Item"
+* category from ChEtocConditionCategory
+* category = ChEtocConditionCategory#primary-diagnosis
+* category ^short = "Primary Diagnosis"
+* code 1.. MS 
+* code.text 1.. MS
+* subject only Reference(ChCorePatient) 
+
+Profile: ChEtocSecondaryDiagnosisCondition
+Parent: Condition
+Id: ch-etoc-secondary-diagnosis
+Title: "CH eToc Secondary Diagnosis Condition"
+Description: "Definition for the Secondary Diagnosis Condition resource in the context of CH RAD-Order."
+* . ^short = "CH eToc Secondary Diagnosis Condition"
+* category 1..1 MS
+* category from ChEtocConditionCategory
+* category = ChEtocConditionCategory#secondary-diagnosis
+* category ^short = "Secondary Diagnosis"
 * code 1.. MS 
 * code.text 1.. MS
 * subject only Reference(ChCorePatient) 
@@ -174,8 +189,9 @@ Title: "CH eToc Past History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Past History of Illness Condition"
 * category 1..1 MS
-* category = ConditionCategory#problem-list-item
-* category ^short = "Problem List Item"
+* category from ChEtocConditionCategory
+* category = ChEtocConditionCategory#illness
+* category ^short = "Illness"
 * code 1.. MS 
 * code.text 1.. MS
 * subject only Reference(ChCorePatient) 
@@ -221,8 +237,9 @@ Title: "CH eToc Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Social History Condition"
 * category 1..1 MS
-* category = ConditionCategory#problem-list-item
-* category ^short = "Problem List Item"
+* category from ChEtocConditionCategory
+* category = ChEtocConditionCategory#social-history-condition
+* category ^short = "Social History Condition"
 * code 1.. MS 
 * code.text 1.. MS
 * subject only Reference(ChCorePatient) 
@@ -236,7 +253,8 @@ Title: "CH eToc Functional Status Condition"
 Description: "Definition for the Functional Status Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Functional Status Condition"
 * category 1..1 MS
-* category = ConditionCategory#problem-list-item
+* category from ChEtocConditionCategory
+* category = ChEtocConditionCategory#functional-status-condition
 * category ^short = "Funktionsfähigkeit, Behinderung"
 * code 1.. MS 
 * code.text 1.. MS

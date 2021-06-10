@@ -177,7 +177,7 @@ Description: "Example for Questionnaire"
 * item[=].item[=].answerOption[+].valueCoding = RequestPriority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
-// patient is not required because patient may not be known e.g. anonymized in case of research or name unknown in emergency
+// patient is not st to required because patient may not be known e.g. anonymized in case of research or name unknown in emergency
 * item[+].linkId = "patient"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.subject"
 * item[=].text = "Patient"
@@ -257,7 +257,6 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #string
 
 // ---------- Patient Contact Person : The principle target of a particular Form Content is one patient ----------
-
 * item[=].item[+].linkId = "patient.contactperson"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.subject"
 * item[=].item[=].text = "Patient"
@@ -314,7 +313,6 @@ Description: "Example for Questionnaire"
 
 // ---------- Coverage (Kostenträger) ----------
 // Design as agreed with eHealth Suisse and Cistec 09.06.2021
-
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -690,7 +688,6 @@ Description: "Example for Questionnaire"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].type = #string
 
-
 /*------ Appointment ------------------------------ */
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
@@ -765,37 +762,27 @@ Description: "Example for Questionnaire"
 * item[=].item[=].answerOption[=].initialSelected = true
 * item[=].item[=].answerOption[+].valueCoding = AppointmentStatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
 * item[=].item[=].answerOption[+].valueCoding = AppointmentStatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
-// * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-orf/ValueSet/ch-orf-vs-appointmentstatus"
 
 * item[=].item[+].linkId = "appointment.patientInstruction"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].type = #string
 
-
 /* ============ Kerninhalte von Etoc ==============================
 
 /*------------------------------------------------------------------------
-Ziel (mehrere Werte)
-(Codierung vorderhand nicht vorgesehen)
+Wozu wird der Patient zugewiesen
 */
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].item[=].text = "Ziel"                 
+* item[=].item[=].text = "Ziel"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
-
-/*------------------------------------------------------------------------
-Fragestellung (mehrere Werte)
-Codierung vorderhand nicht vorgesehen)
-*/
-* item[+].linkId = "reason"
-* item[=].text = "Grund der Zuweisung"
-* item[=].type = #group
 
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
@@ -809,10 +796,12 @@ Darstellung der Diagnosen und Befunde
 * item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "diagnosisList.primarydiagnosis"
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
 * item[=].item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[=].item[+].linkId = "diagnosisList.primaryDiagnosis.item"  
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonReference"
@@ -823,6 +812,7 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[+].linkId = "diagnosisList.secondarydiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
 * item[=].item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis.item"  
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:diagnosis"
@@ -860,36 +850,37 @@ Anamnese
 * item[+].linkId = "anamnesis" 
 * item[=].text = "Anamnese"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "anamnesis.historyofillnesses"   
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofIllnesses"  
 * item[=].item[=].text = "Bisherige Krankheiten und Unfälle"   
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = false
+* item[=].item[=].repeats = false // For convenience: History of illnesses in one paragraph 
 
 * item[=].item[+].linkId = "anamnesis.historyofprocedures"   
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofProcedures"  
 * item[=].item[=].text = "Bisherige Abklärungen und Eingriffe"   
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = false
+* item[=].item[=].repeats = false // For convenience: History of procedures in one paragraph 
 
 * item[=].item[+].linkId = "anamnesis.devices"   
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:devices"  
 * item[=].item[=].text = "Implantate, Schrittmacher, Neurostimulatoren etc."   
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+* item[=].item[=].type = #text
+* item[=].item[=].repeats = false // For convenience: All Devices in one paragraph (seldom numerous items)
 
 * item[=].item[+].linkId = "anamnesis.socialhistory"   
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:socialHistory"  
 * item[=].item[=].text = "Sozialanamnese"  
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = false
+* item[=].item[=].repeats = false // For convenience: Social History in one paragraph (is in general narrative)
 
 * item[=].item[+].linkId = "anamnesis.functionalStatus"   
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:functionalStatus"  
 * item[=].item[=].text = "Funktion, Behinderungen"   
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = false
+* item[=].item[=].repeats = false // For convenience: Functional status in one paragraph (is in general narrative)
 
 /* ---------------------------------------------------------------------------
 Medikation
@@ -897,12 +888,13 @@ Medikation
 * item[+].linkId = "medication"
 * item[=].text = "Aktuelle Medikation"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "medication.medicationcard"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
 * item[=].item[=].text = "Medikation"
 * item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = true // Systems might provide medication as multiple entries 
 
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen
@@ -910,12 +902,13 @@ Allergien und Intoleranzen
 * item[+].linkId = "allergy"
 * item[=].text = "Allergien und Intoleranzen"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "allergy.allegiesIntolerances"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
-* item[=].item[=].text = "Allergie / Intoleranz"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+* item[=].item[=].text = "Allergien / Intoleranzen"
+* item[=].item[=].type = #text
+* item[=].item[=].repeats = false // For convenience: Allergies in one paragraph
 
 /* ---------------------------------------------------------------------------
 Impfungen
@@ -923,12 +916,13 @@ Impfungen
 * item[+].linkId = "immunizationstatus"
 * item[=].text = "Impfungen"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "immunizationstatus.immunizations"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
 * item[=].item[=].text = "Bisherige Impfungen"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+* item[=].item[=].type = #text
+* item[=].item[=].repeats = false // For convenience: Immunizations in one paragraph
 
 /* ---------------------------------------------------------------------------
 Labor
@@ -936,12 +930,13 @@ Labor
 * item[+].linkId = "lab"
 * item[=].text = "Labor"
 * item[=].type = #group
-* item[=].item[+].linkId = "lab.labresults"
+* item[=].repeats = false
 
+* item[=].item[+].linkId = "lab.labresults"
 * item[=].item[=].text = "Laborresultat"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
 * item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = true // Systems might provide lab results as multiple entries
 
 /* ---------------------------------------------------------------------------
 Pathologie
@@ -949,12 +944,13 @@ Pathologie
 * item[+].linkId = "pathology"
 * item[=].text = "Pathologie"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "pathology.pathologyresults"
-* item[=].item[=].text = "Pathologiebefund"
+* item[=].item[=].text = "Pathologiebefunde"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pathologyresults"
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = false // For convenience: Pathology results in one paragraph (is often narrative)
 
 /* ---------------------------------------------------------------------------
 Bildgebung
@@ -962,74 +958,76 @@ Bildgebung
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "imaging.imagingresults"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:imagingresults"
-* item[=].item[=].text = "Befund aus der Bildgebung"
+* item[=].item[=].text = "Befunde aus der Bildgebung"
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = false // For convenience: Radiology results in one paragraph (is often narrative)
 
 /* ---------------------------------------------------------------------------
 Kardiologie
 */
-
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
 * item[=].type = #group
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "cardiology.cardiologyresults"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
-* item[=].item[=].text = "EKG / Kardiologischer Befund"
+* item[=].item[=].text = "EKG / Kardiologische Befunde"
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = false // For convenience: Cardiology results in one paragraph (is often narrative)
 
 /* ---------------------------------------------------------------------------
-Pflege: Bisheriger und weiterer Verlauf
+Bisheriger und weiterer Verlauf
 */
 * item[+].linkId = "carePlans"
 * item[=].text = "Verlauf"
 * item[=].type = #group
+* item[=].repeats = false
 
-* item[=].item[+].linkId = "carePlans.medical"
+* item[=].item[+].linkId = "carePlans.medical" // Aerztlich
 * item[=].item[=].text = "Ärztlicher Bericht"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicalCarePlan"
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = true // Support of multiple care plans (by different teams)
 
-* item[=].item[+].linkId = "carePlans.nursing"
+* item[=].item[+].linkId = "carePlans.nursing" // Pflege
 * item[=].item[=].text = "Pflegebericht"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:nursingCarePlan"
 * item[=].item[=].type = #text
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = true // Support of multiple care plans (by different teams)
 
 /* ---------------------------------------------------------------------------
 Berichte
 */
-
 * item[=].item[+].linkId = "attachments"
 * item[=].item[=].text = "Anhang"
 * item[=].item[=].type = #group
-* item[=].item[=].repeats = true
+* item[=].item[=].repeats = true // Support of multiple attachments
 
 * item[=].item[=].item[+].linkId = "attachtment.title"  
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.title"
 * item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
 * item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = false
 
 * item[=].item[=].item[+].linkId = "attachment.data"  
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.data"
 * item[=].item[=].item[=].text = "Daten"
 * item[=].item[=].item[=].type = #string
-
+* item[=].item[=].item[=].repeats = false
 
 // -------- Service Request Notes ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group
-* item[=].repeats = true
+* item[=].repeats = false
 
 * item[=].item[+].linkId = "note.text"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.note.text"
-* item[=].item[=].text = "Kommentar" 
+* item[=].item[=].text = "Text" 
 * item[=].item[=].type = #text
-* item[=].item[=].required = true
+* item[=].item[=].required = false // For convenience: one paragraph
