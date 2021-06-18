@@ -16,7 +16,7 @@ date: 2021-06-18
 version: 0.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 1 Ballot
+releaseLabel: CI Build
 publisher:
   name: HL7 Switzerland
 contact:
