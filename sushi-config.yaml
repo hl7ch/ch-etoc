@@ -40,7 +40,7 @@ pages:
   usecase-german.md:
     title: Anwendungsfälle
 
-  questionnaire.html:
+  questionnaire-form.html:
     title: Questionnaire
   profiles.html:
     title: Profiles
