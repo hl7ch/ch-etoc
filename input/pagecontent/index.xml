@@ -9,7 +9,14 @@
 
     <p/>
     
-     <a name="volume1"></a><h4>Purpose</h4>
+    <p>
+        <b>Download:</b>
+        You can download this Implementation Guide in 
+        <a href="https://confluence.hl7.org/display/FHIR/NPM+Package+Specification">NPM format</a> from 
+        <a href="package.tgz">here</a>.
+    </p>
+
+     <a name="volume1"></a><h3>Purpose</h3>
 
     <p>The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist,
     from one hispital to another etc.
@@ -18,7 +25,7 @@
     <p>CH eTOC is intended for use in directional communiation as well as for the use in the SWISS EPR.
     </p>  
 
-  <a name="volume1"></a><h4>Foundation</h4>
+  <a name="volume1"></a><h3>Foundation</h3>
     
     <p>This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>
     </p>
@@ -37,33 +44,48 @@
 
         <ul>
             <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the user interface
-            (e.g. on screen, in print).</li> 
-            
-            <li>For Clinical Information: Grouping of items and the order of items within shall be adequately reproduced according to the Questionnaire.</li>
+            (e.g. on screen, in print) Grouping of items and the order of items within shall be adequately
+            reproduced according to the Questionnaire..</li> 
+
+            <li>In case of an implementation without Questionnaire and QuestionnaireResponse, the content of otherwise implemented UIs shall 
+             be in accordance to the questionnaire definition.</li>
+
+            <li>Be able to process all codes related to the generic elements in a Questionnaire.</li>
         </ul>
    
-   <p>This Implementation Guide adheres to the FHIR International Patient Summary (IPS) Implementation Guide. Clinical content uses
-    mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions 
-    are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS. 
-    This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
+    <p>In the 3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) "eDischarge Report", recommendations are formulated that 
+    are important for the inter-professional exchange of information during transitions of treatment ("transition-of-care. The information relevant to treatment 
+    shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
+    </p>
+    
+    <p>At the working group meeting in February 2021, it was decided that a first version of eTOC shall based on the the FHIR International Patient Summary (IPS). 
+    </p>
+
+    <p>However, this first version of eTOC still allows many free text entries. Derivations for use cases in different disciplines are to be defined later.
+    Clinical content uses mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions 
+    are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS.
+    </p>
+
+    <p>As a consequence, the first version of CH eTOC does not claim to be confromant to IPS.
+    </p>
+
+    <p>This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
     Swiss Core. eToc adds a ServiceReequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
     service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest
     resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) 
     and follow the definition in the ORF Implementation Guide.  
-
-    This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives gudiance for 
-    the implementaion of the user interface.</p>
-
-    <p>As a consequence of this decision, the first version of CH eTOC does not claim to be confromant to IPS.
     </p>
-    
+
+    <p>This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives gudiance for 
+    the implementaion of the user interface.
+    </p>
+  
     <p> Actors, transcations and security considerations are covered in the corresponding sections of 
         <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a>
     </p>
 
-    <a name="volume3"></a><h4>Terminology</h4>
+    <a name="volume3"></a><h3>Terminology</h3>
 
     <p>Value sets and coding are preliminary and not yet approved by eHealth Suisse.
     </p> 
-
 </div>
