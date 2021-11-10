@@ -39,19 +39,30 @@
         <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>
     </p>
 
-    <p>Applications claiming for conformance with the CH eTOC Implementation Guide shall:
+    <p>There has been a discussion whether population of the resources such as Patient Resource, ServiceRequest Resource 
+    etc. with the content of the QuestionnaireResponse Resource should be done by the order placer application or rather 
+    by the order filler application. The argument for assigning the task to the order placer is a result of the following 
+    consideration: the authors of a particular implementation guide  may decide to define a questionnaire and its rendering 
+    but to leave it open if in a particular implementation the questionnaire is implemented or if the representation towards 
+    the user is made (in accordance to the questionnaire definition) by other technical means. In such a case, there would 
+    be no QuestionnaireResponse Resource in the bundle because all content is already in concerning resources. In order to 
+    handle all FHIR exchange formats equal (as far as sensible), the authors decided to mandate the order placer application 
+    with the task.
     </p>
 
-        <ul>
-            <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the user interface
-            (e.g. on screen, in print) Grouping of items and the order of items within shall be adequately
-            reproduced according to the Questionnaire..</li> 
+    <p>Applications claiming for conformance with the ORF Implementation Guide shall:
+    </p>
 
-            <li>In case of an implementation without Questionnaire and QuestionnaireResponse, the content of otherwise implemented UIs shall 
-             be in accordance to the questionnaire definition.</li>
+    <ul>
+        <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the
+        user interface (e.g. on screen, in print). Grouping of items and the order of items within shall be adequately
+        reproduced according to the Questionnaire.</li>
 
-            <li>Be able to process all codes related to the generic elements in a Questionnaire.</li>
-        </ul>
+        <li>In case of an implementation without Questionnaire and QuestionnaireResponse, the content of otherwise implemented UIs shall 
+        be in accordance to the questionnaire definition.</li>
+            
+        <li>Be able to process all codes related to the generic elements in a Questionnaire.</li>
+    </ul>
    
     <p>In the 3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) "eDischarge Report", recommendations are formulated that 
     are important for the inter-professional exchange of information during transitions of treatment ("transition-of-care. The information relevant to treatment 
