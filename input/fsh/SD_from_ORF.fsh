@@ -8,11 +8,11 @@ Title: "CH eToc Service Request"
 Description: "Definition for the ServiceRequest resource in the context of electronic transition of care."
 * . ^short = "CH eToc Service Request"
 * . ^definition = "This IG adheres to the FHIR International Patient Summary (IPS) Implementation Guide. Clinical content uses
-mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions are however constrained from FHIR base definitions and Swiss Core definitions 
+mostly the same resources as the IPS; some minor differences are explained in comments to the resources affected. The resouce definitions are however constrained from FHIR base definitions and Swiss Core definitions 
 and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
-Swiss Core. eToc adds a ServiceReequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
-service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest
-resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) 
+Swiss Core. eToc adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
+service and some additional information (e.g. coverage, room preference etc.). Resources for such purpose are referenced by the ServiceRequest
+resource. Header information such as sender, receiver etc. are considered as Generic Elements (to all sorts of referral, orders etc.) 
 and follow the definition in the ORF Implementation Guide.  
 
 This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives gudiance for 

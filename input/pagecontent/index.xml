@@ -19,7 +19,7 @@
      <a name="volume1"></a><h3>Purpose</h3>
 
     <p>The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist,
-    from one hispital to another etc.
+    from one hospital to another etc.
     </p>
 
     <p>CH eTOC is intended for use in directional communiation as well as for the use in the SWISS EPR.
@@ -81,9 +81,9 @@
     </p>
 
     <p>This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
-    Swiss Core. eToc adds a ServiceReequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
-    service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest
-    resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) 
+    Swiss Core. eToc adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
+    service and some additional information (e.g. coverage, room preference etc.). Resources for such purpose are referenced by the ServiceRequest
+    resource. Header information such as sender, receiver etc. are considered as Generic Elements (to all sorts of referral, orders etc.) 
     and follow the definition in the ORF Implementation Guide.  
     </p>
 

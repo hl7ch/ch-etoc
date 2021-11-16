@@ -8,6 +8,8 @@ The players are:
 
 Patient S. Ufferer has an appointment with Dr. O. Rderplacer who agrees with the patient that an operation is necessary, to be performed in the Surgical Department of Happy Hospital. Dr. O. Rderplacer writes a referral containing all the necessary information and sends it to Happy Hospital. This includes existing x-rays and reports, as well as lab results. He also asks that a copy of the report be sent to the patient.
 
+* **Transition of care letter:** [XML](Bundle-DocumentEtoc.xml.html), [JSON](Bundle-DocumentEtoc.json.html)
+
 ### Requesting a discharge letter from earlier
 The players are:
 
