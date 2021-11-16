@@ -345,11 +345,13 @@ Anamnese
 
 /* ---------------------------------------------------------------------------
 Medikation
+MedicationStatement = Definition of the medication statement for the Medication Card document
 */
 * item[+].linkId = "medication"
 * item[=].text = "Aktuelle Medikation"
 
-* item[=].item[+].linkId = "medication.medicationcard"
+//* item[=].item[+].linkId = "medication.medicationcard"
+* item[=].item[+].linkId = "medication.medicationstatement"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
 * item[=].item[=].text = "Medikation"
 * item[=].item[=].answer[+].valueString = "Erdabyclor 20/25 mg 1/2-0-0-0"

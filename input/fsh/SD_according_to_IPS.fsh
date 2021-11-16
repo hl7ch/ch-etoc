@@ -1,7 +1,7 @@
 /* Clinical part is modelled with the International Patient Summary (IPS)in Mind.*/
 
 
-// -------- Corresponds to IPS Medication Summary ---------  
+/* -------- Corresponds to IPS Medication Summary ---------  
 Profile: ChEtocMedicationCard
 Parent: ChEmedMedicationCard
 Id: ch-etoc-medicationcard
@@ -11,16 +11,32 @@ Description: "Definition for the Medication Card resource in the context of elec
 * medicationReference MS
 * dosage MS
 * dosage[nonstructured] MS
+*/
 
-
-Profile: ChEtocMedicatiionStatement
-Parent: ChEmedMedicationStatement
+Profile: ChEtocMedicationStatement
+Parent: ChEmedMedicationStatement  //Definition of the medication statement for the Medication Card document
 Id: ch-etoc-medicationstatement
 Title: "CH eToc Medication Statement"
 Description: "Definition for the Medication Statement resource in the context of electronic transition of care."
-* . ^short = "CH eToc Medirdiotion Statement"
-* code MS
-* code.text MS
+* . ^short = "CH eToc Medication Statement"
+//* code MS
+//* code.text MS
+* medicationReference MS
+/* medicationReference ^slicing.discrimainator.type = #profile
+* medicationReference ^slicing.discriminator.path = "resolve()"
+* medicationReference ^slicing.rules = #open 
+* medicationReference contains
+    medication 1..1
+
+* medicationReference[medication] MS */
+* medicationReference only Reference(ChEmedMedication)
+* medicationReference ^short = "Medication Statement contains 1 medication with dosages"
+
+
+
+
+
+
 
 
 // -------- Corresponds to IPS Allergies and Intolerances --------- 

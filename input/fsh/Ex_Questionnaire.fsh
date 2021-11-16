@@ -883,18 +883,47 @@ Anamnese
 * item[=].item[=].repeats = false // For convenience: Functional status in one paragraph (is in general narrative)
 
 /* ---------------------------------------------------------------------------
-Medikation
+Medikation    ------ Questionnaire supports nonstrucured doasage only ------
+MedicationStatement = Definition of the medication statement for the Medication Card document
 */
 * item[+].linkId = "medication"
 * item[=].text = "Aktuelle Medikation"
 * item[=].type = #group
 * item[=].repeats = false
 
-* item[=].item[+].linkId = "medication.medicationcard"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
-* item[=].item[=].text = "Medikation"
+* item[=].item[+].linkId = "medication.medicationstatement.medication" 
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
+* item[=].item[=].text = "Produkt"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true // Systems might provide medication as multiple entries 
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication.gtin"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
+* item[=].item[=].item[=].text = "GTIN"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = false // Multiple products possible 
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement"
+* item[=].item[=].item[=].text = "Dosierung"
+* item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].repeats = false // Porduct may have multiple substances 
+
+* item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement"
+* item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
+* item[=].item[=].item[=].item[=].text = "Dosierung"
+* item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].repeats = true // Porduct may have multiple substances
+
+* item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement"
+* item[=].item[=].item[=].item[=].text = "Wirkstoffe"
+* item[=].item[=].item[=].item[=].type = #group
+* item[=].item[=].item[=].item[=].repeats = false // Porduct may have multiple substances 
+
+* item[=].item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement"
+* item[=].item[=].item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
+* item[=].item[=].item[=].item[=].item[=].text = "Wirkstoff"
+* item[=].item[=].item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].item[=].item[=].repeats = true // Porduct may have multiple substances
 
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen

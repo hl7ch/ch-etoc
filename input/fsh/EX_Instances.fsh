@@ -37,22 +37,51 @@ Description: "tHistoryofIllnessesCondition"
 
 Instance: MedicationStatementEtoc1
 InstanceOf: ChEmedMedicationStatement
-Title: "Medication Card  Medical Referral"
+Title: "Medication Statement Erdabyclor"
 Description: "MedicationStatement"
-* code.text = "Erdabyclor 20/25 mg 1/2-0-0-0"
+* identifier.value = "123456"
+* subject = Reference(SUfferer)
+* contained[0] = Erdabyclor
+* medicationReference = Reference(Erdabyclor)
+* dosage[nonstructured].text = "20/25 mg 1/2-0-0-0"
+
+Instance: Erdabyclor
+InstanceOf: ChEmedMedication
+Title: "Erdabyclor"
+Usage: #inline
+Description: "Example for Medication"
+* code.text = "Erdabyclor"
 
 Instance: MedicationStatementEtoc2
 InstanceOf: ChEmedMedicationStatement
-Title: "Medication Card  Medical Referral"
+Title: "Medication Statement Morphin"
 Description: "MedicationStatement"
-* code.text = "Morphin 5 mg i.v.; 16h30"
+* identifier.value = "123456"
+* subject = Reference(SUfferer)
+* contained[0] = Morphin
+* medicationReference = Reference(Morphin)
+* dosage[nonstructured].text = "5 mg i.v. bei Bedarf"
 
+Instance: Morphin
+InstanceOf: ChEmedMedication
+Title: "Morphin"
+Usage: #inline
+Description: "Example for Medication"
+* code.text = "Morphin"
 
 Instance: MedicationStatementEtoc3
 InstanceOf: ChEmedMedicationStatement
-Title: "Medication Card  Medical Referral"
-Description: "MedicationStatement"
-* code.text = "Nitroglycerin 0.8 mg s.L.; 16h15"
+* identifier.value = "123456"
+* subject = Reference(SUfferer)
+* contained[0] = Nitroglycerin
+* medicationReference = Reference(Nitroglycerin)
+* dosage[nonstructured].text = "0.8 mg Kaukapsel bei Bedarf"
+
+Instance: Nitroglycerin
+InstanceOf: ChEmedMedication
+Title: "Nitroglycerin"
+Description: "Example for Medication"
+* code.text = "Nitroglycerin"
 
 
 Instance: CompositionEtoc
