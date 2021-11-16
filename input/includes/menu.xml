@@ -38,9 +38,9 @@
   <li>
     <a href="profiles.html">Profiles</a>
   </li>
-  <li>
-    <a href="extensions.html">Extensions</a>
-  </li>
+  <!--<li><li>
+    <a href="extensions.html">Extensions</a>   There are no extensions in this IG
+  </li>>-->
   <li>
     <a href="terminology.html">Terminology</a>
   </li>
