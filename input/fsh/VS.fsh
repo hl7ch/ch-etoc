@@ -1,6 +1,3 @@
-
-
-// ServiceRequest.supportingInfo:caveats.ch-rad-order-caveat-type
 ValueSet: ChEtocConditionCategory
 Id: ch-etoc-conditioncategory
 Title: "Condition Category"

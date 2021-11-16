@@ -43,7 +43,7 @@ Profile: ChEtocPrimaryDiagnosisCondition
 Parent: Condition
 Id: ch-etoc-primary-diagnosis
 Title: "CH eToc Primary Diagnosis Condition"
-Description: "Definition for the Primary Diagnosis Condition resource in the context of CH RAD-Order."
+Description: "Definition for the Primary Diagnosis Condition resource in the context of CH Relectronic tranisiton of care."
 * . ^short = "CH eToc Primary Diagnosis Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory
@@ -57,7 +57,7 @@ Profile: ChEtocSecondaryDiagnosisCondition
 Parent: Condition
 Id: ch-etoc-secondary-diagnosis
 Title: "CH eToc Secondary Diagnosis Condition"
-Description: "Definition for the Secondary Diagnosis Condition resource in the context of CH RAD-Order."
+Description: "Definition for the Secondary Diagnosis Condition resource in the context of electronic transition of care."
 * . ^short = "CH eToc Secondary Diagnosis Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory

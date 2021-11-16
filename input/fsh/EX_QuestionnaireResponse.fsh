@@ -2,7 +2,7 @@ Instance: QuestionnaireResponseEtoc
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "QuestionniaireResponse Radiology Order"
 Description: "Example for QuestionnaireResponse"
-* questionnaire = "http://fhir.ch/ig/ch-rad-order/Questionnaire/QuestionnaireEtoc"
+* questionnaire = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * status = #completed
 
 // ---------- order (Auftrag) ----------
@@ -261,7 +261,7 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
 * item[=].item[=].answer[+].valueCoding = V3ActCode#EMER "Notfall"
 
-/* ============ Kerninhaltes der Rad-Order ==============================
+/* ============ Kerninhaltes von eToc ==============================
 
 /*------------------------------------------------------------------------
 Wozu wird der Patient zugewiesen

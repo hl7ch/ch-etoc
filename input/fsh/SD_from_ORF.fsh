@@ -129,8 +129,9 @@ Description: "Definition for the Bundle (document) resource in the context of el
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
 (which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
-Consequently one CH RAD-Order Document contains one CH RAD-Order ServiceRequest which depicts one Placer Order 
+Consequently one CH eToc Document contains one eToc ServiceRequest which depicts one Placer Order 
 equal one Filler Order equal one Imaging Service Request."
+
 // ---------- Bundle.entry:Composition ----------
 * entry[Composition].resource ^type.profile = Canonical(ChEtocComposition)
 
@@ -143,10 +144,6 @@ Description: "Definition for the Composition resource in the context of electron
 * . ^short = "CH Etoc Composition"
 // ---------- Composition.section.entry:ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
-
-
-
-
 
 
 Profile: ChEtocQuestionnaireResponse
