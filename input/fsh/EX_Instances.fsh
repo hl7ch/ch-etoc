@@ -11,7 +11,7 @@ Description: "Example for ServiceRequest"
 * priority = #routine
 
 * code.text              = "Abklärung akuter Thoraxschmerzen"
-* reasonCode.text        = "Verdacht auf Myokardinfarkt"
+* reasonCode.text        = "Verdacht auf Vorderwandinfarkt"
 * reasonReference[+]     = Reference(PrimaryDiagnosis)
 
 * subject                = Reference(SUfferer)
