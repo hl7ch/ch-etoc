@@ -1003,22 +1003,28 @@ Bisheriger und weiterer Verlauf
 /* ---------------------------------------------------------------------------
 Berichte
 */
-* item[=].item[+].linkId = "attachments"
-* item[=].item[=].text = "Anhang"
-* item[=].item[=].type = #group
-* item[=].item[=].repeats = true // Support of multiple attachments
+* item[+].linkId = "attachments"
+* item[=].text = "Anhang"
+* item[=].type = #group
+* item[=].repeats = true // Support of multiple attachments
 
-* item[=].item[=].item[+].linkId = "attachtment.title"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.title"
-* item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
-* item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].repeats = false
+* item[=].item[+].linkId = "attachtment.title"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.title"
+* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = false
 
-* item[=].item[=].item[+].linkId = "attachment.data"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.data"
-* item[=].item[=].item[=].text = "Daten"
-* item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].repeats = false
+* item[=].item[+].linkId = "attachment.note"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.annotation"
+* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].type = #text
+* item[=].item[=].repeats = false
+
+* item[=].item[+].linkId = "attachment.data"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-media#Media.content.data"
+* item[=].item[=].text = "Daten"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = false
 
 // -------- Service Request Notes ------
 * item[+].linkId = "note"
