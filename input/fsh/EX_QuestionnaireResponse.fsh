@@ -349,8 +349,8 @@ Medikation
 * item[+].linkId = "medication"
 * item[=].text = "Aktuelle Medikation"
 
-* item[=].item[+].linkId = "medication.medicationcard"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
+* item[=].item[+].linkId = "medication.medication"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
 * item[=].item[=].text = "Medikation"
 * item[=].item[=].answer[+].valueString = "Erdabyclor 20/25 mg 1/2-0-0-0"
 * item[=].item[=].answer[+].valueString = "Morphin 5 mg i.v.; 16h30"

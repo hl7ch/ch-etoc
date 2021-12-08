@@ -21,8 +21,10 @@ Alias:   SNOMEDCTSwissExtension =       urn:oid:2.16.756.5.30.1.127.3.4
 // CH SD
 Alias:   ChAllergyIntolerance =          http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance
 
-Alias:   ChEmedMedicationCard =          http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement-card
-Alias:   ChEmedMedicationStatement =     http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication
+Alias:   ChEmedMedication =     http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication 
+Alias:   ChEmedMedicationStatement = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement
+
+Alias: ChEmedDosageNonStructured = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured
 
 Alias:   ChVacdImmunizationSection =     http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization
 

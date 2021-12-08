@@ -55,7 +55,7 @@ Reserved for specification of a particular form für referrals to clinical subsp
     socialHistory 0..1 and
     functionalStatus 0..* and    
 
-    medicationcard 0..1 and // Medication Card contains n medications with dosages
+    medicationstatement 0..* and // MedicationStation contains 1 Medication with dosage
     allergiesIntolerances 0..* and
     immunizations 0..* and
 
@@ -89,9 +89,9 @@ Reserved for specification of a particular form für referrals to clinical subsp
 * supportingInfo[functionalStatus] MS
 * supportingInfo[functionalStatus] only Reference(ChEtocFunctionalStatusCondition)
 
-* supportingInfo[medicationcard] MS
-* supportingInfo[medicationcard] only Reference(ChEtocMedicationCard)
-* supportingInfo[medicationcard] ^short = "Medication Card contains n medications with dosages"
+* supportingInfo[medicationstatement] MS
+* supportingInfo[medicationstatement] only Reference(ChEmedMedicationStatement)
+* supportingInfo[medicationstatement] ^short = "MedicationStetemnt contains one medications with dosage"
 * supportingInfo[allergiesIntolerances] MS
 * supportingInfo[allergiesIntolerances] only Reference(ChEtocAllergyIntolerance)
 * supportingInfo[immunizations] MS
