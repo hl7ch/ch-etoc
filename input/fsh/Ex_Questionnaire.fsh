@@ -897,14 +897,16 @@ Medikation
 * item[=].item[=].repeats = true // Systems might provide medication as multiple entries 
 
 
-* item[=].item[=].item[+].linkId = "medication.medication"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.medication:medicationReference"
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
+//* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.medication:medicationReference"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
 * item[=].item[=].item[=].text = "Medikament"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].repeats = false 
 
-* item[=].item[=].item[+].linkId = "medication.dosage"
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
+
 * item[=].item[=].item[=].text = "Dosierung"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[=].repeats = false 

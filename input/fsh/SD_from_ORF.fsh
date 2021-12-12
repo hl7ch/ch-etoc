@@ -91,7 +91,7 @@ Reserved for specification of a particular form für referrals to clinical subsp
 
 * supportingInfo[medicationstatement] MS
 * supportingInfo[medicationstatement] only Reference(ChEmedMedicationStatement)
-* supportingInfo[medicationstatement] ^short = "MedicationStetemnt contains one medications with dosage"
+* supportingInfo[medicationstatement] ^short = "MedicationStatement contains one medication with dosage"
 * supportingInfo[allergiesIntolerances] MS
 * supportingInfo[allergiesIntolerances] only Reference(ChEtocAllergyIntolerance)
 * supportingInfo[immunizations] MS
