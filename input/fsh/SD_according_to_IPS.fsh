@@ -1,27 +1,8 @@
-/* Clinical part is modelled with the International Patient Summary (IPS)in Mind.*/
+// Clinical part is modelled with the International Patient Summary (IPS)in mind.
 
 
-// -------- Corresponds to IPS Medication Summary ---------  
-Profile: ChEtocMedicationCard
-Parent: ChEmedMedicationCard
-Id: ch-etoc-medicationcard
-Title: "CH eToc Medication Card"
-Description: "Definition for the Medication Card resource in the context of electronic transition of care."
-* . ^short = "CH eToc Medication Card"
-* medicationReference MS
-* dosage MS
-* dosage[nonstructured] MS
-
-
-Profile: ChEtocMedicatiionStatement
-Parent: ChEmedMedicationStatement
-Id: ch-etoc-medicationstatement
-Title: "CH eToc Medication Statement"
-Description: "Definition for the Medication Statement resource in the context of electronic transition of care."
-* . ^short = "CH eToc Medirdiotion Statement"
-* code MS
-* code.text MS
-
+/* -------- Corresponds to IPS Medication Summary ---------  
+--> uses CHEMED */
 
 // -------- Corresponds to IPS Allergies and Intolerances --------- 
 Profile: ChEtocAllergyIntolerance

@@ -886,15 +886,29 @@ Anamnese
 Medikation
 */
 * item[+].linkId = "medication"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
 * item[=].text = "Aktuelle Medikation"
 * item[=].type = #group
 * item[=].repeats = false
 
-* item[=].item[+].linkId = "medication.medicationcard"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationcard"
+* item[=].item[+].linkId = "medication.medicationstement"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement"
 * item[=].item[=].text = "Medikation"
-* item[=].item[=].type = #string
+* item[=].item[=].type = #group
 * item[=].item[=].repeats = true // Systems might provide medication as multiple entries 
+
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
+* item[=].item[=].item[=].text = "Medikament"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = false 
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
+* item[=].item[=].item[=].text = "Dosierung"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = false 
 
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen
