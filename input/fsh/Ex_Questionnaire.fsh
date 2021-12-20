@@ -1039,7 +1039,7 @@ Berichte
 * item[=].item[=].text = "Daten"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = false
-
+//
 // -------- Service Request Notes ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
