@@ -886,7 +886,7 @@ Anamnese
 Medikation
 */
 * item[+].linkId = "medication"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
 * item[=].text = "Aktuelle Medikation"
 * item[=].type = #group
 * item[=].repeats = false
