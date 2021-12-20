@@ -891,7 +891,7 @@ Medikation
 * item[=].type = #group
 * item[=].repeats = false
 
-* item[=].item[+].linkId = "medication.medicationstement"
+* item[=].item[+].linkId = "medication.medicationstatement"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement"
 * item[=].item[=].text = "Medikation"
 * item[=].item[=].type = #group
@@ -1039,7 +1039,7 @@ Berichte
 * item[=].item[=].text = "Daten"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = false
-//
+
 // -------- Service Request Notes ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
