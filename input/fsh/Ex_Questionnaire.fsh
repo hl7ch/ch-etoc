@@ -43,6 +43,7 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #string
 * item[=].item[=].required = true
 * item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "Zuweisungsschreiben"
 
 * item[=].item[+].linkId = "order.type"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.type"
@@ -50,7 +51,8 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode"
+* item[=].item[=].answerValueSet = DocumentEntryTypeCode
+* item[=].item[=].initial.valueCoding = DocumentEntryTypeCode#419891008 // Nicht näher bezeichnetes Dokument
 
 * item[=].item[+].linkId = "order.category"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.category"
@@ -58,7 +60,8 @@ Description: "Example for Questionnaire"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
 * item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode"
+* item[=].item[=].answerValueSet = DocumentEntryClassCode
+* item[=].item[=].initial.valueCoding = DocumentEntryClassCode#721927009 // Zuweisungsschreiben
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
@@ -182,6 +185,7 @@ Description: "Example for Questionnaire"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.subject"
 * item[=].text = "Patient"
 * item[=].type = #group
+
 
 * item[=].item[+].linkId = "patient.familyName"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.name.family"
@@ -322,6 +326,7 @@ Description: "Example for Questionnaire"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.beneficiary"
 * item[=].item[=].text = "Begünstigter (Patient)"
 * item[=].item[=].type = #group
+* item[=].item[=].required = true
 
 * item[=].item[=].item[+].linkId = "coverage.beneficiary.ahvn13"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.identifier:AHVN13"

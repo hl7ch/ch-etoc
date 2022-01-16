@@ -11,6 +11,8 @@ Alias:   AdministrativeGender =             http://hl7.org/fhir/administrative-g
 Alias:   RequestPriority =                  http://hl7.org/fhir/request-priority
 Alias:   V3ActCode =                        http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias:   AppointmentStatus =                http://hl7.org/fhir/appointmentstatus
+Alias:   DocumentEntryClassCode =           http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
+Alias:   DocumentEntryTypeCode =            http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
 
 // Code Systems/ Value Sets from ORF
 Alias:   ChOrfYesNo =  http://fhir.ch/ig/ch-orf/ch-orf-vs-YesNo
