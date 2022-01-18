@@ -90,13 +90,13 @@ Description: "Example for Composition"
 * extension[copyReceiver].valueReference = Reference(SUffererCopyReceiver)
 * status = #final
 // fixer Wert aus DocumentEntry.typeCode
-* type = SCT#419891008 "Nicht näher bezeichnetes Dokument"
+//* type = SCT#419891008 "Nicht näher bezeichnetes Dokument"
 // fixer Wert aus DocumentEntry.classCode
-* category = SCT#721927009 "Zuweisungsschreiben"
+//* category = SCT#721927009 "Zuweisungsschreiben"
 * subject = Reference(SUfferer)
 * date = "2019-04-01T20:18:41.341+00:00"
 * author = Reference(ORderplacerHappyDoctors)
-* title = "Anmeldung zur Abklärung / Hospitalisation"
+//* title = "Anmeldung zur Abklärung / Hospitalisation"
 * section[orderReferral].title = "Order-Referral"
 //* section[orderReferral].code = LNC#93037-0 "Portable medical order form"
 * section[orderReferral].entry[Questionnaire] = Reference(QuestionnaireEtoc)
