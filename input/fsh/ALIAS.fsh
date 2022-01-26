@@ -11,9 +11,9 @@ Alias:   AdministrativeGender =             http://hl7.org/fhir/administrative-g
 Alias:   RequestPriority =                  http://hl7.org/fhir/request-priority
 Alias:   V3ActCode =                        http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias:   AppointmentStatus =                http://hl7.org/fhir/appointmentstatus
-Alias:  EchMaritalStatus =                  http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
-Alias:   DocumentEntryClassCode =           http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.classCode
-Alias:   DocumentEntryTypeCode =            http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.typeCode
+Alias:   EchMaritalStatus =                 http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
+//Alias:   DocumentEntryClassCode =           http://fhir.ch/ig/ch-epr-term/CodeSystem/DocumentEntry.classCode
+//Alias:   DocumentEntryTypeCode =            http://fhir.ch/ig/ch-epr-term/CodeSystem/DocumentEntry.typeCode
 
 // Code Systems/ Value Sets from ORF
 Alias:   ChOrfYesNo =  http://fhir.ch/ig/ch-orf/ch-orf-vs-YesNo
@@ -45,7 +45,7 @@ Alias:   ChOrfComposition =             http://fhir.ch/ig/ch-orf/StructureDefini
 Alias:   ChOrfDocument =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document
 Alias:   ChOrfAppointment =             http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment
 Alias:   ChOrfLocation =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location
-Alias:  ChCoreCSEncounterType =     http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+Alias:   ChCoreCSEncounterType =     http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
 
 // CH ORF CS
 Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype

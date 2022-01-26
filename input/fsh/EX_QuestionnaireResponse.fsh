@@ -7,8 +7,8 @@ Description: "Example for QuestionnaireResponse"
 
 // ---------- order (Auftrag) ----------
 * item[+].linkId = "order"
-* item[=].text = "Zuweisung"
 
+/* ----------- not depicted in questionnaire; fix values are defined in composition resource
 * item[=].item[+].linkId = "order.title"
 * item[=].item[=].text = "Titel"
 * item[=].item[=].answer.valueString = "Notfallzuweisung"
@@ -19,6 +19,7 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[+].linkId = "order.category"
 * item[=].item[=].text = "Kategorie"
 * item[=].item[=].answer.valueCoding = SCT#721927009 "Order (record artifact)"
+*/
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
@@ -86,9 +87,19 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].text = "Land"
 * item[=].item[=].answer.valueString = "Schweiz"
 
+// ---------- Encounter Class (Ambulant / Stationär / Notfall) & Zimmerkategorie ----------
+* item[+].linkId = "requestedEncounter"
+* item[=].text = "Patientenaufnahme"
+
+* item[=].item[+].linkId = "requestedEncounter.class"
+* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
+* item[=].item[=].answer[+].valueCoding = V3ActCode#EMER "Notfall"
+
 // ---------- Coverage (Kostenträger) ----------
 * item[+].linkId = "coverage"
 * item[=].text = "Kostenträger"
+
+* item[=].item[+].linkId = "coverage.beneficiary"
 
 // KVG
 * item[=].item[+].linkId = "coverage.kvg"
@@ -101,7 +112,6 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].item[+].linkId = "coverage.kvg.insuranceCardNumber"
 * item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
 * item[=].item[=].item[=].answer.valueString = "80756015090002647590"
-
 
 // ---------- sender (Absender) ----------
 * item[+].linkId = "sender"
@@ -213,53 +223,11 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
 
-// ---------- Copy Receiver ----------
-* item[+].linkId = "receiverCopies"
-* item[=].text = "Kopieempfänger"
+// ---------- Copy Receiver (Copy of this order and all results therefrom) ----------
+* item[+].linkId = "receiverCopy"
 
-* item[=].item[+].linkId = "receiverCopy"
-* item[=].item[=].text = "Kopieempfangende Organisation oder Person"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.familyName"
-* item[=].item[=].item[=].text = "Name"
-* item[=].item[=].item[=].answer.valueString = "Ufferer"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.givenName"
-* item[=].item[=].item[=].text = "Vorname"
-* item[=].item[=].item[=].answer.valueString = "Susanna"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.phone"
-* item[=].item[=].item[=].text = "Telefon"
-* item[=].item[=].item[=].answer.valueString = "+41 79 979 79 79"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.email"
-* item[=].item[=].item[=].text = "E-Mail"
-* item[=].item[=].item[=].answer.valueString = "susanna@ufferer.ch"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.streetAddressLine"
-* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[+].valueString = "Musterweg"
-* item[=].item[=].item[=].answer[+].valueString = "6a"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.postalCode"
-* item[=].item[=].item[=].text = "PLZ"
-* item[=].item[=].item[=].answer.valueString = "8000"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.city"
-* item[=].item[=].item[=].text = "Ort"
-* item[=].item[=].item[=].answer.valueString = "Zürich"
-
-* item[=].item[=].item[+].linkId = "receiverCopy.country"
-* item[=].item[=].item[=].text = "Land"
-* item[=].item[=].item[=].answer.valueString = "Schweiz"
-
-// ---------- Encounter Class (Ambulant / Stationär / Notfall) & Zimmerkategorie ----------
-* item[+].linkId = "requestedEncounter"
-* item[=].text = "Patientenaufnahme"
-
-* item[=].item[+].linkId = "requestedEncounter.class"
-* item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
-* item[=].item[=].answer[+].valueCoding = V3ActCode#EMER "Notfall"
+* item[=].item[+].linkId = "receiverCopy.patient"
+* item[=].item[=].answer.valueBoolean = true
 
 /* ============ Kerninhaltes von eToc ==============================
 
@@ -302,7 +270,6 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[+].linkId = "diagnosisList.bodyHeight"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyHeight"
 * item[=].item[=].text = "Grösse (cm)"   
-
 
 * item[=].item[+].linkId = "diagnosisList.bodyWeight"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyWeight"
@@ -347,54 +314,43 @@ Anamnese
 Medikation
 */
 * item[+].linkId = "medication"
-* item[=].text = "Aktuelle Medikation"
 
-* item[=].item[+].linkId = "medication.medication"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:medicationstatement"
-* item[=].item[=].text = "Medikation"
-* item[=].item[=].answer[+].valueString = "Erdabyclor 20/25 mg 1/2-0-0-0"
-* item[=].item[=].answer[+].valueString = "Morphin 5 mg i.v.; 16h30"
-* item[=].item[=].answer[+].valueString = "Nitroglycerin 0.8 mg s.L.; 16h15"
+* item[=].item[+].linkId = "medication.medicationstatement"
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
+* item[=].item[=].item[=].answer.valueString = "Erdabyclor"
+
+* item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
+* item[=].item[=].item[=].item[=].answer.valueString = "0/25 mg 1/2-0-0-0"
+
+* item[=].item[+].linkId = "medication.medicationstatement"
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
+* item[=].item[=].item[=].answer.valueString = "Nitroglycerin"
+* item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
+* item[=].item[=].item[=].item[=].answer.valueString = "0.8 mg s.L.; 16h15"
 
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen
 */
 * item[+].linkId = "allergy"
-* item[=].text = "Allergien und Intoleranzen"
-
-* item[=].item[+].linkId = "allergy.allegiesIntolerances"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
-* item[=].item[=].text = "Allergie / Intoleranz"
 
 /* ---------------------------------------------------------------------------
 Impfungen
 */
 * item[+].linkId = "immunizationstatus"
-* item[=].text = "Impfungen"
 
 * item[=].item[+].linkId = "immunizationstatus.immunizations"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
-* item[=].item[=].text = "Bisherige Impfungen"
 
 /* ---------------------------------------------------------------------------
 Labor
 */
 * item[+].linkId = "lab"
-* item[=].text = "Labor"
-
-* item[=].item[+].linkId = "lab.labresults"
-* item[=].item[=].text = "Laborresultat"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
 
 /* ---------------------------------------------------------------------------
 Pathologie
 */
 * item[+].linkId = "pathology"
-* item[=].text = "Pathologie"
-
-* item[=].item[+].linkId = "pathology.pathologyresults"
-* item[=].item[=].text = "Pathologiebefunde"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pathologyresults"
 
 /* ---------------------------------------------------------------------------
 Bildgebung
@@ -409,10 +365,8 @@ Bildgebung
 Kardiologie
 */
 * item[+].linkId = "cardiology"
-* item[=].text = "Kardiologie"
 
 * item[=].item[+].linkId = "cardiology.cardiologyresults"
-* item[=].item[=].text = "EKG / Kardiologischer Befund"
 * item[=].item[=].answer[+].valueString = "ST-Hebungen V1-V5"
 
 /* ---------------------------------------------------------------------------
@@ -430,16 +384,16 @@ Bisheriger und weiterer Verlauf
 /* ---------------------------------------------------------------------------
 Berichte
 */
-* item[=].item[+].linkId = "attachments"
-* item[=].item[=].text = "Anhang"
+* item[+].linkId = "attachments"
 
-* item[=].item[=].item[+].linkId = "attachtment.title"  
-* item[=].item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
-* item[=].item[=].item[=].answer[+].valueString = "EKG_09062021.pdf"
+* item[=].item[+].linkId = "attachtment.title"  
+* item[=].item[=].answer[+].valueString = "EKG_09062021.pdf"
 
-* item[=].item[=].item[+].linkId = "attachment.data"  
-* item[=].item[=].item[=].text = "Daten"
-* item[=].item[=].item[=].answer[+].valueString = "324nnvsdafw3qwef3"
+* item[=].item[+].linkId = "attachment.note"  
+* item[=].item[=].answer[+].valueString = "EKG vom 9.6.2021"
+
+* item[=].item[+].linkId = "attachment.data"  
+* item[=].item[=].answer[+].valueString = "324nnvsdafw3qwef3"
 
 // -------- Service Request Notes ------
 * item[+].linkId = "note"

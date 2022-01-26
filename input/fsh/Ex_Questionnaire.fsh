@@ -349,7 +349,7 @@ Description: "Example for Questionnaire"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.beneficiary"
 * item[=].item[=].text = "Begünstigter (Patient)"
 * item[=].item[=].type = #group
-* item[=].item[=].required = true
+* item[=].item[=].required = false
 
 * item[=].item[=].item[+].linkId = "coverage.beneficiary.ahvn13"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.identifier:AHVN13"

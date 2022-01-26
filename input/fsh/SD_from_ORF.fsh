@@ -143,8 +143,8 @@ Title: "CH Etoc Composition"
 Description: "Definition for the Composition resource in the context of electronic transition of care."
 * . ^short = "CH Etoc Composition"
 * title = "Zuweisungsschreiben"
-* category = DocumentEntryClassCode#721927009 // Zuweisungsschreiben 
-* type = DocumentEntryTypeCode#419891008 // Nicht näher bezeichnetes Dokument
+* category = SCT#721927009 // Zuweisungsschreiben 
+* type = SCT#419891008 // Nicht näher bezeichnetes Dokument
 
 // ---------- Composition.section.entry:ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
