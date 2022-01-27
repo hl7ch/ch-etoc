@@ -315,14 +315,14 @@ Medikation
 */
 * item[+].linkId = "medication"
 
-* item[=].item[+].linkId = "medication.medicationstatement"
+/* item[=].item[+].linkId = "medication.medicationstatement"
 
 * item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
 * item[=].item[=].item[=].answer.valueString = "Erdabyclor"
 
 * item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
 * item[=].item[=].item[=].item[=].answer.valueString = "0/25 mg 1/2-0-0-0"
-
+*/
 * item[=].item[+].linkId = "medication.medicationstatement"
 
 * item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
