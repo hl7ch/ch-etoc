@@ -12,8 +12,6 @@ Alias:   RequestPriority =                  http://hl7.org/fhir/request-priority
 Alias:   V3ActCode =                        http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias:   AppointmentStatus =                http://hl7.org/fhir/appointmentstatus
 Alias:   EchMaritalStatus =                 http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
-//Alias:   DocumentEntryClassCode =           http://fhir.ch/ig/ch-epr-term/CodeSystem/DocumentEntry.classCode
-//Alias:   DocumentEntryTypeCode =            http://fhir.ch/ig/ch-epr-term/CodeSystem/DocumentEntry.typeCode
 
 // Code Systems/ Value Sets from ORF
 Alias:   ChOrfYesNo =  http://fhir.ch/ig/ch-orf/ch-orf-vs-YesNo
