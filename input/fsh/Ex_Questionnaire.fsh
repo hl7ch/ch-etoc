@@ -24,7 +24,7 @@ Description: "Example for Questionnaire"
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * name = "QuestionnaireEtoc"
 * title = "Questionnaire Electronic Transition of Carer"
-* derivedFrom = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
+* derivedFrom = "http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form"
 * status = #active
 * subjectType = #Patient
 * date = "2021-02-24"
