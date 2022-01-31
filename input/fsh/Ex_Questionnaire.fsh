@@ -994,10 +994,14 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[=].repeats = false
 
 * item[=].item[+].linkId = "diagnosisList.pregnancy"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
 * item[=].item[=].text = "Schwangerschaft"   
-* item[=].item[=].type = #boolean
-* item[=].item[=].repeats = false
+* item[=].item[=].type = #group
+
+* item[=].item[=].item[+].linkId = "diagnosisList.pregnancy.present"
+* item[=].item[=].item[=].text = "Schwanger"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+* item[=].item[=].item[=].type = #boolean
+* item[=].item[=].item[=].repeats = false
 
 * item[=].item[=].item[+].linkId = "diagnosisList.pregnancy.expectedDeliveryDate"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"

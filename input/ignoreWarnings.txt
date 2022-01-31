@@ -79,3 +79,16 @@ The link 'null#item.patient.gender' for "Answers: 3 options" cannot be resolved
 The link 'null#item.patient.maritalStatus' for "Answers: 8 options" cannot be resolved
 The link 'null#item.requestedEncounter.class' for "Answers: 3 options" cannot be resolved
 The link 'null#item.requestedEncounter.desiredAccommodation' for "Answers: 3 options" cannot be resolved
+
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/StructureDefinition-abatement-dateTime-uv-ips.html' for "AbatementDateTimeUvIps" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/StructureDefinition-abatement-dateTime-uv-ips.html' for "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/StructureDefinition-abatement-dateTime-uv-ips.html' for "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/StructureDefinition-abatement-dateTime-uv-ips.html' for "http://hl7.org/fhir/uv/ips/StructureDefinition/abatement-dateTime-uv-ips" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-whoatc-uv-ips.html' for "WHO ATC - IPS" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-absent-or-unknown-immunizations-uv-ips.html' for "Absent or Unknown Immunization - IPS" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-whoatc-uv-ips.html' for "WHO ATC - IPS" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-absent-or-unknown-immunizations-uv-ips.html' for "Absent or Unknown Immunization - IPS" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-whoatc-uv-ips.html' for "WHO ATC - IPS" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-absent-or-unknown-immunizations-uv-ips.html' for "Absent or Unknown Immunization - IPS" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-whoatc-uv-ips.html' for "WhoAtcUvIps" cannot be resolved
+The link 'file://C:\GitHub\hl7.fhir.uv.ips#1.0.0\output/ValueSet-absent-or-unknown-immunizations-uv-ips.html' for "NoImmunizationInfoUvIps" cannot be resolved

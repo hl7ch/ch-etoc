@@ -43,7 +43,7 @@ Alias:   ChOrfComposition =             http://fhir.ch/ig/ch-orf/StructureDefini
 Alias:   ChOrfDocument =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document
 Alias:   ChOrfAppointment =             http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment
 Alias:   ChOrfLocation =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location
-Alias:   ChCoreCSEncounterType =     http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+Alias:   ChCoreCSEncounterType =        http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
 
 // CH ORF CS
 Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype

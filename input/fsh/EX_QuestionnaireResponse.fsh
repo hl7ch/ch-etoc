@@ -276,13 +276,14 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[=].text = "Gewicht (kg)"   
 
 * item[=].item[+].linkId = "diagnosisList.pregnancy"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+/* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
 * item[=].item[=].text = "Schwangerschaft"   
+*/
 
 * item[=].item[=].item[+].linkId = "diagnosisList.pregnancy.expectedDeliveryDate"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+/* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
 * item[=].item[=].item[=].text = "Erwarteter Geburtstermin"   
-
+*/
 /*----------------------------------------------------------------------
 Anamnese
  */
