@@ -328,8 +328,10 @@ Medikation
 
 * item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
 * item[=].item[=].item[=].answer.valueString = "Nitroglycerin"
-* item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
-* item[=].item[=].item[=].item[=].answer.valueString = "0.8 mg s.L.; 16h15"
+
+
+* item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
+* item[=].item[=].item[=].answer.valueString = "0.8 mg s.L.; 16h15"
 
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen
