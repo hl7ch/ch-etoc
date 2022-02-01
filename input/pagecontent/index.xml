@@ -73,7 +73,7 @@
     are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS.
     </p>
 
-    <p>As a consequence, the first version of CH eTOC does not claim to be confromant to IPS.
+    <p>As a consequence, the first version of CH eTOC does not claim to be conformant to IPS.
     </p>
 
     <p>This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
