@@ -65,7 +65,7 @@
     shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
     </p>
     
-    <p>At the working group meeting in February 2021, it was decided that a first version of eTOC shall based on the the FHIR International Patient Summary (IPS). 
+    <p>At the working group meeting in February 2021, it was decided that a first version of eTOC shall based on the the  <a href="http://hl7.org/fhir/uv/ips/">FHIR International Patient Summary (IPS).</a> 
     </p>
 
     <p>However, this first version of eTOC still allows many free text entries. Derivations for use cases in different disciplines are to be defined later.
@@ -83,7 +83,7 @@
     and follow the definition in the ORF Implementation Guide.  
     </p>
 
-    <p>This IG follows the Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13. The Questionnaire resource gives gudiance for 
+    <p>This IG follows the<a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/E/Exchange-format-handbook_part-1_v12.pdf">Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13.</a> The Questionnaire resource gives gudiance for 
     the implementaion of the user interface.
     </p>
   

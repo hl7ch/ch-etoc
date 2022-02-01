@@ -28,7 +28,7 @@ dependencies:
   ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: 2.0.0
   ch.fhir.ig.ch-emed: current
-  ch.fhir.ig.ch-vacd: 1.0.0
+  ch.fhir.ig.ch-vacd: current
   ch.fhir.ig.ch-allergyintolerance: current
   hl7.fhir.uv.ips: 1.0.0 
 
