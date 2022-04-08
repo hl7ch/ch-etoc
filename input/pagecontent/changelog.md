@@ -4,17 +4,17 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### STU 1 Ballot
 
 #### Open Issues
-During the ballot, the following comments came in, which will be taken into account in the further development of CH ORF:
+During the ballot, the following comments came in, which will be taken into account in the further development:
 
-* [Issue #10](https://github.com/hl7ch/ch-rad-order/issues/10): Question of principle: Extraction of all questionnaire items to corresponding items in resources at sender site or not. See discussion i t #10
+* [Issue #10](https://github.com/hl7ch/ch-etoc/issues/10): Question of principle: Extraction of all questionnaire items to corresponding items in resources at sender site or not. See discussion i t #10
 
-* [Issue #17](https://github.com/hl7ch/ch-rad-order/issues/17): Restrict Questionnaire to information needed to display to the end user.
+* [Issue #17](https://github.com/hl7ch/ch-etoc/issues/17): Restrict Questionnaire to information needed to display to the end user.
 
-* [Issue #18](https://github.com/hl7ch/ch-rad-order/issues/18): Questionnaire support for various specialties (use cases): The questionnaire(s) should be designed to support various different use cases in the sense, that only the relevant information per specialty (to be referred) is displayed, either by allowing more than one instance of questionnaires in the IG, each of them representaing part of the "super questionnaire" or by using adaptive forms. Use case dependent contraints in the questionnaire will be subject of furhter disussions.
+* [Issue #18](https://github.com/hl7ch/ch-etoc/issues/18): Questionnaire support for various specialties (use cases): The questionnaire(s) should be designed to support various different use cases in the sense, that only the relevant information per specialty (to be referred) is displayed, either by allowing more than one instance of questionnaires in the IG, each of them representaing part of the "super questionnaire" or by using adaptive forms. Use case dependent contraints in the questionnaire will be subject of furhter disussions.
 
-* [Issue #19](https://github.com/hl7ch/ch-rad-order/issues/19): Questionnaire support for expression based population and advanced behavior
+* [Issue #19](https://github.com/hl7ch/ch-etoc/issues/19): Questionnaire support for expression based population and advanced behavior
 
-* [Issue #22](https://github.com/hl7ch/ch-rad-order/issues/22): Value Sets are draft; will be refined with Swiss Rad. Society.
+* [Issue #22](https://github.com/hl7ch/ch-etoc/issues/22): Value Sets are draft; will be refined with Swiss Rad. Society.
 
 #### Follow up of changes in CH-orf
 * [ORF Issue #31](https://github.com/hl7chhttp://build.fhir.org/ig/hl7ch/ch-orf/issues/31): The values for the readonly fields order.title, order.type, order.category are now defined fix in the composition and shonw no more in the questionnaire. 
@@ -40,23 +40,20 @@ During the ballot, the following comments came in, which will be taken into acco
 * [ORF Issue #101](https://github.com/hl7chhttp://build.fhir.org/ig/hl7ch/ch-orf/issues/101) Cardinality for Questionnaire and QR in Composition set to 0..1. For details see home.
 
 #### Added
-* [Issue #19](https://github.com/hl7ch/ch-rad-order/issues/19): Caveats changed from boolean to 
-yes/no/undetermined.
-
-* [Issue #22](https://github.com/hl7ch/ch-rad-order/issues/22): Various attachments now possible
+* [Issue #22](https://github.com/hl7ch/ch-etoc/issues/22): Various attachments now possible
 
 #### Changed / Updated
-* [Issue #4](https://github.com/hl7ch/ch-rad-order/issues/4): Reference to IPAG report added in home.
+* [Issue #4](https://github.com/hl7ch/ch-etoc/issues/4): Reference to IPAG report added in home.
 
-* [Issue #14](https://github.com/hl7ch/ch-rad-order/issues/14): Definition of etoc questionnaire corrected.
+* [Issue #14](https://github.com/hl7ch/ch-etoc/issues/14): Definition of etoc questionnaire corrected.
 
-* [Issue #15](https://github.com/hl7ch/ch-rad-order/issues/15): Examples: Incongruence between questionnaireresponse and servicereques
+* [Issue #15](https://github.com/hl7ch/ch-etoc/issues/15): Examples: Incongruence between questionnaireresponse and servicereques
 
-* [Issue #18](https://github.com/hl7ch/ch-rad-order/issues/18): Cardinality for Questionnaire and QR in Composition set to 0..1. Updated [documentation](http://fhir.ch/ig/ch-rad-order/index.html) accordingly.
+* [Issue #18](https://github.com/hl7ch/ch-etoc/issues/18): Cardinality for Questionnaire and QR in Composition set to 0..1. Updated [documentation](http://fhir.ch/ig/ch-etoc/index.html) accordingly.
 
+* [Issue #20](https://github.com/hl7ch/ch-etoc/issues/20): CH eToc Service Request - Definitions medication statement instead of medication card
 
 #### Issues resolved without amendment
-* [Issue #20](https://github.com/hl7ch/ch-orf/issues/20): CH eToc Service Request - Definitions medication statement instead of medication card
 * [Issue #23](https://github.com/hl7ch/ch-orf/issues/23): One recipient only
 
 
@@ -71,3 +68,4 @@ The actual version is not considered ready for implementation as Standard of Tri
 
 
 Daniel Ratschiller, Cistec AG: From an HIS provider's point of view, the current state of IG eToC is still too immature to be used concretely in everyday hospital life. Perhaps too many different ingredients have been thrown together to do justice to everyone and everything, but it will be very difficult to find a uniform line for referral processes across different systems. Primary care providers will have a difficult time developing healthcare solutions on this basis that will be accepted by healthcare professionals. I would recommend reviewing the original intended goals of IPAG, possibly reducing its scope and focusing on promising use cases. [Issue #21](https://github.com/hl7ch/ch-etoc/issues/21)
+
