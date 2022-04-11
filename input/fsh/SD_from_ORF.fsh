@@ -147,6 +147,9 @@ Description: "Definition for the Composition resource in the context of electron
 * type = SCT#419891008 // Nicht näher bezeichnetes Dokument
 
 // ---------- Composition.section.entry:ServiceRequest ----------
+// objection voted on 7.4.2022 tc meeting Issue #39
+* section[orderReferral].entry[Questionnaire] 1..
+* section[orderReferral].entry[QuestionnaireResponse] 1..
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
 
 Profile: ChEtocQuestionnaireResponse
