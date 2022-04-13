@@ -8,7 +8,7 @@
     {
       "version": "current",
       "desc": "Continuous Integration Build (latest in version control)",
-      "path": "http://build.fhir.org/ig/hl7ch/ch-etoc",
+      "path": "http://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/index.html",
       "status": "ci-build",
       "current": true
     },
