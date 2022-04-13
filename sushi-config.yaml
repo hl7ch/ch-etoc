@@ -12,7 +12,7 @@ status: active
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2022-02-01
+date: 2022-04-13
 version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
@@ -25,11 +25,11 @@ contact:
     system: url
     value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-orf: current
+  ch.fhir.ig.ch-orf: 1.0.0
   ch.fhir.ig.ch-core: 2.0.0
-  ch.fhir.ig.ch-emed: current
-  ch.fhir.ig.ch-vacd: current
-  ch.fhir.ig.ch-allergyintolerance: current
+  ch.fhir.ig.ch-emed: 2.0.0
+  ch.fhir.ig.ch-vacd: 2.0.0
+  ch.fhir.ig.ch-allergyintolerance: 1.0.0
   hl7.fhir.uv.ips: 1.0.0 
 
 pages:
