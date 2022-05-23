@@ -104,7 +104,7 @@ Description: "Example for Composition"
 * section[orderReferral].entry[ServiceRequest] = Reference(ServiceRequestEtoc)
 
 
-Instance: DocumentEtoc // Noch nicht vollständig
+/*Instance: DocumentEtoc // Noch nicht vollständig
 InstanceOf: ChEtocDocument
 Title: "Bundle Medical Referral"
 Description: "Example for Bundle"
@@ -163,7 +163,7 @@ Description: "Example for Bundle"
 * entry[+].fullUrl = "http://example.com/fhir/Location/LocationHospitalStay"
 * entry[=].resource = LocationHospitalStay
 
-
+*/
 //------------- Patient -------------
 Instance: SUfferer
 InstanceOf: ChCorePatient
