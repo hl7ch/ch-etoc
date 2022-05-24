@@ -25,9 +25,9 @@ Description: "Example for Questionnaire"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form-modular"
-* name = "OrderReferralForm"
-* title = "Order-Referral-Form"
+* url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc-modular"
+* name = "QuestionnaireEtoc-modular"
+* title = "QuestionnaireEtoc-modular"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
