@@ -1,6 +1,6 @@
-Instance: QuestionnaireEtoc-module
+Instance: QuestionnaireEtoc-modular
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire Electronic Transition of Care"
+Title: "Questionnaire Etoc (Modular version)"
 Description: "Example for Questionnaire"
 
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
