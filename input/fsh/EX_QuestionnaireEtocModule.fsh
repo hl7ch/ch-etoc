@@ -1,4 +1,4 @@
-Instance: QuestionnaireEtocModular
+Instance: QuestionnaireEtoc
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Electronic Transition of Care"
 Description: "Example for Questionnaire"
