@@ -169,7 +169,7 @@ Description: "Example for Questionnaire"
 
 
 
-/*Darstellung der Diagnosen und Befunde
+/*Module Diagnosen und Befunde
 */
 
 Instance: ch-etoc-module-diagnosis
@@ -240,3 +240,7 @@ Description: "Subquestionnaire Diagnosis"
 * item[=].item[=].item[=].text = "Erwarteter Geburtstermin"   
 * item[=].item[=].item[=].type = #dateTime
 * item[=].item[=].item[=].repeats = false
+
+
+/*Module Anamnesis
+*/
