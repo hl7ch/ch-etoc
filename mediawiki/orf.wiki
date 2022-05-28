@@ -270,7 +270,7 @@ This transaction is used to submit a filled in questionnaire together with requi
 | Uniform Resource Identifier (URI): Generic Syntax
 |-
 | IETF RFC 4627
-| The application/json Media Type for JavaScript Object Notation (JSON)
+| The application/json attachment Type for JavaScript Object Notation (JSON)
 |-
 | IETF RFC 6585
 | Additional HTTP Status Codes
@@ -296,7 +296,7 @@ After the Questionnaire is completed by the Questionnaire filler user, the Quest
 
 The Questionnaire Filler shall initiate a FHIR “transaction” using a “create” action by sending an HTTP POST request method composed of a FHIR Bundle Resource containing the Composition resource and all resources referenced in, in particular one Questionnaire Resource, one QuestionnaireResponse Resource and additional resources according to the Questionnaire Profile.
 
-The media type of the HTTP body shall be either <code>“application/json+fhir”</code> or <code>“application/xml+fhir”</code>.
+The attachment type of the HTTP body shall be either <code>“application/json+fhir”</code> or <code>“application/xml+fhir”</code>.
 
 See http://hl7.org/fhir/http.html#transaction for complete requirements of a transaction. See http://hl7.org/fhir/bundle-transaction.html for example of a transaction bundle.
 
@@ -310,7 +310,7 @@ The FHIR <code>Bundle.meta.profile</code> shall include the value <code>“http:
 
 ===== Expected Actions =====
 
-The Questionnaire Receiver shall accept both media types <code>application/json+fhir</code> and <code>application/xml+fhir</code>.
+The Questionnaire Receiver shall accept both attachment types <code>application/json+fhir</code> and <code>application/xml+fhir</code>.
 
 On receipt of the submission, the Questionnaire Receiver shall validate the resources and respond with one of the HTTP codes defined in Section 3.4.4.2.2 Message Semantics.
 

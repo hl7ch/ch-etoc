@@ -398,9 +398,9 @@ Usage: #inline
 
 //------------- Previous Results -------------
 Instance: MediaRx
-InstanceOf: ChEtocMedia
-Title: "Media Previous Rx"
-Description: "Example for Media"
+InstanceOf: ChEtocAttachment
+Title: "attachment Previous Rx"
+Description: "Example for attachment"
 * status = #completed
 * content.contentType = #application/dicom
 * content.data = "RXhhbXBsZQ=="

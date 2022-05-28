@@ -341,9 +341,9 @@ Allergien und Intoleranzen
 /* ---------------------------------------------------------------------------
 Impfungen
 */
-* item[+].linkId = "immunizationstatus"
+* item[+].linkId = "immunization"
 
-* item[=].item[+].linkId = "immunizationstatus.immunizations"
+* item[=].item[+].linkId = "mmunizationstatus.item"
 
 /* ---------------------------------------------------------------------------
 Labor
@@ -375,13 +375,13 @@ Kardiologie
 /* ---------------------------------------------------------------------------
 Bisheriger und weiterer Verlauf
 */
-* item[+].linkId = "carePlans"
+* item[+].linkId = "careplan"
 * item[=].text = "Verlauf"
 
-* item[=].item[+].linkId = "carePlans.medical" // Aerztlich
+* item[=].item[+].linkId = "careplan.medical" // Aerztlich
 * item[=].item[=].text = "Ärztlicher Bericht"
 
-* item[=].item[+].linkId = "carePlans.nursing" // Pflege
+* item[=].item[+].linkId = "careplan.nursing" // Pflege
 * item[=].item[=].text = "Pflegebericht"
 
 /* ---------------------------------------------------------------------------
