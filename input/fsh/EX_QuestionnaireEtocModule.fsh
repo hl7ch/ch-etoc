@@ -250,15 +250,15 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'careplan' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Attachments ------------------------------ */
-* item[+].linkId = "attachement"
+/*------ attachment ------------------------------ */
+* item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachement|2.0.0"
-* item[=].item.linkId = "attachements.1"
-* item[=].item.text = "Unable to resolve 'attachements' sub-questionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|2.0.0"
+* item[=].item.linkId = "attachment.1"
+* item[=].item.text = "Unable to resolve 'attachment' sub-questionnaire"
 * item[=].item.type = #display
 
 // -------- Service Request Note ------
@@ -548,7 +548,7 @@ Description: "Subquestionnaire Cardiology"
 /*Module Careplan*/
 Instance: ch-etoc-module-careplan
 InstanceOf: Questionnaire
-Title: "Module Questionnaire Care Plan"
+Title: "Module Questionnaire Care plan"
 Description: "Subquestionnaire careplan"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"

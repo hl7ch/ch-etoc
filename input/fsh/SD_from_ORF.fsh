@@ -63,10 +63,7 @@ Reserved for specification of a particular form für referrals to clinical subsp
     pathologyresults 0..* and
     imagingresults 0..* and
     cardiologyresults 0..* and
-
- //   diagnosticReports 0..* and  // not used
-    medicalCarePlans 0..* and 
-    nursingCarePlans 0..
+    Careplan 0..*
 
 * supportingInfo[secondarydiagnosis] MS
 * supportingInfo[secondarydiagnosis] only Reference(ChEtocSecondaryDiagnosisCondition) 
@@ -106,11 +103,9 @@ Reserved for specification of a particular form für referrals to clinical subsp
 * supportingInfo[cardiologyresults] MS
 * supportingInfo[cardiologyresults] only Reference(ChEtocCardiologyObservation)
 
-* supportingInfo[medicalCarePlans] MS
-* supportingInfo[medicalCarePlans] only Reference(ChEtocMedicalCarePlan)
+* supportingInfo[Careplan] MS
+* supportingInfo[Careplan] only Reference(ChEtocCareplan)
 
-* supportingInfo[nursingCarePlans] MS
-* supportingInfo[nursingCarePlans] only Reference(ChEtocNursingCarePlan)
 
 /* ------- bodySite -------
 Currently no use intended

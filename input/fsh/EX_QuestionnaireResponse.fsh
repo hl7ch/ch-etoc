@@ -387,7 +387,7 @@ Bisheriger und weiterer Verlauf
 /* ---------------------------------------------------------------------------
 Berichte
 */
-* item[+].linkId = "attachments"
+* item[+].linkId = "attachment"
 
 * item[=].item[+].linkId = "attachtment.title"  
 * item[=].item[=].answer[+].valueString = "EKG_09062021.pdf"

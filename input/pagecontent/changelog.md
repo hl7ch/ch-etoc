@@ -40,7 +40,7 @@ During the ballot, the following comments came in, which will be taken into acco
 * [ORF Issue #101](https://github.com/hl7chhttp://build.fhir.org/ig/hl7ch/ch-orf/issues/101) Cardinality for Questionnaire and QR in Composition set to 0..1. For details see home.
 
 #### Added
-* [Issue #22](https://github.com/hl7ch/ch-etoc/issues/22): Various attachments now possible
+* [Issue #22](https://github.com/hl7ch/ch-etoc/issues/22): Various attachment now possible
 
 #### Changed / Updated
 * [Issue #4](https://github.com/hl7ch/ch-etoc/issues/4): Reference to IPAG report added in home.

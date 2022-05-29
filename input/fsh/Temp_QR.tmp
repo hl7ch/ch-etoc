@@ -63,7 +63,7 @@ Service Request Notes
 /* ---------------------------------------------------------------------------
 Berichte
 */
-* item[=].item[+].linkId = "attachments"
+* item[=].item[+].linkId = "attachment"
 * item[=].item[=].text = "Anhang"
 
 * item[=].item[=].item[+].linkId = "attachtment.title" 

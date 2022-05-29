@@ -238,18 +238,19 @@ Description: "Definition for the Functional Status Condition resource in the con
 * code.text 1.. MS
 * subject only Reference(ChCorePatient) 
 
-// -------- Corresponds to IPS Plan of Care --------- 
+/*-------- Corresponds to IPS plan of Care --------- 
+Changed to media resource because careplans can have different layouts and might therefore provided as pdf.
 
-Profile: ChEtocMedicalCarePlan
-Parent: CarePlan
+Profile: ChEtocMedicalCareplan
+Parent: Careplan
 Id: ch-etoc-medical-careplan
-Title: "CH eToc Care Plan"
-Description: "Definition for the Care Plan resource in the context of electronic transition of care."
+Title: "CH eToc Care plan"
+Description: "Definition for the Care plan resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
 * status MS
 * intent MS
 * category MS
-// * category from ChEtocCarePlanContributors // not used
+// * category from ChEtocCareplanContributors // not used
 * title MS
 * activity MS
 * activity.outcomeCodeableConcept MS
@@ -259,16 +260,16 @@ Description: "Definition for the Care Plan resource in the context of electronic
 * activity.detail.code.text MS
 
 
-Profile: ChEtocNursingCarePlan
-Parent: CarePlan
+Profile: ChEtocNursingCareplan
+Parent: Careplan
 Id: ch-etoc-ursing-careplan
-Title: "CH eToc Care Plan"
-Description: "Definition for the Care Plan resource in the context of electronic transition of care."
+Title: "CH eToc Care plan"
+Description: "Definition for the Care plan resource in the context of electronic transition of care."
 * . ^short = "CH eToc Procedure"
 * status MS
 * intent MS
 * category MS
-// * category from ChEtocCarePlanContributors // not used
+// * category from ChEtocCareplanContributors // not used
 * title MS
 * activity MS
 * activity.outcomeCodeableConcept MS
@@ -277,7 +278,7 @@ Description: "Definition for the Care Plan resource in the context of electronic
 * activity.detail.code MS
 * activity.detail.code.text MS
 
-
+*/
 // -------- Corresponds to Advance Directives ---------
 // Not supported yet
 
