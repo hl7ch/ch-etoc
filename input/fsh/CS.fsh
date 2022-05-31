@@ -9,3 +9,11 @@ Description: "Extension of Category of Conditionin the context of CH electronic 
 * #social-history-condition
 * #functional-status-condition
 
+// ServiceRequest.category
+CodeSystem: ChEtocRequestedService
+Id: ch-etoc-cs-requested-service
+Title: "Requested Service"
+Description: "Definition for Requested Service Code System in the context of CH Etoc."
+* ^caseSensitive = true
+
+* #
