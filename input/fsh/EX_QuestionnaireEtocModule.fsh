@@ -1,8 +1,7 @@
-Instance: QuestionnaireEtoc-modular
+Instance: order-referral-form-modular
 InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire Etoc (Modular version)"
+Title: "Questionnaire Order-Referral-Form"
 Description: "Example for Questionnaire"
-
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -25,9 +24,9 @@ Description: "Example for Questionnaire"
 * extension[=].extension[2].url = "description"
 * extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc-modular"
-* name = "QuestionnaireEtoc-modular"
-* title = "QuestionnaireEtoc-modular"
+* url = "http://fhir.ch/ig/ch-orf/Questionnaire/order-referral-form-modular"
+* name = "OrderReferralForm"
+* title = "Order Referral Form"
 * status = #active
 * subjectType = #Patient
 * date = "2022-05-04"
@@ -57,6 +56,18 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'receiver' sub-questionnaire"
 * item[=].item.type = #display
 
+// ----------Initiator: Person/organization who initated this order / application ; e.g. spitex, retirement home etc. ----------
+* item[+].linkId = "initiator"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
+* item[=].text = "Initiant dieser Anmeldung"
+* item[=].type = #group
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-initiator|2.0.0"
+* item[=].item.linkId = "initiator.1"
+* item[=].item.text = "Unable to resolve 'intitiator' sub-questionnaire"
+* item[=].item.type = #display
+
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
 * item[+].linkId = "patient"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.subject"
@@ -81,6 +92,7 @@ Description: "Example for Questionnaire"
 * item[=].item.linkId = "requestedEncounter.1"
 * item[=].item.text = "Unable to resolve 'requestedencounter' sub-questionnaire"
 * item[=].item.type = #display
+
 
 // ---------- Coverage (Kostenträger) ----------
 // Design as agreed with eHealth Suisse and Cistec 09.06.2021
@@ -127,6 +139,45 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'receivercopy' sub-questionnaire"
 * item[=].item.type = #display
 
+
+/*------ Antecedent Episode of Care ------------------------------ */
+
+* item[+].linkId = "antecedentEpisodeOfCare"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:antecedentEpisodeOfCare"
+* item[=].text = "Vorgängiger Aufenthalt in Spital / Heim"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.start"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.end"
+* item[=].item[=].text = "Von"
+* item[=].item[=].type = #dateTime
+
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.end"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.end"
+* item[=].item[=].text = "Bis"
+* item[=].item[=].type = #dateTime
+
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.organization"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.organization"
+* item[=].item[=].text = "Spital /Heim"
+* item[=].item[=].type = #group
+
+* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+* item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].extension.valueExpression.expression = "'antecedentEpisodeOfCare.organization.'"
+
+* item[=].item[=].item[+].linkId = "antecedentEpisodeOfCare.practitionerRole.organization.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Organization.name"
+* item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item[=].item[=].extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-address|2.0.0"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.organization.1"
+* item[=].item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
+* item[=].item[=].item[=].type = #display
+
 /*------ Appointment ------------------------------ */
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
@@ -139,6 +190,20 @@ Description: "Example for Questionnaire"
 * item[=].item.linkId = "appointment.1"
 * item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
 * item[=].item.type = #display
+
+/*------ Consent ------------------------------ */
+* item[+].linkId = "consent"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:patientConsent"
+* item[=].text = "Einverständniserklärung"
+* item[=].type = #group
+* item[=].repeats = true
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-consent|2.0.0"
+* item[=].item.linkId = "consent.1"
+* item[=].item.text = "Unable to resolve 'consent' sub-questionnaire"
+* item[=].item.type = #display
+
 
 /*------ Diagnosis and Clinical Findings ------------------------------ */
 * item[+].linkId = "diagnosislist"
@@ -261,15 +326,19 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'attachment' sub-questionnaire"
 * item[=].item.type = #display
 
-// -------- Service Request Note ------
+
+// -------- Service Request Notes ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group
+* item[=].repeats = true
 
 * item[=].item[+].linkId = "note.text"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item[=].text = "Kommentar" 
 * item[=].item[=].type = #string
+
+
 
 
 //============ Module defintions =================================
