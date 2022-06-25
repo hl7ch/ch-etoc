@@ -12,4 +12,4 @@ ValueSet: ChEtocRequestedService
 Id: ch-rad-order-vs-requested-service
 Title: "Requested Service"
 Description: "Definition for Requested Service Value Set in the context of CH RAD-Order."
-* include codes from system ChRadOrderRequestedService
+* include codes from system ChEtocRequestedService

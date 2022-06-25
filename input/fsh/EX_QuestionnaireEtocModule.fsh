@@ -629,3 +629,25 @@ Description: "Subquestionnaire Note"
 * item[=].text = "Text" 
 * item[=].type = #text
 * item[=].required = false 
+
+
+
+/*Module Service Request Category*/           
+* item[+].linkId = "requestedService"
+* item[=].text = "Angeforderte Leistung"
+* item[=].type = #group
+* item[=].required = true
+
+* item[=].item[+].linkId = "requestedService.service"
+// item[=].item[=].definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.category.coding"
+* item[=].item[=].text = "Leistung"                 
+* item[=].item[=].required = true
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-rad-order/ValueSet/ch-etoc-vs-requested-service-level-1"
+
+* item[=].item[=].item[+].linkId = "requestedService.service"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.category.coding"
+* item[=].item[=].item[=].text = "Leistung"                 
+* item[=].item[=].item[=].required = true
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-rad-order/ValueSet/ch-etoc-vs-requested-service-level-2"

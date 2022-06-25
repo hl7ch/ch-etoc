@@ -60,7 +60,7 @@ Description: "Definition for the Immunization Section resource in the context of
 * vaccineCode MS
 * vaccineCode.text MS
 * occurrenceDateTime MS
-* occurrenceString MS
+//* occurrenceString MS wird  von ch-vacd nicht mehr unterstützt in current version
 
 
 // -------- Corresponds to IPS History of Procedures --------- 

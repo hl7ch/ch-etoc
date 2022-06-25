@@ -15,5 +15,6 @@ Id: ch-etoc-cs-requested-service
 Title: "Requested Service"
 Description: "Definition for Requested Service Code System in the context of CH Etoc."
 * ^caseSensitive = true
-
-* #
+* #child-spitex
+* #longterm
+* #"acute transitional care"
