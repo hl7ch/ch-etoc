@@ -646,6 +646,39 @@ Description: "Subquestionnaire careplan"
 * item[=].item[=].type = #string
 
 
+/*Module Hospital Course*/
+Instance: ch-etoc-module-hospitalcourse
+InstanceOf: Questionnaire
+Title: "Module Questionnaire Hospital Course"
+Description: "Subquestionnaire hospitalcours"
+
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[=].valueCode = #assemble-child
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-hospitalcours"
+* name = "ModuleQuestionnaireHospitialcourse"
+* title = "Module Questionnaire hospitalcours"
+* status = #active
+* date = "2022-06-27"
+* publisher = "HL7 Switzerland"
+
+* item[+].linkId = "hospitalcourse.title"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-hospitalcourse#Media.content.title"
+* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeverlauf_12032022.pdf, Medizinischer_Verlauf_12032022\")"
+* item[=].type = #string
+* item[=].repeats = true
+
+* item[=].item[+].linkId = "hospitalcourse.note"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-hospitalcourse#Media.content.annotation"
+* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].type = #text
+
+* item[=].item[+].linkId = "hospitalcourse.data"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/hospitalcourse#Media.content.data"
+* item[=].item[=].text = "Daten"
+* item[=].item[=].type = #string
+
+
+
 /*Module Attachment*/
 Instance: ch-etoc-module-attachment
 InstanceOf: Questionnaire

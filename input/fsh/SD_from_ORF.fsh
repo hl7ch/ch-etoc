@@ -104,7 +104,7 @@ Reserved for specification of a particular form für referrals to clinical subsp
 * supportingInfo[cardiologyresults] only Reference(ChEtocCardiologyObservation)
 
 * supportingInfo[Careplan] MS
-* supportingInfo[Careplan] only Reference(ChEtocCareplan)
+* supportingInfo[Careplan] only Reference(ChEtocCareplanMedia)
 
 
 /* ------- bodySite -------
@@ -151,4 +151,20 @@ Title: "CH eTOC Questionnaire Response"
 Description: "Definition for the QuestionnaireResponse resource in the context of electronic transition of care."
 * . ^short = "CH eToc Questionnaire Response"
 
+Profile: ChEtocEpisodeOfCare
+//Parent: ChOrfEpisodeOfCare
+Parent: EpisodeOfCare
+Id: ch-etoc-epidsodeofcare
+Title: "CH eTOC Episode of Care"
+Description: "Definition for the EpisodeOfCare resource in the context of electronic transition of care."
+* . ^short = "CH eToc Episode of Care"
+* extension contains ChEtocHospitalCourse named hospitalCourse 0..* MS
 
+Extension: ChEtocHospitalCourse
+Id: ch-etoc-hospitalcourse
+Title: "Hospital Course"
+Description: "Documentation of the Hospital Course, e.g. Medical, Nursing etc."
+* ^context[0].type = #fhirpath
+* ^context[0].expression = "EpisodeOfCare"
+* valueReference only Reference(ChEtocHospitalCourseMedia)
+* valueReference ^short = "valueReference"

@@ -34,6 +34,7 @@ Alias:   ChCorePatient =                http://fhir.ch/ig/ch-core/StructureDefin
 Alias:   ChCorePractitioner =           http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner
 Alias:   ChCorePractitionerRole =       http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole
 Alias:   ChCoreOrganization =           http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization
+Alias:   ChCoreCSEncounterType =        http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
 
 // CH ORF SD
 Alias:   ChOrfServiceRequest =          http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest
@@ -43,7 +44,8 @@ Alias:   ChOrfComposition =             http://fhir.ch/ig/ch-orf/StructureDefini
 Alias:   ChOrfDocument =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-document
 Alias:   ChOrfAppointment =             http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment
 Alias:   ChOrfLocation =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location
-Alias:   ChCoreCSEncounterType =        http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+Alias:   ChOrfEpisodeOfCare =           http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare
+
 
 // CH ORF CS
 Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype
