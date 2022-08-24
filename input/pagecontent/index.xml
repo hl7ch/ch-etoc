@@ -23,7 +23,7 @@
 
   <a name="volume1"></a><h3>Foundation</h3>
     
-    <p>This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>
+    <p>This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>.
     </p>
 
     <p>Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and QuestionnaireResponse, forms are addressed here as Questionnaires.
@@ -83,12 +83,12 @@
     and follow the definition in the ORF Implementation Guide.  
     </p>
 
-    <p>This IG follows the<a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/E/Exchange-format-handbook_part-1_v12.pdf">Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13.</a> The Questionnaire resource gives gudiance for 
-    the implementaion of the user interface.
+    <p>This IG follows the <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/E/Exchange-format-handbook_part-1_v12.pdf">Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13</a>. The Questionnaire resource gives guidance for 
+    the implementation of the user interface.
     </p>
   
     <p> Actors, transcations and security considerations are covered in the corresponding sections of 
-        <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a>
+        <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a>.
     </p>
 
     <a name="volume3"></a><h3>Terminology</h3>

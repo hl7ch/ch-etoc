@@ -12,8 +12,8 @@ status: active
 license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2022-02-01
-version: 1.1.0
+date: 2022-04-13
+version: 1.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2022+
 releaseLabel: CI Build
