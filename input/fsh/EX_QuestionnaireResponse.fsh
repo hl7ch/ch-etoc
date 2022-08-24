@@ -287,7 +287,7 @@ Darstellung der Diagnosen und Befunde
 /*----------------------------------------------------------------------
 Anamnese
  */
-* item[+].linkId = "anamnesis" 
+//* item[+].linkId = "anamnesis" 
 * item[=].text = "Anamnese"
 
 * item[=].item[+].linkId = "anamnesis.historyofillnesses"   
@@ -336,7 +336,7 @@ Medikation
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen
 */
-* item[+].linkId = "allergy"
+* item[+].linkId = "allergyIntolerance"
 
 /* ---------------------------------------------------------------------------
 Impfungen
@@ -398,7 +398,7 @@ Berichte
 * item[=].item[+].linkId = "attachment.data"  
 * item[=].item[=].answer[+].valueString = "324nnvsdafw3qwef3"
 
-// -------- Service Request Notes ------
+// -------- Service Request Note ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 

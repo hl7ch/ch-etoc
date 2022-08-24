@@ -1,15 +1,15 @@
 ValueSet: ChEtocConditionCategory
-Id: ch-etoc-conditioncategory
+Id: ch-etoc-vs-conditioncategory
 Title: "Condition Category"
 Description: "Definition for Codition Category in the context of electronic transition of care."
 
 * include codes from valueset HL7ConditionCategory
-* include codes from system http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory
+* include codes from system http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-cs-conditioncategory
 
 
-// ServiceRequest.category (Q: requestedService.service)
+// ServiceRequest.category (requestedService.service)
 ValueSet: ChEtocRequestedService
-Id: ch-rad-order-vs-requested-service
+Id: ch-etoc-vs-requested-service
 Title: "Requested Service"
-Description: "Definition for Requested Service Value Set in the context of CH RAD-Order."
+Description: "Definition for Requested Service Value Set in the context of electronic transition of care."
 * include codes from system ChEtocRequestedService

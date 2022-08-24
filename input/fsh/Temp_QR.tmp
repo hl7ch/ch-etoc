@@ -51,7 +51,7 @@ Medikation
 * item[=].item[=].answer[+].valueString = "Nitroglycerin 0.8 mg s.L.; 16h15"
 
 /* -----------------------------------------------------------------------------
-Service Request Notes 
+Service Request Note 
 */
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"

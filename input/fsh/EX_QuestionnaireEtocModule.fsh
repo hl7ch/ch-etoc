@@ -2,7 +2,6 @@ Instance: QuestionnaireEtoc-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire Etoc (Modular version)"
 Description: "Example for Questionnaire"
-
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -13,7 +12,7 @@ Description: "Example for Questionnaire"
 
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
-
+//----------
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
 
@@ -30,7 +29,7 @@ Description: "Example for Questionnaire"
 * title = "QuestionnaireEtoc-modular"
 * status = #active
 * subjectType = #Patient
-* date = "2022-05-04"
+* date = "2022-08-24"
 * publisher = "HL7 Switzerland"
 
 // ---------- order (Auftrag) ----------
@@ -45,6 +44,35 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'order' sub-questionnaire"
 * item[=].item.type = #display
 
+/* ----------- not depicted in questionnaire; fix values are defined in composition resource
+
+* item[=].item[+].linkId = "order.title"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.title"
+* item[=].item[=].text = "Titel"
+* item[=].item[=].type = #string
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].initial.valueString = "Zuweisungsschreiben"
+
+* item[=].item[+].linkId = "order.type"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.type"
+* item[=].item[=].text = "Typ"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryTypeCode
+* item[=].item[=].initial.valueCoding = DocumentEntryTypeCode#419891008 // Nicht näher bezeichnetes Dokument
+
+* item[=].item[+].linkId = "order.category"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.category"
+* item[=].item[=].text = "Kategorie"
+* item[=].item[=].type = #choice
+* item[=].item[=].required = true
+* item[=].item[=].readOnly = true
+* item[=].item[=].answerValueSet = DocumentEntryClassCode
+* item[=].item[=].initial.valueCoding = DocumentEntryClassCode#721927009 // Zuweisungsschreiben
+-----------*/
+
 // ---------- Receiver: Person/organization who receives the document ----------
 * item[+].linkId = "receiver"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
@@ -57,13 +85,32 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'receiver' sub-questionnaire"
 * item[=].item.type = #display
 
+// ----------Initiator: Person/organization who initated this order / application ; e.g. spitex, retirement home etc. ----------
+* item[+].linkId = "initiator"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
+* item[=].text = "Initiant dieser Anmeldung"
+* item[=].type = #group
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-initiator|2.0.0"
+* item[=].item.linkId = "initiator.1"
+* item[=].item.text = "Unable to resolve 'intitiator' sub-questionnaire"
+* item[=].item.type = #display
+
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
 * item[+].linkId = "patient"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.subject"
 * item[=].text = "Patient"
 * item[=].type = #group
 * item[=].required = true
-
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].extension[0].valueExpression.name = "linkIdPrefix"
+* item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].extension[=].valueExpression.expression = "'patient.'"
+* item[=].extension[+].url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].extension[=].valueExpression.name = "address"
+* item[=].extension[=].valueExpression.language = #text/fhirpath
+* item[=].extension[=].valueExpression.expression = "%patient.address"
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-patient|2.0.0"
 * item[=].item.linkId = "patient.1"
@@ -79,8 +126,9 @@ Description: "Example for Questionnaire"
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-requestedencounter|2.0.0"
 * item[=].item.linkId = "requestedEncounter.1"
-* item[=].item.text = "Unable to resolve 'requestedencounter' sub-questionnaire"
+* item[=].item.text = "Unable to resolve 'requestedEncounter' sub-questionnaire"
 * item[=].item.type = #display
+
 
 // ---------- Coverage (Kostenträger) ----------
 // Design as agreed with eHealth Suisse and Cistec 09.06.2021
@@ -124,8 +172,47 @@ Description: "Example for Questionnaire"
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
 * item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-receivercopy|2.0.0"
 * item[=].item.linkId = "receiverCopy.1"
-* item[=].item.text = "Unable to resolve 'receivercopy' sub-questionnaire"
+* item[=].item.text = "Unable to resolve 'receiverCopy' sub-questionnaire"
 * item[=].item.type = #display
+
+
+/*------ Antecedent Episode of Care ------------------------------ */
+
+* item[+].linkId = "antecedentEpisodeOfCare"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:antecedentEpisodeOfCare"
+* item[=].text = "Vorgängiger Aufenthalt in Spital / Heim"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.start"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.end"
+* item[=].item[=].text = "Von"
+* item[=].item[=].type = #dateTime
+
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.end"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.end"
+* item[=].item[=].text = "Bis"
+* item[=].item[=].type = #dateTime
+
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.organization"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.organization"
+* item[=].item[=].text = "Spital /Heim"
+* item[=].item[=].type = #group
+
+* item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
+* item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
+* item[=].item[=].extension.valueExpression.language = #text/fhirpath
+* item[=].item[=].extension.valueExpression.expression = "'antecedentEpisodeOfCare.organization.'"
+
+* item[=].item[=].item[+].linkId = "antecedentEpisodeOfCare.organization.name"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Organization.name"
+* item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item[=].item[=].extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-address|2.0.0"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.organization.1"
+* item[=].item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
+* item[=].item[=].item[=].type = #display
 
 /*------ Appointment ------------------------------ */
 * item[+].linkId = "appointment"
@@ -140,13 +227,39 @@ Description: "Example for Questionnaire"
 * item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
 * item[=].item.type = #display
 
+/*------ Consent ------------------------------ */
+* item[+].linkId = "consent"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:patientConsent"
+* item[=].text = "Einverständniserklärung"
+* item[=].type = #group
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-consent|2.0.0"
+* item[=].item.linkId = "consent.1"
+* item[=].item.text = "Unable to resolve 'consent' sub-questionnaire"
+* item[=].item.type = #display
+
+//_____
+/*------------------------------------------------------------------------
+Wozu wird der Patient zugewiesen
+*/
+* item[+].linkId = "purpose"
+* item[=].text = "Wozu wird der Patient zugewiesen?"
+* item[=].type = #group
+
+* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-purpose|2.0.0"
+* item[=].item.linkId = "purpose.1"
+* item[=].item.text = "Unable to resolve 'anamnesis' sub-questionnaire"
+* item[=].item.type = #display
+
 /*------ Diagnosis and Clinical Findings ------------------------------ */
 * item[+].linkId = "diagnosislist"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosislist|2.0.0"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosislist"
 * item[=].item.linkId = "diagnosislist.1"
 * item[=].item.text = "Unable to resolve 'diagnosislist' sub-questionnaire"
 * item[=].item.type = #display
@@ -174,14 +287,14 @@ Description: "Example for Questionnaire"
 * item[=].item.type = #display
 
 /*------ Allergies and Intolerances ------------------------------ */
-* item[+].linkId = "allegieyIntolerance"
+* item[+].linkId = "allergyIntolerance"
 * item[=].text = "Allergien und Intoleranzen"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-allegieyIntolerance|2.0.0"
-* item[=].item.linkId = "allegieyIntolerance.1"
-* item[=].item.text = "Unable to resolve 'allegieyIntolerance' sub-questionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-allergyIntolerance|2.0.0"
+* item[=].item.linkId = "allergyIntolerance.1"
+* item[=].item.text = "Unable to resolve 'allergyIntolerance' sub-questionnaire"
 * item[=].item.type = #display
 
 /*------ immunization ------------------------------ */
@@ -274,8 +387,37 @@ Description: "Example for Questionnaire"
 
 //============ Module defintions =================================
 
+/*Module Purpose*/
+Instance: ch-etoc-module-purpose
+InstanceOf: Questionnaire
+Title: "Module Questionnaire Purpose"
+Description: "Subquestionnaire Purpose"
+
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
+* extension[=].valueCode = #assemble-child
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-purpose"
+* name = "ModuleQuestionnaireEtocPurpose"
+* title = "Module Questionnaire Order Purpose"
+* status = #active
+* date = "2022-08-24"
+* publisher = "HL7 Switzerland"
+
+* item[+].linkId = "purpose.aim"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
+* item[=].text = "Ziel"
+* item[=].type = #string
+* item[=].repeats = true
+
+* item[+].linkId = "reason.statement"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
+* item[=].text = "Begründung"                
+* item[=].type = #string
+* item[=].repeats = true
+
+
+
 /*Module Diagnosis and Findings*/
-Instance: ch-etoc-module-diagnosis
+Instance: ch-etoc-module-diagnosislist
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Diagnosis"
 Description: "Subquestionnaire Diagnosis"
@@ -414,7 +556,7 @@ Description: "Subquestionnaire Medication"
 
 
 /*Module AllergyIntolerlance*/
-Instance: ch-etoc-module-allegieyIntolerance
+Instance: ch-etoc-module-allergyIntolerance
 InstanceOf: Questionnaire
 Title: "Module Questionnaire AllergyIntolerlance"
 Description: "Subquestionnaire AllergyIntolerlance"
@@ -422,13 +564,13 @@ Description: "Subquestionnaire AllergyIntolerlance"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-allergyIntolerance"
-* name = "ModuleQuestionnaireallegieyIntolerance"
+* name = "ModuleQuestionnaireallergyIntolerance"
 * title = "Module Questionnaire Allergy and Intolerance"
 * status = #active
 * date = "2022-05-25"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "allegieyIntolerance.status"
+* item[+].linkId = "allergyIntolerance.status"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
 * item[=].text = "Allergien / Intoleranzen"
 * item[=].type = #text
@@ -532,7 +674,7 @@ Description: "Subquestionnaire Cardiology"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-cardiology"
-* name = "ModuleQuestionnaireallegieyIntolerance"
+* name = "ModuleQuestionnaireallergyIntolerance"
 * title = "Module Questionnaire Order immunization"
 * status = #active
 * date = "2022-05-25"
@@ -610,9 +752,9 @@ Description: "Subquestionnaire Attachment"
 
 
 /*Module Note*/
-Instance: ch-etoc-module-notes
+Instance: ch-etoc-module-note
 InstanceOf: Questionnaire
-Title: "Module Questionnaire Notes"
+Title: "Module Questionnaire Note"
 Description: "Subquestionnaire Note"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
@@ -630,9 +772,7 @@ Description: "Subquestionnaire Note"
 * item[=].type = #text
 * item[=].required = false 
 
-
-
-/*Module Service Request Category*/           
+/*Module Service Request Category         
 * item[+].linkId = "requestedService"
 * item[=].text = "Angeforderte Leistung"
 * item[=].type = #group
@@ -651,3 +791,4 @@ Description: "Subquestionnaire Note"
 * item[=].item[=].item[=].required = true
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-rad-order/ValueSet/ch-etoc-vs-requested-service-level-2"
+*/

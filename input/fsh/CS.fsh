@@ -1,7 +1,7 @@
 CodeSystem: ChEtocConditionCategory
-Id: ch-etoc-conditioncategory
+Id: ch-etoc-cs-conditioncategory
 Title: "Extension Category of Condition"
-Description: "Extension of Category of Conditionin the context of CH electronic tranisiton of care."
+Description: "Extension of Category of Condition in the context of electronic tranisiton of care."
 * #illness
 * #procedure
 * #primary-diagnosis
@@ -13,8 +13,7 @@ Description: "Extension of Category of Conditionin the context of CH electronic 
 CodeSystem: ChEtocRequestedService
 Id: ch-etoc-cs-requested-service
 Title: "Requested Service"
-Description: "Definition for Requested Service Code System in the context of CH Etoc."
-* ^caseSensitive = true
+Description: "Definition for Requested Service Code System in the context of electronic tranisiton of care / Spitex."
 * #child-spitex
 * #longterm
 * #"acute transitional care"
