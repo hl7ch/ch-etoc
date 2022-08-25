@@ -5,7 +5,7 @@
 
 id: ch.fhir.ig.ch-etoc
 canonical: http://fhir.ch/ig/ch-etoc
-name: CH_eTOC
+name: CH_eToc
 title: "CH eTOC (R4)"
 description: Implementation guide for eTOC based on CH ORF
 status: active
@@ -13,7 +13,7 @@ license: CC-BY-SA-4.0
 copyright: CC-BY-SA-4.0
 jurisdiction: urn:iso:std:iso:3166#CH
 date: 2022-04-13
-version: 1.0.0
+version: 1.1.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: STU 1

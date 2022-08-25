@@ -8,9 +8,9 @@
 Profile: ChEtocAllergyIntolerance
 Parent: ChAllergyIntolerance
 Id: ch-etoc-allergyintolerance
-Title: "CH eToc Allergy Intolerance"
+Title: "CH eTOC Allergy Intolerance"
 Description: "Definition for the Allergy Intolerance resource in the context of electronic transition of care."
-* . ^short = "CH eToc Allergy Intolerance"
+* . ^short = "CH eTOC Allergy Intolerance"
 * code MS
 * code.text MS
 * reaction.substance MS
@@ -23,9 +23,9 @@ Description: "Definition for the Allergy Intolerance resource in the context of 
 Profile: ChEtocPrimaryDiagnosisCondition
 Parent: Condition
 Id: ch-etoc-primary-diagnosis
-Title: "CH eToc Primary Diagnosis Condition"
+Title: "CH eTOC Primary Diagnosis Condition"
 Description: "Definition for the Primary Diagnosis Condition resource in the context of CH Relectronic tranisiton of care."
-* . ^short = "CH eToc Primary Diagnosis Condition"
+* . ^short = "CH eTOC Primary Diagnosis Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory
 * category = ChEtocConditionCategory#primary-diagnosis
@@ -37,9 +37,9 @@ Description: "Definition for the Primary Diagnosis Condition resource in the con
 Profile: ChEtocSecondaryDiagnosisCondition
 Parent: Condition
 Id: ch-etoc-secondary-diagnosis
-Title: "CH eToc Secondary Diagnosis Condition"
+Title: "CH eTOC Secondary Diagnosis Condition"
 Description: "Definition for the Secondary Diagnosis Condition resource in the context of electronic transition of care."
-* . ^short = "CH eToc Secondary Diagnosis Condition"
+* . ^short = "CH eTOC Secondary Diagnosis Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory
 * category = ChEtocConditionCategory#secondary-diagnosis
@@ -53,10 +53,10 @@ Description: "Definition for the Secondary Diagnosis Condition resource in the c
 Profile: ChEtocImmunizationSection
 Parent: ChVacdImmunizationSection
 Id: ch-etoc-immunizationsection
-Title: "CH eToc Immunization Section"
+Title: "CH eTOC Immunization Section"
 Description: "Definition for the Immunization Section resource in the context of electronic transition of care."
 //* isSubpotent MS
-* . ^short = "CH eToc Immunization Section"
+* . ^short = "CH eTOC Immunization Section"
 * vaccineCode MS
 * vaccineCode.text MS
 * occurrenceDateTime MS
@@ -67,9 +67,9 @@ Description: "Definition for the Immunization Section resource in the context of
 Profile: ChEtocProcedure
 Parent: Procedure
 Id: ch-etoc-procedure
-Title: "CH eToc Procedure"
+Title: "CH eTOC Procedure"
 Description: "Definition for the Procedure resource in the context of electronic transition of care."
-* . ^short = "CH eToc Procedure"
+* . ^short = "CH eTOC Procedure"
 * status MS
 * code MS
 * code.text MS
@@ -79,9 +79,9 @@ Description: "Definition for the Procedure resource in the context of electronic
 Profile: ChEtocDevice
 Parent: Device
 Id: ch-etoc-device
-Title: "CH eToc Device"
+Title: "CH eTOC Device"
 Description: "Definition for the Device resource in the context of electronic transition of care."
-* . ^short = "CH eToc Device"
+* . ^short = "CH eTOC Device"
 * deviceName MS
 * deviceName.name MS
 * deviceName.type MS
@@ -91,8 +91,8 @@ Description: "Definition for the Device resource in the context of electronic tr
 Profile: ChEtocLabObservation
 Parent: Observation
 Id: ch-etoc-lab-observation
-Title: "CH eToc Lab Observation"
-Description: "Definition for the Lab Observation resource in the context of CH eToc."
+Title: "CH eTOC Lab Observation"
+Description: "Definition for the Lab Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Lab Observation"
 * status MS
 * code = LNC#26436-6 "Laboratory studies (set)"
@@ -102,9 +102,9 @@ Description: "Definition for the Lab Observation resource in the context of CH e
 Profile: ChEtocPathologyObservation
 Parent: Observation
 Id: ch-etoc-pahtology-observation
-Title: "CH eToc Pathology Observation"
-Description: "Definition for the Pathology Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Pathology Observation"
+Title: "CH eTOC Pathology Observation"
+Description: "Definition for the Pathology Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Pathology Observation"
 * status MS
 * code = LNC#60570-9 "Pathology Consult note"
 * subject only Reference(ChCorePatient) 
@@ -113,9 +113,9 @@ Description: "Definition for the Pathology Observation resource in the context o
 Profile: ChEtocRadiologyObservation
 Parent: Observation
 Id: ch-etoc-radiolology-observation
-Title: "CH eToc Radiology Observation"
-Description: "Definition for the Radiology Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Radiolology Observation"
+Title: "CH eTOC Radiology Observation"
+Description: "Definition for the Radiology Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Radiolology Observation"
 * status MS
 * code = LNC#75490-3 "Radiology Note"
 * subject only Reference(ChCorePatient) 
@@ -124,9 +124,9 @@ Description: "Definition for the Radiology Observation resource in the context o
 Profile: ChEtocCardiologyObservation
 Parent: Observation
 Id: ch-etoc-cardiolology-observation
-Title: "CH eToc Cardiology Observation"
-Description: "Definition for the Cardiology Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Cardiolology Observation"
+Title: "CH eTOC Cardiology Observation"
+Description: "Definition for the Cardiology Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Cardiolology Observation"
 // Supplementary to IPS
 * status MS
 * code = LNC#77412-5 "Cardiology History and physical note"
@@ -136,9 +136,9 @@ Description: "Definition for the Cardiology Observation resource in the context 
 Profile: ChEtocBodyHeightObservation
 Parent: HL7BodyHeight
 Id: ch-etoc-bodyheight-observation
-Title: "CH eToc Body Height Observation"
-Description: "Definition for the Body Height Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Body Height Observation"
+Title: "CH eTOC Body Height Observation"
+Description: "Definition for the Body Height Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Body Height Observation"
 * status MS
 * code and code.coding[BodyHeightCode] and code.coding[BodyHeightCode].system and code.coding[BodyHeightCode].code MS
 * subject only Reference(ChCorePatient) 
@@ -150,9 +150,9 @@ Description: "Definition for the Body Height Observation resource in the context
 Profile: ChEtocBodyWeightObservation
 Parent: HL7BodyWeight
 Id: ch-etoc-bodyweight-observation
-Title: "CH eToc Body Weight Observation"
-Description: "Definition for the Body Weight Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Body Weight Observation"
+Title: "CH eTOC Body Weight Observation"
+Description: "Definition for the Body Weight Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Body Weight Observation"
 * status MS
 * code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
 * subject only Reference(ChCorePatient) 
@@ -165,9 +165,9 @@ Description: "Definition for the Body Weight Observation resource in the context
 Profile: ChEtocPastHistoryofIllnessesCondition
 Parent: Condition
 Id: ch-etoc-illness
-Title: "CH eToc Past History of Illnesses Condition"
+Title: "CH eTOC Past History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
-* . ^short = "CH eToc Past History of Illness Condition"
+* . ^short = "CH eTOC Past History of Illness Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory
 * category = ChEtocConditionCategory#illness
@@ -181,9 +181,9 @@ Description: "Definition for the Past History of Illnesses Condition resource in
 Profile: ChEtocPregnancyStatusObservation
 Parent: Observation
 Id: ch-etoc-pregnancystatus
-Title: "CH eToc Pregnancy Status Observation"
-Description: "Definition for the Pregnancy Status Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Pregnancy Status Observation"
+Title: "CH eTOC Pregnancy Status Observation"
+Description: "Definition for the Pregnancy Status Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Pregnancy Status Observation"
 * status MS
 * code MS
 * code = LNC#82810-3 "Pregnancy status"
@@ -195,9 +195,9 @@ Description: "Definition for the Pregnancy Status Observation resource in the co
 Profile: ChEtocPregnancyExpectedDeliveryDateObservation
 Parent: Observation
 Id: ch-etoc-expecteddeliverydate
-Title: "CH eToc Expected Delivery Date Observation"
-Description: "Definition for the Expected Delivery Date Observation resource in the context of CH eToc."
-* . ^short = "CH eToc Expected Delivery Date Observation"
+Title: "CH eTOC Expected Delivery Date Observation"
+Description: "Definition for the Expected Delivery Date Observation resource in the context of CH eTOC."
+* . ^short = "CH eTOC Expected Delivery Date Observation"
 * status MS
 //* code MS
 //* code from PregnancyExpectedDeliveryDateMethod (required)
@@ -211,9 +211,9 @@ Profile: ChEtocSocialHistoryCondition
 as broader; consecutverly entries are defined as conditions. tobaco and alcohol abuse shall be listed in problem list*/
 Parent: Condition
 Id: ch-etoc-socialhistory
-Title: "CH eToc Social History Condition"
+Title: "CH eTOC Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
-* . ^short = "CH eToc Social History Condition"
+* . ^short = "CH eTOC Social History Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory
 * category = ChEtocConditionCategory#social-history-condition
@@ -227,9 +227,9 @@ Description: "Definition for the Social History Condition resource in the contex
 Profile: ChEtocFunctionalStatusCondition
 Parent: Condition
 Id: ch-etoc-functionalstatus
-Title: "CH eToc Functional Status Condition"
+Title: "CH eTOC Functional Status Condition"
 Description: "Definition for the Functional Status Condition resource in the context of electronic transition of care."
-* . ^short = "CH eToc Functional Status Condition"
+* . ^short = "CH eTOC Functional Status Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory
 * category = ChEtocConditionCategory#functional-status-condition
@@ -243,9 +243,9 @@ Description: "Definition for the Functional Status Condition resource in the con
 Profile: ChEtocMedicalCarePlan
 Parent: CarePlan
 Id: ch-etoc-medical-careplan
-Title: "CH eToc Care Plan"
+Title: "CH eTOC Care Plan"
 Description: "Definition for the Care Plan resource in the context of electronic transition of care."
-* . ^short = "CH eToc Procedure"
+* . ^short = "CH eTOC Procedure"
 * status MS
 * intent MS
 * category MS
@@ -262,9 +262,9 @@ Description: "Definition for the Care Plan resource in the context of electronic
 Profile: ChEtocNursingCarePlan
 Parent: CarePlan
 Id: ch-etoc-ursing-careplan
-Title: "CH eToc Care Plan"
+Title: "CH eTOC Care Plan"
 Description: "Definition for the Care Plan resource in the context of electronic transition of care."
-* . ^short = "CH eToc Procedure"
+* . ^short = "CH eTOC Procedure"
 * status MS
 * intent MS
 * category MS

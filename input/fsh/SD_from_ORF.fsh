@@ -1,12 +1,12 @@
 
-// CH etoc Structure Defintions derived from CH ORF
+// CH eTOC Structure Defintions derived from CH ORF
 
 Profile: ChEtocServiceRequest
 Parent: ChOrfServiceRequest
 Id: ch-etoc-servicerequest
-Title: "CH eToc Service Request"
+Title: "CH eTOC Service Request"
 Description: "Definition for the ServiceRequest resource in the context of electronic transition of care."
-* . ^short = "CH eToc Service Request"
+* . ^short = "CH eTOC Service Request"
 * . ^definition = "This IG adheres to the FHIR International Patient Summary (IPS) Implementation Guide. Clinical content uses
 mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions are however constrained from FHIR base definitions and Swiss Core definitions 
 and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
@@ -123,13 +123,13 @@ Currently no use intended
 Profile: ChEtocDocument
 Parent: ChOrfDocument
 Id: ch-etoc-document
-Title: "CH Etoc Document"
+Title: "CH eTOC Document"
 Description: "Definition for the Bundle (document) resource in the context of electronic transition of care."
-* . ^short = "CH Etoc Bundle (document)"
+* . ^short = "CH eTOC Bundle (document)"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
 (which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
-Consequently one CH eToc Document contains one eToc ServiceRequest which depicts one Placer Order 
+Consequently one CH eTOC Document contains one eToc ServiceRequest which depicts one Placer Order 
 equal one Filler Order equal one Imaging Service Request."
 
 // ---------- Bundle.entry:Composition ----------
@@ -139,9 +139,9 @@ equal one Filler Order equal one Imaging Service Request."
 Profile: ChEtocComposition
 Parent: ChOrfComposition
 Id: ch-etoc-composition
-Title: "CH Etoc Composition"
+Title: "CH eTOC Composition"
 Description: "Definition for the Composition resource in the context of electronic transition of care."
-* . ^short = "CH Etoc Composition"
+* . ^short = "CH eTOC Composition"
 * title = "Zuweisungsschreiben"
 * category = SCT#721927009 // Zuweisungsschreiben 
 * type = SCT#419891008 // Nicht näher bezeichnetes Dokument
@@ -157,6 +157,6 @@ Parent: ChOrfQuestionnaireResponse
 Id: ch-etoc-questionnaireresponse
 Title: "CH eTOC Questionnaire Response"
 Description: "Definition for the QuestionnaireResponse resource in the context of electronic transition of care."
-* . ^short = "CH eToc Questionnaire Response"
+* . ^short = "CH eTOC Questionnaire Response"
 
 

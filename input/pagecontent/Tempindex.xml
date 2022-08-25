@@ -6,7 +6,7 @@
     QuestionnaireResponse Resource, Patient Resource, PractitionerRole Resource, Practitioner Resource, Organization Resource, ServiceRequest Resource and Bundle Resource from
     FHIR R4. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>.
     </p>
-    <p>The CH-eTOC (CH-eTOC) Implementation Guide describes how forms for eReferrals from one healthcare provider to another (e.g. paratctioner to hospital, hospital to hospital etc.), 
+    <p>The CH Electronic Transition of Care (CH eTOC) Implementation Guide describes how forms for eReferrals from one healthcare provider to another (e.g. paratctioner to hospital, hospital to hospital etc.), 
     shall be defined, deployed and used in order to achieve a syntactical and semantically consistent cross enterprise information exchange.
     </p>
     <p>The Implementation Guide relies on FHIR e.g. the questionnaire resource. Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and
@@ -17,7 +17,7 @@
         <a href="http://build.fhir.org/ig/HL7/sdc/">SDC IG</a> and uses the Swiss Core Profiles, see 
         <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>.
     </p>
-    <p>Applications claiming for conformance with the eTOC Implementation Guide shall:
+    <p>Applications claiming for conformance with the eToc Implementation Guide shall:
     </p>
     <ul>
         <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the
@@ -29,7 +29,7 @@
     interfaces to other applications (such as HIS and PACS) for all MUST SUPPORT items.
     <a name="volume1"></a><h3>Content Modules</h3>
     </p>
-    <p>This Implementation Guide covers the content of CH-eTOC based on CH-ORF. CH-eTOC is intended for use in directional communiation
+    <p>This Implementation Guide covers the content of CH eTOC based on CH-ORF. CH eTOC is intended for use in directional communiation
     as well as for the use in the SWISS EPR.  
     </p>
    <p> Actors, transcations and security considerations are covered in the corresponding sections of 

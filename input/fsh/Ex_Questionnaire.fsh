@@ -929,7 +929,7 @@ Description: "Example for Questionnaire"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
 * item[=].item[=].type = #string
 
-/* ============ Kerninhalte von Etoc ==============================
+/* ============ Kerninhalte von eTOC ==============================
 
 /*------------------------------------------------------------------------
 Wozu wird der Patient zugewiesen

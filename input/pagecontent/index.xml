@@ -60,15 +60,15 @@
         <li>Be able to process all codes related to the generic elements in a Questionnaire.</li>
     </ul>
    
-    <p>In the  <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/D/181206_eTOC-eUeberweisungsbericht-IPAG_d.pdf">3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) eDischarge Report</a>, recommendations are formulated that 
+    <p>In the  <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/D/181206_eToc-eUeberweisungsbericht-IPAG_d.pdf">3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) eDischarge Report</a>, recommendations are formulated that 
     are important for the inter-professional exchange of information during transitions of treatment ("transition-of-care. The information relevant to treatment 
     shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
     </p>
     
-    <p>At the working group meeting in February 2021, it was decided that a first version of eTOC shall based on the the  <a href="http://hl7.org/fhir/uv/ips/">FHIR International Patient Summary (IPS).</a> 
+    <p>At the working group meeting in February 2021, it was decided that a first version of eToc shall based on the the  <a href="http://hl7.org/fhir/uv/ips/">FHIR International Patient Summary (IPS).</a> 
     </p>
 
-    <p>However, this first version of eTOC still allows many free text entries. Derivations for use cases in different disciplines are to be defined later.
+    <p>However, this first version of eToc still allows many free text entries. Derivations for use cases in different disciplines are to be defined later.
     Clinical content uses mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions 
     are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS.
     </p>
