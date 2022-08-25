@@ -229,7 +229,7 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[+].linkId = "receiverCopy.patient"
 * item[=].item[=].answer.valueBoolean = true
 
-/* ============ Kerninhaltes von eToc ==============================
+/* ============ Kerninhaltes von eTOC ==============================
 
 /*------------------------------------------------------------------------
 Wozu wird der Patient zugewiesen

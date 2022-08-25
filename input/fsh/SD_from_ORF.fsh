@@ -8,9 +8,9 @@ Title: "CH eTOC Service Request"
 Description: "Definition for the ServiceRequest resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Service Request"
 * . ^definition = "This IG adheres to the FHIR International Patient Summary (IPS) Implementation Guide. Clinical content uses
-mostly the same resources as th IPS; some minor differences are explained in comments to the resources affected. The resouce definitions are however constrained from FHIR base definitions and Swiss Core definitions 
+mostly the same resources as the IPS; some minor differences are explained in comments to the resources affected. The resource definitions are however constrained from FHIR base definitions and Swiss Core definitions 
 and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
-Swiss Core. eToc adds a ServiceReequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
+Swiss Core. eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
 service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest
 resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) 
 and follow the definition in the ORF Implementation Guide.  
@@ -129,7 +129,7 @@ Description: "Definition for the Bundle (document) resource in the context of el
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
 (which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
-Consequently one CH eTOC Document contains one eToc ServiceRequest which depicts one Placer Order 
+Consequently one CH eTOC Document contains one eTOC ServiceRequest which depicts one Placer Order 
 equal one Filler Order equal one Imaging Service Request."
 
 // ---------- Bundle.entry:Composition ----------

@@ -207,7 +207,7 @@ Description: "Definition for the Expected Delivery Date Observation resource in 
 
 // -------- Corresponds to IPS Social History --------- 
 Profile: ChEtocSocialHistoryCondition
-/* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. eToc considers  Social History as
+/* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. eTOC considers  Social History as
 as broader; consecutverly entries are defined as conditions. tobaco and alcohol abuse shall be listed in problem list*/
 Parent: Condition
 Id: ch-etoc-socialhistory

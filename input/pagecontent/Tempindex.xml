@@ -17,7 +17,7 @@
         <a href="http://build.fhir.org/ig/HL7/sdc/">SDC IG</a> and uses the Swiss Core Profiles, see 
         <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>.
     </p>
-    <p>Applications claiming for conformance with the eToc Implementation Guide shall:
+    <p>Applications claiming for conformance with the eTOC Implementation Guide shall:
     </p>
     <ul>
         <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the
@@ -29,7 +29,7 @@
     interfaces to other applications (such as HIS and PACS) for all MUST SUPPORT items.
     <a name="volume1"></a><h3>Content Modules</h3>
     </p>
-    <p>This Implementation Guide covers the content of CH eTOC based on CH-ORF. CH eTOC is intended for use in directional communiation
+    <p>This Implementation Guide covers the content of CH eTOC based on CH-ORF. CH eTOC is intended for use in directional communication
     as well as for the use in the SWISS EPR.  
     </p>
    <p> Actors, transactions and security considerations are covered in the corresponding sections of 
