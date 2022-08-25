@@ -87,7 +87,7 @@
     the implementation of the user interface.
     </p>
   
-    <p> Actors, transcations and security considerations are covered in the corresponding sections of 
+    <p> Actors, transactions and security considerations are covered in the corresponding sections of 
         <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a>.
     </p>
 

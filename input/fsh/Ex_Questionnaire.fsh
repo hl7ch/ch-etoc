@@ -7,19 +7,19 @@ Description: "Example for Questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extract"
 
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-* extension[0].valueCanonical = "http://fhir.ch/ig/ch-etoc/StructureMap/RadOrderQrToBundle"
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/StructureMap/RadOrderQrToBundle"
 
-* extension[1].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
-* extension[1].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-sourceStructureMap"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfPrepopBundleToQr"
 
-* extension[2].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* extension[2].extension[0].url = "name"
-* extension[2].extension[0].valueId = "Bundle"
-* extension[2].extension[1].url = "type"
-* extension[2].extension[1].valueCode = #Bundle
-* extension[2].extension[2].url = "description"
-* extension[2].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
+* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[=].extension[0].url = "name"
+* extension[=].extension[0].valueId = "Bundle"
+* extension[=].extension[1].url = "type"
+* extension[=].extension[1].valueCode = #Bundle
+* extension[=].extension[2].url = "description"
+* extension[=].extension[2].valueString = "The Bundle that is to be used to pre-populate the form"
 
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * name = "QuestionnaireEtoc"
@@ -277,8 +277,8 @@ Description: "Example for Questionnaire"
 * item[=].item[=].text = "Land"
 * item[=].item[=].type = #string
 
-* item[=].item[+].linkId = "patient.languageOfCorrespondance"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondance"
+* item[=].item[+].linkId = "patient.languageOfCorrespondence"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondence"
 * item[=].item[=].text = "Korrespondenssprache"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode"

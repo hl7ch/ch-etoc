@@ -32,7 +32,7 @@
     <p>This Implementation Guide covers the content of CH eTOC based on CH-ORF. CH eTOC is intended for use in directional communiation
     as well as for the use in the SWISS EPR.  
     </p>
-   <p> Actors, transcations and security considerations are covered in the corresponding sections of 
+   <p> Actors, transactions and security considerations are covered in the corresponding sections of 
       <a href="http://build.fhir.org/ig/ehealthsuisse/ch-orf/">CH-ORF</a>
     </p>
     <a name="volume3"></a><h4>Questionnaire Content</h4>
