@@ -268,18 +268,18 @@ Usage: #example
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
 * item[=].text = "Initiant dieser Anmeldung"
 * item[=].type = #group
-* item[=].item[0].linkId = "initiator.legalrelation"
+* item[=].item[0].linkId = "initiator.legalguardian"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Juristische Beziehung zum Patienten"
 * item[=].item[=].type = #choice
 * item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#373068000 "Nicht definiert"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#58626002 "Gesetzlicher Vertreter"
-* item[=].item[+].linkId = "initiator.personalrelation"
+* item[=].item[+].linkId = "initiator.initiatorrelation"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#66089001 "Tochter"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#65616008 "Sohn"
+* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#6089001 "Tochter"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#5616008 "Sohn"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127849001 "Ehemann"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127850001 "Ehefrau"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#394921008 "Partner (eingetragene  Partnerschaft)"
@@ -1419,4 +1419,3 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item.text = "Kommentar"
 * item[=].item.type = #string
-
