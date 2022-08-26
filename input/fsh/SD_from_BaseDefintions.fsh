@@ -17,7 +17,11 @@ Description: "Definition for the Media resource in the context of electronic tra
 Profile: ChEtocCarePlan
 Parent: ChEtocMedia
 Id: ch-etoc-careplan
+Title: "CH eTOC Careplan"
+Description: "Definition for the Careplan"
 
 Profile: ChEtocAttachment
 Parent: ChEtocMedia
 Id: ch-etoc-attachment
+Title: "CH eTOC Attachment"
+Description: "Definition for the Attachment"
