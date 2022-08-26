@@ -374,7 +374,7 @@ Kardiologie
 
 /* ---------------------------------------------------------------------------
 Bisheriger und weiterer Verlauf
-*/
+
 * item[+].linkId = "carePlans"
 * item[=].text = "Verlauf"
 
@@ -383,7 +383,7 @@ Bisheriger und weiterer Verlauf
 
 * item[=].item[+].linkId = "carePlans.nursing" // Pflege
 * item[=].item[=].text = "Pflegebericht"
-
+*/
 /* ---------------------------------------------------------------------------
 Berichte
 */

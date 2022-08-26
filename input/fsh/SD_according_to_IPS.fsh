@@ -239,11 +239,11 @@ Description: "Definition for the Functional Status Condition resource in the con
 * subject only Reference(ChCorePatient) 
 
 // -------- Corresponds to IPS Plan of Care --------- 
-
+/*
 Profile: ChEtocMedicalCarePlan
 Parent: CarePlan
 Id: ch-etoc-medical-careplan
-Title: "CH eTOC Care Plan"
+Title: "CH eTOC Medical Care Plan"
 Description: "Definition for the Care Plan resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Procedure"
 * status MS
@@ -257,25 +257,7 @@ Description: "Definition for the Care Plan resource in the context of electronic
 * activity.detail MS
 * activity.detail.code MS
 * activity.detail.code.text MS
-
-
-Profile: ChEtocNursingCarePlan
-Parent: CarePlan
-Id: ch-etoc-ursing-careplan
-Title: "CH eTOC Care Plan"
-Description: "Definition for the Care Plan resource in the context of electronic transition of care."
-* . ^short = "CH eTOC Procedure"
-* status MS
-* intent MS
-* category MS
-// * category from ChEtocCarePlanContributors // not used
-* title MS
-* activity MS
-* activity.outcomeCodeableConcept MS
-* activity.outcomeCodeableConcept.text MS
-* activity.detail MS
-* activity.detail.code MS
-* activity.detail.code.text MS
+*/
 
 
 // -------- Corresponds to Advance Directives ---------

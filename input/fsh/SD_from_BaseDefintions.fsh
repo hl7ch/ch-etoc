@@ -10,3 +10,14 @@ Description: "Definition for the Media resource in the context of electronic tra
 * content.data MS
 * content.title MS
 * content.title ^short = "Provide filename and extension (e.g. \"shoulder_re_F_Muster_12021988.pdf\")"
+* note 0..1 MS
+* note.text 1..1 MS
+
+
+Profile: ChEtocCarePlan
+Parent: ChEtocMedia
+Id: ch-etoc-careplan
+
+Profile: ChEtocAttachment
+Parent: ChEtocMedia
+Id: ch-etoc-attachment
