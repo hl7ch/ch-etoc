@@ -73,11 +73,11 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|1.1.0"
 * url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc"
 * version = "1.1.0-assembled"
-* name = "QuestionnaireEtoc-modular"
-* title = "QuestionnaireEtoc-modular"
+* name = "QuestionnaireEtoc"
+* title = "QuestionnaireEtoc"
 * status = #active
 * subjectType = #Patient
-* date = "2022-08-24"
+* date = "2022-08-27"
 * publisher = "HL7 Switzerland"
 * contact.name = "Juerg P. Bleuer"
 * contact.telecom.system = #url
@@ -278,8 +278,8 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#66089001 "Tochter"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#65616008 "Sohn"
+* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#6089001 "Tochter"
+* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#5616008 "Sohn"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127849001 "Ehemann"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127850001 "Ehefrau"
 * item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#394921008 "Partner (eingetragene  Partnerschaft)"
