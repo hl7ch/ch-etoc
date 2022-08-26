@@ -356,7 +356,9 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionResults].entry only Reference(ChEtocLabObservation or
                                                       ChEtocPathologyObservation or
                                                       ChEtocRadiologyObservation or
-                                                      ChEtocCardiologyObservation)
+                                                      ChEtocCardiologyObservation or
+                                                      ChEtocBodyWeightObservation or
+                                                      ChEtocBodyHeightObservation)
 
 // ------- Composition.section: pregnancy -------
 * section contains sectionPregnancyHx 0..1 MS
@@ -394,8 +396,6 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionAttachment].section 0..0
 * section[sectionAttachment].entry 0.. MS
 * section[sectionAttachment].entry only Reference(ChEtocAttachment)
-
-
 
 Profile: ChEtocQuestionnaireResponse
 Parent: ChOrfQuestionnaireResponse

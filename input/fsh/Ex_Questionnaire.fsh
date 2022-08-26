@@ -71,7 +71,7 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplan|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|1.1.0"
-* url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc-modular"
+* url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc"
 * version = "1.1.0-assembled"
 * name = "QuestionnaireEtoc-modular"
 * title = "QuestionnaireEtoc-modular"
