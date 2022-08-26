@@ -709,12 +709,12 @@ Description: "Subquestionnaire careplan"
 * item[=].repeats = true
 
 * item[=].item[+].linkId = "careplan.note"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan.content.annotation"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
 * item[=].item[=].text = "Anmerkung"
 * item[=].item[=].type = #text
 
 * item[=].item[+].linkId = "careplan.data"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan.content.data"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.data"
 * item[=].item[=].text = "Daten"
 * item[=].item[=].type = #string
 
