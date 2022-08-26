@@ -327,6 +327,9 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionSocialHistory].code = LNC#29762-2 "Social history Narrative"
 * section[sectionSocialHistory].text MS
 * section[sectionSocialHistory].section 0..0
+* section[sectionSocialHistory].entry 0..1 MS
+* section[sectionSocialHistory].entry only Reference(ChEtocSocialHistoryCondition)
+
 
 // ------- Composition.section: medical devices -------
 * section contains sectionMedicalDevices 0..1 MS
@@ -378,7 +381,20 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPlanOfCare].text MS
 * section[sectionPlanOfCare].section 0..0
 * section[sectionPlanOfCare].entry 0.. MS
-//* section[sectionPlanOfCare].entry only Reference()
+* section[sectionPlanOfCare].entry only Reference(ChEtocCarePlan)
+
+// ------- Composition.section: attachment -------
+* section contains sectionAttachment 0..1 MS
+* section[sectionAttachment] ^short = "Contains informaion about careplans"
+* section[sectionAttachment].title 1..1 MS
+* section[sectionAttachment].title ^short = "Careplans"
+* section[sectionAttachment].code 1..1 MS
+* section[sectionAttachment].code = LNC#18776-5 "Plan of care note"
+* section[sectionAttachment].text MS
+* section[sectionAttachment].section 0..0
+* section[sectionAttachment].entry 0.. MS
+* section[sectionAttachment].entry only Reference(ChEtocAttachment)
+
 
 
 Profile: ChEtocQuestionnaireResponse
