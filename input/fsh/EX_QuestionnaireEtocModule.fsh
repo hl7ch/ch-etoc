@@ -792,4 +792,3 @@ Description: "Subquestionnaire Note"
 * item[=].item[=].item[=].type = #choice
 * item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-rad-order/ValueSet/ch-etoc-vs-requested-service-level-2"
 */
-//
