@@ -25,7 +25,7 @@ contact:
     system: url
     value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-orf: 1.0.0
+  ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: 2.0.0
   ch.fhir.ig.ch-emed: 2.0.0
   ch.fhir.ig.ch-vacd: 2.0.0
