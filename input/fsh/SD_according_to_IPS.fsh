@@ -50,17 +50,17 @@ Description: "Definition for the Secondary Diagnosis Condition resource in the c
 
 
 // -------- Corresponds to IPS Immunizations --------- 
-Profile: ChEtocImmunizationSection
-Parent: ChVacdImmunizationSection
-Id: ch-etoc-immunizationsection
-Title: "CH eTOC Immunization Section"
-Description: "Definition for the Immunization Section resource in the context of electronic transition of care."
+Profile: ChEtocImmunization
+Parent: ChVacdImmunization
+Id: ch-etoc-immunization
+Title: "CH eTOC Immunization"
+Description: "Definition for the Immunization resource in the context of electronic transition of care."
 //* isSubpotent MS
-* . ^short = "CH eTOC Immunization Section"
+* . ^short = "CH eTOC Immunization"
 * vaccineCode MS
 * vaccineCode.text MS
 * occurrenceDateTime MS
-* occurrenceString MS
+//* occurrenceString MS
 
 
 // -------- Corresponds to IPS History of Procedures --------- 
@@ -237,45 +237,6 @@ Description: "Definition for the Functional Status Condition resource in the con
 * code 1.. MS 
 * code.text 1.. MS
 * subject only Reference(ChCorePatient) 
-
-// -------- Corresponds to IPS Plan of Care --------- 
-
-Profile: ChEtocMedicalCarePlan
-Parent: CarePlan
-Id: ch-etoc-medical-careplan
-Title: "CH eTOC Care Plan"
-Description: "Definition for the Care Plan resource in the context of electronic transition of care."
-* . ^short = "CH eTOC Procedure"
-* status MS
-* intent MS
-* category MS
-// * category from ChEtocCarePlanContributors // not used
-* title MS
-* activity MS
-* activity.outcomeCodeableConcept MS
-* activity.outcomeCodeableConcept.text MS
-* activity.detail MS
-* activity.detail.code MS
-* activity.detail.code.text MS
-
-
-Profile: ChEtocNursingCarePlan
-Parent: CarePlan
-Id: ch-etoc-ursing-careplan
-Title: "CH eTOC Care Plan"
-Description: "Definition for the Care Plan resource in the context of electronic transition of care."
-* . ^short = "CH eTOC Procedure"
-* status MS
-* intent MS
-* category MS
-// * category from ChEtocCarePlanContributors // not used
-* title MS
-* activity MS
-* activity.outcomeCodeableConcept MS
-* activity.outcomeCodeableConcept.text MS
-* activity.detail MS
-* activity.detail.code MS
-* activity.detail.code.text MS
 
 
 // -------- Corresponds to Advance Directives ---------

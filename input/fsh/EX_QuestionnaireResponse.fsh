@@ -138,7 +138,7 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.gln"
 * item[=].item[=].item[=].item[=].text = "GLN"
-* item[=].item[=].item[=].item[=].answer.valueString = "7601000034321"
+* item[=].item[=].item[=].item[=].answer.valueString = "7601000050717"
 
 * item[=].item[=].item[=].item[+].linkId = "sender.author.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
@@ -374,7 +374,7 @@ Kardiologie
 
 /* ---------------------------------------------------------------------------
 Bisheriger und weiterer Verlauf
-*/
+
 * item[+].linkId = "carePlans"
 * item[=].text = "Verlauf"
 
@@ -383,7 +383,7 @@ Bisheriger und weiterer Verlauf
 
 * item[=].item[+].linkId = "carePlans.nursing" // Pflege
 * item[=].item[=].text = "Pflegebericht"
-
+*/
 /* ---------------------------------------------------------------------------
 Berichte
 */

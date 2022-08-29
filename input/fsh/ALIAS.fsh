@@ -27,7 +27,7 @@ Alias:   ChEmedMedicationStatement = http://fhir.ch/ig/ch-emed/StructureDefiniti
 
 Alias: ChEmedDosageNonStructured = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured
 
-Alias:   ChVacdImmunizationSection =     http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization
+Alias:   ChVacdImmunization =     http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization
 
 // CH Core SD
 Alias:   ChCorePatient =                http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient
