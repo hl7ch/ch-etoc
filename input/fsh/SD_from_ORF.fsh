@@ -95,7 +95,7 @@ Reserved for specification of a particular form für referrals to clinical subsp
 * supportingInfo[allergiesIntolerances] MS
 * supportingInfo[allergiesIntolerances] only Reference(ChEtocAllergyIntolerance)
 * supportingInfo[immunizations] MS
-* supportingInfo[immunizations] only Reference(ChEtocImmunizationSection)
+* supportingInfo[immunizations] only Reference(ChEtocImmunization)
 
 * supportingInfo[labresults] MS
 * supportingInfo[labresults] only Reference(ChEtocLabObservation)
@@ -272,7 +272,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionImmunizations].text MS
 * section[sectionImmunizations].section 0..0
 * section[sectionImmunizations].entry 0.. MS
-* section[sectionImmunizations].entry only Reference(ChEtocImmunizationSection)
+* section[sectionImmunizations].entry only Reference(ChEtocImmunization)
 
 // ------- Composition.section: allergies and  intolerances -------
 * section contains sectionAllergies 0..1 MS

@@ -50,17 +50,17 @@ Description: "Definition for the Secondary Diagnosis Condition resource in the c
 
 
 // -------- Corresponds to IPS Immunizations --------- 
-Profile: ChEtocImmunizationSection
-Parent: ChVacdImmunizationSection
-Id: ch-etoc-immunizationsection
-Title: "CH eTOC Immunization Section"
-Description: "Definition for the Immunization Section resource in the context of electronic transition of care."
+Profile: ChEtocImmunization
+Parent: ChVacdImmunization
+Id: ch-etoc-immunization
+Title: "CH eTOC Immunization"
+Description: "Definition for the Immunization resource in the context of electronic transition of care."
 //* isSubpotent MS
-* . ^short = "CH eTOC Immunization Section"
+* . ^short = "CH eTOC Immunization"
 * vaccineCode MS
 * vaccineCode.text MS
 * occurrenceDateTime MS
-* occurrenceString MS
+//* occurrenceString MS
 
 
 // -------- Corresponds to IPS History of Procedures --------- 
