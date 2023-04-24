@@ -24,9 +24,9 @@ contact:
     value: https://www.hl7.ch
 dependencies:
   ch.fhir.ig.ch-orf: current
-  ch.fhir.ig.ch-core: 2.1.0
-  ch.fhir.ig.ch-emed: 2.1.0
-  ch.fhir.ig.ch-vacd: 2.1.0
+  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-emed: current
+  ch.fhir.ig.ch-vacd: current
   ch.fhir.ig.ch-allergyintolerance: 1.0.0
   hl7.fhir.uv.ips: 1.0.0 
 

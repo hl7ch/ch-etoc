@@ -25,7 +25,7 @@ Alias:   ChAllergyIntolerance =          http://fhir.ch/ig/ch-allergyintolerance
 Alias:   ChEmedMedication =     http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication 
 Alias:   ChEmedMedicationStatement = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement
 
-Alias: ChEmedDosageNonStructured = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage-nonstructured
+Alias: ChEmedDosage = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage
 
 Alias:   ChVacdImmunization =     http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization
 
