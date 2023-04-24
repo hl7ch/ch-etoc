@@ -42,7 +42,7 @@ Description: "Medication at Medical Referral"
 * code.text = "Erdabyclor"
 
 Instance: DosageEtoc1
-InstanceOf: ChEmedDosageNonStructured
+InstanceOf: ChEmedDosage
 Description: "DosageNonStrucured"
 Usage: #inline
 * text = "20/25 mg 1/2-0-0-0" // Erdabyclor Dosage
@@ -55,7 +55,7 @@ Description: "Medication at Medical Referral"
 * code.text = "Morphin"
 
 Instance: DosageEtoc2
-InstanceOf: ChEmedDosageNonStructured
+InstanceOf: ChEmedDosage
 Description: "DosageNonStrucured"
 Usage: #inline
 * text = "5 mg i.v.; 16h30" // Morphin Dosage
@@ -68,7 +68,7 @@ Description: "Medication at Medical Referral"
 * code.text = "Nitroglycerin 0.8 mg s.L.; 16h15"
 
 Instance: DosageEtoc3
-InstanceOf: ChEmedDosageNonStructured
+InstanceOf: ChEmedDosage
 Description: "DosageNonStrucured"
 Usage: #inline
 * text = "50.8 mg s.L.; 16h15" // Nitroglycerin Dosage
