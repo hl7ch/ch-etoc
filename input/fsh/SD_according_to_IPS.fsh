@@ -24,7 +24,7 @@ Profile: ChEtocPrimaryDiagnosisCondition
 Parent: Condition
 Id: ch-etoc-primary-diagnosis
 Title: "CH eTOC Primary Diagnosis Condition"
-Description: "Definition for the Primary Diagnosis Condition resource in the context of CH Relectronic tranisiton of care."
+Description: "Definition for the Primary Diagnosis Condition resource in the context of electronic tranisiton of care."
 * . ^short = "CH eTOC Primary Diagnosis Condition"
 * category 1..1 MS
 * category from ChEtocConditionCategory

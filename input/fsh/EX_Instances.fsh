@@ -30,7 +30,7 @@ Description: "Example for ServiceRequest"
 Instance: PastHistoryofIllnessesConditionEtoc
 InstanceOf: ChEtocPastHistoryofIllnessesCondition
 Title: "PastHistoryofIllnesses Medical Referral"
-Description: "tHistoryofIllnessesCondition"
+Description: "HistoryofIllnessesCondition"
 * subject = Reference(SUfferer)
 * code.text = "Endokarditis 1999"
  
