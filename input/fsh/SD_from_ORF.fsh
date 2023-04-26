@@ -149,8 +149,12 @@ Description: "Definition for the Composition resource in the context of electron
 // ---------- Composition.section.entry:ServiceRequest ----------
 // objection voted on 7.4.2022 tc meeting Issue #39
 * section[orderReferral].entry[Questionnaire] 1..
+//* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChEtocQuestionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] 1..
+* section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChEtocQuestionnaireResponse)
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
+* section[orderReferral].entry[DocumentReference] 0..
+//* section[orderReferral].entry[DocumentReference] ^type.targetProfile = Canonical()
 
 /* ======== Definition of sections in CH ORF =========
 * section MS
@@ -224,11 +228,11 @@ Description: "Definition for the Composition resource in the context of electron
 //=== Composition sections eTOC specific ====
 // ------- Composition.section: purpose -------
 * section contains sectionPurpose 0..1 MS
-* section[sectionPurpose] ^short = "Contains information about the medication"
+* section[sectionPurpose] ^short = "Contains information about the purpose/reason"
 * section[sectionPurpose].title 1..1 MS
-* section[sectionPurpose].title ^short = "Medication"
+* section[sectionPurpose].title ^short = "Purpose"
 * section[sectionPurpose].code 1..1 MS
-* section[sectionPurpose].code = LNC#42346-7 "Medications on admission (narrative)"
+* section[sectionPurpose].code = LNC#42349-1 "Reason for referral (narrative)"
 * section[sectionPurpose].text MS
 * section[sectionPurpose].section 0..0
 * section[sectionPurpose].entry 0..1 MS
@@ -278,7 +282,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section contains sectionAllergies 0..1 MS
 * section[sectionAllergies] ^short = "Contains information about allergies and intolerances"
 * section[sectionAllergies].title 1..1 MS
-* section[sectionAllergies].title ^short = "Allergies and intoerlancies"
+* section[sectionAllergies].title ^short = "Allergies and intolerances"
 * section[sectionAllergies].code 1..1 MS
 * section[sectionAllergies].code = LNC#48765-2 "Allergies and adverse reactions Document"
 * section[sectionAllergies].text MS
@@ -289,7 +293,7 @@ Description: "Definition for the Composition resource in the context of electron
 // ------- Composition.section: History of past Illness -------
 * section contains sectionPastIllnessHx 0..1 MS
 * section[sectionPastIllnessHx].title 1..1 MS
-* section[sectionPastIllnessHx].title ^short = "Anamnesis"
+* section[sectionPastIllnessHx].title ^short = "History of past illness"
 * section[sectionPastIllnessHx].code 1..1 MS
 * section[sectionPastIllnessHx].code = LNC#11348-0 "History of past illness Narrative"
 * section[sectionPastIllnessHx].text MS
@@ -311,7 +315,7 @@ Description: "Definition for the Composition resource in the context of electron
 // ------- Composition.section: History of procedures -------
 * section contains sectionProceduresHx 0..1 MS
 * section[sectionProceduresHx].title 1..1 MS
-* section[sectionProceduresHx].title ^short = "Anamnesis"
+* section[sectionProceduresHx].title ^short = "History of Procedures"
 * section[sectionProceduresHx].code 1..1 MS
 * section[sectionProceduresHx].code = LNC#47519-4 "History of Procedures Document"
 * section[sectionProceduresHx].text MS
@@ -322,7 +326,7 @@ Description: "Definition for the Composition resource in the context of electron
 // ------- Composition.section: Social history -------
 * section contains sectionSocialHistory 0..1 MS
 * section[sectionSocialHistory].title 1..1 MS
-* section[sectionSocialHistory].title ^short = "Anamnesis"
+* section[sectionSocialHistory].title ^short = "Social history"
 * section[sectionSocialHistory].code 1..1 MS
 * section[sectionSocialHistory].code = LNC#29762-2 "Social history Narrative"
 * section[sectionSocialHistory].text MS
@@ -373,9 +377,9 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPregnancyHx].entry only Reference(ChEtocPregnancyStatusObservation)
 
 
-// ------- Composition.section: careplans -------
+// ------- Composition.section: careplans -------?????
 * section contains sectionPlanOfCare 0..1 MS
-* section[sectionPlanOfCare] ^short = "Contains informaion about careplans"
+* section[sectionPlanOfCare] ^short = "Contains information about careplans"
 * section[sectionPlanOfCare].title 1..1 MS
 * section[sectionPlanOfCare].title ^short = "Careplans"
 * section[sectionPlanOfCare].code 1..1 MS
@@ -385,13 +389,13 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPlanOfCare].entry 0.. MS
 * section[sectionPlanOfCare].entry only Reference(ChEtocCarePlan)
 
-// ------- Composition.section: attachment -------
+// ------- Composition.section: attachment -------??????
 * section contains sectionAttachment 0..1 MS
-* section[sectionAttachment] ^short = "Contains informaion about careplans"
+* section[sectionAttachment] ^short = "Contains attachments (whatever is considered as important)"
 * section[sectionAttachment].title 1..1 MS
-* section[sectionAttachment].title ^short = "Careplans"
+* section[sectionAttachment].title ^short = "Attachments"
 * section[sectionAttachment].code 1..1 MS
-* section[sectionAttachment].code = LNC#18776-5 "Plan of care note"
+* section[sectionAttachment].code = LNC#55107-7 "Addendum Document"
 * section[sectionAttachment].text MS
 * section[sectionAttachment].section 0..0
 * section[sectionAttachment].entry 0.. MS
