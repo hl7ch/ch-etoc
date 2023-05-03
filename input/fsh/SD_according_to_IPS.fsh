@@ -233,7 +233,7 @@ Description: "Definition for the Functional Status Condition resource in the con
 * category 1..1 MS
 * category from ChEtocConditionCategory
 * category = ChEtocConditionCategory#functional-status-condition
-* category ^short = "Funktionsfähigkeit, Behinderung"
+* category ^short = "Functioning, Disability"
 * code 1.. MS 
 * code.text 1.. MS
 * subject only Reference(ChCorePatient) 

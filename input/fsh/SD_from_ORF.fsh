@@ -20,20 +20,20 @@ the implementaion of the user interface."
 
 * intent MS
 /*------- category -------
-Reserved for specification of a particular form für referrals to clinical subspecialities. As this is a generic referral, leave empty.
+Reserved for specification of a particular form for referrals to clinical subspecialities. As this is a generic referral, leave empty.
 */
 
 //------- code -------
 * code MS
-* code ^short = "Ziel"
+* code ^short = "What is being requested/ordered"
 * code.text MS
 //------- reasonCode -------
 * reasonCode MS
-* reasonCode ^short = "Begründung"
+* reasonCode ^short = "Explanation/Justification for procedure or service"
 * reasonCode.text MS
 //------- reasonReference -------
 * reasonReference MS
-* reasonReference ^short = "Reason for the referral (primary diagnosis)"
+* reasonReference ^short = "Explanation/Justification for service or service (primary diagnosis)"
 * reasonReference only Reference(ChEtocPrimaryDiagnosisCondition) 
 //------- insurance -------
 * insurance MS
@@ -151,7 +151,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[orderReferral].entry[Questionnaire] 1..
 //* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChEtocQuestionnaire)
 * section[orderReferral].entry[QuestionnaireResponse] 1..
-* section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChEtocQuestionnaireResponse)
+* section[orderReferral].entry[QuestionnaireResponse] 
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
 * section[orderReferral].entry[DocumentReference] 0..
 //* section[orderReferral].entry[DocumentReference] ^type.targetProfile = Canonical()
@@ -400,12 +400,4 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionAttachment].section 0..0
 * section[sectionAttachment].entry 0.. MS
 * section[sectionAttachment].entry only Reference(ChEtocAttachment)
-
-Profile: ChEtocQuestionnaireResponse
-Parent: ChOrfQuestionnaireResponse
-Id: ch-etoc-questionnaireresponse
-Title: "CH eTOC Questionnaire Response"
-Description: "Definition for the QuestionnaireResponse resource in the context of electronic transition of care."
-* . ^short = "CH eTOC Questionnaire Response"
-
 

@@ -1253,7 +1253,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].item[0].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].item[=].text = "Ziel"
+* item[=].item[=].text = "Procedere / Behandlung"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 * item[=].item[+].linkId = "reason.statement"
