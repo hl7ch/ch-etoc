@@ -1401,18 +1401,25 @@ Usage: #example
 * item[=].text = "Anhang"
 * item[=].type = #group
 * item[=].item.linkId = "attachtment.title"
-* item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.title"
+* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
 * item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
 * item[=].item.type = #string
 * item[=].item.repeats = true
-* item[=].item.item[0].linkId = "attachment.note"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.annotation"
+/*
+* item[=].item.item[0].linkId = "attachment.description"
+* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#description"
 * item[=].item.item[=].text = "Anmerkung"
 * item[=].item.item[=].type = #text
+*/
 * item[=].item.item[+].linkId = "attachment.data"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.data"
+* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attachment.data"
 * item[=].item.item[=].text = "Daten"
 * item[=].item.item[=].type = #string
+/* item[=].item.item[+].linkId = "attachment.contenttype"
+* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attacchment.contentType"
+* item[=].item.item[=].text = "Datentyp"
+* item[=].item.item[=].type = #code
+*/
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group

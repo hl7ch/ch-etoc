@@ -399,5 +399,5 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionAttachment].text MS
 * section[sectionAttachment].section 0..0
 * section[sectionAttachment].entry 0.. MS
-* section[sectionAttachment].entry only Reference(ChEtocAttachment)
+* section[sectionAttachment].entry only Reference(ChOrfDocumentReference)
 

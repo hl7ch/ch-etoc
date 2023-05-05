@@ -739,21 +739,20 @@ Description: "Subquestionnaire Attachment"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "attachtment.title"  
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.title"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
 * item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
 * item[=].type = #string
 * item[=].repeats = true
 
-* item[=].item[+].linkId = "attachment.note"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.annotation"
-* item[=].item[=].text = "Anmerkung"
-* item[=].item[=].type = #text
-
-* item[=].item[+].linkId = "attachment.data"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.data"
-* item[=].item[=].text = "Daten"
-* item[=].item[=].type = #string
-
+* item[+].linkId = "attachment.data"  
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attachment.data"
+* item[=].text = "Daten"
+* item[=].type = #string
+/* item[+].linkId = "attachment.contenttype"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attacchment.contentType"
+* item[=].text = "Datentyp"
+* item[=].type = #code
+*/
 
 /*Module Note*/
 Instance: ch-etoc-module-note

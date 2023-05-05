@@ -200,7 +200,6 @@ Description: "Example for Patient"
 * address.postalCode = "8000"
 * address.country = "Schweiz"
 
-
 //------------- Copy Receiver -------------
 Instance: SUffererCopyReceiver
 InstanceOf: ChCorePatient
@@ -397,14 +396,14 @@ Usage: #inline
 
 
 //------------- Previous Results -------------
-Instance: MediaRx
-InstanceOf: ChEtocMedia
+Instance: AttachmentRx
+InstanceOf: ChOrfDocumentReference
 Title: "Media Previous Rx"
-Description: "Example for Media"
+Description: "Example for Attachment"
 * status = #completed
-* content.contentType = #application/dicom
-* content.data = "RXhhbXBsZQ=="
-* content.title = "xray_chest_S_Ufferer_20190401.dcm"
+* content.attachment.contentType = #application/dicom
+* content.attachment.data = "RXhhbXBsZQ=="
+* content.attachment.title = "xray_chest_S_Ufferer_20190401.dcm"
 
 
 Instance: LocationHospitalStay
