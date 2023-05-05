@@ -400,7 +400,7 @@ Instance: AttachmentRx
 InstanceOf: ChOrfDocumentReference
 Title: "Media Previous Rx"
 Description: "Example for Attachment"
-* status = #completed
+* status = #current
 * content.attachment.contentType = #application/dicom
 * content.attachment.data = "RXhhbXBsZQ=="
 * content.attachment.title = "xray_chest_S_Ufferer_20190401.dcm"
