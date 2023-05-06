@@ -435,7 +435,7 @@ Description: "Subquestionnaire Diagnosis"
 * date = "2022-05-23"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "diagnosisList.primarydiagnosis"
+* item[+].linkId = "diagnosisList.primaryDiagnosis"
 * item[=].text = "Hauptdiagnosen / Probleme"
 * item[=].type = #group
 
@@ -445,7 +445,7 @@ Description: "Subquestionnaire Diagnosis"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
-* item[+].linkId = "diagnosisList.secondarydiagnosis"
+* item[+].linkId = "diagnosisList.secondaryDiagnosis"
 * item[=].text = "Nebendiagnosen / Probleme"
 * item[=].type = #group
 
@@ -738,7 +738,7 @@ Description: "Subquestionnaire Attachment"
 * date = "2022-05-25"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "attachtment.title"  
+* item[+].linkId = "attachment.title"  
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
 * item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
 * item[=].type = #string

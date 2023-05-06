@@ -1264,7 +1264,7 @@ Usage: #example
 * item[+].linkId = "diagnosislist"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
-* item[=].item[0].linkId = "diagnosisList.primarydiagnosis"
+* item[=].item[0].linkId = "diagnosisList.primaryDiagnosis"
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "diagnosisList.primaryDiagnosis.item"
@@ -1272,7 +1272,7 @@ Usage: #example
 * item[=].item[=].item.text = "Hauptdiagnose / Problem"
 * item[=].item[=].item.type = #string
 * item[=].item[=].item.repeats = true
-* item[=].item[+].linkId = "diagnosisList.secondarydiagnosis"
+* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "diagnosisList.secondaryDiagnosis.item"
@@ -1400,7 +1400,7 @@ Usage: #example
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
-* item[=].item.linkId = "attachtment.title"
+* item[=].item.linkId = "attachment.title"
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
 * item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
 * item[=].item.type = #string

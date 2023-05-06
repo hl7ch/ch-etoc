@@ -251,7 +251,7 @@ Darstellung der Diagnosen und Befunde
 * item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
 
-* item[=].item[+].linkId = "diagnosisList.primarydiagnosis"
+* item[=].item[+].linkId = "diagnosisList.primaryDiagnosis"
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
 
 * item[=].item[=].item[+].linkId = "diagnosisList.primaryDiagnosis.item"  
@@ -259,7 +259,7 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[=].item[=].text = "Hauptdiagnose / Problem"
 * item[=].item[=].item[=].answer[+].valueString = "St. nach Bypass 2007"
 
-* item[=].item[+].linkId = "diagnosisList.secondarydiagnosis"
+* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
 
 * item[=].item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis.item"  
@@ -389,7 +389,7 @@ Berichte
 */
 * item[+].linkId = "attachments"
 
-* item[=].item[+].linkId = "attachtment.title"  
+* item[=].item[+].linkId = "attachment.title"  
 * item[=].item[=].answer[+].valueString = "EKG_09062021.pdf"
 
 * item[=].item[+].linkId = "attachment.note"  
