@@ -1353,7 +1353,7 @@ Usage: #example
 * item[=].item.text = "Allergien / Intoleranzen"
 * item[=].item.type = #text
 * item[+].linkId = "immunization"
-* item[=].text = "Allergien und Intoleranzen"
+* item[=].text = "Impfstatus"
 * item[=].type = #group
 * item[=].item.linkId = "immunization.status"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
