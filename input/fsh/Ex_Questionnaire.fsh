@@ -1251,11 +1251,18 @@ Usage: #example
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
 * item[=].type = #group
-* item[=].item[0].linkId = "purpose.aim"
+* item[=].item[+].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
 * item[=].item[=].text = "Procedere / Behandlung"
 * item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+//* item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "purpose.aim.detail"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail.text"
+* item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].repeats = true
+
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
 * item[=].item[=].text = "Begründung"

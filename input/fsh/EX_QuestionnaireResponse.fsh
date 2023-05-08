@@ -238,12 +238,25 @@ Wozu wird der Patient zugewiesen
 * item[=].text = "Wozu wird der Patient zugewiesen?"
 
 * item[=].item[+].linkId = "purpose.aim"
-* item[=].item[=].text = "Ziel"                
+* item[=].item[=].text = "Procedere / Behandlung"                
 * item[=].item[=].answer.valueString = "Abklärung akuter Thoraxschmerzen"
+
+* item[=].item[=].item[+].linkId = "purpose.aim.detail"
+* item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
+* item[=].item[=].item[=].answer.valueString = "Abklärung kardiale Ursache?"
+
+* item[=].item[=].item[+].linkId = "purpose.aim.detail"
+* item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
+* item[=].item[=].item[=].answer.valueString = "Abklärung Ösophagitis?"
+
 
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].text = "Begründung"  
 * item[=].item[=].answer.valueString = "Verdacht auf Vorderwandinfarkt"
+
+* item[=].item[+].linkId = "reason.statement"
+* item[=].item[=].text = "Begründung"  
+* item[=].item[=].answer.valueString = "Reflux bekannt"
 
 /*----------------------------------------------------------------------
 Darstellung der Diagnosen und Befunde

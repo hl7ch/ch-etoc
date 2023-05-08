@@ -408,9 +408,15 @@ Description: "Subquestionnaire Purpose"
 
 * item[+].linkId = "purpose.aim"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].text = "Ziel"
+* item[=].text = "Procedere / Behandlung"
 * item[=].type = #string
-* item[=].repeats = true
+//* item[=].repeats = true
+
+* item[=].item[+].linkId = "purpose.aim.detail"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail.text"
+* item[=].item[=].text = "Procedere / Behandlung im Detail"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
 
 * item[+].linkId = "reason.statement"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
