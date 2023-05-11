@@ -14,14 +14,12 @@
 
      <a name="volume1"></a><h3>Purpose</h3>
 
-    <p>The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist,
-    from one hispital to another etc.
+    <p>The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist, from one hispital to another etc.
     </p>
 
-    <p>CH eTOC is intended for use in directional for the use in the SWISS EPR.
-    </p>  
+    <p>CH eTOC is intended primarly for use in directional information exchange and for the use in the SWISS EPR. It however my be implemented in other settings too.</p>  
 
-  <a name="volume1"></a><h3>Foundation</h3>
+    <a name="volume1"></a><h3>Foundation</h3>
     
     <p>This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see <a href="http://hl7.org/fhir/r4">http://hl7.org/fhir/r4</a>.
     </p>
@@ -29,62 +27,40 @@
     <p>Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and QuestionnaireResponse, forms are addressed here as Questionnaires.
     </p>
     
-    <p>This Implementation Guide is derived from the Order &amp; Referral by Form (ORF) Implementation Guide  
-        <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH-ORF</a> which relies on HL7 Structured Data Capture Implementation Guide, see
+    <p>This Implementation Guide is derived from the CH Order &amp; Referral by Form (CH ORF) Implementation Guide  
+        <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH ORF</a> which relies on HL7 Structured Data Capture Implementation Guide, see
         <a href="http://build.fhir.org/ig/HL7/sdc/">SDC IG</a> and uses the Swiss Core Profiles, see 
         <a href="http://build.fhir.org/ig/hl7ch/ch-core/index.html">CH Core</a>.
     </p>
 
-    <p>There has been a discussion whether population of the resources such as Patient Resource, ServiceRequest Resource 
-    etc. with the content of the QuestionnaireResponse Resource should be done by the order placer application or rather 
-    by the order filler application. The argument for assigning the task to the order placer is a result of the following 
-    consideration: the authors of a particular implementation guide  may decide to define a questionnaire and its rendering 
-    but to leave it open if in a particular implementation the questionnaire is implemented or if the representation towards 
-    the user is made (in accordance to the questionnaire definition) by other technical means. In such a case, there would 
-    be no QuestionnaireResponse Resource in the bundle because all content is already in concerning resources. In order to 
-    handle all FHIR exchange formats equal (as far as sensible), the authors decided to mandate the order placer application 
-    with the task.
+    <p>April 7, 2022 the the HL7 Switzerland Technical Committee disccussed #39 and finally voted to set cardinality for the questionnaie and questionnaire response to 1.. in the composition resource thus making the use of questionnaires and questionnaireResponses mandatory (see also <a href="http://build.fhir.org/ig/hl7ch/ch-orf/index.html">CH ORF</a>)
     </p>
 
-    <p>Applications claiming for conformance with the ORF Implementation Guide shall:
-    </p>
-
+    <p>Applications claiming for conformance with an CH ORF derived implementation guide shall:</p>
     <ul>
-        <li>Render (and in case of the Questionnaire filler allow for data entry) all elements of a questionnaire in the
-        user interface (e.g. on screen, in print). Grouping of items and the order of items within shall be adequately
-        reproduced according to the Questionnaire.</li>
-
-        <li>In case of an implementation without Questionnaire and QuestionnaireResponse, the content of otherwise implemented UIs shall 
-        be in accordance to the questionnaire definition.</li>
-            
-        <li>Be able to process all codes related to the generic elements in a Questionnaire.</li>
+        <li>Render (and in case of the Questionnaire Filler allow for data entry) all elements of a questionnaire in the user interface (e.g. on screen, in print). 
+        Grouping of items and the order of items within shall be adequately reproduced according to the questionnaire.</li>
     </ul>
+
+    <p>Vendors of applications with Questionnaire Filler/Questionnaire Receiver actors are strongly recommended to implement interfaces to other applications (such as HIS and PACS) at least for all data in the generics elements of questionnaires.
+    </p>
    
-    <p>In the  <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/D/181206_eTOC-eUeberweisungsbericht-IPAG_d.pdf">3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) eDischarge Report</a>, recommendations are formulated that 
-    are important for the inter-professional exchange of information during transitions of treatment (transition of care). The information relevant to treatment 
-    shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
+    <p>In the  <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/D/181206_eTOC-eUeberweisungsbericht-IPAG_d.pdf">3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) eDischarge Report</a>, recommendations are formulated that are important for the inter-professional exchange of information during transitions of treatment (transition of care). The information relevant to treatment shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
     </p>
     
     <p>At the working group meeting in February 2021, it was decided that a first version of eTOC shall be based on the the  <a href="http://hl7.org/fhir/uv/ips/">FHIR International Patient Summary (IPS).</a> 
     </p>
 
-    <p>However, this first version of eTOC still allows many free text entries. Derivations for use cases in different disciplines are to be defined later.
-    Clinical content uses mostly the same resources as the IPS; some minor differences are explained in comments to the resources affected. The resource definitions 
-    are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS.
+    <p>However, this first version of eTOC still allows many free text entries. Derivations for use cases in different disciplines are to be defined later. Clinical content uses mostly the same resources as the IPS; some minor differences are explained in comments to the resources affected. The resource definitions are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS.
     </p>
 
     <p>As a consequence, the first version of CH eTOC does not claim to be conformant to IPS.
     </p>
 
-    <p>This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with 
-    Swiss Core. eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested 
-    service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest
-    resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) 
-    and follow the definition in the ORF Implementation Guide.  
+    <p>This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core. eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) and follow the definition in the ORF Implementation Guide.  
     </p>
 
-    <p>This IG follows the <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/E/Exchange-format-handbook_part-1_v12.pdf">Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13</a>. The Questionnaire resource gives guidance for 
-    the implementation of the user interface.
+    <p>This IG follows the <a href="https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/E/Exchange-format-handbook_part-1_v12.pdf">Swiss eHealth Exchange Format Handbook Part I: Service Requests V 0.13</a>. The Questionnaire resource gives guidance for the implementation of the user interface.
     </p>
   
     <p>Actors, transactions and security considerations are covered in the corresponding sections of 

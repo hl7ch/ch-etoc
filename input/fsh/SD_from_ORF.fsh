@@ -165,7 +165,7 @@ Description: "Definition for the Composition resource in the context of electron
 // section names are according to IPS except anamnesis (reason see below)
 // vital signs and advanced directives not supported yet
 
-// ---------- Composition.section:orderReferral ----------
+// ---------- Composition. ----------
 * section contains orderReferral 1..1 MS
 * section[orderReferral] ^short = "Contains the data that supports the order and referral by form."
 * section[orderReferral].title 1..1 MS

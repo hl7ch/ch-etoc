@@ -418,4 +418,11 @@ Description: "Example for Location"
 * address.city = "Zürich"
 * address.postalCode = "8000"
 * address.country = "Schweiz"
-//
+
+
+Instance: AllergyIntolerance
+InstanceOf: ChEtocAllergyIntolerance
+Title: "Allergy / Intolerance"
+Description: "Example for Allergy / Intolerancce"
+* code.text = "Anamnestisch Penicillinallergie"
+* patient = Reference(SUfferer)
