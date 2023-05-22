@@ -398,7 +398,7 @@ Usage: #inline
 //------------- Previous Results -------------
 Instance: AttachmentRx
 InstanceOf: ChOrfDocumentReference
-Title: "Media Previous Rx"
+Title: "Previous Rx"
 Description: "Example for Attachment"
 * status = #current
 * content.attachment.contentType = #application/dicom
@@ -423,6 +423,52 @@ Description: "Example for Location"
 Instance: AllergyIntolerance
 InstanceOf: ChEtocAllergyIntolerance
 Title: "Allergy / Intolerance"
-Description: "Example for Allergy / Intolerancce"
+Description: "Example for Allergy / Intolerance"
 * code.text = "Anamnestisch Penicillinallergie"
 * patient = Reference(SUfferer)
+
+
+Instance: Haemoglobin
+InstanceOf: ChEtocLabObservation
+Title: "Haemoglobin"
+Description: "Example for Lab Result"
+* status = #final
+* code.text = "Hb: 112 g/l"
+* subject = Reference(SUfferer)
+
+
+Instance: HbA1c
+InstanceOf: ChEtocLabObservation
+Title: "Hb-A1c"
+Description: "Example for Lab Result"
+* status = #final
+* code.text = "HHb-A1c: 5.4 %"
+* subject = Reference(SUfferer)
+
+
+Instance: Biopsie
+InstanceOf: ChEtocPathologyObservation
+Title: "Biopsie Duodenum / Magen"
+Description: "Example for Pathology Result"
+* status = #final
+* code.text = "Biopsien Duodenum, Magen, unruhige Z-Linie vom 19.09.2018:
+Die Veränderungen der Duodenalschleimhaut passen gut zu einem geringen petpischen Schleimhautschaden. Die Magenschleimhaut zeigt das Bild einer reaktiven Gastropathie. Erosive Veränderungen gelangen hier nicht zur Darstellung. Kein Helicopacter, keine Metaplasie, keine pathogenen Erreger nachgeewiesen."
+* subject = Reference(SUfferer)
+
+
+Instance: Imaging
+InstanceOf: ChEtocRadiologyObservation
+Title: "Thx ap / seitl."
+Description: "Example for Imaging Result"
+* status = #final
+* code.text = "Thorax ap / seitl. vom 12.05.23: unauffällig"
+* subject = Reference(SUfferer)
+
+
+Instance: Electrocardiogram
+InstanceOf: ChEtocCardiologyObservation
+Title: "EKG"
+Description: "Example for Cardiology Result"
+* status = #final
+* code.text = "EKG vom 12.5.23: unauffällig"
+* subject = Reference(SUfferer)
