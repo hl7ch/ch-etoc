@@ -75,7 +75,7 @@ Description: "Definition for the Procedure resource in the context of electronic
 * code.text MS
 
 
-// -------- Corresponds to IPSMedical Devices --------- 
+// -------- Corresponds to IPS Medical Devices --------- 
 Profile: ChEtocDevice
 Parent: Device
 Id: ch-etoc-device
@@ -199,8 +199,6 @@ Title: "CH eTOC Expected Delivery Date Observation"
 Description: "Definition for the Expected Delivery Date Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Expected Delivery Date Observation"
 * status MS
-//* code MS
-//* code from PregnancyExpectedDeliveryDateMethod (required)
 * subject only Reference(ChCorePatient) 
 * effectiveDateTime MS
 
@@ -239,7 +237,7 @@ Description: "Definition for the Functional Status Condition resource in the con
 * subject only Reference(ChCorePatient) 
 
 
-// -------- Corresponds to Advance Directives ---------
+// -------- Corresponds to IPS Advance Directives ---------
 // Not supported yet
 
 

@@ -264,7 +264,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionMedications].text MS
 * section[sectionMedications].section 0..0
 * section[sectionMedications].entry 0.. MS
-* section[sectionMedications].entry only Reference(CHEMEDMedicationStatement)
+* section[sectionMedications].entry only Reference(ChEmedMedicationStatement)
 
 // ------- Composition.section: immunizations -------
 * section contains sectionImmunizations 0..1 MS
