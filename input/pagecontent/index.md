@@ -133,7 +133,7 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         <tr>
             <td></td>
             <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-expecteddeliverydate">CH eToc Expected Delivery Date Observation</a></td>
-            <td>Observation<a href="http://hl7.org/fhir/R4/observation.html">ChEtocPregnancyExpectedDeliveryDateObservation</a></td>
+            <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td>IPS Social History</td>
