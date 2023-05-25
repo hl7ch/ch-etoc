@@ -239,11 +239,12 @@ Wozu wird der Patient zugewiesen
 
 * item[=].item[+].linkId = "purpose.aim"
 * item[=].item[=].text = "Procedere / Behandlung"                
-* item[=].item[=].answer.valueString = "Abklärung akuter Thoraxschmerzen"
+* item[=].item[=].answer[0].valueString = "Abklärung akuter Thoraxschmerzen"
 
-* item[=].item[=].item[+].linkId = "purpose.aim.detail"
-* item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
-* item[=].item[=].item[=].answer.valueString = "Abklärung kardiale Ursache?"
+* item[=].item[=].answer[0].item[+].linkId = "purpose.aim.detail"
+* item[=].item[=].answer[=].item[=].text = "Procedere / Behandlung im Detail"                
+* item[=].item[=].answer[=].item[=].answer[0].valueString = "Abklärung kardiale Ursache?"
+* item[=].item[=].answer[=].item[=].answer[1].valueString = "Abklärung Ösophagitis?"
 
 /* item[=].item[=].item[+].linkId = "purpose.aim.detail"
 * item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
