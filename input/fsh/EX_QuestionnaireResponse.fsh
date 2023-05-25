@@ -1,6 +1,6 @@
 Instance: QuestionnaireResponseEtoc
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "QuestionniaireResponse Radiology Order"
+Title: "QuestionniaireResponse Medical Referral"
 Description: "Example for QuestionnaireResponse"
 * questionnaire = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * status = #completed
@@ -245,10 +245,10 @@ Wozu wird der Patient zugewiesen
 * item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
 * item[=].item[=].item[=].answer.valueString = "Abklärung kardiale Ursache?"
 
-* item[=].item[=].item[+].linkId = "purpose.aim.detail"
+/* item[=].item[=].item[+].linkId = "purpose.aim.detail"
 * item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
 * item[=].item[=].item[=].answer.valueString = "Abklärung Ösophagitis?"
-
+*/
 
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].text = "Begründung"  

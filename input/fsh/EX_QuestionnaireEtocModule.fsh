@@ -412,7 +412,7 @@ Description: "Subquestionnaire Purpose"
 * item[=].type = #string
 //* item[=].repeats = true
 
-* item[=].item[+].linkId = "purpose.aim.#"
+* item[=].item[+].linkId = "purpose.aim.detail"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail.text"
 * item[=].item[=].text = "Procedere / Behandlung im Detail"
 * item[=].item[=].type = #string

@@ -1,7 +1,45 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
-### STU 1 Ballot
+### v1.1.0 - HL7 Switzerland STU 2 Ballot
+
+#### Open Issues
+See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
+
+#### Added
+##### Adopted from CH ORF
+* [ORF Issue #61](https://github.com/hl7ch/ch-orf/issues/61): Added Family doctor.
+* [ORF Issue #71](https://github.com/hl7ch/ch-orf/issues/71): Added Initiator and his relationship to to the patient.
+* [ORF Issue #72](https://github.com/hl7ch/ch-orf/issues/72): Added Patient consent.
+* [ORF Issue #73](https://github.com/hl7ch/ch-orf/issues/73): Added Entry date, discharge Date and Organization of stationary episode antecedent to requested service (e.g spitex).
+  
+##### Added in CH eTOC
+* [Issue #59](https://github.com/hl7ch/ch-etoc/issues/59): Added examples for AllergyIntolerance (Penicillineallergie), LabObservation(Haemoglobin), LabObservation (HbA1c), PathologyObservation (Biopsie Duodenum / Magen), RadiologyObservation (Thx ap / seitl.) and CardiologyObservation (EKG).
+* [Issue #60](https://github.com/hl7ch/ch-etoc/issues/60): Added display values to CodeSystem Category of Condition.
+
+#### Changed / Updated
+##### Adopted from CH ORF
+* [ORF Issue Issue #108](https://github.com/hl7ch/ch-orf/issues/108): Improve slicing that infor entry[x] warnings are not shown.
+
+##### Changed / Updated in CH eTOC
+* [Issue #38](https://github.com/hl7ch/ch-etoc/issues/38): Added sections in composition referencing clinical content.
+* [Issue #39](https://github.com/hl7ch/ch-etoc/issues/39): April 7, 2022 the the HL7 Switzerland Technical Committee disccussed #39 and finally voted to set cardinality for the questionnaie and questionnaire response to 1.. in the composition resource thus making the use of questionnaires and questionnaireResponses mandatory.
+* [Issue #40](https://github.com/hl7ch/ch-etoc/issues/40): Cardinality of patient in questionnaire set to 1..1.
+* [Issue #49](https://github.com/hl7ch/ch-etoc/issues/49): Changed derivation of CH eTOC Careplan from ChEtocMedia to CarePlan. Dropped ChEtocMedia. Added Ch Etoc Careteam Resource in order to allow for adressees of careplan (e.g nurses, doctors, spricalists).
+* [Issue #50](https://github.com/hl7ch/ch-etoc/issues/50): Dropped  CH eTOC Attachment. Attachments are now mapped to Composition.section:orderReferral.entry:DocumentReference.
+* [Issue #54](https://github.com/hl7ch/ch-etoc/issues/54): Improved text in index.html.
+* [Issue #58](https://github.com/hl7ch/ch-etoc/issues/58): Corrected title of immunization in questionnaire to "Impfstatus".
+* [Issue #61](https://github.com/hl7ch/ch-etoc/issues/61): Corrected receiver.organization.gln to Organization.identifier:GLN.
+* [Issue #62](https://github.com/hl7ch/ch-etoc/issues/62): Corrected discrepancies between profiles and questionnaire.
+* [Issue #63](https://github.com/hl7ch/ch-etoc/issues/63): Corrected cardinality of appointment.location to 0..1.
+* [Issue #64](https://github.com/hl7ch/ch-etoc/issues/64): Corrected cardinality of purpose.aim to 1..1. Added purpose.aim.detail in order to allow multible entries.
+should be: http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Organization.identifier:GLN
+* [Issue #65](https://github.com/hl7ch/ch-etoc/issues/65): Correctedd  "diagnosisList.primaryDiagnosis" and "diagnosisList.secondaryDiagnosis" to CamelCase.
+* [Issue #67](https://github.com/hl7ch/ch-etoc/issues/67): Changed descriptions in ServiceRequest and questionnaire, details see [Issue #67](https://github.com/hl7ch/ch-etoc/issues/66).
+
+* [Issue #68](https://github.com/hl7ch/ch-etoc/issues/68): Title of QuestionnaireResponseEtoc changed from QuestionniaireResponse Radiology Order to QuestionniaireResponse Medical Referral, (corresponding to ServiceRequest Medical Referral)
+
+### STU 1
 
 #### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH ORF:
@@ -17,7 +55,7 @@ During the ballot, the following comments came in, which will be taken into acco
 * [ORF Issue #53](https://github.com/hl7ch/ch-orf/issues/53) (Feedback 1): The patient in the order defined as required ([Questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html), [CH ORF Composition Profile](http://fhir.ch/ig/hl7ch/ch-orf/StructureDefinition-ch-orf-composition.html)).
 * [ORF Issue #57](https://github.com/hl7ch/ch-orf/issues/57): Added 'GLN' to organization ([Questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html)).
 * [ORF Issue #60](https://github.com/hl7ch/ch-orf/issues/60) and [Issue #63](https://github.com/hl7ch/ch-orf/issues/63):   Added patients marital status to the [Questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html) and the examples (e.g. [Bundle Order-Referral-Form](http://fhir.ch/ig/hl7ch/ch-orf/Bundle-bundle-order-referral-form.html)). 
-* [ORF Issue #64](https://github.com/hl7ch/ch-orf/issues/64): Add patients language of correspondance to the [Questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html) and the examples (e.g. [Bundle Order-Referral-Form](http://fhir.ch/ig/hl7ch/ch-orf/Bundle-bundle-order-referral-form.html)).
+* [ORF Issue #64](https://github.com/hl7ch/ch-orf/issues/64): Add patients language of correspondence to the [Questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html) and the examples (e.g. [Bundle Order-Referral-Form](http://fhir.ch/ig/hl7ch/ch-orf/Bundle-bundle-order-referral-form.html)).
 * [ORF Issue #65](https://github.com/hl7ch/ch-orf/issues/65): Added 'ZSR' as Practitioner.identifier to the [Questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html) and the examples (e.g. [Bundle Order-Referral-Form](http://fhir.ch/ig/hl7ch/ch-orf/Bundle-bundle-order-referral-form.html)).
 * [ORF Issue #80](https://github.com/hl7ch/ch-orf/issues/80): Expansion of the [questionnaire](http://fhir.ch/ig/hl7ch/ch-orf/Questionnaire-order-referral-form.html) field 'coverage.self'. Differentiation between [patient himself](http://fhir.ch/ig/hl7ch/ch-orf/Coverage-CoverageSelfPatient.html) or [related person](http://fhir.ch/ig/hl7ch/ch-orf/Coverage-CoverageSelfRelatedPerson.html) as self-payer.
 * [ORF Issue #84](https://github.com/hl7ch/ch-orf/issues/84): Copy receiver is ment to receive a copy from the order and all evolving results thereof.
@@ -31,10 +69,11 @@ During the ballot, the following comments came in, which will be taken into acco
 * [Issue #4](https://github.com/hl7ch/ch-etoc/issues/4): Reference to IPAG report added in home.
 * [Issue #14](https://github.com/hl7ch/ch-etoc/issues/14): Definition of eTOC questionnaire corrected.
 * [Issue #15](https://github.com/hl7ch/ch-etoc/issues/15): Examples: Incongruence between questionnaireresponse and servicerequest.
+* [Issue #20](https://github.com/hl7ch/ch-etoc/issues/20): CH eTOC Service Request - Definitions medication statement instead of medication card.
 * [Issue #39](https://github.com/hl7ch/ch-etoc/issues/39): Cardinality for Questionnaire and QR in Composition set to 1..1 after voting on objection 7.4.22.
 
+
 #### Issues resolved without amendment
-* [Issue #20](https://github.com/hl7ch/ch-etoc/issues/20): CH eTOC Service Request - Definitions medication statement instead of medication card.
 * [Issue #23](https://github.com/hl7ch/ch-etoc/issues/23): One recipient only.
 
 #### Negative comments which could not be resolved during the ballot

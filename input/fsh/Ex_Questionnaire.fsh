@@ -1248,9 +1248,11 @@ Usage: #example
 * item[=].item.item.linkId = "patient.consent.statement.note"
 * item[=].item.item.text = "Anmerkung"
 * item[=].item.item.type = #string
+
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
 * item[=].type = #group
+
 * item[=].item[+].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
 * item[=].item[=].text = "Procedere / Behandlung"
@@ -1268,6 +1270,7 @@ Usage: #example
 * item[=].item[=].text = "Begründung"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
+
 * item[+].linkId = "diagnosislist"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
