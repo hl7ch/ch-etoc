@@ -239,12 +239,12 @@ Wozu wird der Patient zugewiesen
 
 * item[=].item[+].linkId = "purpose.aim"
 * item[=].item[=].text = "Procedere / Behandlung"                
-* item[=].item[=].answer[0].valueString = "Abklärung akuter Thoraxschmerzen"
+* item[=].item[=].answer[+].valueString = "Abklärung akuter Thoraxschmerzen"
 
-* item[=].item[=].answer[0].item[+].linkId = "purpose.aim.detail"
+* item[=].item[=].answer[=].item[+].linkId = "purpose.aim.detail"
 * item[=].item[=].answer[=].item[=].text = "Procedere / Behandlung im Detail"                
-* item[=].item[=].answer[=].item[=].answer[0].valueString = "Abklärung kardiale Ursache?"
-* item[=].item[=].answer[=].item[=].answer[1].valueString = "Abklärung Ösophagitis?"
+* item[=].item[=].answer[=].item[=].answer[+].valueString = "Abklärung kardiale Ursache?"
+* item[=].item[=].answer[=].item[=].answer[+].valueString = "Abklärung Ösophagitis?"
 
 /* item[=].item[=].item[+].linkId = "purpose.aim.detail"
 * item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
@@ -387,30 +387,37 @@ Kardiologie
 * item[=].item[=].answer[+].valueString = "ST-Hebungen V1-V5"
 
 /* ---------------------------------------------------------------------------
-Bisheriger und weiterer Verlauf
+Verlauf und Therapie- / Pflegeplanung
+*/
+/* item[+].linkId = "carePlans"
+* item[=].text = "Verlauf und Therapie- / Pflegeplanung"
 
-* item[+].linkId = "carePlans"
-* item[=].text = "Verlauf"
+* item[=].item.linkId = "careplan.title"
+* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item[=].answer[+].valueString = "Verlauf_Reha_S_Ufferer_2007.pdf"
 
-* item[=].item[+].linkId = "carePlans.medical" // Aerztlich
-* item[=].item[=].text = "Ärztlicher Bericht"
-
-* item[=].item[+].linkId = "carePlans.nursing" // Pflege
-* item[=].item[=].text = "Pflegebericht"
+* item[=].item[+].linkId = "careplan.note"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
+* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].answer[+].valueString = "Reha-Verlauf S Ufferer nach Bypass 2007"
 */
 /* ---------------------------------------------------------------------------
-Berichte
+Anhangs
 */
 * item[+].linkId = "attachments"
 
 * item[=].item[+].linkId = "attachment.title"  
-* item[=].item[=].answer[+].valueString = "EKG_09062021.pdf"
+* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item[=].answer[+].valueString = "EKGt_S_Ufferer_26052023.pdf"
+* item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].answer[=].item[=].answer[+].valueString = "EKG vom 9.6.2021"
 
-* item[=].item[+].linkId = "attachment.note"  
-* item[=].item[=].answer[+].valueString = "EKG vom 9.6.2021"
+* item[=].item[+].linkId = "attachment.title"  
+* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item[=].answer[+].valueString = "Pflegeplan_Spitex_S_Ufferer_26052023.pdf"
+* item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].answer[=].item[=].answer[+].valueString = "Aktueller Pflegeplan der Spitex"
 
-* item[=].item[+].linkId = "attachment.data"  
-* item[=].item[=].answer[+].valueString = "324nnvsdafw3qwef3"
 
 // -------- Service Request Notes ------
 * item[+].linkId = "note"

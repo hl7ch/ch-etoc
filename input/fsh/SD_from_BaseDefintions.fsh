@@ -1,4 +1,4 @@
-
+/*
 Profile: ChEtocCarePlan
 Parent: CarePlan
 Id: ch-etoc-careplan
@@ -18,3 +18,4 @@ Description: "Defines who's involved in Careplan"
 * participant MS
 * participant.role MS
 * participant.role from ParticipantRoles
+*/

@@ -356,17 +356,17 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'cardiology' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ careplan ------------------------------ */
-* item[+].linkId = "careplan"
-* item[=].text = "Therapie / Pflegeplanung"
+/*------ careplans ------------------------------ 
+* item[+].linkId = "careplans"
+* item[=].text = "Verlauf und Therapie- / Pflegeplanung"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplan|2.0.0"
-* item[=].item.linkId = "careplan.1"
-* item[=].item.text = "Unable to resolve 'careplan' sub-questionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplans|2.0.0"
+* item[=].item.linkId = "careplans.1"
+* item[=].item.text = "Unable to resolve 'careplans' sub-questionnaire"
 * item[=].item.type = #display
-
+*/
 /*------ attachment ------------------------------ */
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
@@ -696,27 +696,34 @@ Description: "Subquestionnaire Cardiology"
 * item[=].type = #text
  // For convenience: Cardiology results in one paragraph (is often narrative)
 
-
-/*Module Careplan*/
-Instance: ch-etoc-module-careplan
+/*Module Careplans
+Instance: ch-etoc-module-careplans
 InstanceOf: Questionnaire
-Title: "Module Questionnaire Care plan"
-Description: "Subquestionnaire careplan"
+Title: "Module Questionnaire Careplans"
+Description: "Subquestionnaire Careplans"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplan"
-* name = "ModuleQuestionnaireCareplan"
-* title = "Module Questionnaire careplan"
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplans"
+* name = "ModuleQuestionnaireCareplans"
+* title = "Module Questionnaire Careplans"
 * status = #active
 * date = "2022-05-25"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "careplan.title"  
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.title"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#.title"
 * item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
 * item[=].type = #string
 * item[=].repeats = true
+
+* item[+].linkId = "careplan.careteam"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#careteam.text"
+* item[=].text = "Wer ist involviert?"
+* item[=].type = #string
+* item[=].repeats = true
+
+
 
 * item[=].item[+].linkId = "careplan.note"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
@@ -727,7 +734,7 @@ Description: "Subquestionnaire careplan"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.data"
 * item[=].item[=].text = "Daten"
 * item[=].item[=].type = #string
-
+*/
 
 /*Module Attachment*/
 Instance: ch-etoc-module-attachment
@@ -738,7 +745,7 @@ Description: "Subquestionnaire Attachment"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment"
-* name = "ModuleQuestionnaireAttachment"
+* name = "Module Questionnaire Attachment"
 * title = "Module Questionnaire Attachment"
 * status = #active
 * date = "2022-05-25"
@@ -750,15 +757,10 @@ Description: "Subquestionnaire Attachment"
 * item[=].type = #string
 * item[=].repeats = true
 
-* item[+].linkId = "attachment.data"  
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attachment.data"
-* item[=].text = "Daten"
-* item[=].type = #string
-/* item[+].linkId = "attachment.contenttype"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attacchment.contentType"
-* item[=].text = "Datentyp"
-* item[=].type = #code
-*/
+* item[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.descritption"
+* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].type = #string
 
 /*Module Note*/
 Instance: ch-etoc-module-note

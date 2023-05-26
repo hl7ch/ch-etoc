@@ -221,7 +221,7 @@ Description: "Example for Patient"
 //------------- Data Enterer -------------
 Instance: DAtaentererHappyDoctors
 InstanceOf: ChCorePractitionerRole
-Title: "Doris Ataenterer @ Happy Doctors"
+Title: "Doris Ataenterer@Happy Doctors"
 Description: "Example for PractionerRole"
 * practitioner = Reference(DAtaenterer)
 * organization = Reference(HappyDoctors)
@@ -242,7 +242,7 @@ Description: "Example for Practitioner"
 //------------- Author -------------
 Instance: ORderplacerHappyDoctors
 InstanceOf: ChCorePractitionerRole
-Title: "Ottilie Rderplacer @ Happy Doctors"
+Title: "Ottilie Rderplacer@Happy Doctors"
 Description: "Example for PractionerRole"
 * practitioner = Reference(ORderplacer)
 * organization = Reference(HappyDoctors)
@@ -269,7 +269,7 @@ Description: "Example for Practitioner"
 //------------- Receiver -------------
 Instance: MedicalDepartmentHappyHospital
 InstanceOf: ChCorePractitionerRole
-Title: "MedicalDepartment @ Happy Hospital"
+Title: "MedicalDepartment@Happy Hospital"
 Description: "Example for PractionerRole"
 * organization = Reference(HappyHospital)
 

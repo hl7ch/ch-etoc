@@ -25,7 +25,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [Issue #38](https://github.com/hl7ch/ch-etoc/issues/38): Added sections in composition referencing clinical content.
 * [Issue #39](https://github.com/hl7ch/ch-etoc/issues/39): April 7, 2022 the the HL7 Switzerland Technical Committee disccussed #39 and finally voted to set cardinality for the questionnaie and questionnaire response to 1.. in the composition resource thus making the use of questionnaires and questionnaireResponses mandatory.
 * [Issue #40](https://github.com/hl7ch/ch-etoc/issues/40): Cardinality of patient in questionnaire set to 1..1.
-* [Issue #49](https://github.com/hl7ch/ch-etoc/issues/49): Changed derivation of CH eTOC Careplan from ChEtocMedia to CarePlan. Dropped ChEtocMedia. Added Ch Etoc Careteam Resource in order to allow for adressees of careplan (e.g nurses, doctors, spricalists).
+* [Issue #49](https://github.com/hl7ch/ch-etoc/issues/49): Careplan section dropped. Reason: It can be assumed that careplans will be available at best as pdf files for the foreseeable future. There is therefore a need to provide careplans as an attachment. This is what the Attachment section is for.
 * [Issue #50](https://github.com/hl7ch/ch-etoc/issues/50): Dropped  CH eTOC Attachment. Attachments are now mapped to Composition.section:orderReferral.entry:DocumentReference.
 * [Issue #54](https://github.com/hl7ch/ch-etoc/issues/54): Improved text in index.html.
 * [Issue #58](https://github.com/hl7ch/ch-etoc/issues/58): Corrected title of immunization in questionnaire to "Impfstatus".

@@ -33,7 +33,7 @@ In the [3rd report of the Interprofessional Working Group on Electronic Patient 
 At the working group meeting in February 2021, it was decided that a first version of eTOC shall be based on the the [FHIR International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/).
 
 However, this first version of CH eTOC still allows many free text entries. 
-Clinical content uses mostly the same resources as the IPS. The resource definitions are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS.
+Clinical content uses mostly the same resources as the IPS. The resource definitions are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core.
     
 
 {:class="table table-bordered"}
@@ -156,29 +156,33 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
 
 In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionPurpose).
 
-CH eTOC  alllows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems) and[sectionAttachment](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/section:sectionAttachment) for attachments (whatever is considered as important).
+CH eTOC  alllows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems). [sectionAttachment](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/section:sectionAttachment) allowsnfor attachments (whatever is considered as important).
 
-There is no sectionVitalSigns such as provided by the [IPS](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips-definitions.html#Composition.section:sectionVitalSigns) in order to prevent duplicate content.
+There is no sectionVitalSigns  such as provided by the [IPS](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips-definitions.html#Composition.section:sectionVitalSigns). This is in order to prevent duplicate content.
 
-All other secctions for clinical wording use the same wording for sections as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
+SectionPlanOfCare is omitted for the following reason: It can be assumed that careplans will be available at best as pdf files for the foreseeable future. There is therefore a need to provide careplans as an attachment. This is what the Attachment section is for.
 
-[sectionMedications](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionMedications)
-[sectionImmunizations](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionImmunizations)
-[sectionAllergies](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionAllergies)
-[sectionPastIllnessHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPastIllnessHx)
-[sectionFunctionalStatus](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/ection:sectionFunctionalStatus)
-[sectionProceduresHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionProceduresHx)
-[sectionSocialHistory](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionSocialHistory)
-[sectionMedicalDevices](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionMedicalDevices)
-[sectionResults](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/ection:sectionResults)
-[sectionPregnancyHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPregnanc)
-[sectionPlanOfCare](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPlanOfCare)
+All other secctions for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
 
-As a consequence, the first version of CH eTOC does not claim to be conformant to IPS.
+[sectionMedications](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionMedications) 
+[sectionImmunizations](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionImmunizations) 
+[sectionAllergies](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionAllergies) 
+[sectionPastIllnessHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPastIllnessHx) 
+[sectionFunctionalStatus](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/ection:sectionFunctionalStatus) 
+[sectionProceduresHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionProceduresHx) 
+[sectionSocialHistory](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionSocialHistory) 
+[sectionMedicalDevices](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionMedicalDevices) 
+[sectionResults](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/ection:sectionResults) 
+[sectionPregnancyHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPregnancy) 
+
+
+As a consequence of the above CH eTOC does not claim to be conformant to IPS for now.
 
 Derivations for use cases in different disciplines are to be defined later. 
 
-This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core. eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested service and some additional information (e.g. coverage, room preferance etc.). Resources for such purpose are referenced by the ServiceRequest resource. Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) and follow the definition in the ORF Implementation Guide.  
+eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested service and some additional information (e.g. coverage, room preferance etc.). 
+
+Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) and follow the definition in the ORF Implementation Guide.  
 
 Copy receiver is ment to receive a copy from the order and all evolving results thereof.
 

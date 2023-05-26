@@ -69,8 +69,8 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-cardiology|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplan|1.1.0"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
+//* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplans|1.1.0"
+//* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|1.1.0"
 * url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc"
 * version = "1.1.0-assembled"
@@ -1391,49 +1391,47 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].item.text = "EKG / Kardiologische Befunde"
 * item[=].item.type = #text
-* item[+].linkId = "careplan"
-* item[=].text = "Therapie / Pflegeplanung"
+/*≈
+* item[+].linkId = "careplans"
+* item[=].text = "Verlauf und Therapie- / Pflegeplanung"
 * item[=].type = #group
 * item[=].item.linkId = "careplan.title"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.title"
 * item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
 * item[=].item.type = #string
 * item[=].item.repeats = true
+
 * item[=].item.item[0].linkId = "careplan.note"
 * item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
 * item[=].item.item[=].text = "Anmerkung"
 * item[=].item.item[=].type = #text
+
 * item[=].item.item[+].linkId = "careplan.data"
 * item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.data"
 * item[=].item.item[=].text = "Daten"
 * item[=].item.item[=].type = #string
+*/
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
-* item[=].item.linkId = "attachment.title"
-* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
-* item[=].item.type = #string
-* item[=].item.repeats = true
-/*
-* item[=].item.item[0].linkId = "attachment.description"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#description"
-* item[=].item.item[=].text = "Anmerkung"
-* item[=].item.item[=].type = #text
-*/
-* item[=].item.item[+].linkId = "attachment.data"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attachment.data"
-* item[=].item.item[=].text = "Daten"
-* item[=].item.item[=].type = #string
-/* item[=].item.item[+].linkId = "attachment.contenttype"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attacchment.contentType"
-* item[=].item.item[=].text = "Datentyp"
-* item[=].item.item[=].type = #code
-*/
+
+* item[=].item[+].linkId = "attachment.title"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
+* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.descritption"
+* item[=].item[=].item[=].text = "Anmerkung"
+* item[=].item[=].item[=].type = #string
+
+
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group
+
 * item[=].item.linkId = "note.text"
-* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.note.text"
 * item[=].item.text = "Kommentar"
 * item[=].item.type = #string

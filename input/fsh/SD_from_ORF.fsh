@@ -64,10 +64,6 @@ Reserved for specification of a particular form for referrals to clinical subspe
     imagingresults 0..* and
     cardiologyresults 0..*
 
- //   diagnosticReports 0..* and  // not used
- /*   medicalCarePlans 0..* and 
-    nursingCarePlans 0..
-*/
 * supportingInfo[secondarydiagnosis] MS
 * supportingInfo[secondarydiagnosis] only Reference(ChEtocSecondaryDiagnosisCondition) 
 * supportingInfo[secondarydiagnosis] ^short = "Additional problem / secondary diagnosis"
@@ -106,15 +102,6 @@ Reserved for specification of a particular form for referrals to clinical subspe
 * supportingInfo[cardiologyresults] MS
 * supportingInfo[cardiologyresults] only Reference(ChEtocCardiologyObservation)
 
-//* supportingInfo[medicalCarePlans] MS
-//* supportingInfo[medicalCarePlans] only Reference(ChEtocMedicalCarePlan)
-
-//* supportingInfo[nursingCarePlans] MS
-//* supportingInfo[nursingCarePlans] only Reference(ChEtocNursingCarePlan)
-
-/* ------- bodySite -------
-Currently no use intended
-*/
 //------- note -------
 * note MS
 * note.text MS
@@ -377,7 +364,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPregnancyHx].entry only Reference(ChEtocPregnancyStatusObservation)
 
 
-// ------- Composition.section: careplans -------?????
+/*------- Composition.section: careplans -------
 * section contains sectionPlanOfCare 0..1 MS
 * section[sectionPlanOfCare] ^short = "Contains information about careplans"
 * section[sectionPlanOfCare].title 1..1 MS
@@ -388,7 +375,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPlanOfCare].section 0..0
 * section[sectionPlanOfCare].entry 0.. MS
 * section[sectionPlanOfCare].entry only Reference(ChEtocCarePlan)
-
+*/
 // ------- Composition.section: attachment -------??????
 * section contains sectionAttachment 0..1 MS
 * section[sectionAttachment] ^short = "Contains attachments (whatever is considered as important)"
