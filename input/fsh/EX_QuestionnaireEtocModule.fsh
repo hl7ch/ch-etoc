@@ -727,7 +727,7 @@ Description: "Subquestionnaire Careplans"
 
 * item[=].item[+].linkId = "careplan.note"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
-* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].text = "Beschreibung"
 * item[=].item[=].type = #text
 
 * item[=].item[+].linkId = "careplan.data"  
@@ -759,7 +759,7 @@ Description: "Subquestionnaire Attachment"
 
 * item[=].item[+].linkId = "attachment.description"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.descritption"
-* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].text = "Beschreibung"
 * item[=].item[=].type = #string
 
 /*Module Note*/

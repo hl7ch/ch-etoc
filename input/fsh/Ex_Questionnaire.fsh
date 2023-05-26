@@ -1,9 +1,16 @@
-Instance: QuestionnaireEtoc
-InstanceOf: ChOrfQuestionnaire
-Title: "Questionnaire Electronic Transition of Care"
-Description: "Example for Questionnaire"
-Usage: #example
+Alias: $launchContext = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
+Alias: $request-priority = http://hl7.org/fhir/request-priority
+Alias: $sct = http://snomed.info/sct
+Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
+Alias: $ech-11-maritalstatus = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
+Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
+Alias: $bfs-medstats-21-encountertype = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+Alias: $appointmentstatus = http://hl7.org/fhir/appointmentstatus
+Alias: $ch-orf-cs-consentstatus = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus
 
+Instance: QuestionnaireEtoc
+InstanceOf: Questionnaire
+Usage: #example
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -12,12 +19,12 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#patient
+* extension[=].extension[=].valueCoding = $launchContext#patient
 * extension[=].extension[+].url = "type"
 * extension[=].extension[=].valueCode = #Patient
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
+* extension[=].extension[=].valueCoding = $launchContext#user "User"
 * extension[=].extension[+].url = "type"
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
@@ -69,8 +76,6 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-cardiology|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-//* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplans|1.1.0"
-//* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|1.1.0"
 * url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc"
 * version = "1.1.0-assembled"
@@ -78,7 +83,7 @@ Usage: #example
 * title = "QuestionnaireEtoc"
 * status = #active
 * subjectType = #Patient
-* date = "2022-08-27"
+* date = "2022-08-24"
 * publisher = "HL7 Switzerland"
 * contact.name = "Juerg P. Bleuer"
 * contact.telecom.system = #url
@@ -89,7 +94,11 @@ Usage: #example
 * item[=].text = "Auftrag"
 * item[=].type = #group
 * item[=].required = true
-* item[=].item[0].linkId = "order.placerOrderIdentifier"
+* item[=].item[0].linkId = "order.authoredOn"
+* item[=].item[=].definition = "http://build.fhir.org/ig/hl7ch/ch-orf/StructureDefinition-ch-orf-servicerequest.html#ServiceRequest.authoredOn"
+* item[=].item[=].text = "Daum/Zeit der Auftragserteilung"
+* item[=].item[=].type = #dateTime
+* item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
 * item[=].item[=].type = #string
@@ -183,11 +192,11 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.priority"
 * item[=].item[=].text = "Auftragspriorität"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://hl7.org/fhir/request-priority#routine "Die Anfrage hat normale Priorität."
+* item[=].item[=].answerOption[0].valueCoding = $request-priority#routine "Die Anfrage hat normale Priorität."
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#urgent "Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#asap "Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend."
+* item[=].item[=].answerOption[+].valueCoding = $request-priority#stat "Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall."
 * item[+].linkId = "receiver"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:receiver"
 * item[=].text = "Empfänger"
@@ -269,26 +278,26 @@ Usage: #example
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initiator"
 * item[=].text = "Initiant dieser Anmeldung"
 * item[=].type = #group
-* item[=].item[0].linkId = "initiator.legalguardian"
+* item[=].item[0].linkId = "initiator.legalrelation"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Juristische Beziehung zum Patienten"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#373068000 "Nicht definiert"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#58626002 "Gesetzlicher Vertreter"
-* item[=].item[+].linkId = "initiator.initiatorrelation"
+* item[=].item[=].answerOption[0].valueCoding = $sct#373068000 "Nicht definiert"
+* item[=].item[=].answerOption[+].valueCoding = $sct#58626002 "Gesetzlicher Vertreter"
+* item[=].item[+].linkId = "initiator.personalrelation"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:initator"
 * item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://snomed.info/sct#6089001 "Tochter"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#5616008 "Sohn"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127849001 "Ehemann"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#127850001 "Ehefrau"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#394921008 "Partner (eingetragene  Partnerschaft)"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#70924004 "Bruder"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#27733009 "Schwester"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#72705000 "Mutter"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#66839005 "Vater"
-* item[=].item[=].answerOption[+].valueCoding = http://snomed.info/sct#48385004 "Bekannt"
+* item[=].item[=].answerOption[0].valueCoding = $sct#66089001 "Tochter"
+* item[=].item[=].answerOption[+].valueCoding = $sct#65616008 "Sohn"
+* item[=].item[=].answerOption[+].valueCoding = $sct#127849001 "Ehemann"
+* item[=].item[=].answerOption[+].valueCoding = $sct#127850001 "Ehefrau"
+* item[=].item[=].answerOption[+].valueCoding = $sct#394921008 "Partner (eingetragene  Partnerschaft)"
+* item[=].item[=].answerOption[+].valueCoding = $sct#70924004 "Bruder"
+* item[=].item[=].answerOption[+].valueCoding = $sct#27733009 "Schwester"
+* item[=].item[=].answerOption[+].valueCoding = $sct#72705000 "Mutter"
+* item[=].item[=].answerOption[+].valueCoding = $sct#66839005 "Vater"
+* item[=].item[=].answerOption[+].valueCoding = $sct#48385004 "Bekannt"
 * item[=].item[+].linkId = "initiator.practitionerRole"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole#PractitionerRole.practitioner"
 * item[=].item[=].text = "Gesundheitsfachperson oder -organisation"
@@ -373,7 +382,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "initiator.relatedPerson.givenName"
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.name.given"
-* item[=].item[=].item[=].text = "Vorame"
+* item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "initiator.relatedPerson.phone"
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.telecom.value"
@@ -470,10 +479,10 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.gender"
 * item[=].item[=].text = "Geschlecht"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://hl7.org/fhir/administrative-gender#male "Männlich"
+* item[=].item[=].answerOption[0].valueCoding = $administrative-gender#male "Männlich"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/administrative-gender#female "Weiblich"
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/administrative-gender#other "Anderes"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#female "Weiblich"
+* item[=].item[=].answerOption[+].valueCoding = $administrative-gender#other "Anderes"
 * item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
 * item[=].item[=].extension.valueExpression.expression = "%patient.maritalStatus"
@@ -481,14 +490,14 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.maritalStatus"
 * item[=].item[=].text = "Zivilstand"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#1 "ledig"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#2 "verheiratet"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#3 "verwitwet"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#4 "geschieden"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#5 "unverheiratet"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#6 "in eingetragener Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#7 "aufgelöste Partnerschaft"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#9 "unbekannt"
+* item[=].item[=].answerOption[0].valueCoding = $ech-11-maritalstatus#1 "ledig"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#2 "verheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#3 "verwitwet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#4 "geschieden"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#5 "unverheiratet"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#6 "in eingetragener Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#7 "aufgelöste Partnerschaft"
+* item[=].item[=].answerOption[+].valueCoding = $ech-11-maritalstatus#9 "unbekannt"
 * item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
 * item[=].item[=].extension.valueExpression.expression = "%patient.telecom.where(system='phone').value"
@@ -659,23 +668,23 @@ Usage: #example
 * item[=].item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].item[=].type = #string
 * item[+].linkId = "requestedEncounter"
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounter#s"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:requestedEncounterDetails"
 * item[=].text = "Patientenaufnahme"
 * item[=].type = #group
 * item[=].item[0].linkId = "requestedEncounter.class"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.class"
 * item[=].item[=].text = "Voraussichtlich: Ambulant / Stationär / Notfall"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB "Ambulant"
-* item[=].item[=].answerOption[+].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP "Stationär"
-* item[=].item[=].answerOption[+].valueCoding = http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER "Notfall"
+* item[=].item[=].answerOption[0].valueCoding = $v3-ActCode#AMB "Ambulant"
+* item[=].item[=].answerOption[+].valueCoding = $v3-ActCode#IMP "Stationär"
+* item[=].item[=].answerOption[+].valueCoding = $v3-ActCode#EMER "Notfall"
 * item[=].item[+].linkId = "requestedEncounter.desiredAccommodation"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-encounter#Encounter.extension:desiredAccommodation"
 * item[=].item[=].text = "Zimmerkategorie"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerOption[0].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#1 "allgemein"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#2 "halbprivat"
-* item[=].item[=].answerOption[+].valueCoding = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype#3 "privat"
+* item[=].item[=].answerOption[0].valueCoding = $bfs-medstats-21-encountertype#1 "allgemein"
+* item[=].item[=].answerOption[+].valueCoding = $bfs-medstats-21-encountertype#2 "halbprivat"
+* item[=].item[=].answerOption[+].valueCoding = $bfs-medstats-21-encountertype#3 "privat"
 * item[+].linkId = "coverage"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.insurance"
 * item[=].text = "Kostenträger"
@@ -1075,7 +1084,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.givenName"
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.name.given"
-* item[=].item[=].item[=].text = "Vorame"
+* item[=].item[=].item[=].text = "Vorname"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "receiverCopy.relatedPerson.phone"
 * item[=].item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson.telecom.value"
@@ -1228,10 +1237,10 @@ Usage: #example
 * item[=].item[=].text = "Status"
 * item[=].item[=].type = #choice
 * item[=].item[=].required = true
-* item[=].item[=].answerOption[0].valueCoding = http://hl7.org/fhir/appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
+* item[=].item[=].answerOption[0].valueCoding = $appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
 * item[=].item[=].answerOption[=].initialSelected = true
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
-* item[=].item[=].answerOption[+].valueCoding = http://hl7.org/fhir/appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
+* item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
+* item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#booked "Vom Patienten und Leistungserbringer bestätigt (gebucht)"
 * item[=].item[+].linkId = "appointment.patientInstruction"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.patientInstruction"
 * item[=].item[=].text = "Patienteninformation für diesen Termin"
@@ -1243,38 +1252,28 @@ Usage: #example
 * item[=].item.linkId = "patient.consent.statement"
 * item[=].item.text = "Ist der Patient über die Anmeldung informiert und explizit einverstanden?"
 * item[=].item.type = #choice
-* item[=].item.answerOption[0].valueCoding = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus#ExplicitAgreement "Patient is informed and has explicitly agreed"
-* item[=].item.answerOption[+].valueCoding = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
+* item[=].item.answerOption[0].valueCoding = $ch-orf-cs-consentstatus#ExplicitAgreement "Patient is informed and has explicitly agreed"
+* item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
 * item[=].item.item.linkId = "patient.consent.statement.note"
-* item[=].item.item.text = "Anmerkung"
+* item[=].item.item.text = "Beschreibung"
 * item[=].item.item.type = #string
-
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
 * item[=].type = #group
-
-* item[=].item[+].linkId = "purpose.aim"
+* item[=].item[0].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].item[=].text = "Procedere / Behandlung"
+* item[=].item[=].text = "Ziel"
 * item[=].item[=].type = #string
-//* item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "purpose.aim.detail"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail.text"
-* item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"
-* item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].repeats = true
-
+* item[=].item[=].repeats = true
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
 * item[=].item[=].text = "Begründung"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
-
 * item[+].linkId = "diagnosislist"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
-* item[=].item[0].linkId = "diagnosisList.primaryDiagnosis"
+* item[=].item[0].linkId = "diagnosisList.primarydiagnosis"
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "diagnosisList.primaryDiagnosis.item"
@@ -1282,7 +1281,7 @@ Usage: #example
 * item[=].item[=].item.text = "Hauptdiagnose / Problem"
 * item[=].item[=].item.type = #string
 * item[=].item[=].item.repeats = true
-* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"
+* item[=].item[+].linkId = "diagnosisList.secondarydiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "diagnosisList.secondaryDiagnosis.item"
@@ -1356,7 +1355,7 @@ Usage: #example
 * item[=].item.text = "Allergien / Intoleranzen"
 * item[=].item.type = #text
 * item[+].linkId = "immunization"
-* item[=].text = "Impfstatus"
+* item[=].text = "Allergien und Intoleranzen"
 * item[=].type = #group
 * item[=].item.linkId = "immunization.status"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
@@ -1391,47 +1390,26 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].item.text = "EKG / Kardiologische Befunde"
 * item[=].item.type = #text
-/*≈
-* item[+].linkId = "careplans"
-* item[=].text = "Verlauf und Therapie- / Pflegeplanung"
-* item[=].type = #group
-* item[=].item.linkId = "careplan.title"
-* item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.title"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
-* item[=].item.type = #string
-* item[=].item.repeats = true
-
-* item[=].item.item[0].linkId = "careplan.note"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
-* item[=].item.item[=].text = "Anmerkung"
-* item[=].item.item[=].type = #text
-
-* item[=].item.item[+].linkId = "careplan.data"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.data"
-* item[=].item.item[=].text = "Daten"
-* item[=].item.item[=].type = #string
-*/
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
-
-* item[=].item[+].linkId = "attachment.title"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
-* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "attachment.description"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.descritption"
-* item[=].item[=].item[=].text = "Anmerkung"
-* item[=].item[=].item[=].type = #string
-
-
+* item[=].item.linkId = "attachtment.title"
+* item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.title"
+* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].item.type = #string
+* item[=].item.repeats = true
+* item[=].item.item[0].linkId = "attachment.description"
+* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.annotation"
+* item[=].item.item[=].text = "Beschreibung"
+* item[=].item.item[=].type = #text
+* item[=].item.item[+].linkId = "attachment.data"
+* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.data"
+* item[=].item.item[=].text = "Daten"
+* item[=].item.item[=].type = #string
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group
-
 * item[=].item.linkId = "note.text"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.note.text"
+* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item.text = "Kommentar"
 * item[=].item.type = #string

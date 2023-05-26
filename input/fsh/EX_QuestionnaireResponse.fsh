@@ -398,7 +398,7 @@ Verlauf und Therapie- / Pflegeplanung
 
 * item[=].item[+].linkId = "careplan.note"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
-* item[=].item[=].text = "Anmerkung"
+* item[=].item[=].text = ""
 * item[=].item[=].answer[+].valueString = "Reha-Verlauf S Ufferer nach Bypass 2007"
 */
 /* ---------------------------------------------------------------------------
@@ -408,14 +408,16 @@ Anhangs
 
 * item[=].item[+].linkId = "attachment.title"  
 * item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
-* item[=].item[=].answer[+].valueString = "EKGt_S_Ufferer_26052023.pdf"
+* item[=].item[=].answer[+].valueString = "EKG_S_Ufferer_26052023.pdf"
 * item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].answer[=].item[=].text = "Beschreibung" 
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "EKG vom 9.6.2021"
 
 * item[=].item[+].linkId = "attachment.title"  
 * item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
 * item[=].item[=].answer[+].valueString = "Pflegeplan_Spitex_S_Ufferer_26052023.pdf"
 * item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].answer[=].item[=].text = "Beschreibung" 
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "Aktueller Pflegeplan der Spitex"
 
 
