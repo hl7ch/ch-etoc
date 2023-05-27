@@ -1262,9 +1262,13 @@ Usage: #example
 * item[=].type = #group
 * item[=].item[0].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].item[=].text = "Ziel"
+* item[=].item[=].text = "Procedere / Behandlung"
 * item[=].item[=].type = #string
-* item[=].item[=].repeats = true
+* item[=].item[=].item.linkId = "purpose.aim.detail"
+* item[=].item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail.text"
+* item[=].item[=].item.text = "Procedere / Behandlung im Detail"
+* item[=].item[=].item.type = #string
+* item[=].item[=].item.repeats = true
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.reasonCode.text"
 * item[=].item[=].text = "Begründung"
@@ -1273,7 +1277,7 @@ Usage: #example
 * item[+].linkId = "diagnosislist"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
-* item[=].item[0].linkId = "diagnosisList.primarydiagnosis"
+* item[=].item[0].linkId = "diagnosisList.primaryDiagnosis"
 * item[=].item[=].text = "Hauptdiagnosen / Probleme"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "diagnosisList.primaryDiagnosis.item"
@@ -1281,7 +1285,7 @@ Usage: #example
 * item[=].item[=].item.text = "Hauptdiagnose / Problem"
 * item[=].item[=].item.type = #string
 * item[=].item[=].item.repeats = true
-* item[=].item[+].linkId = "diagnosisList.secondarydiagnosis"
+* item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis"
 * item[=].item[=].text = "Nebendiagnosen / Probleme"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "diagnosisList.secondaryDiagnosis.item"
@@ -1334,19 +1338,15 @@ Usage: #example
 * item[+].linkId = "medication"
 * item[=].text = "Medikation"
 * item[=].type = #group
-* item[=].item.linkId = "medication.medicationstatement"
-* item[=].item.definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement"
-* item[=].item.text = "Medikation"
-* item[=].item.type = #group
+* item[=].item.linkId = "medication.medication"
+* item[=].item.definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
+* item[=].item.text = "Medikament"
+* item[=].item.type = #string
 * item[=].item.repeats = true
-* item[=].item.item[0].linkId = "medication.medicationstatement.medication"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
-* item[=].item.item[=].text = "Medikament"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "medication.medicationstatement.dosage"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
-* item[=].item.item[=].text = "Dosierung"
-* item[=].item.item[=].type = #string
+* item[=].item.item.linkId = "medication.dosage"
+* item[=].item.item.definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
+* item[=].item.item.text = "Dosierung"
+* item[=].item.item.type = #string
 * item[+].linkId = "allergyIntolerance"
 * item[=].text = "Allergien und Intoleranzen"
 * item[=].type = #group
@@ -1393,19 +1393,15 @@ Usage: #example
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
-* item[=].item.linkId = "attachtment.title"
-* item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.title"
+* item[=].item.linkId = "attachment.title"
+* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
 * item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
 * item[=].item.type = #string
 * item[=].item.repeats = true
-* item[=].item.item[0].linkId = "attachment.note"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.annotation"
-* item[=].item.item[=].text = "Anmerkung"
-* item[=].item.item[=].type = #text
-* item[=].item.item[+].linkId = "attachment.data"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-attachment#Media.content.data"
-* item[=].item.item[=].text = "Daten"
-* item[=].item.item[=].type = #string
+* item[=].item.item.linkId = "attachment.description"
+* item[=].item.item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.descritption"
+* item[=].item.item.text = "Beschreibung"
+* item[=].item.item.type = #string
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group
