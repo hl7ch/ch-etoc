@@ -1334,28 +1334,30 @@ Usage: #example
 * item[+].linkId = "medication"
 * item[=].text = "Medikation"
 * item[=].type = #group
-* item[=].item.linkId = "medication.medicationstatement"
+/* item[=].item.linkId = "medication"
 * item[=].item.definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement"
 * item[=].item.text = "Medikation"
-* item[=].item.type = #group
-* item[=].item.repeats = true
-* item[=].item.item[0].linkId = "medication.medicationstatement.medication"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
-* item[=].item.item[=].text = "Medikament"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "medication.medicationstatement.dosage"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
-* item[=].item.item[=].text = "Dosierung"
-* item[=].item.item[=].type = #string
+* item[=].type = #group
+* item[=].repeats = true
+*/
+* item[=].item[+].linkId = "medication.medication"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
+* item[=].item[=].text = "Medikament"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+* item[=].item[=].item[+].linkId = "medication.dosage"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
+* item[=].item[=].item[=].text = "Dosierung"
+* item[=].item[=].item[=].type = #string
 * item[+].linkId = "allergyIntolerance"
 * item[=].text = "Allergien und Intoleranzen"
 * item[=].type = #group
 * item[=].item.linkId = "allergyIntolerance.status"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
-* item[=].item.text = "Allergien / Intoleranzen"
+* item[=].item.text = "Bekannte Allergien / Intoleranzen"
 * item[=].item.type = #text
 * item[+].linkId = "immunization"
-* item[=].text = "Allergien und Intoleranzen"
+* item[=].text = "Impfstatus"
 * item[=].type = #group
 * item[=].item.linkId = "immunization.status"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
@@ -1366,7 +1368,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].item.linkId = "lab.result"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
-* item[=].item.text = "Laborresultat"
+* item[=].item.text = "Laborresultate"
 * item[=].item.type = #string
 * item[=].item.repeats = true
 * item[+].linkId = "pathology"
@@ -1383,7 +1385,7 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:imagingresults"
 * item[=].item.text = "Befunde aus der Bildgebung"
 * item[=].item.type = #text
-* item[+].linkId = "cardiology"
+* item[+].linkId = "Kardiologie"
 * item[=].text = "cardiology"
 * item[=].type = #group
 * item[=].item.linkId = "cardiology.result"

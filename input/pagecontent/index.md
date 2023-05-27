@@ -32,7 +32,7 @@ In the [3rd report of the Interprofessional Working Group on Electronic Patient 
 
 At the working group meeting in February 2021, it was decided that a first version of eTOC shall be based on the the [FHIR International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/).
 
-However, this first version of CH eTOC still allows many free text entries. 
+However, this first version of CH eTOC still allows many free text entries. Entries to be assumed 
 Clinical content uses mostly the same resources as the IPS. The resource definitions are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core.
     
 

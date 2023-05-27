@@ -548,18 +548,19 @@ Description: "Subquestionnaire Medication"
 * date = "2022-05-25"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "medication.medicationstatement"
+/* item[+].linkId = "medication"
 * item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement"
 * item[=].text = "Medikation"
 * item[=].type = #group
 * item[=].repeats = true // Systems might provide medication as multiple entries 
+*/
+* item[+].linkId = "medication.medication"
+* item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
+* item[=].text = "Medikament"
+* item[=].type = #string
+* item[=].repeats = true
 
-* item[=].item[+].linkId = "medication.medicationstatement.medication"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
-* item[=].item[=].text = "Medikament"
-* item[=].item[=].type = #string
-
-* item[=].item[+].linkId = "medication.medicationstatement.dosage"
+* item[=].item[+].linkId = "medication.dosage"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
 * item[=].item[=].text = "Dosierung"
 * item[=].item[=].type = #string

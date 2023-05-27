@@ -329,45 +329,57 @@ Anamnese
 Medikation
 */
 * item[+].linkId = "medication"
+* item[=].text = "Medikation"
 
-/* item[=].item[+].linkId = "medication.medicationstatement"
+* item[=].item[+].linkId = "medication.medication"
+* item[=].item[=].text = "Medikament"
+* item[=].item[=].answer[+].valueString = "Erdabyclor"
+* item[=].item[=].answer[=].item[+].linkId = "medication.dosage"
+* item[=].item[=].answer[=].item[=].text = "Dosierung"
+* item[=].item[=].answer[=].item[=].answer.valueString = "0/25 mg 1/2-0-0-0"
 
-* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
-* item[=].item[=].item[=].answer.valueString = "Erdabyclor"
-
-* item[=].item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
-* item[=].item[=].item[=].item[=].answer.valueString = "0/25 mg 1/2-0-0-0"
-*/
-* item[=].item[+].linkId = "medication.medicationstatement"
-
-* item[=].item[=].item[+].linkId = "medication.medicationstatement.medication"
-* item[=].item[=].item[=].answer.valueString = "Nitroglycerin"
-
-
-* item[=].item[=].item[+].linkId = "medication.medicationstatement.dosage"
-* item[=].item[=].item[=].answer.valueString = "0.8 mg s.L.; 16h15"
+* item[=].item[+].linkId = "medication.medication"
+* item[=].item[=].text = "Medikament"
+* item[=].item[=].answer[+].valueString = "Nitroglycerin"
+* item[=].item[=].answer[=].item[+].linkId = "medication.dosage"
+* item[=].item[=].answer[=].item[=].text = "Dosierung"
+* item[=].item[=].answer[=].item[=].answer.valueString = "0.8 mg s.L.; 16h15"
 
 /* ---------------------------------------------------------------------------
 Allergien und Intoleranzen
 */
-* item[+].linkId = "allergy"
+* item[+].linkId = "allergyIntolerance"
+* item[=].text = "Allergien und Intoleranzen"
+
+* item[=].item[+].linkId = "allergyIntolerance.status"
+* item[=].item[=].text = "Bekannte Allergien / Intoleranzen"
 
 /* ---------------------------------------------------------------------------
 Impfungen
 */
-* item[+].linkId = "immunizationstatus"
+* item[+].linkId = "immunization"
+* item[=].text = "Impfstatus"
 
-* item[=].item[+].linkId = "immunizationstatus.immunizations"
+* item[=].item[+].linkId = "immunizationstatus.status"
+* item[=].item[=].text = "Bisherige Impfungen"
 
 /* ---------------------------------------------------------------------------
 Labor
 */
 * item[+].linkId = "lab"
+* item[=].text = "Labor"
+
+* item[=].item[+].linkId = "lab.result"
+* item[=].item[=].text = "Laborresultate"
 
 /* ---------------------------------------------------------------------------
 Pathologie
 */
 * item[+].linkId = "pathology"
+* item[=].text = "Pathologie"
+
+* item[=].item[+].linkId = "pathology.result"
+* item[=].item[=].text = "Pathologiebefunde"
 
 /* ---------------------------------------------------------------------------
 Bildgebung
@@ -375,16 +387,18 @@ Bildgebung
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
 
-* item[=].item[+].linkId = "imaging.imagingresults"
+* item[=].item[+].linkId = "imaging.imagingresult"
 * item[=].item[=].text = "Befund aus der Bildgebung"
 
 /* ---------------------------------------------------------------------------
 Kardiologie
 */
 * item[+].linkId = "cardiology"
+* item[=].text = "Kardiologie"
 
 * item[=].item[+].linkId = "cardiology.cardiologyresults"
-* item[=].item[=].answer[+].valueString = "ST-Hebungen V1-V5"
+* item[=].item[=].text = "EKG / Kardiologische Befunde"
+* item[=].item[=].answer.valueString = "ST-Hebungen V1-V5"
 
 /* ---------------------------------------------------------------------------
 Verlauf und Therapie- / Pflegeplanung
@@ -405,6 +419,7 @@ Verlauf und Therapie- / Pflegeplanung
 Anhangs
 */
 * item[+].linkId = "attachments"
+* item[=].text = "Anhang"
 
 * item[=].item[+].linkId = "attachment.title"  
 * item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
