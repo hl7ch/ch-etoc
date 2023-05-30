@@ -8,10 +8,10 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 
 #### Added
 ##### Adopted from CH ORF
-* [ORF Issue #61](https://github.com/hl7ch/ch-orf/issues/61): Added Family doctor.
 * [ORF Issue #71](https://github.com/hl7ch/ch-orf/issues/71): Added Initiator and his relationship to to the patient.
 * [ORF Issue #72](https://github.com/hl7ch/ch-orf/issues/72): Added Patient consent.
 * [ORF Issue #73](https://github.com/hl7ch/ch-orf/issues/73): Added Entry date, discharge Date and Organization of stationary episode antecedent to requested service (e.g spitex).
+* [Issue #106](https://github.com/hl7ch/ch-orf/issues/106): Changed Cardinality of Contact Person from 0..1 to 0..*.* [ORF Issue #61](https://github.com/hl7ch/ch-orf/issues/61): Added Family doctor.
   
 ##### Added in CH eTOC
 * [Issue #59](https://github.com/hl7ch/ch-etoc/issues/59): Added examples for AllergyIntolerance (Penicillineallergie), LabObservation(Haemoglobin), LabObservation (HbA1c), PathologyObservation (Biopsie Duodenum / Magen), RadiologyObservation (Thx ap / seitl.) and CardiologyObservation (EKG).
@@ -19,7 +19,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 
 #### Changed / Updated
 ##### Adopted from CH ORF
-* [ORF Issue Issue #108](https://github.com/hl7ch/ch-orf/issues/108): Improve slicing that infor entry[x] warnings are not shown.
+* [ORF Issue Issue #108](https://github.com/hl7ch/ch-orf/issues/108): Improve slicing that info entry[x] warnings are not shown.
 
 ##### Changed / Updated in CH eTOC
 * [Issue #38](https://github.com/hl7ch/ch-etoc/issues/38): Added sections in composition referencing clinical content.
@@ -28,7 +28,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [Issue #49](https://github.com/hl7ch/ch-etoc/issues/49): Careplan section dropped. Reason: It can be assumed that careplans will be available at best as pdf files for the foreseeable future. There is therefore a need to provide careplans as an attachment. This is what the Attachment section is for.
 * [Issue #50](https://github.com/hl7ch/ch-etoc/issues/50): Dropped  CH eTOC Attachment. Attachments are now mapped to Composition.section:orderReferral.entry:DocumentReference.
 * [Issue #54](https://github.com/hl7ch/ch-etoc/issues/54): Improved text in index.html.
-* [Issue #58](https://github.com/hl7ch/ch-etoc/issues/58): Corrected title of immunization in questionnaire to "Impfstatus".
+* [Issue #58](https://github.com/hl7ch/ch-etoc/issues/58): Corrected title of immunizationstatus in questionnaire to "Impfstatus".
 * [Issue #61](https://github.com/hl7ch/ch-etoc/issues/61): Corrected receiver.organization.gln to Organization.identifier:GLN.
 * [Issue #62](https://github.com/hl7ch/ch-etoc/issues/62): Corrected discrepancies between profiles and questionnaire.
 * [Issue #63](https://github.com/hl7ch/ch-etoc/issues/63): Corrected cardinality of appointment.location to 0..1.
@@ -64,7 +64,7 @@ During the ballot, the following comments came in, which will be taken into acco
 * [ORF Issue #101](https://github.com/hl7ch/ch-orf/issues/101): Cardinality for Questionnaire and QR in Composition set to 0..1. For details see home.
 
 #### Added
-* [Issue #22](https://github.com/hl7ch/ch-etoc/issues/22): Various attachments now possible.
+* [Issue #22](https://github.com/hl7ch/ch-etoc/issues/22): Various attachment now possible.
 
 #### Changed / Updated
 * [Issue #4](https://github.com/hl7ch/ch-etoc/issues/4): Reference to IPAG report added in home.

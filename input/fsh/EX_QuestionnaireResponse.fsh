@@ -357,10 +357,10 @@ Allergien und Intoleranzen
 /* ---------------------------------------------------------------------------
 Impfungen
 */
-* item[+].linkId = "immunization"
+* item[+].linkId = "immunizationStatus"
 * item[=].text = "Impfstatus"
 
-* item[=].item[+].linkId = "immunizationstatus.status"
+* item[=].item[+].linkId = "immunizationStatus.status"
 * item[=].item[=].text = "Bisherige Impfungen"
 
 /* ---------------------------------------------------------------------------
@@ -387,7 +387,7 @@ Bildgebung
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
 
-* item[=].item[+].linkId = "imaging.imagingresult"
+* item[=].item[+].linkId = "imaging.result"
 * item[=].item[=].text = "Befund aus der Bildgebung"
 
 /* ---------------------------------------------------------------------------
@@ -396,7 +396,7 @@ Kardiologie
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
 
-* item[=].item[+].linkId = "cardiology.cardiologyresults"
+* item[=].item[+].linkId = "cardiology.results"
 * item[=].item[=].text = "EKG / Kardiologische Befunde"
 * item[=].item[=].answer.valueString = "ST-Hebungen V1-V5"
 
@@ -418,7 +418,7 @@ Verlauf und Therapie- / Pflegeplanung
 /* ---------------------------------------------------------------------------
 Anhangs
 */
-* item[+].linkId = "attachments"
+* item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 
 * item[=].item[+].linkId = "attachment.title"  
@@ -429,7 +429,7 @@ Anhangs
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "EKG vom 9.6.2021"
 
 * item[=].item[+].linkId = "attachment.title"  
-* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item[=].text =  "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
 * item[=].item[=].answer[+].valueString = "Pflegeplan_Spitex_S_Ufferer_26052023.pdf"
 * item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
 * item[=].item[=].answer[=].item[=].text = "Beschreibung" 
@@ -441,5 +441,5 @@ Anhangs
 * item[=].text = "Bemerkungen"
 
 * item[=].item[+].linkId = "note.text"
-* item[=].item[=].text = "Text" 
+* item[=].item[=].text = "Kommentar" 
 * item[=].item[=].answer[+].valueString = "Patient ist sehr ängstlich"

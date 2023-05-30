@@ -154,9 +154,9 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
 
 <sup>&#91;Table 1&#93;</sup> *Resources and datatypes for clinical content*
 
-In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionPurpose).
+In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionPurpose).
 
-CH eTOC  alllows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems). [sectionAttachment](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/section:sectionAttachment) allowsnfor attachments (whatever is considered as important).
+CH eTOC  alllows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems). [sectionAttachment]( http://fhir.ch/ig/ch-etoc/branches/main/section:sectionAttachment) allowsnfor attachment (whatever is considered as important).
 
 There is no sectionVitalSigns  such as provided by the [IPS](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips-definitions.html#Composition.section:sectionVitalSigns). This is in order to prevent duplicate content.
 
@@ -164,16 +164,16 @@ SectionPlanOfCare is omitted for the following reason: It can be assumed that ca
 
 All other secctions for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
 
-[sectionMedications](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionMedications) 
-[sectionImmunizations](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionImmunizations) 
-[sectionAllergies](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionAllergies) 
-[sectionPastIllnessHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPastIllnessHx) 
-[sectionFunctionalStatus](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/ection:sectionFunctionalStatus) 
-[sectionProceduresHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionProceduresHx) 
-[sectionSocialHistory](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionSocialHistory) 
-[sectionMedicalDevices](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionMedicalDevices) 
-[sectionResults](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/ection:sectionResults) 
-[sectionPregnancyHx](https://build.fhir.org/ig/hl7ch/ch-etoc/branches/main/sectionPregnancy) 
+[sectionMedications]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionMedications) 
+[sectionImmunizations]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionImmunizations) 
+[sectionAllergies]( http://fhir.ch/ig/ch-etoc/branches/main/sectionAllergies) 
+[sectionPastIllnessHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionPastIllnessHx) 
+[sectionFunctionalStatus]( http://fhir.ch/ig/ch-etoc/branches/main/ection:sectionFunctionalStatus) 
+[sectionProceduresHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionProceduresHx) 
+[sectionSocialHistory]( http://fhir.ch/ig/ch-etoc/branches/main/sectionSocialHistory) 
+[sectionMedicalDevices]( http://fhir.ch/ig/ch-etoc/branches/main/sectionMedicalDevices) 
+[sectionResults]( http://fhir.ch/ig/ch-etoc/branches/main/ection:sectionResults) 
+[sectionPregnancyHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionPregnancy) 
 
 
 As a consequence of the above CH eTOC does not claim to be conformant to IPS for now.

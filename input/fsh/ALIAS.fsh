@@ -35,6 +35,7 @@ Alias:   ChCorePractitioner =           http://fhir.ch/ig/ch-core/StructureDefin
 Alias:   ChCorePractitionerRole =       http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitionerrole
 Alias:   ChCoreOrganization =           http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization
 
+
 // CH ORF SD
 Alias:   ChOrfServiceRequest =          http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest
 Alias:   ChOrfQuestionnaire =           http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire
@@ -48,6 +49,7 @@ Alias:   ChCoreCSEncounterType =        http://fhir.ch/ig/ch-core/CodeSystem/bfs
 // CH ORF CS
 Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype
 Alias:   CSCoverageIdentifierType =     http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype
+Alias:   ChOrfDocumentReference =       http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference
 
 // HL7 / FHIR
 Alias:   HL7BodyHeight =                http://hl7.org/fhir/StructureDefinition/bodyheight

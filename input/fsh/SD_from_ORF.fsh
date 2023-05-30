@@ -115,13 +115,12 @@ Description: "Definition for the Bundle (document) resource in the context of el
 * . ^short = "CH eTOC Bundle (document)"
 * . ^definition = "This IG follows the IHE Scheduled Workflow (SWF) Profile: 
 An Order Filler accepts from an Order Placer a single Order that it equates to a Filler Order 
-(which is concept commonly used in HL7) or Imaging Service Request (Concept commonly used in DICOM). 
+(which is concept commonly used in HL7) or imaging Service Request (Concept commonly used in DICOM). 
 Consequently one CH eTOC Document contains one eTOC ServiceRequest which depicts one Placer Order 
-equal one Filler Order equal one Imaging Service Request."
+equal one Filler Order equal one imaging Service Request."
 
 // ---------- Bundle.entry:Composition ----------
-* entry[Composition].resource ^type.profile = Canonical(ChEtocComposition)
-
+* entry[Composition].resource ^type.profile = Canonical(http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition)
 
 Profile: ChEtocComposition
 Parent: ChOrfComposition
@@ -133,15 +132,29 @@ Description: "Definition for the Composition resource in the context of electron
 * category = SCT#721927009 // Zuweisungsschreiben 
 * type = SCT#419891008 // Nicht näher bezeichnetes Dokument
 
-// ---------- Composition.section.entry:ServiceRequest ----------
-// objection voted on 7.4.2022 tc meeting Issue #39
+// ---------- Composition.section.entry: Questionnaire ----------
+// Objection voted on 7.4.2022 tc meeting Issue #39
+* section[orderReferral].entry[Questionnaire] 1..1
+* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChOrfQuestionnaire)
+
+/* Objection voted on 7.4.2022 tc meeting Issue #39
 * section[orderReferral].entry[Questionnaire] 1..
-//* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChEtocQuestionnaire)
-* section[orderReferral].entry[QuestionnaireResponse] 1..
-* section[orderReferral].entry[QuestionnaireResponse] 
+* section[orderReferral].entry[Questionnaire] //^type.targetProfile = Canonical(http://hl7.org/fhir/StructureDefinition/StructureDefinition/Questionnaire)
+*/
+
+// ---------- Composition.section.entry: QuestionnaireResponse ----------
+// Objection voted on 7.4.2022 tc meeting Issue #39
+* section[orderReferral].entry[QuestionnaireResponse] 1..1
+* section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChOrfQuestionnaireResponse)
+
+
+// ---------- Composition.section.entry: ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
+
+// ---------- Composition.section.entry: DocumentReference ----------
 * section[orderReferral].entry[DocumentReference] 0..
-//* section[orderReferral].entry[DocumentReference] ^type.targetProfile = Canonical()
+* section[orderReferral].entry[DocumentReference] ^type.targetProfile = Canonical(ChOrfDocumentReference)
+
 
 /* ======== Definition of sections in CH ORF =========
 * section MS
@@ -259,7 +272,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionImmunizations].title 1..1 MS
 * section[sectionImmunizations].title ^short = "Immunizations"
 * section[sectionImmunizations].code 1..1 MS
-* section[sectionImmunizations].code = LNC#11369-6 "History of immunization Narrative"
+* section[sectionImmunizations].code = LNC#11369-6 "History of immunizationstatus Narrative"
 * section[sectionImmunizations].text MS
 * section[sectionImmunizations].section 0..0
 * section[sectionImmunizations].entry 0.. MS
@@ -378,7 +391,7 @@ Description: "Definition for the Composition resource in the context of electron
 */
 // ------- Composition.section: attachment -------??????
 * section contains sectionAttachment 0..1 MS
-* section[sectionAttachment] ^short = "Contains attachments (whatever is considered as important)"
+* section[sectionAttachment] ^short = "Contains attachment (whatever is considered as important)"
 * section[sectionAttachment].title 1..1 MS
 * section[sectionAttachment].title ^short = "Attachments"
 * section[sectionAttachment].code 1..1 MS

@@ -431,7 +431,7 @@ Description: "Example for Allergy / Intolerance"
 Instance: Haemoglobin
 InstanceOf: ChEtocLabObservation
 Title: "Haemoglobin"
-Description: "Example for Lab Result"
+Description: "Example for Lab result"
 * status = #final
 * code.text = "Hb: 112 g/l"
 * subject = Reference(SUfferer)
@@ -440,7 +440,7 @@ Description: "Example for Lab Result"
 Instance: HbA1c
 InstanceOf: ChEtocLabObservation
 Title: "Hb-A1c"
-Description: "Example for Lab Result"
+Description: "Example for Lab result"
 * status = #final
 * code.text = "HHb-A1c: 5.4 %"
 * subject = Reference(SUfferer)
@@ -449,17 +449,17 @@ Description: "Example for Lab Result"
 Instance: Biopsie
 InstanceOf: ChEtocPathologyObservation
 Title: "Biopsie Duodenum / Magen"
-Description: "Example for Pathology Result"
+Description: "Example for Pathology result"
 * status = #final
 * code.text = "Biopsien Duodenum, Magen, unruhige Z-Linie vom 19.09.2018:
 Die Veränderungen der Duodenalschleimhaut passen gut zu einem geringen petpischen Schleimhautschaden. Die Magenschleimhaut zeigt das Bild einer reaktiven Gastropathie. Erosive Veränderungen gelangen hier nicht zur Darstellung. Kein Helicopacter, keine Metaplasie, keine pathogenen Erreger nachgeewiesen."
 * subject = Reference(SUfferer)
 
 
-Instance: Imaging
+Instance: imaging
 InstanceOf: ChEtocRadiologyObservation
 Title: "Thx ap / seitl."
-Description: "Example for Imaging Result"
+Description: "Example for imaging result"
 * status = #final
 * code.text = "Thorax ap / seitl. vom 12.05.23: unauffällig"
 * subject = Reference(SUfferer)
@@ -468,7 +468,7 @@ Description: "Example for Imaging Result"
 Instance: Electrocardiogram
 InstanceOf: ChEtocCardiologyObservation
 Title: "EKG"
-Description: "Example for Cardiology Result"
+Description: "Example for cardiology result"
 * status = #final
 * code.text = "EKG vom 12.5.23: unauffällig"
 * subject = Reference(SUfferer)

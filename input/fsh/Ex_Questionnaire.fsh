@@ -58,7 +58,7 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-purpose|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosislist|1.1.0"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosis|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-anamnesis|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
@@ -66,7 +66,7 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-allergyIntolerance|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
-* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-immunization|1.1.0"
+* extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-immunizationstatus|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-lab|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
@@ -77,7 +77,7 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-cardiology|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|1.1.0"
-* url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc"
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * version = "1.1.0-assembled"
 * name = "QuestionnaireEtoc"
 * title = "QuestionnaireEtoc"
@@ -1274,7 +1274,7 @@ Usage: #example
 * item[=].item[=].text = "Begründung"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
-* item[+].linkId = "diagnosislist"
+* item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
 * item[=].item[0].linkId = "diagnosisList.primaryDiagnosis"
@@ -1323,7 +1323,7 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofProcedures"
 * item[=].item[=].text = "Bisherige Abklärungen und Eingriffe"
 * item[=].item[=].type = #text
-* item[=].item[+].linkId = "anamnesis.device"
+* item[=].item[+].linkId = "anamnesis.devices"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:devices"
 * item[=].item[=].text = "Implantate, Schrittmacher, Neurostimulatoren etc."
 * item[=].item[=].type = #text
@@ -1354,10 +1354,10 @@ Usage: #example
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
 * item[=].item.text = "Allergien / Intoleranzen"
 * item[=].item.type = #text
-* item[+].linkId = "immunization"
-* item[=].text = "Allergien und Intoleranzen"
+* item[+].linkId = "immunizationStatus"
+* item[=].text = "Impfstatus"
 * item[=].type = #group
-* item[=].item.linkId = "immunization.status"
+* item[=].item.linkId = "immunizationStatus.status"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
 * item[=].item.text = "Bisherige Impfungen"
 * item[=].item.type = #text
@@ -1384,9 +1384,9 @@ Usage: #example
 * item[=].item.text = "Befunde aus der Bildgebung"
 * item[=].item.type = #text
 * item[+].linkId = "cardiology"
-* item[=].text = "cardiology"
+* item[=].text = "Kardiologie"
 * item[=].type = #group
-* item[=].item.linkId = "cardiology.result"
+* item[=].item.linkId = "cardiology.results"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].item.text = "EKG / Kardiologische Befunde"
 * item[=].item.type = #text
@@ -1395,7 +1395,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].item.linkId = "attachment.title"
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
 * item[=].item.type = #string
 * item[=].item.repeats = true
 * item[=].item.item.linkId = "attachment.description"

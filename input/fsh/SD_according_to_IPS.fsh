@@ -53,10 +53,10 @@ Description: "Definition for the Secondary Diagnosis Condition resource in the c
 Profile: ChEtocImmunization
 Parent: ChVacdImmunization
 Id: ch-etoc-immunization
-Title: "CH eTOC Immunization"
-Description: "Definition for the Immunization resource in the context of electronic transition of care."
+Title: "CH eTOC immunizationstatus"
+Description: "Definition for the immunizationstatus resource in the context of electronic transition of care."
 //* isSubpotent MS
-* . ^short = "CH eTOC Immunization"
+* . ^short = "CH eTOC immunizationstatus"
 * vaccineCode MS
 * vaccineCode.text MS
 * occurrenceDateTime MS
@@ -124,12 +124,12 @@ Description: "Definition for the Radiology Observation resource in the context o
 Profile: ChEtocCardiologyObservation
 Parent: Observation
 Id: ch-etoc-cardiolology-observation
-Title: "CH eTOC Cardiology Observation"
-Description: "Definition for the Cardiology Observation resource in the context of CH eTOC."
+Title: "CH eTOC cardiology Observation"
+Description: "Definition for the cardiology Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Cardiolology Observation"
 // Supplementary to IPS
 * status MS
-* code = LNC#77412-5 "Cardiology History and physical note"
+* code = LNC#77412-5 "cardiology History and physical note"
 * subject only Reference(ChCorePatient) 
 
 

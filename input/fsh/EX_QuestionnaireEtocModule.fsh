@@ -2,6 +2,7 @@ Instance: QuestionnaireEtoc-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire eTOC (Modular version)"
 Description: "Example for Questionnaire"
+Usage: #example
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -28,7 +29,7 @@ Description: "Example for Questionnaire"
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
 
-* url = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc-modular"
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc-modular"
 * name = "QuestionnaireEtoc-modular"
 * title = "QuestionnaireEtoc-modular"
 * status = #active
@@ -258,14 +259,14 @@ Wozu wird der Patient zugewiesen
 * item[=].item.type = #display
 
 /*------ Diagnosis and Clinical Findings ------------------------------ */
-* item[+].linkId = "diagnosislist"
+* item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosislist"
-* item[=].item.linkId = "diagnosislist.1"
-* item[=].item.text = "Unable to resolve 'diagnosislist' sub-questionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosis"
+* item[=].item.linkId = "diagnosisList.1"
+* item[=].item.text = "Unable to resolve 'diagnosisist' sub-questionnaire"
 * item[=].item.type = #display
 
 /*------ Anamnesis ------------------------------ */
@@ -301,15 +302,15 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'allergyIntolerance' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ immunization ------------------------------ */
-* item[+].linkId = "immunization"
-* item[=].text = "Allergien und Intoleranzen"
+/*------ immunizationstatus ------------------------------ */
+* item[+].linkId = "immunizationStatus"
+* item[=].text = "Impfstatus"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-immunization|2.0.0"
-* item[=].item.linkId = "immunization.1"
-* item[=].item.text = "Unable to resolve 'immunization' sub-questionnaire"
+* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-immunizationstatus|2.0.0"
+* item[=].item.linkId = "immunizationStatus.1"
+* item[=].item.text = "Unable to resolve 'immunizationstatus' sub-questionnaire"
 * item[=].item.type = #display
 
 /*------ Lab ------------------------------ */
@@ -334,7 +335,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'pathology' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Imaging ------------------------------ */
+/*------ imaging ------------------------------ */
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
 * item[=].type = #group
@@ -345,9 +346,9 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'lab' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Cardiology ------------------------------ */
+/*------ cardiology ------------------------------ */
 * item[+].linkId = "cardiology"
-* item[=].text = "cardiology"
+* item[=].text = "Kardiologie"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
@@ -427,14 +428,14 @@ Description: "Subquestionnaire Purpose"
 
 
 /*Module Diagnosis and Findings*/
-Instance: ch-etoc-module-diagnosislist
+Instance: ch-etoc-module-diagnosis
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Diagnosis"
 Description: "Subquestionnaire Diagnosis"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosislist"
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-diagnosis"
 * name = "ModuleQuestionnaireEtocDiagnosis"
 * title = "Module Questionnaire Order Diagnosis"
 * status = #active
@@ -514,7 +515,7 @@ Description: "Subquestionnaire Anamnesis"
 * item[=].type = #text
  // For convenience: History of procedures in one paragraph 
 
-* item[+].linkId = "anamnesis.device"   
+* item[+].linkId = "anamnesis.devices"   
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:devices"  
 * item[=].text = "Implantate, Schrittmacher, Neurostimulatoren etc."   
 * item[=].type = #text
@@ -588,22 +589,22 @@ Description: "Subquestionnaire AllergyIntolerlance"
 // For convenience: Allergies in one paragraph
 
 
-/*Module Immunization*/
-Instance: ch-etoc-module-immunization
+/*Module immunizationstatus*/
+Instance: ch-etoc-module-immunizationstatus
 InstanceOf: Questionnaire
-Title: "Module Questionnaire Immunization"
-Description: "Subquestionnaire Immunization"
+Title: "Module Questionnaire immunizationstatus"
+Description: "Subquestionnaire immunizationstatus"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-immunization"
+* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-immunizationstatus"
 * name = "ModuleQuestionnaireImmunization"
-* title = "Module Questionnaire Immunization"
+* title = "Module Questionnaire immunizationstatus"
 * status = #active
 * date = "2022-05-25"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "immunization.status"
+* item[+].linkId = "immunizationStatus.status"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
 * item[=].text = "Bisherige Impfungen"
 * item[=].type = #text
@@ -654,11 +655,11 @@ Description: "Subquestionnaire Pathology"
  // For convenience: Pathology results in one paragraph (is often narrative)
 
 
-/*Module Imaging*/
+/*Module imaging*/
 Instance: ch-etoc-module-imaging
 InstanceOf: Questionnaire
-Title: "Module Questionnaire Imaging"
-Description: "Subquestionnaire Imaging"
+Title: "Module Questionnaire imaging"
+Description: "Subquestionnaire imaging"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
@@ -676,17 +677,17 @@ Description: "Subquestionnaire Imaging"
  // For convenience: Radiology results in one paragraph (is often narrative)
 
 
-/*Module Cardiology*/
+/*Module cardiology*/
 Instance: ch-etoc-module-cardiology
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Cardiology"
-Description: "Subquestionnaire Cardiology"
+Description: "Subquestionnaire cardiology"
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-cardiology"
 * name = "ModuleQuestionnaireallergyIntolerance"
-* title = "Module Questionnaire Order immunization"
+* title = "Module Questionnaire Order immunizationstatus"
 * status = #active
 * date = "2022-05-25"
 * publisher = "HL7 Switzerland"
@@ -695,7 +696,7 @@ Description: "Subquestionnaire Cardiology"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].text = "EKG / Kardiologische Befunde"
 * item[=].type = #text
- // For convenience: Cardiology results in one paragraph (is often narrative)
+ // For convenience: cardiology results in one paragraph (is often narrative)
 
 /*Module Careplans
 Instance: ch-etoc-module-careplans
@@ -754,7 +755,7 @@ Description: "Subquestionnaire Attachment"
 
 * item[+].linkId = "attachment.title"  
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
-* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"shoulder_re_F_Muster_12021988.pdf\")"
+* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
 * item[=].type = #string
 * item[=].repeats = true
 
