@@ -95,7 +95,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 * item[=].item[0].linkId = "order.authoredOn"
-* item[=].item[=].definition = "http://build.fhir.org/ig/hl7ch/ch-orf/StructureDefinition-ch-orf-servicerequest.html#ServiceRequest.authoredOn"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition-ch-orf-servicerequest.html#ServiceRequest.authoredOn"
 * item[=].item[=].text = "Daum/Zeit der Auftragserteilung"
 * item[=].item[=].type = #dateTime
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
@@ -371,7 +371,6 @@ Usage: #example
 * item[=].item[=].definition = "http://hl7.org/fhir/StructureDefinition/RelatedPerson#RelatedPerson"
 * item[=].item[=].text = "Andere Person"
 * item[=].item[=].type = #group
-* item[=].item[=].repeats = true
 * item[=].item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
 * item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
@@ -554,6 +553,7 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.contact"
 * item[=].item[=].text = "Kontaktperson"
 * item[=].item[=].type = #group
+* item[=].item[=].repeats = true
 * item[=].item[=].item[0].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-initialExpression"
 * item[=].item[=].item[=].extension.valueExpression.language = #text/fhirpath
 * item[=].item[=].item[=].extension.valueExpression.expression = "%contact.relationship.text"
@@ -1386,7 +1386,7 @@ Usage: #example
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
 * item[=].type = #group
-* item[=].item.linkId = "cardiology.results"
+* item[=].item.linkId = "cardiology.result"
 * item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].item.text = "EKG / Kardiologische Befunde"
 * item[=].item.type = #text
