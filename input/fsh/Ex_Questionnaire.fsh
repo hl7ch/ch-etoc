@@ -1395,7 +1395,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].item.linkId = "attachment.title"
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].item.type = #string
 * item[=].item.repeats = true
 * item[=].item.item.linkId = "attachment.description"

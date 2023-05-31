@@ -696,7 +696,7 @@ Description: "Subquestionnaire cardiology"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
 * item[=].text = "EKG / Kardiologische Befunde"
 * item[=].type = #text
- // For convenience: cardiology results in one paragraph (is often narrative)
+ // For convenience:  in one paragraph (is often narrative)
 
 /*Module Careplans
 Instance: ch-etoc-module-careplans
@@ -715,7 +715,7 @@ Description: "Subquestionnaire Careplans"
 
 * item[+].linkId = "careplan.title"  
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#.title"
-* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].type = #string
 * item[=].repeats = true
 
@@ -755,7 +755,7 @@ Description: "Subquestionnaire Attachment"
 
 * item[+].linkId = "attachment.title"  
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
-* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].type = #string
 * item[=].repeats = true
 

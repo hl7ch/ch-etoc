@@ -336,7 +336,7 @@ Medikation
 * item[=].item[=].answer[+].valueString = "Erdabyclor"
 * item[=].item[=].answer[=].item[+].linkId = "medication.dosage"
 * item[=].item[=].answer[=].item[=].text = "Dosierung"
-* item[=].item[=].answer[=].item[=].answer.valueString = "0/25 mg 1/2-0-0-0"
+* item[=].item[=].answer[=].item[=].answer.valueString = "0/25 mg 1/2-0-0"
 
 * item[=].item[+].linkId = "medication.medication"
 * item[=].item[=].text = "Medikament"
@@ -396,7 +396,7 @@ Kardiologie
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
 
-* item[=].item[+].linkId = "cardiology.results"
+* item[=].item[+].linkId = "cardiology.result"
 * item[=].item[=].text = "EKG / Kardiologische Befunde"
 * item[=].item[=].answer.valueString = "ST-Hebungen V1-V5"
 
@@ -407,7 +407,7 @@ Verlauf und Therapie- / Pflegeplanung
 * item[=].text = "Verlauf und Therapie- / Pflegeplanung"
 
 * item[=].item.linkId = "careplan.title"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].item[=].answer[+].valueString = "Verlauf_Reha_S_Ufferer_2007.pdf"
 
 * item[=].item[+].linkId = "careplan.note"  
@@ -422,14 +422,14 @@ Anhangs
 * item[=].text = "Anhang"
 
 * item[=].item[+].linkId = "attachment.title"  
-* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].item[=].answer[+].valueString = "EKG_S_Ufferer_26052023.pdf"
 * item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
 * item[=].item[=].answer[=].item[=].text = "Beschreibung" 
-* item[=].item[=].answer[=].item[=].answer[+].valueString = "EKG vom 9.6.2021"
+* item[=].item[=].answer[=].item[=].answer[+].valueString = "EKG vom 26.05.2023"
 
 * item[=].item[+].linkId = "attachment.title"  
-* item[=].item[=].text =  "Dateiname und -endung der angehängten Datei (z.B. \"Pflegeplan_12032022.pdf\")"
+* item[=].item[=].text =  "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].item[=].answer[+].valueString = "Pflegeplan_Spitex_S_Ufferer_26052023.pdf"
 * item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
 * item[=].item[=].answer[=].item[=].text = "Beschreibung" 
