@@ -1,4 +1,3 @@
-Alias: $launchContext = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext
 Alias: $request-priority = http://hl7.org/fhir/request-priority
 Alias: $sct = http://snomed.info/sct
 Alias: $administrative-gender = http://hl7.org/fhir/administrative-gender
@@ -15,19 +14,7 @@ Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueCoding = $launchContext#patient
-* extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Patient
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueCoding = $launchContext#user "User"
-* extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Practitioner
-* extension[=].extension[+].url = "description"
-* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-order|1.1.0"
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assembledFrom"
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-practitioner-nametel|1.1.0"
