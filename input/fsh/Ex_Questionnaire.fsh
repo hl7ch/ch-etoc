@@ -15,9 +15,7 @@ Usage: #example
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-pop-exp"
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-//* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
+* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
 * extension[=].extension[=].valueCoding = $launchContext#patient
 * extension[=].extension[+].url = "type"
@@ -79,8 +77,8 @@ Usage: #example
 * extension[=].valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment|1.1.0"
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * version = "1.1.0-assembled"
-* name = "QuestionnaireEtoc"
-* title = "QuestionnaireEtoc"
+* name = "QuestionnaireEtoc-modular"
+* title = "QuestionnaireEtoc-modular"
 * status = #active
 * subjectType = #Patient
 * date = "2022-08-24"
