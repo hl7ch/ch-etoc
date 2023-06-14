@@ -36,7 +36,7 @@ Description: "Example for QuestionnaireResponse"
 // ---------- Order Priority ----------
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#urgent "Die Anfrage hat normale Priorität."
+* item[=].item[=].answer.valueCoding = RequestPriority#urgent //"Dringend."
 
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
 * item[+].linkId = "patient"
