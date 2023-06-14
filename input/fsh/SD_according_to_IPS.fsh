@@ -140,7 +140,7 @@ Title: "CH eTOC Body Height Observation"
 Description: "Definition for the Body Height Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Body Height Observation"
 * status MS
-* code and code.coding[BodyHeightCode] and code.coding[BodyHeightCode].system and code.coding[BodyHeightCode].code MS
+* code and code.coding[BodyHeightCode] MS
 * subject only Reference(ChCorePatient) 
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "cm"
@@ -154,7 +154,7 @@ Title: "CH eTOC Body Weight Observation"
 Description: "Definition for the Body Weight Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Body Weight Observation"
 * status MS
-* code and code.coding[BodyWeightCode] and code.coding[BodyWeightCode].system and code.coding[BodyWeightCode].code MS
+* code and code.coding[BodyWeightCode] MS
 * subject only Reference(ChCorePatient) 
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "kg"
