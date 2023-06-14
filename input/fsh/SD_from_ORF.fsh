@@ -281,7 +281,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionImmunizations].title 1..1 MS
 * section[sectionImmunizations].title ^short = "Immunizations"
 * section[sectionImmunizations].code 1..1 MS
-* section[sectionImmunizations].code = LNC#11369-6 "History of immunizationstatus Narrative"
+* section[sectionImmunizations].code = LNC#11369-6 "History of Immunization Narrative"
 * section[sectionImmunizations].text MS
 * section[sectionImmunizations].section 0..0
 * section[sectionImmunizations].entry 0.. MS

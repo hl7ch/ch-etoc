@@ -426,6 +426,7 @@ Title: "Allergy / Intolerance"
 Description: "Example for Allergy / Intolerance"
 * code.text = "Anamnestisch Penicillinallergie"
 * patient = Reference(SUfferer)
+* clinicalStatus = AllergyIntoleranceClinical#active
 
 
 Instance: Haemoglobin

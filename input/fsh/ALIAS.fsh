@@ -18,6 +18,7 @@ Alias:   ChOrfYesNo =  http://fhir.ch/ig/ch-orf/ch-orf-vs-YesNo
 
 // CH EPR Term Code Systems
 Alias:   SNOMEDCTSwissExtension =       urn:oid:2.16.756.5.30.1.127.3.4
+Alias:   AllergyIntoleranceClinical =        http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 
 // CH SD
 Alias:   ChAllergyIntolerance =          http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance
