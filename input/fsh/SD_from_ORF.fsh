@@ -1,6 +1,15 @@
 
 // CH eTOC Structure Defintions derived from CH ORF
 
+Profile: ChEtocQuestionnaire
+Parent: ChOrfQuestionnaire
+Id: ch-etoc-questionnaire
+Title: "CH eTOC Questionnaire"
+Description: "Definition for the ChEtocQuestionnaire (equal to hOrfQuestionnaire)"
+* . ^short = "CH eTOC Questionnaire"
+
+
+
 Profile: ChEtocServiceRequest
 Parent: ChOrfServiceRequest
 Id: ch-etoc-servicerequest
@@ -120,7 +129,7 @@ Consequently one CH eTOC Document contains one eTOC ServiceRequest which depicts
 equal one Filler Order equal one imaging Service Request."
 
 // ---------- Bundle.entry:Composition ----------
-* entry[Composition].resource ^type.profile = Canonical(http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition)
+* entry[Composition].resource ^type.profile = Canonical(ChEtocComposition)
 
 Profile: ChEtocComposition
 Parent: ChOrfComposition
@@ -135,8 +144,8 @@ Description: "Definition for the Composition resource in the context of electron
 // ---------- Composition.section.entry: Questionnaire ----------
 // Objection voted on 7.4.2022 tc meeting Issue #39
 * section[orderReferral].entry[Questionnaire] 1..1
-* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChOrfQuestionnaire)
-
+//* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(QuestionnaireEtoc)
+* section[orderReferral].entry[Questionnaire] ^type.targetProfile = Canonical(ChEtocQuestionnaire)
 /* Objection voted on 7.4.2022 tc meeting Issue #39
 * section[orderReferral].entry[Questionnaire] 1..
 * section[orderReferral].entry[Questionnaire] //^type.targetProfile = Canonical(http://hl7.org/fhir/StructureDefinition/StructureDefinition/Questionnaire)
@@ -145,8 +154,8 @@ Description: "Definition for the Composition resource in the context of electron
 // ---------- Composition.section.entry: QuestionnaireResponse ----------
 // Objection voted on 7.4.2022 tc meeting Issue #39
 * section[orderReferral].entry[QuestionnaireResponse] 1..1
-* section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChOrfQuestionnaireResponse)
-
+//* section[orderReferral].entry[QuestionnaireResponse] ^type.targetProfile = Canonical(ChEtocQuestionnaireResponse)
+* section[orderReferral].entry[QuestionnaireResponse] only Reference(ChOrfQuestionnaireResponse)
 
 // ---------- Composition.section.entry: ServiceRequest ----------
 * section[orderReferral].entry[ServiceRequest] ^type.targetProfile = Canonical(ChEtocServiceRequest)
