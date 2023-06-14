@@ -11,9 +11,9 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-root
 
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
+//* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
 //* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
-
+/*
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
 * extension[=].extension[0].url = "name"
 * extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
@@ -28,7 +28,7 @@ Usage: #example
 * extension[=].extension[=].valueCode = #Practitioner
 * extension[=].extension[+].url = "description"
 * extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-
+*/
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc-modular"
 * name = "QuestionnaireEtoc-modular"
 * title = "QuestionnaireEtoc-modular"
