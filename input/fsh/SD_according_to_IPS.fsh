@@ -142,7 +142,7 @@ Description: "Definition for the Body Height Observation resource in the context
 * status MS
 //* code and code.coding MS
 * subject only Reference(ChCorePatient) 
-* code = LNC#8302-2 "Body height" // "Body Height, method unspecified"
+//* code = LNC#8302-2 "Body height" // "Body Height, method unspecified"
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "cm"
 * valueQuantity.code ^fixedCode = #cm
@@ -157,7 +157,7 @@ Description: "Definition for the Body Weight Observation resource in the context
 * status MS
 //* code and code.coding MS
 * subject only Reference(ChCorePatient) 
-* code = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
+//* code = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
 * valueQuantity MS
 * valueQuantity.unit ^fixedString = "kg"
 * valueQuantity.code ^fixedCode = #kg
