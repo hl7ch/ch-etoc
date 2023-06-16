@@ -330,14 +330,14 @@ Description: "Example for Primary Diagnosis Condition"
 * code.text = "St. nach Bypass 2007"
 * subject = Reference(SUfferer)
 
-/*
+
 Instance: BodyHeight
 InstanceOf: ChEtocBodyHeightObservation
 Title: "Body Height 176 cm"
 Description: "Example for Body Height Observation"
 * status = #final
 * category = ObservationCategory#vital-signs
-* code = LNC#8302-2 "Body height" // "Body Height, method unspecified"
+* code.coding = LNC#8302-2 "Body height" // "Body Height, method unspecified"
 * subject = Reference(SUfferer)
 * effectiveDateTime = "2019-04-01T10:10:00.000+00:00"
 * valueQuantity = 176 'cm' "cm"
@@ -349,11 +349,11 @@ Title: "Body Weight 99 kg"
 Description: "Example for Body Weight Observation"
 * status = #final
 * category = ObservationCategory#vital-signs
-* code = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
+* code.coding = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
 * subject = Reference(SUfferer)
 * effectiveDateTime = "2019-04-01T10:10:00.000+00:00"
 * valueQuantity = 99 'kg' "kg"
-*/
+
 
 Instance: SecondaryDiagnosis1
 InstanceOf: ChEtocSecondaryDiagnosisCondition
