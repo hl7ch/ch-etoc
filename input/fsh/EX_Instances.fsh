@@ -330,7 +330,7 @@ Description: "Example for Primary Diagnosis Condition"
 * code.text = "St. nach Bypass 2007"
 * subject = Reference(SUfferer)
 
-
+/*
 Instance: BodyHeight
 InstanceOf: ChEtocBodyHeightObservation
 Title: "Body Height 176 cm"
@@ -353,7 +353,7 @@ Description: "Example for Body Weight Observation"
 * subject = Reference(SUfferer)
 * effectiveDateTime = "2019-04-01T10:10:00.000+00:00"
 * valueQuantity = 99 'kg' "kg"
-
+*/
 
 Instance: SecondaryDiagnosis1
 InstanceOf: ChEtocSecondaryDiagnosisCondition
