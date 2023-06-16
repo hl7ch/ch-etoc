@@ -336,11 +336,11 @@ InstanceOf: ChEtocBodyHeightObservation
 Title: "Body Height 176 cm"
 Description: "Example for Body Height Observation"
 * status = #final
-* category = ObservationCategory#vital-signs
+//* category = ObservationCategory#vital-signs
 //* code.coding = LNC#8302-2 "Body height" // "Body Height, method unspecified"
 * subject = Reference(SUfferer)
-* effectiveDateTime = "2019-04-01T10:10:00.000+00:00"
-* valueQuantity = 176 'cm' "cm"
+* effectiveDateTime = "2019-04-01"
+* valueQuantity.value = 176
 
 
 Instance: BodyWeight
@@ -348,11 +348,11 @@ InstanceOf: ChEtocBodyWeightObservation
 Title: "Body Weight 99 kg"
 Description: "Example for Body Weight Observation"
 * status = #final
-* category = ObservationCategory#vital-signs
+//* category = ObservationCategory#vital-signs
 //* code.coding = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
 * subject = Reference(SUfferer)
-* effectiveDateTime = "2019-04-01T10:10:00.000+00:00"
-* valueQuantity = 99 'kg' "kg"
+* effectiveDateTime = "2019-04-01"
+* valueQuantity.value = 99
 
 
 Instance: SecondaryDiagnosis1
@@ -396,6 +396,7 @@ Usage: #inline
 
 
 //------------- Previous Results -------------
+/*
 Instance: AttachmentRx
 InstanceOf: ChOrfDocumentReference
 Title: "Previous Rx"
@@ -404,7 +405,7 @@ Description: "Example for Attachment"
 * content.attachment.contentType = #application/dicom
 * content.attachment.data = "RXhhbXBsZQ=="
 * content.attachment.title = "xray_chest_S_Ufferer_20190401.dcm"
-
+*/
 
 Instance: LocationHospitalStay
 InstanceOf: ChOrfLocation
@@ -429,7 +430,7 @@ Description: "Example for Allergy / Intolerance"
 * clinicalStatus = AllergyIntoleranceClinical#active
 
 
-Instance: Haemoglobin
+Instance: Hemoglobin
 InstanceOf: ChEtocLabObservation
 Title: "Haemoglobin"
 Description: "Example for Lab result"
@@ -447,7 +448,7 @@ Description: "Example for Lab result"
 * subject = Reference(SUfferer)
 
 
-Instance: Biopsie
+Instance: Biopsy
 InstanceOf: ChEtocPathologyObservation
 Title: "Biopsie Duodenum / Magen"
 Description: "Example for Pathology result"
@@ -457,7 +458,7 @@ Die Veränderungen der Duodenalschleimhaut passen gut zu einem geringen petpisch
 * subject = Reference(SUfferer)
 
 
-Instance: imaging
+Instance: Imaging
 InstanceOf: ChEtocRadiologyObservation
 Title: "Thx ap / seitl."
 Description: "Example for imaging result"
