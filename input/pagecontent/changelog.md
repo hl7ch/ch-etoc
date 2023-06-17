@@ -36,7 +36,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 should be: http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Organization.identifier:GLN
 * [Issue #65](https://github.com/hl7ch/ch-etoc/issues/65): Correctedd  "diagnosisList.primaryDiagnosis" and "diagnosisList.secondaryDiagnosis" to CamelCase.
 * [Issue #67](https://github.com/hl7ch/ch-etoc/issues/67): Changed descriptions in ServiceRequest and questionnaire, details see [Issue #67](https://github.com/hl7ch/ch-etoc/issues/66).
-* [Issue #68](https://github.com/hl7ch/ch-etoc/issues/68): Title of QuestionnaireResponseEtoc changed from QuestionniaireResponse Radiology Order to QuestionniaireResponse Medical Referral, (corresponding to ServiceRequest Medical Referral)
+* [Issue #68](https://github.com/hl7ch/ch-etoc/issues/68): Title of QuestionnaireResponseEtoc changed from QuestionniaireResponse Radiology Order to QuestionniaireResponse Etoc.
 * [Issue #69](https://github.com/hl7ch/ch-etoc/issues/69): : Changed questionnaire linkid's medication.statement.medication and medication.medicationstatement.dosage to medication.medication and medication.dosage in order to be inline with other. likid's. Adapted representation in questionnaire.
 
 

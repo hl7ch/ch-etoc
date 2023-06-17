@@ -246,7 +246,7 @@ Usage: #example
 
 //_____
 /*------------------------------------------------------------------------
-Wozu wird der Patient zugewiesen
+What is the Patient referred for?
 */
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
@@ -302,7 +302,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'allergyIntolerance' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ immunizationstatus ------------------------------ */
+/*------ Immunizationstatus ------------------------------ */
 * item[+].linkId = "immunizationStatus"
 * item[=].text = "Impfstatus"
 * item[=].type = #group
@@ -335,7 +335,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'pathology' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ imaging ------------------------------ */
+/*------ Imaging ------------------------------ */
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
 * item[=].type = #group
@@ -346,7 +346,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'lab' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ cardiology ------------------------------ */
+/*------ Cardiology ------------------------------ */
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
 * item[=].type = #group
@@ -357,18 +357,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'cardiology' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ careplans ------------------------------ 
-* item[+].linkId = "careplans"
-* item[=].text = "Verlauf und Therapie- / Pflegeplanung"
-* item[=].type = #group
-
-* item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item.extension.valueCanonical = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-careplans|2.0.0"
-* item[=].item.linkId = "careplans.1"
-* item[=].item.text = "Unable to resolve 'careplans' sub-questionnaire"
-* item[=].item.type = #display
-*/
-/*------ attachment ------------------------------ */
+/*------ Attachment ------------------------------ */
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
@@ -379,7 +368,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item.text = "Unable to resolve 'attachment' sub-questionnaire"
 * item[=].item.type = #display
 
-// -------- Service Request Note ------
+// -------- ServiceRequest Note ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group

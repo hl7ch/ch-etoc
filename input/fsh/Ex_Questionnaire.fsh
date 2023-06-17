@@ -9,6 +9,7 @@ Alias: $ch-orf-cs-consentstatus = http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-
 
 Instance: QuestionnaireEtoc
 InstanceOf: Questionnaire
+Description: "Definition for the Questionnaire in the context of electronic transition of care."
 Usage: #example
 * meta.profile[0] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"

@@ -2,6 +2,8 @@ CodeSystem: ChEtocConditionCategory
 Id: ch-etoc-conditioncategory
 Title: "Extension Category of Condition"
 Description: "Extension of Category of Conditionin the context of CH electronic tranisiton of care."
+* ^experimental = false
+* ^caseSensitive = true
 * #illness "Illness"
 * #procedure "Procedure"
 * #primary-diagnosis "Primary Diagnosis"

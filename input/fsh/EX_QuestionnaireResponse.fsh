@@ -1,6 +1,6 @@
 Instance: QuestionnaireResponseEtoc
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "QuestionniaireResponse Medical Referral"
+Title: "QuestionniaireResponse Etoc"
 Description: "Example for QuestionnaireResponse"
 * questionnaire = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * status = #completed
@@ -11,23 +11,11 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
-* item[=].item[=].answer.valueString = "123"
+* item[=].item[=].answer.valueString = "60823"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
-* item[=].item[=].answer.valueString = "urn:oid:2.999.1.3.4.5.6.7"
-
-* item[=].item[+].linkId = "order.fillerOrderIdentifier"
-* item[=].item[=].text = "Auftragsnummer des Auftragsempfängers"
-* item[=].item[=].answer.valueString = "456"
-
-* item[=].item[+].linkId = "order.fillerOrderIdentifierDomain"
-* item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftragsempfängers"
-* item[=].item[=].answer.valueString = "urn:oid:2.999.7.8.9.10.11"
-
-* item[=].item[+].linkId = "order.precedentDocumentIdentifier"
-* item[=].item[=].text = "Identifier des Vorgängerdokuments"
-* item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
+* item[=].item[=].answer.valueString = "urn:oid:2.999.66.77.88"
 
 // ---------- Urgent Notification Contact for this document ----------
 * item[=].item[+].linkId = "order.notificationContactDocument"
@@ -42,19 +30,19 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.familyName"
 * item[=].item[=].item[=].item[=].text = "Name"
-* item[=].item[=].item[=].item[=].answer.valueString = "Röntgen"
+* item[=].item[=].item[=].item[=].answer.valueString = "Iller"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.givenName"
 * item[=].item[=].item[=].item[=].text = "Vorname"
-* item[=].item[=].item[=].item[=].answer.valueString = "Hans"
+* item[=].item[=].item[=].item[=].answer.valueString = "Frederica"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
-* item[=].item[=].item[=].item[=].answer.valueString = "044 412 00 99"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 503 44 44"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.email"
 * item[=].item[=].item[=].item[=].text = "E-Mail"
-* item[=].item[=].item[=].item[=].answer.valueString = "hans.roentgen@kantonsspital.ch"
+* item[=].item[=].item[=].item[=].answer.valueString = "f.iller@univerityhospital.ch"
 
 // ---------- Urgent Notification Contact for the Response to this document ----------
 * item[=].item[+].linkId = "order.notificationContactDocumentResponse"
@@ -69,24 +57,24 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.familyName"
 * item[=].item[=].item[=].item[=].text = "Name"
-* item[=].item[=].item[=].item[=].answer.valueString = "Meier"
+* item[=].item[=].item[=].item[=].answer.valueString = "Lacer"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.givenName"
 * item[=].item[=].item[=].item[=].text = "Vorname"
-* item[=].item[=].item[=].item[=].answer.valueString = "Sabine"
+* item[=].item[=].item[=].item[=].answer.valueString = "Paul"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.phone"
 * item[=].item[=].item[=].item[=].text = "Telefon"
-* item[=].item[=].item[=].item[=].answer.valueString = "044 333 22 11"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 987 65 43"
 
 * item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
 * item[=].item[=].item[=].item[=].text = "E-Mail"
-* item[=].item[=].item[=].item[=].answer.valueString = "sabine.meier@praxisseeblick.ch"
+* item[=].item[=].item[=].item[=].answer.valueString = "p.lacer@regionalhospital.ch"
 
 // ---------- Order Priority ----------
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#routine
+* item[=].item[=].answer.valueCoding = RequestPriority#stat
 
 // ---------- Receiver: Person/organization who receives the document ----------
 * item[+].linkId = "receiver"
@@ -101,39 +89,35 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.familyName"
 * item[=].item[=].item[=].text = "Name"
-* item[=].item[=].item[=].answer.valueString = "Röntgen"
+* item[=].item[=].item[=].answer.valueString = "Iller"
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.givenName"
 * item[=].item[=].item[=].text = "Vorname"
-* item[=].item[=].item[=].answer.valueString = "Hans"
+* item[=].item[=].item[=].answer.valueString = "Frederica"
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
 * item[=].item[=].item[=].text = "GLN"
-* item[=].item[=].item[=].answer.valueString = "7601000201041"
-
-* item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
-* item[=].item[=].item[=].text = "ZSR"
-* item[=].item[=].item[=].answer.valueString = "A123262"
+* item[=].item[=].item[=].answer.valueString = "7601000618306"
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
 * item[=].item[=].item[=].text = "Telefon"
-* item[=].item[=].item[=].answer.valueString = "044 412 00 99"
+* item[=].item[=].item[=].answer.valueString = "044 503 44 44"
 
 * item[=].item[=].item[+].linkId = "receiver.practitioner.email"
 * item[=].item[=].item[=].text = "E-Mail"
-* item[=].item[=].item[=].answer.valueString = "hans.roentgen@kantonsspital.ch"
+* item[=].item[=].item[=].answer.valueString = "f.iller@universityhospital.ch"
 
 * item[=].item[+].linkId = "receiver.organization"
 * item[=].item[=].text = "Empfangende Organisation"
 
 * item[=].item[=].item[+].linkId = "receiver.organization.name"
 * item[=].item[=].item[=].text = "Name der Organisation"
-* item[=].item[=].item[=].answer.valueString = "Kantonsspital"
+* item[=].item[=].item[=].answer.valueString = "University Hospital"
 
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 14"
-* item[=].item[=].item[=].answer[1].valueString = "Postfach 14"
+* item[=].item[=].item[=].answer[0].valueString = "Uniweg 33"
+* item[=].item[=].item[=].answer[1].valueString = "Radiology"
 
 * item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
 * item[=].item[=].item[=].text = "PLZ"
@@ -147,7 +131,7 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].item[=].text = "Land"
 * item[=].item[=].item[=].answer.valueString = "Schweiz"
 
-// ---------- Receiver: Person/organization who receives the document ----------
+// ---------- Initiator: Person/organization who initiated this order/referral ----------
 * item[+].linkId = "initiator"
 * item[=].text = "Initiant dieser Anmeldung"
 
@@ -157,7 +141,6 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[+].linkId = "initiator.personalrelation"
 * item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
-// * item[=].item[=].answer.valueCoding = http://snomed.info/sct#65616008 "Sohn"
 * item[=].item[=].answer.valueCoding = http://snomed.info/sct#65616008
 
 * item[=].item[+].linkId = "initiator.relatedPerson"
@@ -165,7 +148,7 @@ Description: "Example for QuestionnaireResponse"
 
 * item[=].item[=].item[+].linkId = "initiator.relatedPerson.familyName"
 * item[=].item[=].item[=].text = "Name"
-* item[=].item[=].item[=].answer.valueString = "Musterfrau"
+* item[=].item[=].item[=].answer.valueString = "Ufferer"
 
 * item[=].item[=].item[+].linkId = "initiator.relatedPerson.givenName"
 * item[=].item[=].item[=].text = "Vorname"
@@ -335,10 +318,21 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[+].linkId = "receiverCopy.patient"
 * item[=].item[=].answer.valueBoolean = true
 
+// -------- Consent ------
+* item[+].linkId = "consent"
+* item[=].text = "Einverständniserklärung"
+
+* item[=].item[+].linkId = "patient.consent.statement"
+* item[=].item[=].text = "Ist der Patient über die Anmeldung informiert und explizit einverstanden?"
+* item[=].item[=].answer[+].valueCoding = ChOrfConsentStatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
+* item[=].item[=].answer[=].item[+].linkId = "patient.consent.statement.note"
+* item[=].item[=].answer[=].item[=].text = "Anmerkung"
+* item[=].item[=].answer[=].item[=].answer.valueString = "Voraussichtlich einverstanden; Sohn wird die Situation beim nä. Besuch mit Pat. besprechen"
+
 /* ============ Kerninhaltes von eTOC ==============================
 
 /*------------------------------------------------------------------------
-Wozu wird der Patient zugewiesen
+What is the Patient referred for?
 */
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
@@ -352,11 +346,6 @@ Wozu wird der Patient zugewiesen
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "Abklärung kardiale Ursache?"
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "Abklärung Ösophagitis?"
 
-/* item[=].item[=].item[+].linkId = "purpose.aim.detail"
-* item[=].item[=].item[=].text = "Procedere / Behandlung im Detail"                
-* item[=].item[=].item[=].answer.valueString = "Abklärung Ösophagitis?"
-*/
-
 * item[=].item[+].linkId = "reason.statement"
 * item[=].item[=].text = "Begründung"  
 * item[=].item[=].answer.valueString = "Verdacht auf Vorderwandinfarkt"
@@ -366,7 +355,7 @@ Wozu wird der Patient zugewiesen
 * item[=].item[=].answer.valueString = "Reflux bekannt"
 
 /*----------------------------------------------------------------------
-Darstellung der Diagnosen und Befunde
+Diagnosis and Clinical Findings
 */
 * item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
@@ -396,16 +385,11 @@ Darstellung der Diagnosen und Befunde
 * item[=].item[=].text = "Gewicht (kg)"   
 
 * item[=].item[+].linkId = "diagnosisList.pregnancy"
-/* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
-* item[=].item[=].text = "Schwangerschaft"   
-*/
 
 * item[=].item[=].item[+].linkId = "diagnosisList.pregnancy.expectedDeliveryDate"
-/* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
-* item[=].item[=].item[=].text = "Erwarteter Geburtstermin"   
-*/
+
 /*----------------------------------------------------------------------
-Anamnese
+Anamnesis
  */
 * item[+].linkId = "anamnesis" 
 * item[=].text = "Anamnese"
@@ -432,7 +416,7 @@ Anamnese
 * item[=].item[=].text = "Funktion, Behinderungen"   
 
 /* ---------------------------------------------------------------------------
-Medikation
+Medication
 */
 * item[+].linkId = "medication"
 * item[=].text = "Medikation"
@@ -452,7 +436,7 @@ Medikation
 * item[=].item[=].answer[=].item[=].answer.valueString = "0.8 mg s.L.; 16h15"
 
 /* ---------------------------------------------------------------------------
-Allergien und Intoleranzen
+Allergies and Intolerances
 */
 * item[+].linkId = "allergyIntolerance"
 * item[=].text = "Allergien und Intoleranzen"
@@ -461,7 +445,7 @@ Allergien und Intoleranzen
 * item[=].item[=].text = "Bekannte Allergien / Intoleranzen"
 
 /* ---------------------------------------------------------------------------
-Impfungen
+Immunizationstatus
 */
 * item[+].linkId = "immunizationStatus"
 * item[=].text = "Impfstatus"
@@ -470,7 +454,7 @@ Impfungen
 * item[=].item[=].text = "Bisherige Impfungen"
 
 /* ---------------------------------------------------------------------------
-Labor
+Lab
 */
 * item[+].linkId = "lab"
 * item[=].text = "Labor"
@@ -479,7 +463,7 @@ Labor
 * item[=].item[=].text = "Laborresultate"
 
 /* ---------------------------------------------------------------------------
-Pathologie
+Pathology
 */
 * item[+].linkId = "pathology"
 * item[=].text = "Pathologie"
@@ -488,7 +472,7 @@ Pathologie
 * item[=].item[=].text = "Pathologiebefunde"
 
 /* ---------------------------------------------------------------------------
-Bildgebung
+Imaging
 */
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
@@ -497,7 +481,7 @@ Bildgebung
 * item[=].item[=].text = "Befund aus der Bildgebung"
 
 /* ---------------------------------------------------------------------------
-Kardiologie
+Cardiology
 */
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
@@ -507,22 +491,7 @@ Kardiologie
 * item[=].item[=].answer.valueString = "ST-Hebungen V1-V5"
 
 /* ---------------------------------------------------------------------------
-Verlauf und Therapie- / Pflegeplanung
-*/
-/* item[+].linkId = "carePlans"
-* item[=].text = "Verlauf und Therapie- / Pflegeplanung"
-
-* item[=].item.linkId = "careplan.title"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
-* item[=].item[=].answer[+].valueString = "Verlauf_Reha_S_Ufferer_2007.pdf"
-
-* item[=].item[+].linkId = "careplan.note"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
-* item[=].item[=].text = ""
-* item[=].item[=].answer[+].valueString = "Reha-Verlauf S Ufferer nach Bypass 2007"
-*/
-/* ---------------------------------------------------------------------------
-Anhangs
+Attachment
 */
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
@@ -542,10 +511,10 @@ Anhangs
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "Aktueller Pflegeplan der Spitex"
 
 
-// -------- Service Request Notes ------
+// -------- ServiceRequest Note ------
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 
 * item[=].item[+].linkId = "note.text"
 * item[=].item[=].text = "Kommentar" 
-* item[=].item[=].answer[+].valueString = "Patient ist sehr ängstlich"
+* item[=].item[=].answer[+].valueString = "Patientin ist sehr ängstlich"
