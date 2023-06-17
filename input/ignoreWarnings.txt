@@ -233,3 +233,5 @@ The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.support
 The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:pathologyresults' for "ServiceRequest.supportingInfo:pathologyresults" cannot be resolved (valid targets: 320 targets)
 The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:imagingresults' for "ServiceRequest.supportingInfo:imagingresults" cannot be resolved (valid targets: 320 targets)
 The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:cardiologyresults' for "ServiceRequest.supportingInfo:cardiologyresults" cannot be resolved (valid targets: 320 targets)
+
+The extension http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire is not allowed to be used at this point (allowed = e:Questionnaire.item, e:ElementDefinition; this element is [Questionnaire.item.item, BackboneElement.item, ])
