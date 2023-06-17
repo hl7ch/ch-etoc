@@ -427,7 +427,7 @@ InstanceOf: ChEtocAllergyIntolerance
 Title: "Allergy / Intolerance"
 Description: "Example for Allergy / Intolerance"
 * code.text = "Anamnestisch Penicillinallergie"
-* code = SCT#91936005 //"Allergie gegen Penicillin"
+//* code = SCT#91936005 //"Allergie gegen Penicillin"
 * patient = Reference(SUfferer)
 * clinicalStatus = AllergyIntoleranceClinicalStatusCodes#active
 
