@@ -305,7 +305,7 @@ Title: "Otto Rderfiller"
 Description: "Example for Practitioner"
 * name.use = #official
 * name.family = "Rderfiller"
-* name.given = "Otto"
+* name.given = "Ottilie"
 
 
 //-------------  Time and Location -------------
@@ -421,7 +421,7 @@ Description: "Example for Location"
 * address.country = "Schweiz"
 
 
-/*Instance: AllergyIntolerance
+Instance: AllergyIntolerance
 InstanceOf: ChEtocAllergyIntolerance
 Title: "Allergy / Intolerance"
 Description: "Example for Allergy / Intolerance"
@@ -429,7 +429,7 @@ Description: "Example for Allergy / Intolerance"
 //* code = SCT#91936005 //"Allergie gegen Penicillin"
 * patient = Reference(SUfferer)
 * clinicalStatus = AllergyIntoleranceClinicalStatusCodes#active
-*/
+
 
 Instance: Hemoglobin
 InstanceOf: ChEtocLabObservation
