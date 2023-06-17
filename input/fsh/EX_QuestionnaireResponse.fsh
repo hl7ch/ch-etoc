@@ -7,36 +7,170 @@ Description: "Example for QuestionnaireResponse"
 
 // ---------- order (Auftrag) ----------
 * item[+].linkId = "order"
-
-/* ----------- not depicted in questionnaire; fix values are defined in composition resource
-* item[=].item[+].linkId = "order.title"
-* item[=].item[=].text = "Titel"
-* item[=].item[=].answer.valueString = "Notfallzuweisung"
-
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].text = "Typ"
-
-* item[=].item[+].linkId = "order.category"
-* item[=].item[=].text = "Kategorie"
-* item[=].item[=].answer.valueCoding = SCT#721927009 "Order (record artifact)"
-*/
+* item[=].text = "Auftrag"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].text = "Auftragsnummer des Auftraggebers"
-* item[=].item[=].answer.valueString = "12345"
+* item[=].item[=].answer.valueString = "123"
 
 * item[=].item[+].linkId = "order.placerOrderIdentifierDomain"
 * item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftraggebers"
-* item[=].item[=].answer.valueString = "urn:oid:1.3.4.5.6.7"
+* item[=].item[=].answer.valueString = "urn:oid:2.999.1.3.4.5.6.7"
+
+* item[=].item[+].linkId = "order.fillerOrderIdentifier"
+* item[=].item[=].text = "Auftragsnummer des Auftragsempfängers"
+* item[=].item[=].answer.valueString = "456"
+
+* item[=].item[+].linkId = "order.fillerOrderIdentifierDomain"
+* item[=].item[=].text = "Identifier Domain der Auftragsnummer des Auftragsempfängers"
+* item[=].item[=].answer.valueString = "urn:oid:2.999.7.8.9.10.11"
+
+* item[=].item[+].linkId = "order.precedentDocumentIdentifier"
+* item[=].item[=].text = "Identifier des Vorgängerdokuments"
+* item[=].item[=].answer.valueString = "1622f2fb-6ba3-4532-9aed-35b158def187"
 
 // ---------- Urgent Notification Contact for this document ----------
+* item[=].item[+].linkId = "order.notificationContactDocument"
+* item[=].item[=].text = "Dringender Benachrichtigungskontakt für dieses Dokument"
+
+* item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner"
+* item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Röntgen"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Hans"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 412 00 99"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocument.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "hans.roentgen@kantonsspital.ch"
 
 // ---------- Urgent Notification Contact for the Response to this document ----------
+* item[=].item[+].linkId = "order.notificationContactDocumentResponse"
+* item[=].item[=].text = "Dringender Benachrichtigungskontakt für die Antwort auf dieses Dokument"
+
+* item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner"
+* item[=].item[=].item[=].text = "Zu benachrichtigende Person"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.title"
+* item[=].item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.familyName"
+* item[=].item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].item[=].answer.valueString = "Meier"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.givenName"
+* item[=].item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].item[=].answer.valueString = "Sabine"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.phone"
+* item[=].item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].item[=].answer.valueString = "044 333 22 11"
+
+* item[=].item[=].item[=].item[+].linkId = "order.notificationContactDocumentResponse.practitioner.email"
+* item[=].item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].item[=].answer.valueString = "sabine.meier@praxisseeblick.ch"
 
 // ---------- Order Priority ----------
 * item[=].item[+].linkId = "order.priority"
 * item[=].item[=].text = "Auftragspriorität"
-* item[=].item[=].answer.valueCoding = RequestPriority#urgent //"Dringend."
+* item[=].item[=].answer.valueCoding = RequestPriority#routine
+
+// ---------- Receiver: Person/organization who receives the document ----------
+* item[+].linkId = "receiver"
+* item[=].text = "Empfänger"
+
+* item[=].item[+].linkId = "receiver.practitioner"
+* item[=].item[=].text = "Empfangende Person"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.title"
+* item[=].item[=].item[=].text = "Titel"
+* item[=].item[=].item[=].answer.valueString = "Dr. med."
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = "Röntgen"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.givenName"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].answer.valueString = "Hans"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.gln"
+* item[=].item[=].item[=].text = "GLN"
+* item[=].item[=].item[=].answer.valueString = "7601000201041"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.zsr"
+* item[=].item[=].item[=].text = "ZSR"
+* item[=].item[=].item[=].answer.valueString = "A123262"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.phone"
+* item[=].item[=].item[=].text = "Telefon"
+* item[=].item[=].item[=].answer.valueString = "044 412 00 99"
+
+* item[=].item[=].item[+].linkId = "receiver.practitioner.email"
+* item[=].item[=].item[=].text = "E-Mail"
+* item[=].item[=].item[=].answer.valueString = "hans.roentgen@kantonsspital.ch"
+
+* item[=].item[+].linkId = "receiver.organization"
+* item[=].item[=].text = "Empfangende Organisation"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.name"
+* item[=].item[=].item[=].text = "Name der Organisation"
+* item[=].item[=].item[=].answer.valueString = "Kantonsspital"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 14"
+* item[=].item[=].item[=].answer[1].valueString = "Postfach 14"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
+* item[=].item[=].item[=].text = "PLZ"
+* item[=].item[=].item[=].answer.valueString = "8000"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.city"
+* item[=].item[=].item[=].text = "Ort"
+* item[=].item[=].item[=].answer.valueString = "Zürich"
+
+* item[=].item[=].item[+].linkId = "receiver.organization.country"
+* item[=].item[=].item[=].text = "Land"
+* item[=].item[=].item[=].answer.valueString = "Schweiz"
+
+// ---------- Receiver: Person/organization who receives the document ----------
+* item[+].linkId = "initiator"
+* item[=].text = "Initiant dieser Anmeldung"
+
+* item[=].item[+].linkId = "initiator.legalrelation"
+* item[=].item[=].text = "Juristische Beziehung zum Patienten"
+* item[=].item[=].answer.valueCoding = SCT#373068000 "Nicht definiert"
+
+* item[=].item[+].linkId = "initiator.personalrelation"
+* item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
+// * item[=].item[=].answer.valueCoding = http://snomed.info/sct#65616008 "Sohn"
+* item[=].item[=].answer.valueCoding = http://snomed.info/sct#65616008
+
+* item[=].item[+].linkId = "initiator.relatedPerson"
+* item[=].item[=].text = "Andere Person"
+
+* item[=].item[=].item[+].linkId = "initiator.relatedPerson.familyName"
+* item[=].item[=].item[=].text = "Name"
+* item[=].item[=].item[=].answer.valueString = "Musterfrau"
+
+* item[=].item[=].item[+].linkId = "initiator.relatedPerson.givenName"
+* item[=].item[=].item[=].text = "Vorname"
+* item[=].item[=].item[=].answer.valueString = "Fritz"
+
 
 // ---------- Patient: The principle target of a particular Form Content is one patient ----------
 * item[+].linkId = "patient"
@@ -194,34 +328,6 @@ Description: "Example for QuestionnaireResponse"
 * item[=].item[=].item[=].item[+].linkId = "sender.dataenterer.practitioner.email"
 * item[=].item[=].item[=].item[=].text = "E-Mail"
 * item[=].item[=].item[=].item[=].answer.valueString = "d.ataenterer@happydoctors.ch"
-
-// ---------- Receiver: Person/organization who receives the document ----------
-* item[+].linkId = "receiver"
-* item[=].text = "Empfänger"
-
-* item[=].item[+].linkId = "receiver.organization"
-* item[=].item[=].text = "Empfangende Organisation"
-
-* item[=].item[=].item[+].linkId = "receiver.organization.name"
-* item[=].item[=].item[=].text = "Name der Organisation"
-* item[=].item[=].item[=].answer.valueString = "Klinik Happy Hospital"
-
-* item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
-* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[+].valueString = "Seestrasse 133"
-* item[=].item[=].item[=].answer[+].valueString = "Haus C"
-
-* item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
-* item[=].item[=].item[=].text = "PLZ"
-* item[=].item[=].item[=].answer.valueString = "8000"
-
-* item[=].item[=].item[+].linkId = "receiver.organization.city"
-* item[=].item[=].item[=].text = "Ort"
-* item[=].item[=].item[=].answer.valueString = "Zürich"
-
-* item[=].item[=].item[+].linkId = "receiver.organization.country"
-* item[=].item[=].item[=].text = "Land"
-* item[=].item[=].item[=].answer.valueString = "Schweiz"
 
 // ---------- Copy Receiver (Copy of this order and all results therefrom) ----------
 * item[+].linkId = "receiverCopy"
