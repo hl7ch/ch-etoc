@@ -475,3 +475,4 @@ Description: "Example for cardiology result"
 * status = #final
 * code.text = "EKG vom 12.5.23: unauffällig"
 * subject = Reference(SUfferer)
+/**/
