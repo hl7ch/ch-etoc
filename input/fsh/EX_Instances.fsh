@@ -336,8 +336,9 @@ InstanceOf: ChEtocBodyHeightObservation
 Title: "Body Height 176 cm"
 Description: "Example for Body Height Observation"
 * status = #final
+
 //* category = ObservationCategory#vital-signs
-//* code.coding = LNC#8302-2 "Body height" // "Body Height, method unspecified"
+* code.coding = LNC#8302-2 "Body height" // "Body Height, method unspecified"
 * subject = Reference(SUfferer)
 * effectiveDateTime = "2019-04-01"
 * valueQuantity.value = 176
@@ -348,8 +349,9 @@ InstanceOf: ChEtocBodyWeightObservation
 Title: "Body Weight 99 kg"
 Description: "Example for Body Weight Observation"
 * status = #final
+
 //* category = ObservationCategory#vital-signs
-//* code.coding = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
+* code.coding = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
 * subject = Reference(SUfferer)
 * effectiveDateTime = "2019-04-01"
 * valueQuantity.value = 99
