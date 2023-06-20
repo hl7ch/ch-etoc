@@ -1,8 +1,10 @@
+/* 
 Instance: QuestionnaireEtoc-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire eTOC (Modular version)"
 Description: "Example for Questionnaire"
 Usage: #example
+
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire"
 * meta.profile[+] = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-extr-smap"
@@ -11,24 +13,6 @@ Usage: #example
 * extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-root
 
-//* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-targetStructureMap"
-//* extension[=].valueCanonical = "http://fhir.ch/ig/ch-orf/StructureMap/OrfQrToBundle"
-/*
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueCoding.system = "http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext"
-* extension[=].extension[=].valueCoding.code = #patient
-* extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Patient
-
-* extension[+].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-launchContext"
-* extension[=].extension[0].url = "name"
-* extension[=].extension[=].valueCoding = http://hl7.org/fhir/uv/sdc/CodeSystem/launchContext#user "User"
-* extension[=].extension[+].url = "type"
-* extension[=].extension[=].valueCode = #Practitioner
-* extension[=].extension[+].url = "description"
-* extension[=].extension[=].valueString = "The practitioner that is to be used to pre-populate the form"
-*/
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc-modular"
 * name = "QuestionnaireEtoc-modular"
 * title = "QuestionnaireEtoc-modular"
@@ -48,35 +32,6 @@ Usage: #example
 * item[=].item.linkId = "order.1"
 * item[=].item.text = "Unable to resolve 'order' sub-questionnaire"
 * item[=].item.type = #display
-
-/* ----------- not depicted in questionnaire; fix values are defined in composition resource
-
-* item[=].item[+].linkId = "order.title"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.title"
-* item[=].item[=].text = "Titel"
-* item[=].item[=].type = #string
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].initial.valueString = "Zuweisungsschreiben"
-
-* item[=].item[+].linkId = "order.type"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.type"
-* item[=].item[=].text = "Typ"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = DocumentEntryTypeCode
-* item[=].item[=].initial.valueCoding = DocumentEntryTypeCode#419891008 // Nicht näher bezeichnetes Dokument
-
-* item[=].item[+].linkId = "order.category"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-composition#Composition.category"
-* item[=].item[=].text = "Kategorie"
-* item[=].item[=].type = #choice
-* item[=].item[=].required = true
-* item[=].item[=].readOnly = true
-* item[=].item[=].answerValueSet = DocumentEntryClassCode
-* item[=].item[=].initial.valueCoding = DocumentEntryClassCode#721927009 // Zuweisungsschreiben
------------*/
 
 // ---------- Receiver: Person/organization who receives the document ----------
 * item[+].linkId = "receiver"
@@ -149,7 +104,7 @@ Usage: #example
 * item[=].item.text = "Unable to resolve 'coverage' sub-questionnaire"
 * item[=].item.type = #display
 
-// ---------- sender (Absender) ----------
+// ---------- Sender (Absender) ----------
 * item[+].linkId = "sender"
 * item[=].text = "Absender"
 * item[=].type = #group
@@ -181,7 +136,7 @@ Usage: #example
 * item[=].item.type = #display
 
 
-/*------ Antecedent Episode of Care ------------------------------ */
+//------ Antecedent Episode of Care ------------------------------ 
 
 * item[+].linkId = "antecedentEpisodeOfCare"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:antecedentEpisodeOfCare"
@@ -219,7 +174,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].item[=].item[=].type = #display
 
-/*------ Appointment ------------------------------ */
+//------ Appointment ------------------------------ 
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
 * item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
@@ -232,7 +187,7 @@ Usage: #example
 * item[=].item.text = "Unable to resolve 'appointment' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Consent ------------------------------ */
+//------ Consent ------------------------------ 
 * item[+].linkId = "consent"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:patientConsent"
 * item[=].text = "Einverständniserklärung"
@@ -244,10 +199,8 @@ Usage: #example
 * item[=].item.text = "Unable to resolve 'consent' sub-questionnaire"
 * item[=].item.type = #display
 
-//_____
-/*------------------------------------------------------------------------
-What is the Patient referred for?
-*/
+
+//------- What is the Patient referred for? ------------------------------
 * item[+].linkId = "purpose"
 * item[=].text = "Wozu wird der Patient zugewiesen?"
 * item[=].type = #group
@@ -258,7 +211,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'anamnesis' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Diagnosis and Clinical Findings ------------------------------ */
+//------ Diagnosis and Clinical Findings ------------------------------ 
 * item[+].linkId = "diagnosisList"
 * item[=].text = "Diagnosen und Befunde"
 * item[=].type = #group
@@ -269,7 +222,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'diagnosisist' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Anamnesis ------------------------------ */
+//------ Anamnesis ------------------------------ 
 * item[+].linkId = "anamnesis"
 * item[=].text = "Anamnese"
 * item[=].type = #group
@@ -280,7 +233,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'anamnesis' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Medication ------------------------------ */
+//------ Medication ------------------------------ 
 * item[+].linkId = "medication"
 * item[=].text = "Medikation"
 * item[=].type = #group
@@ -291,7 +244,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'medication' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Allergies and Intolerances ------------------------------ */
+//------ Allergies and Intolerances ------------------------------ 
 * item[+].linkId = "allergyIntolerance"
 * item[=].text = "Allergien und Intoleranzen"
 * item[=].type = #group
@@ -302,7 +255,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'allergyIntolerance' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Immunizationstatus ------------------------------ */
+//------ Immunizationstatus ------------------------------ 
 * item[+].linkId = "immunizationStatus"
 * item[=].text = "Impfstatus"
 * item[=].type = #group
@@ -313,7 +266,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'immunizationstatus' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Lab ------------------------------ */
+//------ Lab ------------------------------ 
 * item[+].linkId = "lab"
 * item[=].text = "Labor"
 * item[=].type = #group
@@ -324,7 +277,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'lab' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Pathology ------------------------------ */
+//------ Pathology ------------------------------ 
 * item[+].linkId = "pathology"
 * item[=].text = "Pathologie"
 * item[=].type = #group
@@ -335,7 +288,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'pathology' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Imaging ------------------------------ */
+//------ Imaging ------------------------------ 
 * item[+].linkId = "imaging"
 * item[=].text = "Bildgebung"
 * item[=].type = #group
@@ -346,7 +299,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'lab' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Cardiology ------------------------------ */
+//------ Cardiology ------------------------------ 
 * item[+].linkId = "cardiology"
 * item[=].text = "Kardiologie"
 * item[=].type = #group
@@ -357,7 +310,7 @@ What is the Patient referred for?
 * item[=].item.text = "Unable to resolve 'cardiology' sub-questionnaire"
 * item[=].item.type = #display
 
-/*------ Attachment ------------------------------ */
+//------ Attachment ------------------------------
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
@@ -378,7 +331,7 @@ What is the Patient referred for?
 * item[=].item[=].text = "Kommentar" 
 * item[=].item[=].type = #string
 
-
+*/
 //============ Module defintions =================================
 
 /*Module Purpose*/
