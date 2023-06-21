@@ -141,8 +141,13 @@ Description: "Definition for the Body Height Observation resource in the context
 * . ^short = "CH eTOC Body Height Observation"
 //* status MS
 //* code and code.coding MS
+//* code.coding ^slicing.discriminator.type = #value
+//* code.coding ^slicing.discriminator.path = "resolve()"
+//* code.coding ^slicing.rules = #open
+* code.coding 1..1
+
 * subject only Reference(ChCorePatient) 
-//* code = LNC#8302-2 "Body height" // "Body Height, method unspecified"
+//* code.coding[BodyHeightCode].code = LNC#8302-2 "Body height" // "Body Height, method unspecified"
 //* valueQuantity MS
 * valueQuantity.unit ^fixedString = "cm"
 * valueQuantity.code ^fixedCode = #cm
@@ -156,6 +161,7 @@ Description: "Definition for the Body Weight Observation resource in the context
 * . ^short = "CH eTOC Body Weight Observation"
 //* status MS
 //* code and code.coding MS
+* code.coding 1..1
 * subject only Reference(ChCorePatient) 
 //* code = LNC#29463-7 "Body weight" // "Body Weight, method unspecified"
 //* valueQuantity MS
