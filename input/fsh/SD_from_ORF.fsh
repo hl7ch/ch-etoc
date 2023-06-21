@@ -26,6 +26,8 @@ Reserved for specification of a particular form for referrals to clinical subspe
 //------- code -------
 * code MS
 * code ^short = "What is being requested/ordered"
+* code ^binding.description = "Codes for tests or services that can be carried out by a designated individual, organization or healthcare service. For laboratory, LOINC is preferred."
+
 * code.text MS
 //------- reasonCode -------
 * reasonCode MS
