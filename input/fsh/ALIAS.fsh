@@ -17,7 +17,7 @@ Alias:   EchMaritalStatus =                 http://fhir.ch/ig/ch-core/CodeSystem
 Alias:   ChOrfYesNo =  http://fhir.ch/ig/ch-orf/ch-orf-vs-YesNo
 
 // CH EPR Term Code Systems
-Alias:   SNOMEDCTSwissExtension =               urn:oid:2.16.756.5.30.1.127.3.4
+Alias:   SNOMEDCTSwissExtension =                urn:oid:2.16.756.5.30.1.127.3.4
 Alias:   AllergyIntoleranceClinicalStatusCodes = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias:   Language =                              urn:ietf:bcp:47
 
