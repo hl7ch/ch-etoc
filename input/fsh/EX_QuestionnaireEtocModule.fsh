@@ -18,7 +18,7 @@ Usage: #example
 * title = "QuestionnaireEtoc-modular"
 * status = #active
 * subjectType = #Patient
-* date = "2022-08-24"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 // ---------- order (Auftrag) ----------
@@ -346,7 +346,7 @@ Description: "Subquestionnaire Purpose"
 * name = "ModuleQuestionnaireEtocPurpose"
 * title = "Module Questionnaire Order Purpose"
 * status = #active
-* date = "2022-08-24"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "purpose.aim"
@@ -381,7 +381,7 @@ Description: "Subquestionnaire Diagnosis"
 * name = "ModuleQuestionnaireEtocDiagnosis"
 * title = "Module Questionnaire Order Diagnosis"
 * status = #active
-* date = "2022-05-23"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "diagnosisList.primaryDiagnosis"
@@ -442,7 +442,7 @@ Description: "Subquestionnaire Anamnesis"
 * name = "ModuleQuestionnaireEtocAnamnesis"
 * title = "Module Questionnaire Order Anamnesis"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "anamnesis.historyofillnesses"   
@@ -488,7 +488,7 @@ Description: "Subquestionnaire Medication"
 * name = "ModuleQuestionnaireEtocMedication"
 * title = "Module Questionnaire Order Medication"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 /* item[+].linkId = "medication"
@@ -521,7 +521,7 @@ Description: "Subquestionnaire AllergyIntolerlance"
 * name = "ModuleQuestionnaireallergyIntolerance"
 * title = "Module Questionnaire Allergy and Intolerance"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "allergyIntolerance.status"
@@ -543,7 +543,7 @@ Description: "Subquestionnaire immunizationstatus"
 * name = "ModuleQuestionnaireImmunization"
 * title = "Module Questionnaire immunizationstatus"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "immunizationStatus.status"
@@ -565,7 +565,7 @@ Description: "Subquestionnaire Lab"
 * name = "ModuleQuestionnaireEtocLab"
 * title = "Module Questionnaire Lab"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "lab.result"
@@ -587,7 +587,7 @@ Description: "Subquestionnaire Pathology"
 * name = "ModuleQuestionnaireEtocPathology"
 * title = "Module Questionnaire Pathology"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "pathology.result"
@@ -609,7 +609,7 @@ Description: "Subquestionnaire imaging"
 * name = "ModuleQuestionnaireEtocImaging"
 * title = "Module Questionnaire Imaging"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "imaging.result"
@@ -631,7 +631,7 @@ Description: "Subquestionnaire cardiology"
 * name = "ModuleQuestionnaireallergyIntolerance"
 * title = "Module Questionnaire Order immunizationstatus"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "cardiology.result"
@@ -652,7 +652,7 @@ Description: "Subquestionnaire Careplans"
 * name = "ModuleQuestionnaireCareplans"
 * title = "Module Questionnaire Careplans"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "careplan.title"  
@@ -692,7 +692,7 @@ Description: "Subquestionnaire Attachment"
 * name = "Module Questionnaire Attachment"
 * title = "Module Questionnaire Attachment"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "attachment.title"  
@@ -718,7 +718,7 @@ Description: "Subquestionnaire Note"
 * name = "ModuleQuestionnaireNote"
 * title = "Module Questionnaire Note"
 * status = #active
-* date = "2022-05-25"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "note.text"

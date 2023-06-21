@@ -72,7 +72,7 @@ Usage: #example
 * title = "QuestionnaireEtoc"
 * status = #active
 * subjectType = #Patient
-* date = "2022-08-24"
+* date = "2023-06-21"
 * publisher = "HL7 Switzerland"
 * contact.name = "Juerg P. Bleuer"
 * contact.telecom.system = #url
