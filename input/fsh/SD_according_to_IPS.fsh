@@ -151,7 +151,6 @@ Description: "Definition for the Body Height Observation resource in the context
 //* valueQuantity MS
 * valueQuantity.unit ^fixedString = "cm"
 * valueQuantity.code ^fixedCode = #cm
-/**/
 
 Profile: ChEtocBodyWeightObservation
 Parent: HL7BodyWeight
@@ -247,6 +246,5 @@ Description: "Definition for the Functional Status Condition resource in the con
 
 // -------- Corresponds to IPS Advance Directives ---------
 // Not supported yet
-/**/
 
 
