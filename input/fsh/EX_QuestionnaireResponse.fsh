@@ -2,7 +2,7 @@ Instance: QuestionnaireResponseEtoc
 InstanceOf: ChOrfQuestionnaireResponse
 Title: "QuestionnaireResponseEtoc"
 Description: "Example for QuestionnaireResponse in the context of electronic transition of care"
-* questionnaire = "http://fhir.ch/ig/ch-orf/Questionnaire/QuestionnaireEtoc"
+* questionnaire = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * status = #completed
 
 // ---------- Order (Auftrag) ----------
