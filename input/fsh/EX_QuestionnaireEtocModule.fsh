@@ -689,7 +689,7 @@ Description: "Subquestionnaire Attachment"
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment"
-* name = "Module Questionnaire Attachment"
+//* name = "Module Questionnaire Attachment"
 * title = "Module Questionnaire Attachment"
 * status = #active
 * date = "2023-06-21"
