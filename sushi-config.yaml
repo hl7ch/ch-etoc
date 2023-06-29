@@ -7,14 +7,14 @@ name: CH_eTOC
 title: "CH eTOC (R4)"
 description: Implementation guide for eTOC based on CH ORF
 status: active
-license: CC-BY-SA-4.0
-copyright: CC-BY-SA-4.0
+license: CC0-1.0
+copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2023-06-21
-version: 1.1.0
+date: 2023-06-29
+version: 2.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: STU 1
+releaseLabel: ballot
 publisher:
   name: HL7 Switzerland
 contact:
@@ -23,11 +23,13 @@ contact:
     system: url
     value: https://www.hl7.ch
 dependencies:
-  ch.fhir.ig.ch-orf: current
-  ch.fhir.ig.ch-core: current
-  ch.fhir.ig.ch-emed: current
-  ch.fhir.ig.ch-vacd: current
-  ch.fhir.ig.ch-allergyintolerance: 1.0.0
+  ch.fhir.ig.ch-epr-term: 2.0.9
+  hl7.terminology: 5.1.0
+  ch.fhir.ig.ch-orf: 2.0.0-ballot
+  ch.fhir.ig.ch-core: 4.0.0-ballot
+  ch.fhir.ig.ch-emed: 4.0.0-ballot
+  ch.fhir.ig.ch-vacd: 4.0.0-ballot
+  ch.fhir.ig.ch-allergyintolerance: 2.0.0-ballot
   hl7.fhir.uv.ips: 1.0.0 
 
 pages:
