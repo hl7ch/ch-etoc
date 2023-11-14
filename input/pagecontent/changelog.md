@@ -18,6 +18,8 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [Issue #60](https://github.com/hl7ch/ch-etoc/issues/60): Added display values to CodeSystem Category of Condition.
 
 #### Changed / Updated
+* [Issue 78](https://github.com/hl7ch/ch-etoc/issues/78) - Added IG Fragements to the home page below
+  
 ##### Adopted from CH ORF
 * [ORF Issue Issue #108](https://github.com/hl7ch/ch-orf/issues/108): Improve slicing that info entry[x] warnings are not shown.
 
