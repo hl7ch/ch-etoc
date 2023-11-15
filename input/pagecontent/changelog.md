@@ -8,6 +8,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 
 #### Fixed
 * [Issue #76](https://github.com/hl7ch/ch-etoc/issues/76): Various typos on the home page corrected.
+* [Issue #75](https://github.com/hl7ch/ch-etoc/issues/75): Typo in example Biopsy Duodenum / Magen corrected.
 
 #### Added
 ##### Adopted from CH ORF
