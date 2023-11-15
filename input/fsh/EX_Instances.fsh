@@ -457,7 +457,7 @@ Title: "Biopsie Duodenum / Magen"
 Description: "Example for Pathology result"
 * status = #final
 * code.text = "Biopsien Duodenum, Magen, unruhige Z-Linie vom 19.09.2018:
-Die Veränderungen der Duodenalschleimhaut passen gut zu einem geringen petpischen Schleimhautschaden. Die Magenschleimhaut zeigt das Bild einer reaktiven Gastropathie. Erosive Veränderungen gelangen hier nicht zur Darstellung. Kein Helicobacter, keine Metaplasie, keine pathogenen Erreger nachgeewiesen."
+Die Veränderungen der Duodenalschleimhaut passen gut zu einem geringen petpischen Schleimhautschaden. Die Magenschleimhaut zeigt das Bild einer reaktiven Gastropathie. Erosive Veränderungen gelangen hier nicht zur Darstellung. Kein Helicobacter, keine Metaplasie, keine pathogenen Erreger nachgewiesen."
 * subject = Reference(SUfferer)
 
 
