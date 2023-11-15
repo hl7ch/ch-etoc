@@ -11,19 +11,19 @@ You can download this implementation guide in [NPM format](https://confluence.hl
 
 
 ### Purpose
-The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist, from one hispital to another etc.
+The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist, from one hospital to another etc.
 
-CH eTOC is intended primarly for use in directional information exchange and for the use in the SWISS EPR. It however my be implemented in other settings too.
+CH eTOC is intended primarly for use in directional information exchange and for the use in the SWISS EPR. It however may be implemented in other settings too.
 
 
 ### Foundation    
-This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see [http://hl7.org/fhir/r4](http://hl7.org/fhir/r4)>.
+This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see [http://hl7.org/fhir/r4](http://hl7.org/fhir/r4).
 
 Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and QuestionnaireResponse, forms are addressed here as Questionnaires.
   
 This Implementation Guide is derived from the [CH Order & Referral by Form (CH ORF) Implementation Guide (CH ORF)](http://build.fhir.org/ig/hl7ch/ch-orf/index.html) which relies on HL7 Structured Data Capture Implementation Guide, see [SDC](http://build.fhir.org/ig/HL7/sdc/) and uses the Swiss Core Profiles, see [CH Core](http://build.fhir.org/ig/hl7ch/ch-core/index.html).
 
-April 7, 2022 the the HL7 Switzerland Technical Committee disccussed #39 and finally voted to set cardinality for the questionnaie and questionnaire response to 1.. in the composition resource thus making the use of questionnaires and questionnaireResponses mandatory (see also [CH ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)).
+April 7, 2022 the HL7 Switzerland Technical Committee discussed #39 and finally voted to set cardinality for the Questionnaire and QuestionnaireResponse to 1.. in the composition resource thus making the use of Questionnaires and QuestionnaireResponses mandatory (see also [CH ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)).
 
 Applications claiming for conformance with an CH ORF derived implementation guide shall:
   
@@ -39,7 +39,7 @@ At the working group meeting in February 2021, it was decided that a first versi
 However, this first version of CH eTOC still allows many free text entries. Reason: According to IPAG, in a first step, the items shall be implemented as text.
 It can be expected, that users want to copy paste results: it seems sensible, to have multiple entries for lab, but other findings are mostly in freetext and therefore it makes sense to copy all findings in one copy-paste action.
  
-Clinical content uses mostly the same resources as the IPS. The resource definitions are however constrained from FHIR base definitions and Swiss Core definitions and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core.
+Clinical content uses mostly the same resources as the IPS. The resource definitions are however constrained from FHIR base definitions and CH Core definitions and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core.
     
 
 {:class="table table-bordered"}
@@ -168,7 +168,7 @@ There is no sectionVitalSigns  such as provided by the [IPS](https://build.fhir.
 
 SectionPlanOfCare is omitted for the following reason: It can be assumed that careplans will be available at best as pdf files for the foreseeable future. There is therefore a need to provide careplans as an attachment. This is what the Attachment section is for.
 
-All other secctions for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
+All other sections for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
 
 [sectionMedications]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionMedications) 
 [sectionImmunizations]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionImmunizations) 
@@ -188,9 +188,9 @@ Derivations for use cases in different disciplines are to be defined later.
 
 eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested service and some additional information (e.g. coverage, room preferance etc.). 
 
-Header information such as sender, receiver etc. are condsidered as Generic Elements (to all sorts of referral, orders etc.) and follow the definition in the ORF Implementation Guide.  
+Header information such as sender, receiver etc. are considered as Generic Elements (to all sorts of referral, orders etc.) and follow the definition in the ORF Implementation Guide.  
 
-Copy receiver is ment to receive a copy from the order and all evolving results thereof.
+Copy receiver is meant to receive a copy from the order and all evolving results thereof.
 
 Actors, transactions and security considerations are covered in the corresponding sections of [CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)
     
