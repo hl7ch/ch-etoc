@@ -132,7 +132,7 @@ Description: "Definition for the Composition resource in the context of electron
 * . ^short = "CH eTOC Composition"
 * title = "Zuweisungsschreiben"
 * category = SCT#721927009 // Zuweisungsschreiben 
-* type = SCT#419891008 // Nicht näher bezeichnetes Dokument
+* type = SCT#371535009 // Transfer summary report (record artifact)
 
 // ---------- Composition.section.entry: Questionnaire ----------
 // Objection voted on 7.4.2022 tc meeting Issue #39

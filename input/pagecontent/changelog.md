@@ -22,6 +22,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 
 #### Changed / Updated
 * [Issue 78](https://github.com/hl7ch/ch-etoc/issues/78) - Added IG Fragements to the home page below
+* [Issue 77](https://github.com/hl7ch/ch-etoc/issues/77):  SCT code for DocumantEntry.typeCode adapted from 419891008 to 371535009.
   
 ##### Adopted from CH ORF
 * [ORF Issue Issue #108](https://github.com/hl7ch/ch-orf/issues/108): Improve slicing that info entry[x] warnings are not shown.
