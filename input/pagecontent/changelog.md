@@ -6,6 +6,9 @@ All significant changes to this FHIR implementation guide will be documented on 
 #### Open Issues
 See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 
+#### Fixed
+* [Issue #76](https://github.com/hl7ch/ch-etoc/issues/76): Various typos on the home page corrected.
+
 #### Added
 ##### Adopted from CH ORF
 * [ORF Issue #71](https://github.com/hl7ch/ch-orf/issues/71): Added Initiator and his relationship to to the patient.
