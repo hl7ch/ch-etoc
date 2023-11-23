@@ -4,7 +4,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 ### v1.1.0 - HL7 Switzerland STU 2 Ballot
 
 #### Open Issues
-See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
+* [Issue #80](https://github.com/hl7ch/ch-etoc/issues/80): Secondary Diagnosis Condition - support also the less specific value from the base spec: encounter-diagnosis
 
 #### Fixed
 * [Issue #76](https://github.com/hl7ch/ch-etoc/issues/76): Various typos on the home page corrected.
