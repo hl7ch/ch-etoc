@@ -1,3 +1,8 @@
+### Purpose
+The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist, from one hospital to another etc.
+
+CH eTOC is intended primarly for use in directional information exchange and for the use in the SWISS EPR. It however may be implemented in other settings too.
+
 <div markdown="1" class="stu-note">
 
 [Significant Changes, Open and Closed Issues](changelog.html)
@@ -5,13 +10,6 @@
 
 **Download:**
 You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
-
-
-### Purpose
-The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist, from one hospital to another etc.
-
-CH eTOC is intended primarly for use in directional information exchange and for the use in the SWISS EPR. It however may be implemented in other settings too.
-
 
 ### Foundation    
 This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see [http://hl7.org/fhir/r4](http://hl7.org/fhir/r4).
