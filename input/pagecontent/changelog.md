@@ -3,6 +3,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 ### v1.1.0 - HL7 Switzerland STU 2 Ballot
 
+* [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
+
 #### Open Issues
 * [Issue #80](https://github.com/hl7ch/ch-etoc/issues/80): Secondary Diagnosis Condition - support also the less specific value from the base spec: encounter-diagnosis
 
