@@ -1,7 +1,7 @@
 ### Purpose
 The CH eTransition of Care (CH eTOC) Implementation Guide defines the content of a referral from a GP to the hospital, to a specialist, from one hospital to another etc.
 
-CH eTOC is intended primarly for use in directional information exchange and for the use in the SWISS EPR. It however may be implemented in other settings too.
+CH eTOC is intended primarily for use in directional information exchange and for the use in the SWISS EPR. It however may be implemented in other settings too.
 
 <div markdown="1" class="stu-note">
 
@@ -9,7 +9,7 @@ CH eTOC is intended primarly for use in directional information exchange and for
 </div>
 
 **Download:**
-You can download this implementation guide in [NPM format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
+You can download this implementation guide in [npm format](https://confluence.hl7.org/display/FHIR/NPM+Package+Specification) from [here](package.tgz).
 
 ### Foundation    
 This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R4 see [http://hl7.org/fhir/r4](http://hl7.org/fhir/r4).
@@ -62,93 +62,93 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         </tr>
         <tr>
             <td>IPS Allergies and Intolerances</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-allergyintolerance">ChEtocAllergyIntolerance</a></td>
+            <td><a href="StructureDefinition-ch-etoc-allergyintolerance.html">ChEtocAllergyIntolerance</a></td>
             <td><a href="http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance">ChAllergyIntolerance</a></td>
         </tr>
         <tr>
             <td>IPS Problem List</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-primary-diagnosis">ChEtocPrimaryDiagnosisCondition</a></td>
+            <td><a href="StructureDefinition-ch-etoc-primary-diagnosis.html">ChEtocPrimaryDiagnosisCondition</a></td>
             <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-secondary-diagnosis">ChEtocSecondaryDiagnosisCondition</a></td>
+            <td><a href="StructureDefinition-ch-etoc-secondary-diagnosis.html">ChEtocSecondaryDiagnosisCondition</a></td>
             <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
         </tr>
         <tr>
             <td>IPS Immunizations</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-immunization">ChEtocImmunization</a></td>
+            <td><a href="StructureDefinition-ch-etoc-immunization.html">ChEtocImmunization</a></td>
             <td><a href="http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization">ChVacdImmunization</a></td>
-            <td></td>
         </tr>
         <tr>
             <td>IPS History of Procedures</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-procedure">ChEtocProcedure</a></td>
-            <td><a href="http://hl7.org/fhir/R4/prozedure.html">Prozedure</a></td>
+            <td><a href="StructureDefinition-ch-etoc-procedure.html">ChEtocProcedure</a></td>
+            <td><a href="http://hl7.org/fhir/R4/procedure.html">Procedure</a></td>
         </tr>
         <tr>
             <td>IPS Medical Devices</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-device">ChEtocDevice</a></td>
+            <td><a href="StructureDefinition-ch-etoc-device.html">ChEtocDevice</a></td>
             <td><a href="http://hl7.org/fhir/R4/device.html">Device</a></td>
         </tr>
         <tr>
             <td>IPS Diagnostic Results</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-lab-observation">ChEtocLabObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-lab-observation.html">ChEtocLabObservation</a></td>
             <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-pahtology-observation">ChEtocPathologyObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-pathology-observation.html">ChEtocPathologyObservation</a></td>
             <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-radiolology-observation">ChEtocRadiologyObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-radiology-observation.html">ChEtocRadiologyObservation</a></td>
             <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-cardiolology-observation">ChEtocCardiologyObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-cardiology-observation.html">ChEtocCardiologyObservation</a></td>
             <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-bodyheight-observation">ChEtocBodyHeightObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-bodyheight-observation.html">ChEtocBodyHeightObservation</a></td>
             <td><a href="http://hl7.org/fhir/StructureDefinition/bodyheight">HL7BodyHeight</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-bodyweight-observation">ChEtocBodyWeightObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-bodyweight-observation.html">ChEtocBodyWeightObservation</a></td>
             <td><a href="http://hl7.org/fhir/StructureDefinition/bodyweight">HL7BodyWeight</a></td>
         </tr>
         <tr>
             <td>IPS Past history of illnesses</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-illness">ChEtocPastHistoryofIllnessesCondition</a></td>
+            <td><a href="StructureDefinition-ch-etoc-illness.html">ChEtocPastHistoryofIllnessesCondition</a></td>
             <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
         </tr>
         <tr>
             <td>IPS Pregnancy</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-pregnancystatus">ChEtocPregnancyStatusObservation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-pregnancystatus.html">ChEtocPregnancyStatusObservation</a></td>
             <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-expecteddeliverydate">CH eToc Expected Delivery Date Observation</a></td>
+            <td><a href="StructureDefinition-ch-etoc-expecteddeliverydate.html">CH eToc Expected Delivery Date Observation</a></td>
             <td><a href="http://hl7.org/fhir/R4/observation.html">Observation</a></td>
         </tr>
         <tr>
             <td>IPS Social History</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-socialhistory">ChEtocSocialHistoryCondition</a></td>
+            <td><a href="StructureDefinition-ch-etoc-socialhistory.html">ChEtocSocialHistoryCondition</a></td>
             <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
         </tr>
         <tr>
             <td>IPS IFunctional Status</td>
-            <td><a href="http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-functionalstatus">ChEtocFunctionalStatusCondition</a></td>
+            <td><a href="StructureDefinition-ch-etoc-functionalstatus.html">ChEtocFunctionalStatusCondition</a></td>
             <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
         </tr>
         <tr>
             <td>IPS Advance Directives</td>
             <td>Not supported yet</td>
+            <td>-</td>
         </tr>
     </tbody>
 </table>
@@ -157,7 +157,7 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
 
 In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionPurpose).
 
-CH eTOC  alllows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems). [sectionAttachment]( http://fhir.ch/ig/ch-etoc/branches/main/section:sectionAttachment) allowsnfor attachment (whatever is considered as important).
+CH eTOC  allows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems). [sectionAttachment]( http://fhir.ch/ig/ch-etoc/branches/main/section:sectionAttachment) allows n for attachment (whatever is considered as important).
 
 There is no sectionVitalSigns  such as provided by the [IPS](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips-definitions.html#Composition.section:sectionVitalSigns). This is in order to prevent duplicate content.
 
@@ -173,7 +173,7 @@ All other sections for clinical content use the same wording for section titles 
 [sectionProceduresHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionProceduresHx) 
 [sectionSocialHistory]( http://fhir.ch/ig/ch-etoc/branches/main/sectionSocialHistory) 
 [sectionMedicalDevices]( http://fhir.ch/ig/ch-etoc/branches/main/sectionMedicalDevices) 
-[sectionResults]( http://fhir.ch/ig/ch-etoc/branches/main/ection:sectionResults) 
+[sectionResults]( http://fhir.ch/ig/ch-etoc/branches/main/section:sectionResults) 
 [sectionPregnancyHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionPregnancy) 
 
 
@@ -181,7 +181,7 @@ As a consequence of the above CH eTOC does not claim to be conformant to IPS for
 
 Derivations for use cases in different disciplines are to be defined later. 
 
-eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested service and some additional information (e.g. coverage, room preferance etc.). 
+eTOC adds a ServiceRequest resource to the clinical content (according to the IPS) in order to depict the reason for a referral, the requested service and some additional information (e.g. coverage, room preference etc.). 
 
 Header information such as sender, receiver etc. are considered as Generic Elements (to all sorts of referral, orders etc.) and follow the definition in the ORF Implementation Guide.  
 
@@ -197,7 +197,7 @@ Value sets and coding are preliminary and not yet approved by eHealth Suisse.
 This implementation guide defines data elements, resources, formats, and methods for exchanging healthcare data between different participants in the healthcare process. As such, clinical safety is a key concern. Additional guidance regarding safety for the specification’s many and various implementations is available at: [https://www.hl7.org/FHIR/safety.html](https://www.hl7.org/FHIR/safety.html).
 
 Although the present specification does gives users the opportunity to observe data protection and data security regulations, its use does not guarantee compliance with these regulations. Effective compliance must be ensured by appropriate measures during implementation projects and in daily operations. The corresponding implementation measures are explained in the standard. 
-In addition, the present specification can only influence compliance with the security regulations in the technical area of standardisation. It cannot influence organisational and contractual matters.
+In addition, the present specification can only influence compliance with the security regulations in the technical area of standardization. It cannot influence organizational and contractual matters.
 
 ### IP Statements
 This document is licensed under Creative Commons "No Rights Reserved" ([CC0](https://creativecommons.org/publicdomain/zero/1.0/)).

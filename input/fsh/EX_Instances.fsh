@@ -326,7 +326,7 @@ Instance: PrimaryDiagnosis
 InstanceOf: ChEtocPrimaryDiagnosisCondition
 Title: "Primary Diagnosis"
 Description: "Example for Primary Diagnosis Condition"
-* category = ChEtocConditionCategory#primary-diagnosis "Primary Diagnosis"
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#primary-diagnosis "Primary Diagnosis"
 * code.text = "St. nach Bypass 2007"
 * subject = Reference(SUfferer)
 
@@ -361,7 +361,7 @@ Instance: SecondaryDiagnosis1
 InstanceOf: ChEtocSecondaryDiagnosisCondition
 Title: "Secondary Diagnosis 1"
 Description: "Example for Secondary Diagnosis Condition"
-* category = ChEtocConditionCategory#secondary-diagnosis "Secondary Diagnosis"
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#secondary-diagnosis "Secondary Diagnosis"
 * code.text = "Hypertonie (Syst um 180 mm HG)"
 * subject = Reference(SUfferer)
 
@@ -370,7 +370,7 @@ Instance: SecondaryDiagnosis2
 InstanceOf: ChEtocSecondaryDiagnosisCondition
 Title: "Secondary Diagnosis 2"
 Description: "Example for Diagnosis Condition"
-* category = ChEtocConditionCategory#secondary-diagnosis "Secondary Diagnosis"
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#secondary-diagnosis "Secondary Diagnosis"
 * code.text = "Hypercholesterinämie"
 * subject = Reference(SUfferer)
 

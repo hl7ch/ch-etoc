@@ -560,7 +560,7 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient#Patient.communication:languageOfCorrespondence"
 * item[=].item[=].text = "Korrespondenzsprache"
 * item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode"
+* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-term/ValueSet/DocumentEntry.languageCode"
 * item[=].item[+].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].item[=].extension.valueExpression.name = "contact"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
@@ -1304,7 +1304,7 @@ Usage: #example
 * item[=].item.text = "Ist der Patient über die Anmeldung informiert und explizit einverstanden?"
 * item[=].item.type = #choice
 * item[=].item.answerOption[0].valueCoding = $ch-orf-cs-consentstatus#ExplicitAgreement "Patient is informed and has explicitly agreed"
-* item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
+* item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian' etc."
 * item[=].item.item.linkId = "patient.consent.statement.note"
 * item[=].item.item.text = "Anmerkung"
 * item[=].item.item.type = #string

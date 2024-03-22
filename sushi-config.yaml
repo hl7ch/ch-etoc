@@ -10,7 +10,7 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2023-12-28
+date: 2024-03-22
 version: 3.0.0-ci-build
 fhirVersion: 4.0.1
 copyrightYear: 2021+
@@ -24,12 +24,13 @@ contact:
         value: https://www.hl7.ch
 dependencies:
   hl7.terminology: 5.4.0
-  ch.fhir.ig.ch-orf: 2.0.1
-  ch.fhir.ig.ch-core: 4.0.1
-  ch.fhir.ig.ch-emed: 4.0.1
-  ch.fhir.ig.ch-vacd: 4.0.1
-  ch.fhir.ig.ch-allergyintolerance: 2.0.1
-  hl7.fhir.uv.ips: 1.0.0 
+  ch.fhir.ig.ch-orf: current
+  ch.fhir.ig.ch-core: current
+  ch.fhir.ig.ch-term: current
+  ch.fhir.ig.ch-emed: current
+  ch.fhir.ig.ch-vacd: current
+  ch.fhir.ig.ch-allergyintolerance: current
+  hl7.fhir.uv.ips: 1.1.0
 
 pages:
   index.md:
@@ -45,7 +46,10 @@ pages:
     title: Profiles
   extensions.html:
     title: Extensions
-  terminology.html:
-    title: Terminology
   changelog.md:
     title: Changelog
+
+parameters:
+  excludettl: true
+  allow-extensible-warnings: true
+  display-warnings: true  

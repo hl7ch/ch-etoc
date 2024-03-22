@@ -29,3 +29,46 @@ The link 'null#item.requestedEncounter.class' for "Answers: 3 options" cannot be
 The link 'null#item.requestedEncounter.desiredAccommodation' for "Answers: 3 options" cannot be resolved
 The link 'null#item.appointment.status' for "Answers: 3 options" cannot be resolved
 The link 'null#item.patient.consent.statement' for "Answers: 2 options" cannot be resolved
+
+# Not practicable in this context/use case
+Best Practice Recommendation: In general, all observations should have a performer
+Best Practice Recommendation: In general, all observations should have an effective[x] ()
+Constraint failed: con-3: 'Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item' (defined in http://hl7.org/fhir/StructureDefinition/Condition) (Best Practice Recommendation)
+Constraint failed: con-3: 'Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item' (Best Practice Recommendation)
+
+# Swiss specific display values
+Wrong Display Name 'Die Anfrage hat normale Priorität.' for http://hl7.org/fhir/request-priority#routine. Valid display is 'Routine' (for the language(s) '--')
+Wrong Display Name 'Die Anfrage sollte dringend bearbeitet werden - höhere Priorität als normal.' for http://hl7.org/fhir/request-priority#urgent. Valid display is 'Urgent' (for the language(s) '--')
+Wrong Display Name 'Die Anfrage sollte so schnell wie möglich bearbeitet werden - höhere Priorität als dringend.' for http://hl7.org/fhir/request-priority#asap. Valid display is 'ASAP' (for the language(s) '--')
+Wrong Display Name 'Die Anfrage sollte sofort bearbeitet werden - höchstmögliche Priorität. Z.B. bei einem Notfall.' for http://hl7.org/fhir/request-priority#stat. Valid display is 'STAT' (for the language(s) '--')
+Wrong Display Name 'Nicht definiert' for http://snomed.info/sct#373068000. Valid display is one of 3 choices: 'Undetermined (qualifier value)', 'Undetermined' or 'Not known' (for the language(s) '--')
+Wrong Display Name 'Gesetzlicher Vertreter' for http://snomed.info/sct#58626002. Valid display is one of 3 choices: 'Legal guardian', 'Legal custodian' or 'Legal guardian (person)' (for the language(s) '--')
+Wrong Display Name 'Tochter' for http://snomed.info/sct#66089001. Valid display is one of 2 choices: 'Daughter' or 'Daughter (person)' (for the language(s) '--')
+Wrong Display Name 'Sohn' for http://snomed.info/sct#65616008. Valid display is one of 2 choices: 'Son' or 'Son (person)' (for the language(s) '--') 
+Wrong Display Name 'Ehemann' for http://snomed.info/sct#127849001. Valid display is one of 2 choices: 'Husband' or 'Husband (person)' (for the language(s) '--')
+Wrong Display Name 'Ehefrau' for http://snomed.info/sct#127850001. Valid display is one of 2 choices: 'Wife' or 'Wife (person)' (for the language(s) '--')
+Wrong Display Name 'Partner (eingetragene Partnerschaft)' for http://snomed.info/sct#394921008. Valid display is one of 2 choices: 'Cohabitee (person)' or 'Cohabitee' (for the language(s) '--') 
+Wrong Display Name 'Bruder' for http://snomed.info/sct#70924004. Valid display is one of 2 choices: 'Brother' or 'Brother (person)' (for the language(s) '--')
+Wrong Display Name 'Schwester' for http://snomed.info/sct#27733009. Valid display is one of 3 choices: 'Sister', 'Sister (person)' or 'Sr - Sister' (for the language(s) '--')
+Wrong Display Name 'Mutter' for http://snomed.info/sct#72705000. Valid display is one of 3 choices: 'Mother', 'Maternal' or 'Mother (person)' (for the language(s) '--')
+Wrong Display Name 'Vater' for http://snomed.info/sct#66839005. Valid display is one of 2 choices: 'Father' or 'Father (person)' (for the language(s) '--')
+Wrong Display Name 'Bekannt' for http://snomed.info/sct#48385004. Valid display is one of 2 choices: 'Acquaintance' or 'Acquaintance (person)' (for the language(s) '--')
+Wrong Display Name 'Männlich' for http://hl7.org/fhir/administrative-gender#male. Valid display is 'Male' (for the language(s) '--')
+Wrong Display Name 'Weiblich' for http://hl7.org/fhir/administrative-gender#female. Valid display is 'Female' (for the language(s) '--')
+Wrong Display Name 'Anderes' for http://hl7.org/fhir/administrative-gender#other. Valid display is 'Other' (for the language(s) '--')
+Wrong Display Name 'aufgelöste Partnerschaft' for http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus#7. Valid display is 'aufgelöste Partnerschaft' (for the language(s) '--')
+Wrong Display Name 'Ambulant' for http://terminology.hl7.org/CodeSystem/v3-ActCode#AMB. Valid display is 'ambulatory' (en) (for the language(s) '--')
+Wrong Display Name 'Stationär' for http://terminology.hl7.org/CodeSystem/v3-ActCode#IMP. Valid display is 'inpatient encounter' (en) (for the language(s) '--')
+Wrong Display Name 'Notfall' for http://terminology.hl7.org/CodeSystem/v3-ActCode#EMER. Valid display is 'emergency' (en) (for the language(s) '--')
+Wrong Display Name 'Wunsch des Patienten (vorgeschlagen)' for http://hl7.org/fhir/appointmentstatus#proposed. Valid display is 'Proposed' (for the language(s) '--')
+Wrong Display Name 'Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)' for http://hl7.org/fhir/appointmentstatus#pending. Valid display is 'Pending' (for the language(s) '--')
+Wrong Display Name 'Vom Patienten und Leistungserbringer bestätigt (gebucht)' for http://hl7.org/fhir/appointmentstatus#booked. Valid display is 'Booked' (for the language(s) '--')
+
+# Additional codes are defined for this element and this use case
+None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#illness)
+None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#secondary-diagnosis)
+None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#primary-diagnosis)
+
+# Reference to draft code systems
+Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
+Reference to draft CodeSystem http://hl7.org/fhir/request-priority|4.0.1
