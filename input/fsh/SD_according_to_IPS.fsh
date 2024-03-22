@@ -27,8 +27,7 @@ Title: "CH eTOC Primary Diagnosis Condition"
 Description: "Definition for the Primary Diagnosis Condition resource in the context of electronic tranisiton of care."
 * . ^short = "CH eTOC Primary Diagnosis Condition"
 * category 1..1 MS
-* category from ChEtocConditionCategory
-* category = ChEtocConditionCategory#primary-diagnosis
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#primary-diagnosis
 * category ^short = "Primary Diagnosis"
 * code 1.. MS 
 * code.text 1.. MS
@@ -41,8 +40,7 @@ Title: "CH eTOC Secondary Diagnosis Condition"
 Description: "Definition for the Secondary Diagnosis Condition resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Secondary Diagnosis Condition"
 * category 1..1 MS
-* category from ChEtocConditionCategory
-* category = ChEtocConditionCategory#secondary-diagnosis
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#secondary-diagnosis
 * category ^short = "Secondary Diagnosis"
 * code 1.. MS 
 * code.text 1.. MS
@@ -101,7 +99,7 @@ Description: "Definition for the Lab Observation resource in the context of CH e
 
 Profile: ChEtocPathologyObservation
 Parent: Observation
-Id: ch-etoc-pahtology-observation
+Id: ch-etoc-pathology-observation
 Title: "CH eTOC Pathology Observation"
 Description: "Definition for the Pathology Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Pathology Observation"
@@ -112,10 +110,10 @@ Description: "Definition for the Pathology Observation resource in the context o
 
 Profile: ChEtocRadiologyObservation
 Parent: Observation
-Id: ch-etoc-radiolology-observation
+Id: ch-etoc-radiology-observation
 Title: "CH eTOC Radiology Observation"
 Description: "Definition for the Radiology Observation resource in the context of CH eTOC."
-* . ^short = "CH eTOC Radiolology Observation"
+* . ^short = "CH eTOC Radiology Observation"
 * status MS
 * code = LNC#75490-3 "Radiology Note"
 * subject only Reference(ChCorePatient) 
@@ -123,10 +121,10 @@ Description: "Definition for the Radiology Observation resource in the context o
 
 Profile: ChEtocCardiologyObservation
 Parent: Observation
-Id: ch-etoc-cardiolology-observation
+Id: ch-etoc-cardiology-observation
 Title: "CH eTOC cardiology Observation"
 Description: "Definition for the cardiology Observation resource in the context of CH eTOC."
-* . ^short = "CH eTOC Cardiolology Observation"
+* . ^short = "CH eTOC Cardiology Observation"
 // Supplementary to IPS
 * status MS
 * code = LNC#77412-5 "cardiology History and physical note"
@@ -177,8 +175,7 @@ Title: "CH eTOC Past History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Past History of Illness Condition"
 * category 1..1 MS
-* category from ChEtocConditionCategory
-* category = ChEtocConditionCategory#illness
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#illness
 * category ^short = "Illness"
 * code 1.. MS 
 * code.text 1.. MS
@@ -221,8 +218,7 @@ Title: "CH eTOC Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Social History Condition"
 * category 1..1 MS
-* category from ChEtocConditionCategory
-* category = ChEtocConditionCategory#social-history-condition
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#social-history-condition
 * category ^short = "Social History Condition"
 * code 1.. MS 
 * code.text 1.. MS
@@ -237,8 +233,7 @@ Title: "CH eTOC Functional Status Condition"
 Description: "Definition for the Functional Status Condition resource in the context of electronic transition of care."
 * . ^short = "CH eTOC Functional Status Condition"
 * category 1..1 MS
-* category from ChEtocConditionCategory
-* category = ChEtocConditionCategory#functional-status-condition
+* category = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#functional-status-condition
 * category ^short = "Functioning, Disability"
 * code 1.. MS 
 * code.text 1.. MS
