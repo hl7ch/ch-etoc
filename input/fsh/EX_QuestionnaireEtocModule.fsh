@@ -696,7 +696,7 @@ Description: "Subquestionnaire Attachment"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "attachment.title"  
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreferencet#content.attachment.title"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attachment.title"
 * item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
 * item[=].type = #string
 * item[=].repeats = true
