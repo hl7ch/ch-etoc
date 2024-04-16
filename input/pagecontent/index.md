@@ -47,23 +47,23 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         </tr>
         <tr>
             <td>IPS Medication Summary</td>
-            <td><a href="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement">CH EMED MedicationStatement</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medicationstatement">CHCoreMedicationStatement</a></td>
             <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication">CH EMED Medication</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medication">CHCoreMedication</a></td>
             <td><a href="http://hl7.org/fhir/R4/medication.html">Medication</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage">CH EMED Dosage</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-dosage">CHCoreDosage</a></td>
             <td><a href="http://hl7.org/fhir/R4/datatypes.html#Dosage">Dosage</a></td>
         </tr>
         <tr>
             <td>IPS Allergies and Intolerances</td>
             <td><a href="StructureDefinition-ch-etoc-allergyintolerance.html">ChEtocAllergyIntolerance</a></td>
-            <td><a href="http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance">ChAllergyIntolerance</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core-allergyintolerance/StructureDefinition/ch-core-allergyintolerance">CHCoreAllergyIntolerance</a></td>
         </tr>
         <tr>
             <td>IPS Problem List</td>
@@ -78,7 +78,7 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         <tr>
             <td>IPS Immunizations</td>
             <td><a href="StructureDefinition-ch-etoc-immunization.html">ChEtocImmunization</a></td>
-            <td><a href="http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization">ChVacdImmunization</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-immunization">CHCoreImmunization</a></td>
         </tr>
         <tr>
             <td>IPS History of Procedures</td>

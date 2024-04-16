@@ -2,7 +2,7 @@
 
 
 /* -------- Corresponds to IPS Medication Summary ---------  
---> uses CHEMED */
+--> uses CHCore */
 
 // -------- Corresponds to IPS Allergies and Intolerances --------- 
 Profile: ChEtocAllergyIntolerance

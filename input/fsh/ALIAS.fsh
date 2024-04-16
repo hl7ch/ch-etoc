@@ -21,16 +21,6 @@ Alias:   SNOMEDCTSwissExtension =                urn:oid:2.16.756.5.30.1.127.3.4
 Alias:   AllergyIntoleranceClinicalStatusCodes = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias:   Language =                              urn:ietf:bcp:47
 
-// CH SD
-Alias:   ChAllergyIntolerance =          http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance
-
-Alias:   ChEmedMedication =     http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication 
-Alias:   ChEmedMedicationStatement = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement
-
-Alias: ChEmedDosage = http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage
-
-Alias:   ChVacdImmunization =     http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization
-
 // CH Core SD
 Alias:   ChCorePatient =                http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-patient
 Alias:   ChCorePractitioner =           http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-practitioner
