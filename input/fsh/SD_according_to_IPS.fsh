@@ -2,11 +2,11 @@
 
 
 /* -------- Corresponds to IPS Medication Summary ---------  
---> uses CHEMED */
+--> uses CHCore */
 
 // -------- Corresponds to IPS Allergies and Intolerances --------- 
 Profile: ChEtocAllergyIntolerance
-Parent: ChAllergyIntolerance
+Parent: CHCoreAllergyIntolerance
 Id: ch-etoc-allergyintolerance
 Title: "CH eTOC Allergy Intolerance"
 Description: "Definition for the Allergy Intolerance resource in the context of electronic transition of care."
@@ -21,7 +21,7 @@ Description: "Definition for the Allergy Intolerance resource in the context of 
 
 // -------- Corresponds to IPS Problem List --------- 
 Profile: ChEtocPrimaryDiagnosisCondition
-Parent: Condition
+Parent: CHCoreCondition
 Id: ch-etoc-primary-diagnosis
 Title: "CH eTOC Primary Diagnosis Condition"
 Description: "Definition for the Primary Diagnosis Condition resource in the context of electronic tranisiton of care."
@@ -34,7 +34,7 @@ Description: "Definition for the Primary Diagnosis Condition resource in the con
 * subject only Reference(ChCorePatient) 
 
 Profile: ChEtocSecondaryDiagnosisCondition
-Parent: Condition
+Parent: CHCoreCondition
 Id: ch-etoc-secondary-diagnosis
 Title: "CH eTOC Secondary Diagnosis Condition"
 Description: "Definition for the Secondary Diagnosis Condition resource in the context of electronic transition of care."
@@ -49,7 +49,7 @@ Description: "Definition for the Secondary Diagnosis Condition resource in the c
 
 // -------- Corresponds to IPS Immunizations --------- 
 Profile: ChEtocImmunization
-Parent: ChVacdImmunization
+Parent: CHCoreImmunization
 Id: ch-etoc-immunization
 Title: "CH eTOC immunizationstatus"
 Description: "Definition for the immunizationstatus resource in the context of electronic transition of care."
@@ -169,7 +169,7 @@ Description: "Definition for the Body Weight Observation resource in the context
 
 // -------- Corresponds to IPS Past history of illnesses --------- 
 Profile: ChEtocPastHistoryofIllnessesCondition
-Parent: Condition
+Parent: CHCoreCondition
 Id: ch-etoc-illness
 Title: "CH eTOC Past History of Illnesses Condition"
 Description: "Definition for the Past History of Illnesses Condition resource in the context of electronic transition of care."
@@ -212,7 +212,7 @@ Description: "Definition for the Expected Delivery Date Observation resource in 
 Profile: ChEtocSocialHistoryCondition
 /* IPS focusses on tobaco and alcohol abuse only; conscutevely, entires are defined as observation. eTOC considers  Social History as
 as broader; consecutverly entries are defined as conditions. tobaco and alcohol abuse shall be listed in problem list*/
-Parent: Condition
+Parent: CHCoreCondition
 Id: ch-etoc-socialhistory
 Title: "CH eTOC Social History Condition"
 Description: "Definition for the Social History Condition resource in the context of electronic transition of care."
@@ -227,7 +227,7 @@ Description: "Definition for the Social History Condition resource in the contex
 
 // -------- Corresponds to IPS IFunctional Status  --------- 
 Profile: ChEtocFunctionalStatusCondition
-Parent: Condition
+Parent: CHCoreCondition
 Id: ch-etoc-functionalstatus
 Title: "CH eTOC Functional Status Condition"
 Description: "Definition for the Functional Status Condition resource in the context of electronic transition of care."

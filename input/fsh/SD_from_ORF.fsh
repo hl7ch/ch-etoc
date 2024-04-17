@@ -88,7 +88,7 @@ Reserved for specification of a particular form for referrals to clinical subspe
 * supportingInfo[functionalStatus] only Reference(ChEtocFunctionalStatusCondition)
 
 * supportingInfo[medicationstatement] MS
-* supportingInfo[medicationstatement] only Reference(ChEmedMedicationStatement)
+* supportingInfo[medicationstatement] only Reference(CHCoreMedicationStatement)
 * supportingInfo[medicationstatement] ^short = "MedicationStatement contains one medication with dosage"
 * supportingInfo[allergiesIntolerances] MS
 * supportingInfo[allergiesIntolerances] only Reference(ChEtocAllergyIntolerance)
@@ -260,7 +260,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionMedications].text MS
 * section[sectionMedications].section 0..0
 * section[sectionMedications].entry 0.. MS
-* section[sectionMedications].entry only Reference(ChEmedMedicationStatement)
+* section[sectionMedications].entry only Reference(CHCoreMedicationStatement)
 
 // ------- Composition.section: immunizations -------
 * section contains sectionImmunizations 0..1 MS

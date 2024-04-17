@@ -5,6 +5,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 
 #### Changed / Updated
 * [#82](https://github.com/hl7ch/ch-etoc/issues/82): Move terminology to CH Term
+* [#83](https://github.com/hl7ch/ch-etoc/issues/83): Use CH Core base profiles
 
 #### Fixed
 * [#84](https://github.com/hl7ch/ch-etoc/issues/84): Typos in ids of profiles

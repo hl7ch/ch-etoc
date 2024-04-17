@@ -492,19 +492,19 @@ Description: "Subquestionnaire Medication"
 * publisher = "HL7 Switzerland"
 
 /* item[+].linkId = "medication"
-* item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement"
+* item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medicationstatement#MedicationStatement"
 * item[=].text = "Medikation"
 * item[=].type = #group
 * item[=].repeats = true // Systems might provide medication as multiple entries 
 */
 * item[+].linkId = "medication.medication"
-* item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
+* item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medication#Medication.code.text"
 * item[=].text = "Medikament"
 * item[=].type = #string
 * item[=].repeats = true
 
 * item[=].item[+].linkId = "medication.dosage"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medicationstatement#MedicationStatement.dosage:nonstructured"
 * item[=].item[=].text = "Dosierung"
 * item[=].item[=].type = #string
 

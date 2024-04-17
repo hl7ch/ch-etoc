@@ -47,38 +47,38 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         </tr>
         <tr>
             <td>IPS Medication Summary</td>
-            <td><a href="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement">CH EMED MedicationStatement</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medicationstatement">CHCoreMedicationStatement</a></td>
             <td><a href="http://hl7.org/fhir/R4/medicationstatement.html">MedicationStatement</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication">CH EMED Medication</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medication">CHCoreMedication</a></td>
             <td><a href="http://hl7.org/fhir/R4/medication.html">Medication</a></td>
         </tr>
         <tr>
             <td></td>
-            <td><a href="http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-dosage">CH EMED Dosage</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-dosage">CHCoreDosage</a></td>
             <td><a href="http://hl7.org/fhir/R4/datatypes.html#Dosage">Dosage</a></td>
         </tr>
         <tr>
             <td>IPS Allergies and Intolerances</td>
             <td><a href="StructureDefinition-ch-etoc-allergyintolerance.html">ChEtocAllergyIntolerance</a></td>
-            <td><a href="http://fhir.ch/ig/ch-allergyintolerance/StructureDefinition/ch-allergyintolerance">ChAllergyIntolerance</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-allergyintolerance">CHCoreAllergyIntolerance</a></td>
         </tr>
         <tr>
             <td>IPS Problem List</td>
             <td><a href="StructureDefinition-ch-etoc-primary-diagnosis.html">ChEtocPrimaryDiagnosisCondition</a></td>
-            <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-condition">CHCoreCondition</a></td>
         </tr>
         <tr>
             <td></td>
             <td><a href="StructureDefinition-ch-etoc-secondary-diagnosis.html">ChEtocSecondaryDiagnosisCondition</a></td>
-            <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-condition">CHCoreCondition</a></td>
         </tr>
         <tr>
             <td>IPS Immunizations</td>
             <td><a href="StructureDefinition-ch-etoc-immunization.html">ChEtocImmunization</a></td>
-            <td><a href="http://fhir.ch/ig/ch-vacd/StructureDefinition/ch-vacd-immunization">ChVacdImmunization</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-immunization">CHCoreImmunization</a></td>
         </tr>
         <tr>
             <td>IPS History of Procedures</td>
@@ -123,7 +123,7 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         <tr>
             <td>IPS Past history of illnesses</td>
             <td><a href="StructureDefinition-ch-etoc-illness.html">ChEtocPastHistoryofIllnessesCondition</a></td>
-            <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-condition">CHCoreCondition</a></td>
         </tr>
         <tr>
             <td>IPS Pregnancy</td>
@@ -138,12 +138,12 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
         <tr>
             <td>IPS Social History</td>
             <td><a href="StructureDefinition-ch-etoc-socialhistory.html">ChEtocSocialHistoryCondition</a></td>
-            <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-condition">CHCoreCondition</a></td>
         </tr>
         <tr>
             <td>IPS IFunctional Status</td>
             <td><a href="StructureDefinition-ch-etoc-functionalstatus.html">ChEtocFunctionalStatusCondition</a></td>
-            <td><a href="http://hl7.org/fhir/R4/condition.html">Condition</a></td>
+            <td><a href="http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-condition">CHCoreCondition</a></td>
         </tr>
         <tr>
             <td>IPS Advance Directives</td>
@@ -155,9 +155,9 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
 
 <sup>&#91;Table 1&#93;</sup> *Resources and datatypes for clinical content*
 
-In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionPurpose).
+In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionPurpose).
 
-CH eTOC  allows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionProblems). [sectionAttachment]( http://fhir.ch/ig/ch-etoc/branches/main/section:sectionAttachment) allows n for attachment (whatever is considered as important).
+CH eTOC  allows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionProblems). [sectionAttachment](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionAttachment) allows n for attachment (whatever is considered as important).
 
 There is no sectionVitalSigns  such as provided by the [IPS](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips-definitions.html#Composition.section:sectionVitalSigns). This is in order to prevent duplicate content.
 
@@ -165,16 +165,16 @@ SectionPlanOfCare is omitted for the following reason: It can be assumed that ca
 
 All other sections for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
 
-[sectionMedications]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionMedications) 
-[sectionImmunizations]( http://fhir.ch/ig/ch-etoc/branches/main/StructureDefinition-ch-etoc-composition-definitions.html#Composition.sectionImmunizations) 
-[sectionAllergies]( http://fhir.ch/ig/ch-etoc/branches/main/sectionAllergies) 
-[sectionPastIllnessHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionPastIllnessHx) 
-[sectionFunctionalStatus]( http://fhir.ch/ig/ch-etoc/branches/main/ection:sectionFunctionalStatus) 
-[sectionProceduresHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionProceduresHx) 
-[sectionSocialHistory]( http://fhir.ch/ig/ch-etoc/branches/main/sectionSocialHistory) 
-[sectionMedicalDevices]( http://fhir.ch/ig/ch-etoc/branches/main/sectionMedicalDevices) 
-[sectionResults]( http://fhir.ch/ig/ch-etoc/branches/main/section:sectionResults) 
-[sectionPregnancyHx]( http://fhir.ch/ig/ch-etoc/branches/main/sectionPregnancy) 
+[sectionMedications](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionMedications)     
+[sectionImmunizations](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionImmunizations)        
+[sectionAllergies](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionAllergies)     
+[sectionPastIllnessHx](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionPastIllnessHx)      
+[sectionFunctionalStatus](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionFunctionalStatus)      
+[sectionProceduresHx](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionProceduresHx)      
+[sectionSocialHistory](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionSocialHistory)      
+[sectionMedicalDevices](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionMedicalDevices)      
+[sectionResults](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionResults)      
+[sectionPregnancyHx](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionPregnancyHx)     
 
 
 As a consequence of the above CH eTOC does not claim to be conformant to IPS for now.
@@ -187,7 +187,7 @@ Header information such as sender, receiver etc. are considered as Generic Eleme
 
 Copy receiver is meant to receive a copy from the order and all evolving results thereof.
 
-Actors, transactions and security considerations are covered in the corresponding sections of [CH-ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)
+Actors, transactions and security considerations are covered in the corresponding sections of [CH ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)
     
 
 ### Terminology

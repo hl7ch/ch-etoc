@@ -1390,12 +1390,12 @@ Usage: #example
 * item[=].text = "Medikation"
 * item[=].type = #group
 * item[=].item.linkId = "medication.medication"
-* item[=].item.definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medication#Medication.code.text"
+* item[=].item.definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medication#Medication.code.text"
 * item[=].item.text = "Medikament"
 * item[=].item.type = #string
 * item[=].item.repeats = true
 * item[=].item.item.linkId = "medication.dosage"
-* item[=].item.item.definition = "http://fhir.ch/ig/ch-emed/StructureDefinition/ch-emed-medicationstatement#MedicationStatement.dosage:nonstructured"
+* item[=].item.item.definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-medicationstatement#MedicationStatement.dosage:nonstructured"
 * item[=].item.item.text = "Dosierung"
 * item[=].item.item.type = #string
 * item[+].linkId = "allergyIntolerance"
