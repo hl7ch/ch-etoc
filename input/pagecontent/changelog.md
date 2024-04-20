@@ -8,8 +8,10 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#83](https://github.com/hl7ch/ch-etoc/issues/83): Use CH Core base profiles
 
 #### Fixed
-* [#84](https://github.com/hl7ch/ch-etoc/issues/84): Typos in ids of profiles
 
+* [#84](https://github.com/hl7ch/ch-etoc/issues/84): Typos in ids of profiles
+* [#81](https://github.com/hl7ch/ch-etoc/issues/81): Typo in in questionnaire item definition of attachment fixed
+   
 ### STU 2
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
