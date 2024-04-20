@@ -31,7 +31,7 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [ORF Issue #71](https://github.com/hl7ch/ch-orf/issues/71): Added Initiator and his relationship to to the patient.
 * [ORF Issue #72](https://github.com/hl7ch/ch-orf/issues/72): Added Patient consent.
 * [ORF Issue #73](https://github.com/hl7ch/ch-orf/issues/73): Added Entry date, discharge Date and Organization of stationary episode antecedent to requested service (e.g spitex).
-* [Issue #106](https://github.com/hl7ch/ch-orf/issues/106): Changed Cardinality of Contact Person from 0..1 to 0..*.* [ORF Issue #61](https://github.com/hl7ch/ch-orf/issues/61): Added Family doctor.
+* [ORF Issue #106](https://github.com/hl7ch/ch-orf/issues/106): Changed Cardinality of Contact Person from 0..1 to 0..*.* [ORF Issue #61](https://github.com/hl7ch/ch-orf/issues/61): Added Family doctor.
   
 ##### Added in CH eTOC
 * [Issue #59](https://github.com/hl7ch/ch-etoc/issues/59): Added examples for AllergyIntolerance (Penicillineallergie), LabObservation(Haemoglobin), LabObservation (HbA1c), PathologyObservation (Biopsie Duodenum / Magen), RadiologyObservation (Thx ap / seitl.) and CardiologyObservation (EKG).
