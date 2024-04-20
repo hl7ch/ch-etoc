@@ -2,15 +2,19 @@
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
 ### v3.0.0-ballot
-
+#### Open Issues
+* [#87](https://github.com/hl7ch/ch-etoc/issues/87): Update Coverage 
+* [#88](https://github.com/hl7ch/ch-etoc/issues/88): Update ServiceRequest
+  
 #### Changed / Updated
 * [#82](https://github.com/hl7ch/ch-etoc/issues/82): Move terminology to CH Term
 * [#83](https://github.com/hl7ch/ch-etoc/issues/83): Use CH Core base profiles
 
 #### Fixed
-
+* [#81](https://github.com/hl7ch/ch-etoc/issues/81): Item attachment fixed (in the course of #85)
 * [#84](https://github.com/hl7ch/ch-etoc/issues/84): Typos in ids of profiles
-* [#81](https://github.com/hl7ch/ch-etoc/issues/81): Typo in in questionnaire item definition of attachment fixed
+* [#85](https://github.com/hl7ch/ch-etoc/issues/85): Typo in questionnaire item definition of attachment fixed
+
    
 ### STU 2
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
