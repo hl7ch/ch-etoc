@@ -23,8 +23,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [Issue #80](https://github.com/hl7ch/ch-etoc/issues/80): Secondary Diagnosis Condition - support also the less specific value from the base spec: encounter-diagnosis
 
 #### Fixed
-* [Issue #76](https://github.com/hl7ch/ch-etoc/issues/76): Various typos on the home page corrected.
 * [Issue #75](https://github.com/hl7ch/ch-etoc/issues/75): Typo in example Biopsy Duodenum / Magen corrected.
+* [Issue #76](https://github.com/hl7ch/ch-etoc/issues/76): Various typos on the home page corrected.
 
 #### Added
 ##### Adopted from CH ORF
