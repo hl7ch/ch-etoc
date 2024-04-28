@@ -477,3 +477,39 @@ Description: "Example for cardiology result"
 * status = #final
 * code.text = "EKG vom 12.5.23: unauffällig"
 * subject = Reference(SUfferer)
+
+
+Instance: DocumentReferenceNonDicom
+InstanceOf: ChOrfDocumentReference
+Title: "Befund_Rx_Thorax_S_Ufferer_20190401"
+Description: "Example of non-Dicom Attachment (e.g. pdf)"
+* status = #current
+* content.attachment.title = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
+* description = "Befund Thorax-Rx vom 1.2.23; Eyample of Non-DICOM Attachment"
+* content.attachment.contentType = MimeType#application/pdf
+* content.attachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
+
+/*
+Instance: DicomSopInstanceConformant
+InstanceOf: ChRadOrderImagingStudy
+Title: "DICOM conformant SOP Instance"
+Description: "Rx-Knie-S_Ufferer_05032024; Example of DICOM conformant SOP Instance (regarding Coding of Series-Modality)"
+* status = #available
+* subject = Reference(SUfferer)
+* series.instance.uid = "2.16.124.113543.1154777499.30246.19789.3503430045.1.1"
+* series.instance.sopClass = #1.2.840.10008.5.1.4.1.1.1
+* series.modality = #DX
+* series.uid = "2.16.124.113543.1154777499.30246.19789.3503430045.1"
+* identifier[studyInstanceUid].value = "2.16.124.113543.1154777499.30246.19789.3503430045" //StudyInstanceUid 
+* identifier[acsn].value = "2819497684894126" //ACSN
+*/
+
+Instance: DocumentReferenceDicomSopInstanceConformant
+InstanceOf: ChOrfDocumentReference
+Title: "Rx-Knie-S_Ufferer_05032024"
+Description: "Example for Previous Result"
+* status = #current
+* content.attachment.contentType = MimeType#application/dicom
+* content.attachment.data = "VGhpcyBpcyBhbiBleGFtcGxl" // Encoded in base64
+
+

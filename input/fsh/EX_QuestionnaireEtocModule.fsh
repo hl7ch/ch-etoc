@@ -1,4 +1,4 @@
-/* 
+
 Instance: QuestionnaireEtoc-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire eTOC (Modular version)"
@@ -331,7 +331,7 @@ Usage: #example
 * item[=].item[=].text = "Kommentar" 
 * item[=].item[=].type = #string
 
-*/
+
 //============ Module defintions =================================
 
 /*Module Purpose*/
@@ -681,30 +681,105 @@ Description: "Subquestionnaire Careplans"
 */
 
 /*Module Attachment*/
+/*Module Attachment*/
 Instance: ch-etoc-module-attachment
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Attachment"
 Description: "Subquestionnaire Attachment"
+/* Vorherige Untersuchungsresultate:
+Angaben zu Reports, auf die verwiesen wird
+Angaben zu Bildern bzw. allfällige Vorbildern und Reports, auf die verwiesen wird  
+mittels ImagingStudy Resource (DICOM WADO) oder die mitgegeben werden mit der Documen.
+*/
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment"
-//* name = "Module Questionnaire Attachment"
-* title = "Module Questionnaire Attachment"
+* name = "ModuleQuestionnaireRadiologyOrderPreviousResults"
+* title = "Module Questionnaire Radiologyorder Previous Results"
 * status = #active
-* date = "2023-06-21"
+* date = "2024-03-02"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "attachment.title"  
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.attachment.title"
-* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Verlauf.pdf\")"
-* item[=].type = #string
-* item[=].repeats = true
+* item[+].linkId = "attachment.nonDicom"
+* item[=].text = "Anhang (nicht DICOM)"
+* item[=].type = #group
 
-* item[=].item[+].linkId = "attachment.description"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#content.descritption"
-* item[=].item[=].text = "Beschreibung"
+* item[=].item[+].linkId = "attachment.nonDicom.title"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#content.attachment.title"
+* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
 * item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "attachment.nonDicom.description"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
+* item[=].item[=].item[=].text = "Beschreibung"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "attachment.nonDicom.attachment.mimeType"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
+* item[=].item[=].item[=].text = "Mime Type"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/mimetypes"
+* item[=].item[=].item[=].initial.valueCoding = MimeType#application/pdf
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "attachment.nonDicom.attachment.data"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
+* item[=].item[=].item[=].text = "Non-DICOM Data"
+* item[=].item[=].item[=].type = #attachment
+
+* item[+].linkId = "attachment.dicom"
+* item[=].text = "Anhang (DICOM)"
+* item[=].type = #group
+
+* item[=].item[+].linkId = "attachment.dicom.title"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.content.attachment.title"
+* item[=].item[=].text = "Dateiname und -endung der angehängten Dicom-Datei (z.B. \"Muster_F_2023-07-20_MR Knie nativ beidseits_im2588909576\")"
+* item[=].item[=].type = #string
+* item[=].item[=].repeats = true
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.sopInstanceUid"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.series.instance.uid"
+* item[=].item[=].item[=].text = "DICOM SOP Instance UID"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.sopClass"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.series.instance.sopClass.value"
+* item[=].item[=].item[=].text = "DICOM SOP Class"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerValueSet = SopClass
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.modality"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#.ImagingStudy.series.modality.coding"
+* item[=].item[=].item[=].text = "DICOM Series Modality"
+* item[=].item[=].item[=].type = #choice
+* item[=].item[=].item[=].answerValueSet = AcquisitionModality
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.SeriesInstanceUid"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.series.uid"
+* item[=].item[=].item[=].text = "DICOM Series Instance UID"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.studyInstanceUid"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.identifier"
+* item[=].item[=].item[=].text = "DICOM Study Instance UID"
+* item[=].item[=].item[=].type = #string
+* item[=].item[=].item[=].required = true
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.acsn"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.identifier"
+* item[=].item[=].item[=].text = "ACSN"
+* item[=].item[=].item[=].type = #string
+
+* item[=].item[=].item[+].linkId = "attachment.dicom.attachment"  
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
+* item[=].item[=].item[=].text = "DICOM Data"
+* item[=].item[=].item[=].type = #attachment
 
 /*Module Note*/
 Instance: ch-etoc-module-note
@@ -726,24 +801,3 @@ Description: "Subquestionnaire Note"
 * item[=].text = "Text" 
 * item[=].type = #text
 * item[=].required = false 
-
-/*Module Service Request Category         
-* item[+].linkId = "requestedService"
-* item[=].text = "Angeforderte Leistung"
-* item[=].type = #group
-* item[=].required = true
-
-* item[=].item[+].linkId = "requestedService.service"
-// item[=].item[=].definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.category.coding"
-* item[=].item[=].text = "Leistung"                 
-* item[=].item[=].required = true
-* item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-rad-order/ValueSet/ch-etoc-vs-requested-service-level-1"
-
-* item[=].item[=].item[+].linkId = "requestedService.service"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.category.coding"
-* item[=].item[=].item[=].text = "Leistung"                 
-* item[=].item[=].item[=].required = true
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://fhir.ch/ig/ch-rad-order/ValueSet/ch-etoc-vs-requested-service-level-2"
-*/
