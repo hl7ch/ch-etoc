@@ -24,12 +24,14 @@ Description: "Example for ServiceRequest"
 * supportingInfo[secondarydiagnosis][+] = Reference(SecondaryDiagnosis1)
 * supportingInfo[secondarydiagnosis][+] = Reference(SecondaryDiagnosis2)
 
+* supportingInfo[attachment][+]         = Reference(DocumentReferenceAttachment)
+
 * note.text = "Patient ist sehr ängstlich"
 
 
 Instance: PastHistoryofIllnessesConditionEtoc
 InstanceOf: ChEtocPastHistoryofIllnessesCondition
-Title: "PastHistoryofIllnesses Medical Referral"
+Title: "Past History of Illnesses"
 Description: "HistoryofIllnessesCondition"
 * subject = Reference(SUfferer)
 * code.text = "Endokarditis 1999"
@@ -163,6 +165,8 @@ Description: "Example for Bundle"
 * entry[+].fullUrl = "http://example.com/fhir/Location/LocationHospitalStay"
 * entry[=].resource = LocationHospitalStay
 
+* entry[+].fullUrl = "http://example.com/fhir/DocumentReference/DocumentReferenceAttachment"
+* entry[=].resource = DocumentReferenceAttachment
 
 //------------- Patient -------------
 Instance: SUfferer
@@ -398,16 +402,6 @@ Usage: #inline
 
 
 //------------- Previous Results -------------
-/*
-Instance: AttachmentRx
-InstanceOf: ChOrfDocumentReference
-Title: "Previous Rx"
-Description: "Example for Attachment"
-* status = #current
-* content.attachment.contentType = #application/dicom
-* content.attachment.data = "RXhhbXBsZQ=="
-* content.attachment.title = "xray_chest_S_Ufferer_20190401.dcm"
-*/
 
 Instance: LocationHospitalStay
 InstanceOf: ChOrfLocation
@@ -464,7 +458,7 @@ Die Veränderungen der Duodenalschleimhaut passen gut zu einem geringen petpisch
 Instance: Imaging
 InstanceOf: ChEtocRadiologyObservation
 Title: "Thx ap / seitl."
-Description: "Example for imaging result"
+Description: "Example for Imaging Result"
 * status = #final
 * code.text = "Thorax ap / seitl. vom 12.05.23: unauffällig"
 * subject = Reference(SUfferer)
@@ -479,13 +473,13 @@ Description: "Example for cardiology result"
 * subject = Reference(SUfferer)
 
 
-Instance: DocumentReferenceNonDicom
+Instance: DocumentReferenceAttachment
 InstanceOf: ChOrfDocumentReference
 Title: "Befund_Rx_Thorax_S_Ufferer_20190401"
-Description: "Example of non-Dicom Attachment (e.g. pdf)"
+Description: "Example of Attachment (e.g. pdf)"
 * status = #current
 * content.attachment.title = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
-* description = "Befund Thorax-Rx vom 1.2.23; Eyample of Non-DICOM Attachment"
+* description = "Befund Thorax-Rx vom 1.2.23; Eyample of Attachment Attachment"
 * content.attachment.contentType = MimeType#application/pdf
 * content.attachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
 
@@ -504,12 +498,5 @@ Description: "Rx-Knie-S_Ufferer_05032024; Example of DICOM conformant SOP Instan
 * identifier[acsn].value = "2819497684894126" //ACSN
 */
 
-Instance: DocumentReferenceDicomSopInstanceConformant
-InstanceOf: ChOrfDocumentReference
-Title: "Rx-Knie-S_Ufferer_05032024"
-Description: "Example for Previous Result"
-* status = #current
-* content.attachment.contentType = MimeType#application/dicom
-* content.attachment.data = "VGhpcyBpcyBhbiBleGFtcGxl" // Encoded in base64
 
 

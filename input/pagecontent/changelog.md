@@ -11,9 +11,8 @@ All significant changes to this FHIR implementation guide will be documented on 
 * [#83](https://github.com/hl7ch/ch-etoc/issues/83): Use CH Core base profiles
 
 #### Fixed
-* [#81](https://github.com/hl7ch/ch-etoc/issues/81): Item attachment fixed (in the course of #85)
+* [#81](https://github.com/hl7ch/ch-etoc/issues/81): Item attachment fixed; example added
 * [#84](https://github.com/hl7ch/ch-etoc/issues/84): Typos in ids of profiles
-* [#85](https://github.com/hl7ch/ch-etoc/issues/85): Typo in questionnaire item definition of attachment fixed
 
    
 ### STU 2

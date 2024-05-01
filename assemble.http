@@ -89,5 +89,5 @@ POST {{host}}/Questionnaire/$assemble HTTP/1.1
 Accept: application/json+fhir
 Content-Type: application/json+fhir
 
-< ./output/Questionnaire-QuestionnaireRadiologyOrder-modular.json
+< ./output/Questionnaire-QuestionnaireEtoc-modular.json
 

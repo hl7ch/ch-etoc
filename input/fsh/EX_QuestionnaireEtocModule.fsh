@@ -89,7 +89,6 @@ Usage: #example
 * item[=].item.text = "Unable to resolve 'requestedEncounter' sub-questionnaire"
 * item[=].item.type = #display
 
-
 // ---------- Coverage (Kostenträger) ----------
 // Design as agreed with eHealth Suisse and Cistec 09.06.2021
 
@@ -138,6 +137,8 @@ Usage: #example
 
 //------ Antecedent Episode of Care ------------------------------ 
 
+/*------ Antecedent Episode of Care ------------------------------ */
+
 * item[+].linkId = "antecedentEpisodeOfCare"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-composition#Composition.extension:antecedentEpisodeOfCare"
 * item[=].text = "Vorgängiger Aufenthalt in Spital / Heim"
@@ -153,24 +154,24 @@ Usage: #example
 * item[=].item[=].text = "Bis"
 * item[=].item[=].type = #dateTime
 
-* item[=].item[+].linkId = "antecedentEpisodeOfCare.organization"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.Period.organization"
+* item[=].item[+].linkId = "antecedentEpisodeOfCare.managingOrganization"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-episodeofcare#EpisodeOfCare.managingOrganization"
 * item[=].item[=].text = "Spital /Heim"
 * item[=].item[=].type = #group
 
 * item[=].item[=].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
 * item[=].item[=].extension.valueExpression.name = "linkIdPrefix"
 * item[=].item[=].extension.valueExpression.language = #text/fhirpath
-* item[=].item[=].extension.valueExpression.expression = "'antecedentEpisodeOfCare.organization.'"
+* item[=].item[=].extension.valueExpression.expression = "'antecedentEpisodeOfCare.managingOrganization.'"
 
-* item[=].item[=].item[+].linkId = "antecedentEpisodeOfCare.organization.name"
+* item[=].item[=].item[+].linkId = "antecedentEpisodeOfCare.managingOrganization.name"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Organization.name"
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].type = #string
 
 * item[=].item[=].item[+].extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
-* item[=].item[=].item[=].extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-address|2.0.0"
-* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.organization.1"
+* item[=].item[=].item[=].extension.valueCanonical = "http://fhir.ch/ig/ch-orf/Questionnaire/ch-orf-module-address|3.0.0-ci-build"
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization.1"
 * item[=].item[=].item[=].text = "Unable to resolve 'address' sub-questionnaire"
 * item[=].item[=].item[=].type = #display
 
@@ -198,7 +199,6 @@ Usage: #example
 * item[=].item.linkId = "consent.1"
 * item[=].item.text = "Unable to resolve 'consent' sub-questionnaire"
 * item[=].item.type = #display
-
 
 //------- What is the Patient referred for? ------------------------------
 * item[+].linkId = "purpose"
@@ -356,7 +356,7 @@ Description: "Subquestionnaire Purpose"
 //* item[=].repeats = true
 
 * item[=].item[+].linkId = "purpose.aim.detail"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail.text"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail"
 * item[=].item[=].text = "Procedere / Behandlung im Detail"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
@@ -399,18 +399,18 @@ Description: "Subquestionnaire Diagnosis"
 * item[=].type = #group
 
 * item[=].item[+].linkId = "diagnosisList.secondaryDiagnosis.item"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:diagnosis"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].item[=].text = "Nebendiagnose / Problem"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
 * item[+].linkId = "diagnosisList.bodyHeight"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyHeight"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Grösse (cm)"   
 * item[=].type = #quantity
 
 * item[+].linkId = "diagnosisList.bodyWeight"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyWeight"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Gewicht (kg)"   
 * item[=].type = #quantity
 
@@ -420,12 +420,12 @@ Description: "Subquestionnaire Diagnosis"
 
 * item[=].item[+].linkId = "diagnosisList.pregnancy.present"
 * item[=].item[=].text = "Schwanger"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].item[=].type = #boolean
 
 
 * item[=].item[+].linkId = "diagnosisList.pregnancy.expectedDeliveryDate"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pregnancy"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].item[=].text = "Erwarteter Geburtstermin"   
 * item[=].item[=].type = #dateTime
 
@@ -446,31 +446,31 @@ Description: "Subquestionnaire Anamnesis"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "anamnesis.historyofillnesses"   
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofIllnesses"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].text = "Bisherige Krankheiten und Unfälle"   
 * item[=].type = #text
  // For convenience: History of illnesses in one paragraph 
 
 * item[+].linkId = "anamnesis.historyofprocedures"   
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofProcedures"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].text = "Bisherige Abklärungen und Eingriffe"   
 * item[=].type = #text
  // For convenience: History of procedures in one paragraph 
 
 * item[+].linkId = "anamnesis.devices"   
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:devices"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].text = "Implantate, Schrittmacher, Neurostimulatoren etc."   
 * item[=].type = #text
  // For convenience: All Devices in one paragraph (seldom numerous items)
 
 * item[+].linkId = "anamnesis.socialhistory"   
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:socialHistory"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].text = "Sozialanamnese"  
 * item[=].type = #text
  // For convenience: Social History in one paragraph (is in general narrative)
 
 * item[+].linkId = "anamnesis.functionalStatus"   
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:functionalStatus"  
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].text = "Funktion, Behinderungen"   
 * item[=].type = #text
  // For convenience: Functional status in one paragraph (is in general narrative)
@@ -525,7 +525,7 @@ Description: "Subquestionnaire AllergyIntolerlance"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "allergyIntolerance.status"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:allergiesIntolerances"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Allergien / Intoleranzen"
 * item[=].type = #text
 // For convenience: Allergies in one paragraph
@@ -547,7 +547,7 @@ Description: "Subquestionnaire immunizationstatus"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "immunizationStatus.status"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:immunizations"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Bisherige Impfungen"
 * item[=].type = #text
  // For convenience: Immunizations in one paragraph
@@ -570,7 +570,7 @@ Description: "Subquestionnaire Lab"
 
 * item[+].linkId = "lab.result"
 * item[=].text = "Laborresultat"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:labresults"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].type = #string
 * item[=].repeats = true // Systems might provide lab results as multiple entries
 
@@ -592,7 +592,7 @@ Description: "Subquestionnaire Pathology"
 
 * item[+].linkId = "pathology.result"
 * item[=].text = "Pathologiebefunde"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:pathologyresults"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].type = #text
  // For convenience: Pathology results in one paragraph (is often narrative)
 
@@ -613,7 +613,7 @@ Description: "Subquestionnaire imaging"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "imaging.result"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:imagingresults"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "Befunde aus der Bildgebung"
 * item[=].type = #text
  // For convenience: Radiology results in one paragraph (is often narrative)
@@ -635,7 +635,7 @@ Description: "Subquestionnaire cardiology"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "cardiology.result"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:cardiologyresults"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].text = "EKG / Kardiologische Befunde"
 * item[=].type = #text
  // For convenience:  in one paragraph (is often narrative)
@@ -686,49 +686,42 @@ Instance: ch-etoc-module-attachment
 InstanceOf: Questionnaire
 Title: "Module Questionnaire Attachment"
 Description: "Subquestionnaire Attachment"
-/* Vorherige Untersuchungsresultate:
-Angaben zu Reports, auf die verwiesen wird
-Angaben zu Bildern bzw. allfällige Vorbildern und Reports, auf die verwiesen wird  
-mittels ImagingStudy Resource (DICOM WADO) oder die mitgegeben werden mit der Documen.
-*/
 
 * extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
 * extension[=].valueCode = #assemble-child
 * url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-attachment"
-* name = "ModuleQuestionnaireRadiologyOrderPreviousResults"
-* title = "Module Questionnaire Radiologyorder Previous Results"
+* name = "ModuleQuestionnaireAttachment"
+* title = "Module Questionnaire Attachment"
 * status = #active
 * date = "2024-03-02"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "attachment.nonDicom"
-* item[=].text = "Anhang (nicht DICOM)"
-* item[=].type = #group
+* item[+].linkId = "attachment.title"  
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#content.attachment.title"
+* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
+* item[=].type = #string
+* item[=].repeats = true
 
-* item[=].item[+].linkId = "attachment.nonDicom.title"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#content.attachment.title"
-* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
+* item[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
+* item[=].item[=].text = "Beschreibung"
 * item[=].item[=].type = #string
-* item[=].item[=].repeats = true
 
-* item[=].item[=].item[+].linkId = "attachment.nonDicom.description"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
-* item[=].item[=].item[=].text = "Beschreibung"
-* item[=].item[=].item[=].type = #string
+* item[=].item[+].linkId = "attachment.data.contentType"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
+* item[=].item[=].text = "Mime Type"
+* item[=].item[=].type = #choice
+* item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/mimetypes"
+* item[=].item[=].initial.valueCoding = MimeType#application/pdf
+* item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "attachment.nonDicom.attachment.mimeType"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item[=].item[=].text = "Mime Type"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/mimetypes"
-* item[=].item[=].item[=].initial.valueCoding = MimeType#application/pdf
-* item[=].item[=].item[=].required = true
+* item[=].item[+].linkId = "attachment.data"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
+* item[=].item[=].text = "Attachment Data"
+* item[=].item[=].type = #attachment
+* item[=].item[=].required = true
 
-* item[=].item[=].item[+].linkId = "attachment.nonDicom.attachment.data"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item[=].item[=].text = "Non-DICOM Data"
-* item[=].item[=].item[=].type = #attachment
-
+/*
 * item[+].linkId = "attachment.dicom"
 * item[=].text = "Anhang (DICOM)"
 * item[=].type = #group
@@ -780,6 +773,8 @@ mittels ImagingStudy Resource (DICOM WADO) oder die mitgegeben werden mit der Do
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
 * item[=].item[=].item[=].text = "DICOM Data"
 * item[=].item[=].item[=].type = #attachment
+* item[=].item[=].item[=].required = true
+*/
 
 /*Module Note*/
 Instance: ch-etoc-module-note

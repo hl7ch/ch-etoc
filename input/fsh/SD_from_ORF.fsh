@@ -64,7 +64,8 @@ Reserved for specification of a particular form for referrals to clinical subspe
     labresults 0..* and
     pathologyresults 0..* and
     imagingresults 0..* and
-    cardiologyresults 0..*
+    cardiologyresults 0..* and
+    attachment 0..*
 
 * supportingInfo[secondarydiagnosis] MS
 * supportingInfo[secondarydiagnosis] only Reference(ChEtocSecondaryDiagnosisCondition) 

@@ -122,7 +122,7 @@ Description: "Definition for the Radiology Observation resource in the context o
 Profile: ChEtocCardiologyObservation
 Parent: Observation
 Id: ch-etoc-cardiology-observation
-Title: "CH eTOC cardiology Observation"
+Title: "CH eTOC Cardiology Observation"
 Description: "Definition for the cardiology Observation resource in the context of CH eTOC."
 * . ^short = "CH eTOC Cardiology Observation"
 // Supplementary to IPS

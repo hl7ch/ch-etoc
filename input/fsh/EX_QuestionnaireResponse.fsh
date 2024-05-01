@@ -471,6 +471,11 @@ Description: "Example for QuestionnaireResponse in the context of electronic tra
 * item[=].item[=].item[=].text = "Name der Organisation"
 * item[=].item[=].item[=].answer.valueString = "Spital Hinterfultigen"
 
+* item[=].item[=].item[=].linkId = "antecedentEpisodeOfCare.managingOrganization.streetAddressLine"
+* item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
+* item[=].item[=].item[=].answer[+].valueString = "Hinterfultigenweg 33"
+* item[=].item[=].item[=].answer[+].valueString = "3089 Hinterfultigen"
+
 // -------- Appointment ------
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
@@ -542,11 +547,11 @@ Diagnosis and Clinical Findings
 * item[=].item[=].item[=].answer[+].valueString = "Hypercholesterinämie seit Jahren"
 
 * item[=].item[+].linkId = "diagnosisList.bodyHeight"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyHeight"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].item[=].text = "Grösse (cm)"   
 
 * item[=].item[+].linkId = "diagnosisList.bodyWeight"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:bodyWeight"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"
 * item[=].item[=].text = "Gewicht (kg)"   
 
 * item[=].item[+].linkId = "diagnosisList.pregnancy"
@@ -560,24 +565,24 @@ Anamnesis
 * item[=].text = "Anamnese"
 
 * item[=].item[+].linkId = "anamnesis.historyofillnesses"   
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofIllnesses"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].item[=].text = "Bisherige Krankheiten und Unfälle" 
 * item[=].item[=].answer[+].valueString = "Endokarditis 1999"
 
 * item[=].item[+].linkId = "anamnesis.historyofprocedures"   
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:historyofProcedures"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].item[=].text = "Bisherige Abklärungen und Eingriffe"   
 
 * item[=].item[+].linkId = "anamnesis.devices"   
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:devices"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].item[=].text = "Implantate, Schrittmacher, Neurostimulatoren etc."   
 
 * item[=].item[+].linkId = "anamnesis.socialhistory"   
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:socialHistory"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].item[=].text = "Sozialanamnese"  
 
 * item[=].item[+].linkId = "anamnesis.functionalStatus"   
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo:functionalStatus"  
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.supportingInfo"  
 * item[=].item[=].text = "Funktion, Behinderungen"   
 
 /* ---------------------------------------------------------------------------
@@ -658,26 +663,27 @@ Cardiology
 /* ---------------------------------------------------------------------------
 Attachment:
 */
-* item[+].linkId = "attachment.nonDicom"
-* item[=].text = "Anhang (nicht DICOM)"
+* item[+].linkId = "attachment"
+* item[=].text = "Anhang"
 
-* item[=].item[+].linkId = "attachment.nonDicom.title"  
+* item[=].item[+].linkId = "attachment.title"  
 * item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
 * item[=].item[=].answer[+].valueString = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
 
-* item[=].item[=].answer[=].item[+].linkId = "attachment.nonDicom.description"  
+* item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
 * item[=].item[=].answer[=].item[=].text = "Beschreibung"
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "Befund Notfall-Rx nach Sturz"
 
-//* item[=].item[=].answer[=].item[+].linkId = "attachment.nonDicom.attachment.mimeType"  
-//* item[=].item[=].answer[=].item[=].text = "Mime Type"
-//* item[=].item[=].answer[=].item[=].answer[+].valueCoding = MimeType#application/pdf
+* item[=].item[=].answer[=].item[+].linkId = "attachment.data.contentType"  
+* item[=].item[=].answer[=].item[=].text = "Mime Type"
+* item[=].item[=].answer[=].item[=].answer[+].valueCoding = MimeType#application/pdf
 
-* item[=].item[=].answer[=].item[+].linkId = "attachment.nonDicom.attachment"  
-* item[=].item[=].answer[=].item[=].text = "Non-DICOM Data"
+* item[=].item[=].answer[=].item[+].linkId = "attachment.data"  
+* item[=].item[=].answer[=].item[=].text = "Attachment Data"
 * item[=].item[=].answer[=].item[=].answer[+].valueAttachment.contentType = MimeType#application/pdf
 * item[=].item[=].answer[=].item[=].answer[=].valueAttachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
 
+/*
 * item[+].linkId = "attachment.dicom"
 * item[=].text = "Anhang (DICOM)"
 
@@ -718,7 +724,7 @@ Attachment:
 
 * item[=].item[=].answer[=].item[=].answer[+].valueAttachment.contentType = MimeType#application/dicom
 * item[=].item[=].answer[=].item[=].answer[=].valueAttachment.data = "VGhpcyBpcyBhbiBleGFtcGxl" // Encoded in base64
-
+*/
 
 // -------- ServiceRequest Note ------
 * item[+].linkId = "note"
