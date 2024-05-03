@@ -1238,7 +1238,7 @@ Usage: #example
 * item[=].item.text = "Ist der Patient über die Anmeldung informiert und explizit einverstanden?"
 * item[=].item.type = #choice
 * item[=].item.answerOption[0].valueCoding = $ch-orf-cs-consentstatus#ExplicitAgreement "Patient is informed and has explicitly agreed"
-* item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement','agreed by legal guardian' etc."
+* item[=].item.answerOption[+].valueCoding = $ch-orf-cs-consentstatus#Other "Other situation such as 'implicit agreement', 'agreed by legal guardian'  etc."
 * item[=].item.item.linkId = "patient.consent.statement.note"
 * item[=].item.item.text = "Anmerkung"
 * item[=].item.item.type = #string
@@ -1378,27 +1378,15 @@ Usage: #example
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 * item[=].type = #group
-* item[=].item.linkId = "attachment.title"
-* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#content.attachment"
-* item[=].item.text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
-* item[=].item.type = #string
+* item[=].item.linkId = "attachedFile"
+* item[=].item.definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
+* item[=].item.text = "Datei"
+* item[=].item.type = #attachment
 * item[=].item.repeats = true
-* item[=].item.item[0].linkId = "attachment.description"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference"
-* item[=].item.item[=].text = "Beschreibung"
-* item[=].item.item[=].type = #string
-* item[=].item.item[+].linkId = "attachment.data.contentType"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item.item[=].text = "Mime Type"
-* item[=].item.item[=].type = #choice
-* item[=].item.item[=].required = true
-* item[=].item.item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/mimetypes"
-* item[=].item.item[=].initial.valueCoding = urn:ietf:bcp:13#application/pdf
-* item[=].item.item[+].linkId = "attachment.data"
-* item[=].item.item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item.item[=].text = "Attachment Data"
-* item[=].item.item[=].type = #attachment
-* item[=].item.item[=].required = true
+* item[=].item.item.linkId = "attachedFile.description"
+* item[=].item.item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
+* item[=].item.item.text = "Beschreibung"
+* item[=].item.item.type = #string
 * item[+].linkId = "note"
 * item[=].text = "Bemerkungen"
 * item[=].type = #group

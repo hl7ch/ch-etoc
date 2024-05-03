@@ -476,7 +476,7 @@ Description: "Example for cardiology result"
 Instance: DocumentReferenceAttachment
 InstanceOf: ChOrfDocumentReference
 Title: "Befund_Rx_Thorax_S_Ufferer_20190401"
-Description: "Example of Attachment (e.g. pdf)"
+Description: "Example of Document Reference for Attachment (e.g. pdf)"
 * status = #current
 * content.attachment.title = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
 * description = "Befund Thorax-Rx vom 1.2.23; Eyample of Attachment Attachment"

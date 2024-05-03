@@ -666,22 +666,14 @@ Attachment:
 * item[+].linkId = "attachment"
 * item[=].text = "Anhang"
 
-* item[=].item[+].linkId = "attachment.title"  
-* item[=].item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
-* item[=].item[=].answer[+].valueString = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
+* item[=].item[+].linkId = "attachedFile"  
+* item[=].item[=].text = "Datei"
+* item[=].item[=].answer[+].valueAttachment.contentType = MimeType#application/pdf
+* item[=].item[=].answer[=].valueAttachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
 
-* item[=].item[=].answer[=].item[+].linkId = "attachment.description"  
+* item[=].item[=].answer[=].item[+].linkId = "attachedFile.description"  
 * item[=].item[=].answer[=].item[=].text = "Beschreibung"
 * item[=].item[=].answer[=].item[=].answer[+].valueString = "Befund Notfall-Rx nach Sturz"
-
-* item[=].item[=].answer[=].item[+].linkId = "attachment.data.contentType"  
-* item[=].item[=].answer[=].item[=].text = "Mime Type"
-* item[=].item[=].answer[=].item[=].answer[+].valueCoding = MimeType#application/pdf
-
-* item[=].item[=].answer[=].item[+].linkId = "attachment.data"  
-* item[=].item[=].answer[=].item[=].text = "Attachment Data"
-* item[=].item[=].answer[=].item[=].answer[+].valueAttachment.contentType = MimeType#application/pdf
-* item[=].item[=].answer[=].item[=].answer[=].valueAttachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
 
 /*
 * item[+].linkId = "attachment.dicom"
@@ -723,7 +715,7 @@ Attachment:
 * item[=].item[=].answer[=].item[=].text = "DICOM Data"
 
 * item[=].item[=].answer[=].item[=].answer[+].valueAttachment.contentType = MimeType#application/dicom
-* item[=].item[=].answer[=].item[=].answer[=].valueAttachment.data = "VGhpcyBpcyBhbiBleGFtcGxl" // Encoded in base64
+* item[=].item[=].answer[=].item[=].answer[=].valueattachedFile = "VGhpcyBpcyBhbiBleGFtcGxl" // Encoded in base64
 */
 
 // -------- ServiceRequest Note ------

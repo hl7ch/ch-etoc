@@ -667,8 +667,6 @@ Description: "Subquestionnaire Careplans"
 * item[=].type = #string
 * item[=].repeats = true
 
-
-
 * item[=].item[+].linkId = "careplan.note"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-careplan#Media.content.annotation"
 * item[=].item[=].text = "Beschreibung"
@@ -680,7 +678,6 @@ Description: "Subquestionnaire Careplans"
 * item[=].item[=].type = #string
 */
 
-/*Module Attachment*/
 /*Module Attachment*/
 Instance: ch-etoc-module-attachment
 InstanceOf: Questionnaire
@@ -696,103 +693,15 @@ Description: "Subquestionnaire Attachment"
 * date = "2024-03-02"
 * publisher = "HL7 Switzerland"
 
-* item[+].linkId = "attachment.title"  
-* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#content.attachment.title"
-* item[=].text = "Dateiname und -endung der angehängten Datei (z.B. \"Befund Thorax-Rx\")"
-* item[=].type = #string
+* item[+].linkId = "attachedFile"  
+* item[=].definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
+* item[=].text = "Datei"
+* item[=].type = #attachment
 * item[=].repeats = true
 
-* item[=].item[+].linkId = "attachment.description"  
+* item[=].item[+].linkId = "attachedFile.description"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
 * item[=].item[=].text = "Beschreibung"
 * item[=].item[=].type = #string
 
-* item[=].item[+].linkId = "attachment.data.contentType"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item[=].text = "Mime Type"
-* item[=].item[=].type = #choice
-* item[=].item[=].answerValueSet = "http://hl7.org/fhir/ValueSet/mimetypes"
-* item[=].item[=].initial.valueCoding = MimeType#application/pdf
-* item[=].item[=].required = true
 
-* item[=].item[+].linkId = "attachment.data"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item[=].text = "Attachment Data"
-* item[=].item[=].type = #attachment
-* item[=].item[=].required = true
-
-/*
-* item[+].linkId = "attachment.dicom"
-* item[=].text = "Anhang (DICOM)"
-* item[=].type = #group
-
-* item[=].item[+].linkId = "attachment.dicom.title"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.content.attachment.title"
-* item[=].item[=].text = "Dateiname und -endung der angehängten Dicom-Datei (z.B. \"Muster_F_2023-07-20_MR Knie nativ beidseits_im2588909576\")"
-* item[=].item[=].type = #string
-* item[=].item[=].repeats = true
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.sopInstanceUid"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.series.instance.uid"
-* item[=].item[=].item[=].text = "DICOM SOP Instance UID"
-* item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.sopClass"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.series.instance.sopClass.value"
-* item[=].item[=].item[=].text = "DICOM SOP Class"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerValueSet = SopClass
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.modality"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#.ImagingStudy.series.modality.coding"
-* item[=].item[=].item[=].text = "DICOM Series Modality"
-* item[=].item[=].item[=].type = #choice
-* item[=].item[=].item[=].answerValueSet = AcquisitionModality
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.SeriesInstanceUid"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.series.uid"
-* item[=].item[=].item[=].text = "DICOM Series Instance UID"
-* item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.studyInstanceUid"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.identifier"
-* item[=].item[=].item[=].text = "DICOM Study Instance UID"
-* item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].required = true
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.acsn"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-imagingstudy-definitions#ImagingStudy.identifier"
-* item[=].item[=].item[=].text = "ACSN"
-* item[=].item[=].item[=].type = #string
-
-* item[=].item[=].item[+].linkId = "attachment.dicom.attachment"  
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachment.data"
-* item[=].item[=].item[=].text = "DICOM Data"
-* item[=].item[=].item[=].type = #attachment
-* item[=].item[=].item[=].required = true
-*/
-
-/*Module Note*/
-Instance: ch-etoc-module-note
-InstanceOf: Questionnaire
-Title: "Module Questionnaire Note"
-Description: "Subquestionnaire Note"
-
-* extension[0].url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-assemble-expectation"
-* extension[=].valueCode = #assemble-child
-* url = "http://fhir.ch/ig/ch-etoc/Questionnaire/ch-etoc-module-note"
-* name = "ModuleQuestionnaireNote"
-* title = "Module Questionnaire Note"
-* status = #active
-* date = "2023-06-21"
-* publisher = "HL7 Switzerland"
-
-* item[+].linkId = "note.text"
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.note.text"
-* item[=].text = "Text" 
-* item[=].type = #text
-* item[=].required = false 
