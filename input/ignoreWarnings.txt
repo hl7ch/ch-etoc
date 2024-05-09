@@ -1,24 +1,5 @@
 == Suppressed Messages ==
 
-# IG Publisher can not resolve these links
-The link 'http://hl7.org/fhir/R4/prozedure.html' for "Prozedure" cannot be resolved
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.orderDetail.text' for "ServiceRequest.orderDetail.text" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:diagnosis' for "ServiceRequest.supportingInfo:diagnosis" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:bodyHeight' for "ServiceRequest.supportingInfo:bodyHeight" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:bodyWeight' for "ServiceRequest.supportingInfo:bodyWeight" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:pregnancy' for "ServiceRequest.supportingInfo:pregnancy" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:historyofIllnesses' for "ServiceRequest.supportingInfo:historyofIllnesses" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:historyofProcedures' for "ServiceRequest.supportingInfo:historyofProcedures" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:devices' for "ServiceRequest.supportingInfo:devices" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:socialHistory' for "ServiceRequest.supportingInfo:socialHistory" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:functionalStatus' for "ServiceRequest.supportingInfo:functionalStatus" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:allergiesIntolerances' for "ServiceRequest.supportingInfo:allergiesIntolerances" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:immunizations' for "ServiceRequest.supportingInfo:immunizations" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:labresults' for "ServiceRequest.supportingInfo:labresults" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:pathologyresults' for "ServiceRequest.supportingInfo:pathologyresults" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:imagingresults' for "ServiceRequest.supportingInfo:imagingresults" cannot be resolved (valid targets: 321 targets)
-The link 'StructureDefinition-ch-etoc-servicerequest.html#ServiceRequest.supportingInfo:cardiologyresults' for "ServiceRequest.supportingInfo:cardiologyresults" cannot be resolved (valid targets: 321 targets)
-
 # Links for answer options not resolved
 The link 'null#item.order.priority' for "Answers: 4 options" cannot be resolved
 The link 'null#item.initiator.legalrelation' for "Answers: 2 options" cannot be resolved
@@ -34,7 +15,8 @@ The link 'null#item.patient.consent.statement' for "Answers: 2 options" cannot b
 Best Practice Recommendation: In general, all observations should have a performer
 Best Practice Recommendation: In general, all observations should have an effective[x] ()
 Constraint failed: con-3: 'Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item' (defined in http://hl7.org/fhir/StructureDefinition/Condition) (Best Practice Recommendation)
-Constraint failed: con-3: 'Condition.clinicalStatus SHALL be present if verificationStatus is not entered-in-error and category is problem-list-item' (Best Practice Recommendation)
+Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
+
 
 # Swiss specific display values
 Wrong Display Name 'Die Anfrage hat normale Priorität.' for http://hl7.org/fhir/request-priority#routine. Valid display is 'Routine' (for the language(s) '--')
@@ -47,7 +29,7 @@ Wrong Display Name 'Tochter' for http://snomed.info/sct#66089001. Valid display 
 Wrong Display Name 'Sohn' for http://snomed.info/sct#65616008. Valid display is one of 2 choices: 'Son' or 'Son (person)' (for the language(s) '--') 
 Wrong Display Name 'Ehemann' for http://snomed.info/sct#127849001. Valid display is one of 2 choices: 'Husband' or 'Husband (person)' (for the language(s) '--')
 Wrong Display Name 'Ehefrau' for http://snomed.info/sct#127850001. Valid display is one of 2 choices: 'Wife' or 'Wife (person)' (for the language(s) '--')
-Wrong Display Name 'Partner (eingetragene Partnerschaft)' for http://snomed.info/sct#394921008. Valid display is one of 2 choices: 'Cohabitee (person)' or 'Cohabitee' (for the language(s) '--') 
+%Wrong Display Name 'Partner (eingetragene Partnerschaft)' for http://snomed.info/sct#394921008% 
 Wrong Display Name 'Bruder' for http://snomed.info/sct#70924004. Valid display is one of 2 choices: 'Brother' or 'Brother (person)' (for the language(s) '--')
 Wrong Display Name 'Schwester' for http://snomed.info/sct#27733009. Valid display is one of 3 choices: 'Sister', 'Sister (person)' or 'Sr - Sister' (for the language(s) '--')
 Wrong Display Name 'Mutter' for http://snomed.info/sct#72705000. Valid display is one of 3 choices: 'Mother', 'Maternal' or 'Mother (person)' (for the language(s) '--')
@@ -63,6 +45,8 @@ Wrong Display Name 'Notfall' for http://terminology.hl7.org/CodeSystem/v3-ActCod
 Wrong Display Name 'Wunsch des Patienten (vorgeschlagen)' for http://hl7.org/fhir/appointmentstatus#proposed. Valid display is 'Proposed' (for the language(s) '--')
 Wrong Display Name 'Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)' for http://hl7.org/fhir/appointmentstatus#pending. Valid display is 'Pending' (for the language(s) '--')
 Wrong Display Name 'Vom Patienten und Leistungserbringer bestätigt (gebucht)' for http://hl7.org/fhir/appointmentstatus#booked. Valid display is 'Booked' (for the language(s) '--')
+Wrong Display Name 'Other situation such as 'implicit agreement','agreed by legal guardian' etc.' for http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-consentstatus#Other. Valid display is 'Other situation such as 'implicit agreement', 'agreed by legal guardian' etc.' (for the language(s) '--')
+ Valid display is one of 2 choices: 'Cohabitee (person)' or 'Cohabitee' (for the language(s) '--')
 
 # Additional codes are defined for this element and this use case
 None of the codings provided are in the value set 'Condition Category Codes' (http://hl7.org/fhir/ValueSet/condition-category|4.0.1), and a coding should come from this value set unless it has no suitable code (note that the validator cannot judge what is suitable) (codes = http://fhir.ch/ig/ch-etoc/CodeSystem/ch-etoc-conditioncategory#illness)
@@ -72,3 +56,6 @@ None of the codings provided are in the value set 'Condition Category Codes' (ht
 # Reference to draft code systems
 Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/request-priority|4.0.1
+
+# Other value set problem
+ValueSet 'http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode' not found

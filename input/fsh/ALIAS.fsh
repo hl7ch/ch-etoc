@@ -13,6 +13,11 @@ Alias:   V3ActCode =                        http://terminology.hl7.org/CodeSyste
 Alias:   AppointmentStatus =                http://hl7.org/fhir/appointmentstatus
 Alias:   EchMaritalStatus =                 http://fhir.ch/ig/ch-core/CodeSystem/ech-11-maritalstatus
 
+Alias:   MimeType =                         urn:ietf:bcp:13
+
+Alias:   AcquisitionModality =          https://dicom.nema.org/medical/dicom/current/output/chtml/part16/sect_CID_33.html
+Alias:   SopClass =                     https://dicom.nema.org/medical/dicom/current/output/chtml/part04/sect_B.5.html#table_B.5-1
+
 // Code Systems/ Value Sets from ORF
 Alias:   ChOrfYesNo =  http://fhir.ch/ig/ch-orf/ch-orf-vs-YesNo
 
@@ -37,6 +42,9 @@ Alias:   ChOrfDocument =                http://fhir.ch/ig/ch-orf/StructureDefini
 Alias:   ChOrfAppointment =             http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment
 Alias:   ChOrfLocation =                http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location
 Alias:   ChCoreCSEncounterType =        http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-21-encountertype
+
+// CH Rad-Order SD
+Alias:   ChRadOrderImagingStudy =       http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-imagingstudy
 
 // CH ORF CS
 Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype

@@ -27,6 +27,7 @@ dependencies:
   ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: current
   ch.fhir.ig.ch-term: current
+  ch.fhir.ig.ch-rad-order: current
   hl7.fhir.uv.ips: 1.1.0
 
 pages:
