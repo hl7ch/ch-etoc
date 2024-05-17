@@ -1,7 +1,7 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
-### v3.0.0-ballot
+### STU 3 Ballot (2024-05-17)
 #### Open Issues
 * [#87](https://github.com/hl7ch/ch-etoc/issues/87): Update Coverage 
 * [#88](https://github.com/hl7ch/ch-etoc/issues/88): Update ServiceRequest
