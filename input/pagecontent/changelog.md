@@ -1,6 +1,22 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
+### STU 3 (2024)
+
+#### Open Issues
+During the ballot, the following comments came in, which will be taken into account in the further development of CH eTOC:
+
+* [#87](https://github.com/hl7ch/ch-etoc/issues/87): Revision (harmonization, usage SCT) of code system and value set ServiceRequest Category
+
+See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
+
+#### Added
+
+#### Changed / Updated
+
+#### Fixed
+
+
 ### STU 3 Ballot (2024-05-17)
 #### Open Issues
 * [#87](https://github.com/hl7ch/ch-etoc/issues/87): Update Coverage 
