@@ -49,12 +49,12 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [ORF Issue #106](https://github.com/hl7ch/ch-orf/issues/106): Changed Cardinality of Contact Person from 0..1 to 0..*.* [ORF Issue #61](https://github.com/hl7ch/ch-orf/issues/61): Added Family doctor.
   
 ##### Added in CH eTOC
-* [Issue #59](https://github.com/hl7ch/ch-etoc/issues/59): Added examples for AllergyIntolerance (Penicillineallergie), LabObservation(Haemoglobin), LabObservation (HbA1c), PathologyObservation (Biopsie Duodenum / Magen), RadiologyObservation (Thx ap / seitl.) and CardiologyObservation (EKG).
+* [Issue #59](https://github.com/hl7ch/ch-etoc/issues/59): Added examples for AllergyIntolerance (Penicillin-Allergie), LabObservation(Haemoglobin), LabObservation (HbA1c), PathologyObservation (Biopsie Duodenum / Magen), RadiologyObservation (Thx ap / seitl.) and CardiologyObservation (EKG).
 * [Issue #60](https://github.com/hl7ch/ch-etoc/issues/60): Added display values to CodeSystem Category of Condition.
 
 #### Changed / Updated
-* [Issue 78](https://github.com/hl7ch/ch-etoc/issues/78) - Added IG Fragements to the home page below
-* [Issue 77](https://github.com/hl7ch/ch-etoc/issues/77):  SCT code for DocumantEntry.typeCode adapted from 419891008 to 371535009.
+* [Issue 78](https://github.com/hl7ch/ch-etoc/issues/78) - Added IG Fragments to the home page below
+* [Issue 77](https://github.com/hl7ch/ch-etoc/issues/77):  SCT code for DocumentEntry.typeCode adapted from 419891008 to 371535009.
   
 ##### Adopted from CH ORF
 * [ORF Issue Issue #108](https://github.com/hl7ch/ch-orf/issues/108): Improve slicing that info entry[x] warnings are not shown.
@@ -114,10 +114,10 @@ During the ballot, the following comments came in, which will be taken into acco
 
 #### Issues resolved without amendment
 * [Issue #23](https://github.com/hl7ch/ch-etoc/issues/23): One recipient only.
-* [Issue #42](https://github.com/hl7ch/ch-etoc/issues/42) Purpose (Wozu wird der Patient zugewiesen?) allows to indicate "type of Spitex required for the patient (child-spitex, longterm, acute transitional care)", however as freetext. Reason: There are currently no generally accepted codes for spitex-services available. 
+* [Issue #42](https://github.com/hl7ch/ch-etoc/issues/42) Purpose (Wozu wird der Patient zugewiesen?) allows to indicate "type of Spitex required for the patient (child-spitex, longterm, acute transitional care)", however as free text. Reason: There are currently no generally accepted codes for spitex-services available. 
 
 #### Negative comments which could not be resolved during the ballot
-Walter Wellauer, Cistec AG: The initial STU 1 ballot version of eTOC required the Form Filler / Questionnaire Filler actor to provide redundant information in the QuestionnaireResponse and in the transaction or document bundle, with the corresponding resources referenced in the ServiceRequest Resource. This hindered the Form Filler implementing a combined front end / back end data acquisition and thus providing the data with complementary processes, was not feasible for the user experience as the enduser was presented a lot of information of no interest at the form filler and form receiver side and required the Form Filler actor  to extract alle the data of the QuestionnaireResponse before transmitting it to the FromReceiver, which is not foreseen be [SDC](http://build.fhir.org/ig/HL7/sdc/workflow.html#form-filling).  All these issues led to the implementation feedback from Projectathon 2021, where the most significant discussion was held in issue#10, corresponding to issue#17 and issue#18 - with emphasis of the missing usability.
+Walter Wellauer, Cistec AG: The initial STU 1 ballot version of eTOC required the Form Filler / Questionnaire Filler actor to provide redundant information in the QuestionnaireResponse and in the transaction or document bundle, with the corresponding resources referenced in the ServiceRequest Resource. This hindered the Form Filler implementing a combined front end / back end data acquisition and thus providing the data with complementary processes, was not feasible for the user experience as the end user was presented a lot of information of no interest at the form filler and form receiver side and required the Form Filler actor  to extract alle the data of the QuestionnaireResponse before transmitting it to the FromReceiver, which is not foreseen be [SDC](http://build.fhir.org/ig/HL7/sdc/workflow.html#form-filling).  All these issues led to the implementation feedback from Projectathon 2021, where the most significant discussion was held in issue#10, corresponding to issue#17 and issue#18 - with emphasis of the missing usability.
 
 None of the relevant suggestions of the feedback was adopted since then (we agree, that issue#19 needs more time to elaborate though). On the contrary there has been implemented a game changer, as in the ORF Composition profile the Questionnaire and QuestionnaireResponse Resources have been changed to optionality (which makes sense for some derivates of the ORF profile like Lab Order), but have not been declared mandatory in the CH eTOC to restore the preconditions of the balloted version. The effect is worse than before. If Questionnaires / QuestionnaireResponses are optional, the main benefit of interchanging forms in the context of TransitionOcCare are gone, as it needs only one player who doesn’t provide a QuestionnaireResponse that all the other actors (any transaction receiver in B2B context, Form Receiver, QuestionnaireReceiver or EPR Document Consumer) to implement proprietary form integration as it is the actual practise but has its well known downsides for the overall interoperability.
 
