@@ -388,7 +388,7 @@ Description: "Example for Coverage"
 * identifier[+].type = CSCoverageIdentifierType#VeKa
 * identifier[=].value = "80756015090002647590"
 * status = #active
-* type = CSCoverageType#KVG "According to KVG"
+* type = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor#1 "Krankenversicherung (obligat.)"
 * beneficiary = Reference(SUfferer)
 * payor = Reference(Sanitas)
 

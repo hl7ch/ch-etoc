@@ -13,6 +13,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 #### Added
 
 #### Changed / Updated
+* [#88](https://github.com/hl7ch/ch-etoc/issues/88): Update Coverage.type according to changes in parent profile CH ORF (see [CH ORF #177](https://github.com/hl7ch/ch-orf/issues/177))
 
 #### Fixed
 
