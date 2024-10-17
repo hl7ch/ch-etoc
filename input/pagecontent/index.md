@@ -33,7 +33,7 @@ In the [3rd report of the Interprofessional Working Group on Electronic Patient 
 At the working group meeting in February 2021, it was decided that a first version of eTOC shall be based on the the [FHIR International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/).
 
 However, this first version of CH eTOC still allows many free text entries. Reason: According to IPAG, in a first step, the items shall be implemented as text.
-It can be expected, that users want to copy paste results: it seems sensible, to have multiple entries for lab, but other findings are mostly in freetext and therefore it makes sense to copy all findings in one copy-paste action.
+It can be expected, that users want to copy paste results: it seems sensible, to have multiple entries for lab, but other findings are mostly in free text and therefore it makes sense to copy all findings in one copy-paste action.
  
 Clinical content uses mostly the same resources as the IPS. The resource definitions are however constrained from FHIR base definitions and CH Core definitions and NOT from UVIPS. This decision was made in order to minimize unexpected impact of future changes in IPS and for compatibility with Swiss Core.
     
@@ -154,7 +154,7 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
     </tbody>
 </table>
 
-<sup>&#91;Table 1&#93;</sup> *Resources and datatypes for clinical content*
+<sup>&#91;Table 1&#93;</sup> *Resources and data types for clinical content*
 
 In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionPurpose).
 
