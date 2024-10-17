@@ -13,6 +13,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 #### Added
 
 #### Changed / Updated
+* [#94](https://github.com/hl7ch/ch-etoc/issues/94): Add dates to the versions in the changelog
 * [#88](https://github.com/hl7ch/ch-etoc/issues/88): Update Coverage.type according to changes in parent profile CH ORF (see [CH ORF #177](https://github.com/hl7ch/ch-orf/issues/177))
 
 #### Fixed
@@ -32,7 +33,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [#84](https://github.com/hl7ch/ch-etoc/issues/84): Typos in ids of profiles
 
    
-### STU 2
+### STU 2 (2023-12-28)
 * [#270](https://github.com/hl7ch/ch-core/issues/270): Technical correction for invalid package
 
 #### Open Issues
@@ -79,7 +80,7 @@ should be: http://fhir.ch/ig/ch-core/StructureDefinition/ch-core-organization#Or
 * [Issue #69](https://github.com/hl7ch/ch-etoc/issues/69): : Changed questionnaire linkid's medication.statement.medication and medication.medicationstatement.dosage to medication.medication and medication.dosage in order to be inline with other. linkid's. Adapted representation in questionnaire.
 
 
-### STU 1
+### STU 1 (2022-04-13)
 
 #### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH ORF:
