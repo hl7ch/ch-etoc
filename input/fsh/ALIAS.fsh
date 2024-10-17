@@ -47,7 +47,6 @@ Alias:   ChCoreCSEncounterType =        http://fhir.ch/ig/ch-core/CodeSystem/bfs
 Alias:   ChRadOrderImagingStudy =       http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-rad-order-imagingstudy
 
 // CH ORF CS
-Alias:   CSCoverageType =               http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coveragetype
 Alias:   CSCoverageIdentifierType =     http://fhir.ch/ig/ch-orf/CodeSystem/ch-orf-cs-coverageidentifiertype
 Alias:   ChOrfDocumentReference =       http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference
 
