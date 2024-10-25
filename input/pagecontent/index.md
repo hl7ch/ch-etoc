@@ -28,7 +28,7 @@ Grouping of items and the order of items within shall be adequately reproduced a
 
 Vendors of applications with Questionnaire Filler/Questionnaire Receiver actors are strongly recommended to implement interfaces to other applications (such as HIS and PACS) at least for all data in the generics elements of questionnaires.
 
-In the [3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) eDischarge Report](https://www.e-health-suisse.ch/upload/documents/Bericht_IPAG_eTOC_eUeberweisungsbericht.pdf), recommendations are formulated that are important for the inter-professional exchange of information during transitions of treatment (transition of care). The information relevant to treatment shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
+In the 3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) [eDischarge Report](https://www.e-health-suisse.ch/upload/documents/Bericht_IPAG_eTOC_eUeberweisungsbericht.pdf), recommendations are formulated that are important for the inter-professional exchange of information during transitions of treatment (transition of care). The information relevant to treatment shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
 
 At the working group meeting in February 2021, it was decided that a first version of eTOC shall be based on the the [FHIR International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/).
 
