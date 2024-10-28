@@ -17,9 +17,9 @@ This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R
 
 Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and QuestionnaireResponse, forms are addressed here as Questionnaires.
   
-This Implementation Guide is derived from the [CH Order & Referral by Form (CH ORF) Implementation Guide (CH ORF)](http://build.fhir.org/ig/hl7ch/ch-orf/index.html) which relies on HL7 Structured Data Capture Implementation Guide, see [SDC](http://build.fhir.org/ig/HL7/sdc/) and uses the Swiss Core Profiles, see [CH Core](http://build.fhir.org/ig/hl7ch/ch-core/index.html).
+This Implementation Guide is derived from the [CH Order & Referral by Form (CH ORF) Implementation Guide (CH ORF)](https://fhir.ch/ig/ch-orf/index.html) which relies on HL7 Structured Data Capture Implementation Guide, see [SDC](http://build.fhir.org/ig/HL7/sdc/) and uses the Swiss Core Profiles, see [CH Core](https://fhir.ch/ig/ch-core/index.html).
 
-April 7, 2022 the HL7 Switzerland Technical Committee discussed #39 and finally voted to set cardinality for the Questionnaire and QuestionnaireResponse to 1.. in the composition resource thus making the use of Questionnaires and QuestionnaireResponses mandatory (see also [CH ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)).
+April 7, 2022 the HL7 Switzerland Technical Committee discussed #39 and finally voted to set cardinality for the Questionnaire and QuestionnaireResponse to 1.. in the composition resource thus making the use of Questionnaires and QuestionnaireResponses mandatory (see also [CH ORF](https://fhir.ch/ig/ch-orf/index.html)).
 
 Applications claiming for conformance with an CH ORF derived implementation guide shall:
   
@@ -28,7 +28,7 @@ Grouping of items and the order of items within shall be adequately reproduced a
 
 Vendors of applications with Questionnaire Filler/Questionnaire Receiver actors are strongly recommended to implement interfaces to other applications (such as HIS and PACS) at least for all data in the generics elements of questionnaires.
 
-In the [3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) eDischarge Report](https://www.e-health-suisse.ch/fileadmin/user_upload/Dokumente/2018/D/181206_eTOC-eUeberweisungsbericht-IPAG_d.pdf), recommendations are formulated that are important for the inter-professional exchange of information during transitions of treatment (transition of care). The information relevant to treatment shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
+In the 3rd report of the Interprofessional Working Group on Electronic Patient Dossiers (IPAG) [eDischarge Report](https://www.e-health-suisse.ch/upload/documents/Bericht_IPAG_eTOC_eUeberweisungsbericht.pdf), recommendations are formulated that are important for the inter-professional exchange of information during transitions of treatment (transition of care). The information relevant to treatment shall be be described in an exchange format that makes suggestions for structuring the content of interprofessional data content.  
 
 At the working group meeting in February 2021, it was decided that a first version of eTOC shall be based on the the [FHIR International Patient Summary (IPS)](http://hl7.org/fhir/uv/ips/).
 
@@ -156,7 +156,7 @@ Clinical content uses mostly the same resources as the IPS. The resource definit
 
 <sup>&#91;Table 1&#93;</sup> *Resources and data types for clinical content*
 
-In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionPurpose).
+In addition to the [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html), the CH eTOC Composition provides a [sectionPurpose]( StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionPurpose).
 
 CH eTOC  allows to distinguish between primary and secondary diagnosis; both are referenced in [sectionProblems](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionProblems). [sectionAttachment](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionAttachment) allows n for attachment (whatever is considered as important).
 
@@ -164,7 +164,7 @@ There is no sectionVitalSigns  such as provided by the [IPS](https://build.fhir.
 
 SectionPlanOfCare is omitted for the following reason: It can be assumed that careplans will be available at best as pdf files for the foreseeable future. There is therefore a need to provide careplans as an attachment. This is what the Attachment section is for.
 
-All other sections for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.htmlhttps://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
+All other sections for clinical content use the same wording for section titles as the  [Composition (IPS)](https://build.fhir.org/ig/HL7/fhir-ips/StructureDefinition-Composition-uv-ips.html):
 
 [sectionMedications](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionMedications)     
 [sectionImmunizations](StructureDefinition-ch-etoc-composition-definitions.html#Composition.section:sectionImmunizations)        
@@ -188,7 +188,7 @@ Header information such as sender, receiver etc. are considered as Generic Eleme
 
 Copy receiver is meant to receive a copy from the order and all evolving results thereof.
 
-Actors, transactions and security considerations are covered in the corresponding sections of [CH ORF](http://build.fhir.org/ig/hl7ch/ch-orf/index.html)
+Actors, transactions and security considerations are covered in the corresponding sections of [CH ORF](https://fhir.ch/ig/ch-orf/index.html )
     
 
 ### Terminology
