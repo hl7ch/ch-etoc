@@ -17,9 +17,9 @@ This Implementation Guide uses FHIR defined resources. For details on HL7 FHIR R
 
 Because the Implementation Guide relies heavily on the FHIR Resources Questionnaire and QuestionnaireResponse, forms are addressed here as Questionnaires.
   
-This Implementation Guide is derived from the [CH Order & Referral by Form (CH ORF) Implementation Guide (CH ORF)](https://fhir.ch/ig/ch-orf/index.html) which relies on HL7 Structured Data Capture Implementation Guide, see [SDC](http://build.fhir.org/ig/HL7/sdc/) and uses the Swiss Core Profiles, see [CH Core](https://fhir.ch/ig/ch-core/index.html).
+This Implementation Guide is derived from the [CH Order & Referral by Form (CH ORF) Implementation Guide (CH ORF)](https://fhir.ch/ig/ch-orf/3.0.0/index.html) which relies on HL7 Structured Data Capture Implementation Guide, see [SDC](https://hl7.org/fhir/uv/sdc/STU3/) and uses the Swiss Core Profiles, see [CH Core](https://fhir.ch/ig/ch-core/5.0.0/index.html).
 
-April 7, 2022 the HL7 Switzerland Technical Committee discussed #39 and finally voted to set cardinality for the Questionnaire and QuestionnaireResponse to 1.. in the composition resource thus making the use of Questionnaires and QuestionnaireResponses mandatory (see also [CH ORF](https://fhir.ch/ig/ch-orf/index.html)).
+April 7, 2022 the HL7 Switzerland Technical Committee discussed #39 and finally voted to set cardinality for the Questionnaire and QuestionnaireResponse to 1.. in the composition resource thus making the use of Questionnaires and QuestionnaireResponses mandatory (see also [CH ORF](https://fhir.ch/ig/ch-orf/3.0.0/index.html)).
 
 Applications claiming for conformance with an CH ORF derived implementation guide shall:
   
@@ -188,7 +188,7 @@ Header information such as sender, receiver etc. are considered as Generic Eleme
 
 Copy receiver is meant to receive a copy from the order and all evolving results thereof.
 
-Actors, transactions and security considerations are covered in the corresponding sections of [CH ORF](https://fhir.ch/ig/ch-orf/index.html )
+Actors, transactions and security considerations are covered in the corresponding sections of [CH ORF](https://fhir.ch/ig/ch-orf/3.0.0/index.html )
     
 
 ### Terminology
