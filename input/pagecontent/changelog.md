@@ -16,6 +16,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [#94](https://github.com/hl7ch/ch-etoc/issues/94): Add dates to the versions in the changelog
 * [#93](https://github.com/hl7ch/ch-etoc/issues/94): Broken links in Home/Foundation
 * [#88](https://github.com/hl7ch/ch-etoc/issues/88): Update Coverage.type according to changes in parent profile CH ORF (see [CH ORF #177](https://github.com/hl7ch/ch-orf/issues/177))
+* [#90](https://github.com/hl7ch/ch-etoc/issues/90): Update the documentation regarding the relationship with IPS (also taking into account new developments in the field of IPS)
 
 #### Fixed
 
