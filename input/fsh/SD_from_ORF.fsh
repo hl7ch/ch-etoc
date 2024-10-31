@@ -370,8 +370,8 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPregnancyHx].code = LNC#10162-6 "History of pregnancies Narrative"
 * section[sectionPregnancyHx].text MS
 * section[sectionPregnancyHx].section 0..0
-* section[sectionPregnancyHx].entry 0..1 MS
-* section[sectionPregnancyHx].entry only Reference(ChEtocPregnancyStatusObservation)
+* section[sectionPregnancyHx].entry 0.. MS
+* section[sectionPregnancyHx].entry only Reference(ChEtocPregnancyStatusObservation or ChEtocPregnancyExpectedDeliveryDateObservation)
 
 
 /*------- Composition.section: careplans -------
