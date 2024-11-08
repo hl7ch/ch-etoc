@@ -371,7 +371,7 @@ Description: "Definition for the Composition resource in the context of electron
 * section[sectionPregnancyHx].text MS
 * section[sectionPregnancyHx].section 0..0
 * section[sectionPregnancyHx].entry 0..1 MS
-* section[sectionPregnancyHx].entry only Reference(ChEtocPregnancyStatusObservation)
+* section[sectionPregnancyHx].entry only Reference(ChEtocPregnancyStatusObservation or ChEtocPregnancyExpectedDeliveryDateObservation)
 
 
 /*------- Composition.section: careplans -------
