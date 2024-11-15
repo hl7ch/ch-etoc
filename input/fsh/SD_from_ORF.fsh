@@ -155,7 +155,7 @@ Description: "Definition for the Composition resource in the context of electron
 
 /* ======== Definition of sections in CH ORF =========
 * section MS
-* section ^slicing.discriminator.type = #pattern
+* section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "code"
 * section ^slicing.rules = #open
 
