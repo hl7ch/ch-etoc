@@ -81,7 +81,7 @@ Usage: #example
 * item[=].required = true
 * item[=].item[0].linkId = "order.authoredOn"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition-ch-orf-servicerequest#ServiceRequest.authoredOn"
-* item[=].item[=].text = "Daum/Zeit der Auftragserteilung"
+* item[=].item[=].text = "Datum/Zeit der Auftragserteilung"
 * item[=].item[=].type = #dateTime
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.identifier:placerOrderIdentifier.value"
@@ -691,7 +691,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Versicherung"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "coverage.kvg.insuranceCardNumber"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#entifier"
 * item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
 * item[=].item[=].item[=].type = #string
 * item[=].item[+].linkId = "coverage.uvg"
@@ -715,7 +715,7 @@ Usage: #example
 * item[=].item[=].item[=].text = "Name der Versicherung"
 * item[=].item[=].item[=].type = #string
 * item[=].item[=].item[+].linkId = "coverage.vvg.insuranceCardNumber"
-* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#entifier"
 * item[=].item[=].item[=].text = "Kennnummer der Versichertenkarte"
 * item[=].item[=].item[=].type = #string
 * item[=].item[+].linkId = "coverage.iv"
@@ -731,7 +731,7 @@ Usage: #example
 * item[=].item[=].text = "Militärversicherung (MV)"
 * item[=].item[=].type = #group
 * item[=].item[=].item.linkId = "coverage.mv.versichertennummer"
-* item[=].item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#Coverage.identifier"
+* item[=].item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-coverage#entifier"
 * item[=].item[=].item.text = "MV-Versichertennummer"
 * item[=].item[=].item.type = #string
 * item[=].item[+].linkId = "coverage.self"
@@ -1156,7 +1156,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
-* item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
+* item[=].text = "Ort und Zeit"
 * item[=].type = #group
 * item[=].repeats = true
 * item[=].item[0].extension.url = "http://hl7.org/fhir/StructureDefinition/variable"
@@ -1165,13 +1165,13 @@ Usage: #example
 * item[=].item[=].extension.valueExpression.expression = "'appointment.location.'"
 * item[=].item[=].linkId = "appointment.location"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.participant.actor"
-* item[=].item[=].text = "Ort der Durchführung"
+* item[=].item[=].text = "Ort"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "appointment.location.name"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location#Location.name"
 * item[=].item[=].item[=].text = "Name"
 * item[=].item[=].item[=].type = #string
-* item[=].item[=].item[=].required = true
+//* item[=].item[=].item[=].required = true
 * item[=].item[=].item[+].linkId = "appointment.location.phone"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-location#Location.telecom"
 * item[=].item[=].item[=].text = "Telefon"
@@ -1207,7 +1207,7 @@ Usage: #example
 * item[=].item[=].item[=].type = #string
 * item[=].item[+].linkId = "appointment.requestedPeriod"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.requestedPeriod"
-* item[=].item[=].text = "Datum und Zeit, wann der Termin bevorzugt geplant werden soll"
+* item[=].item[=].text = "Datum und Zeit"
 * item[=].item[=].type = #group
 * item[=].item[=].item[0].linkId = "appointment.requestedPeriod.start"
 * item[=].item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.requestedPeriod.start"
@@ -1221,7 +1221,7 @@ Usage: #example
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-appointment#Appointment.status"
 * item[=].item[=].text = "Status"
 * item[=].item[=].type = #choice
-* item[=].item[=].required = true
+//* item[=].item[=].required = true
 * item[=].item[=].answerOption[0].valueCoding = $appointmentstatus#proposed "Wunsch des Patienten (vorgeschlagen)"
 * item[=].item[=].answerOption[=].initialSelected = true
 * item[=].item[=].answerOption[+].valueCoding = $appointmentstatus#pending "Vom Patienten bestätigt, aber vom Leistungserbringer noch nicht (ausstehend)"
@@ -1243,15 +1243,15 @@ Usage: #example
 * item[=].item.item.text = "Anmerkung"
 * item[=].item.item.type = #string
 * item[+].linkId = "purpose"
-* item[=].text = "Wozu wird der Patient zugewiesen?"
+* item[=].text = "Zweck?"
 * item[=].type = #group
 * item[=].item[0].linkId = "purpose.aim"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].item[=].text = "Procedere / Behandlung"
+* item[=].item[=].text = "Procedere / Behandlung / Sonstiges?"
 * item[=].item[=].type = #string
 * item[=].item[=].item.linkId = "purpose.aim.detail"
 * item[=].item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail"
-* item[=].item[=].item.text = "Procedere / Behandlung im Detail"
+* item[=].item[=].item.text = "Procedere / Behandlung im Detail?"
 * item[=].item[=].item.type = #string
 * item[=].item[=].item.repeats = true
 * item[=].item[+].linkId = "reason.statement"
@@ -1379,7 +1379,7 @@ Usage: #example
 * item[=].text = "Anhang"
 * item[=].type = #group
 * item[=].item.linkId = "attachedFile"
-* item[=].item.definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
+* item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
 * item[=].item.text = "Datei"
 * item[=].item.type = #attachment
 * item[=].item.repeats = true

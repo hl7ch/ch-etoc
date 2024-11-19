@@ -1,21 +1,25 @@
 TBD
 
 ### Zuweisungsschreiben
-Die Beteiligten sind:
+Akteure:
 
-* Zuweiser: Dr. O. Rderplacer, der Hausarzt in der Gemeinschaftspraxis Happy Doctors ist
-* Spital:  Chirurgische Abteilung des Happy Hospital
-* Patientin: Frau S. Ufferer, die eine chirurgische Intervention benötigt.
+* Auftrag erteilt durch: [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyDoctors.html).
+* Empfänger des Auftrages: [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html)
+* Patientin: [Frau S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html), die eine chirurgiesche Intervention benötigt
 
-Patientin S. Ufferer hat einen Termin bei Dr. O. Rderplacer. Dieser vereinbart mit der Patientin, dass eine Operation notwendig ist, die in der chirurgischen Abteilung des Happy Hospital durchgeführt werden soll. Dr. O. Rderplacer schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an das Happy Hospital. Dazu gehören vorhandene Röntgenbilder und Berichte sowie Laborergebnisse. Außerdem bittet er darum, der Patientin eine Kopie des Berichts zukommen zu lassen.
+[Frau S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html) ist für einen Ferienaufenthalt im Plfegeheim Bergblick. Dr. O. Rderplacer betreut dieses Pflegeheim. Ein akuter Herzinfakt macht eine Einweisung auf die[Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) nötig. [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html) schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html). Außerdem schickt sie der Hausärztin [Dr. med S.Meier](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-SMeier.html) eine Kopie der Anmeldung.
+
+Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocTransCare.html)
+
 
 ### Anforderung eines Austrittsberichtes von früher
-Die Beteiligten sind:
+Akteure
 
-* Dr. O. Rderplacer, der Hausarzt in der Gemeinschaftspraxis Happy Doctors ist.
-* Chirurgische Abteilung im Happy Hospital
-* Patientin: Frau S. Ufferer, die vor 2 oder 3 Jahren für einen opertiven Eingriff im Happy Hospital war.
+* Auftrag erteilt durch: [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyDoctors.html).
+* Empfänger des Auftrages: [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html)
+* Patientin: [Frau S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html), die vor 3 Jahren bei [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) war
 
-Dr. O. Rderplacer fordert bei Happy Hospital den Austrittsbericht an.
+ [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html) fordert bei [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) den Austrittsbericht an.
 
-<i>Obwohl man den Hausarzt anders nennen könnte (z.B. Dr. R. Equester; da es sich im allgemeinen Sprachgebrauch eher um eine Anforderung als um eine Anordnung handelt), bleiben wir bei der Bezeichnung des Hausarztes als Dr. O. Rderplacer: Konzeptionell gibt es keinen Unterschied zwischen der Anforerung eines Berichtes, einer Überweisung und eines Auftrages (Labor. Radiologie etc.).<i>
+
+Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocRequestPrevious.html)

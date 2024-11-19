@@ -89,7 +89,7 @@ Description: "Example for Composition"
 * extension[receiver].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
 * extension[receiver].valueReference = Reference(MedicalDepartmentHappyHospital)
 * extension[copyReceiver].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[copyReceiver].valueReference = Reference(SUffererCopyReceiver)
+* extension[copyReceiver].valueReference = Reference(SUfferer)
 * status = #final
 // fixer Wert aus DocumentEntry.typeCode
 //* type = SCT#419891008 "Nicht näher bezeichnetes Dokument"
@@ -102,11 +102,11 @@ Description: "Example for Composition"
 * section[orderReferral].title = "Order-Referral"
 //* section[orderReferral].code = LNC#93037-0 "Portable medical order form"
 * section[orderReferral].entry[Questionnaire] = Reference(QuestionnaireEtoc)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(QuestionnaireResponseEtoc)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(QuestionnaireResponseEtocTransCare)
 * section[orderReferral].entry[ServiceRequest] = Reference(ServiceRequestEtoc)
 
 
-Instance: DocumentEtoc // Noch nicht vollständig
+Instance: DocumentEtoc 
 InstanceOf: ChEtocDocument
 Title: "Bundle Medical Referral"
 Description: "Example for Bundle"
@@ -118,15 +118,15 @@ Description: "Example for Bundle"
 * entry[=].resource = CompositionEtoc
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/QuestionnaireEtoc"
 * entry[=].resource = QuestionnaireEtoc
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/QuestionnaireResponseEtoc"
-* entry[=].resource = QuestionnaireResponseEtoc
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/QuestionnaireResponseEtocTransCare"
+* entry[=].resource = QuestionnaireResponseEtocTransCare
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/ServiceRequestEtoc"
 * entry[=].resource = ServiceRequestEtoc
 //------------- Patient and Copy Receiver -------------
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SUfferer"
 * entry[=].resource = SUfferer
-* entry[+].fullUrl = "http://example.com/fhir/Patient/SUffererCopyReceiver"
-* entry[=].resource = SUffererCopyReceiver
+//* entry[+].fullUrl = "http://example.com/fhir/Patient/SUffererCopyReceiver"
+//* entry[=].resource = SUffererCopyReceiver
 //------------- Data Enterer -------------
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/DAtaentererHappyDoctors"
 * entry[=].resource = DAtaentererHappyDoctors
@@ -205,7 +205,7 @@ Description: "Example for Patient"
 * address.country = "Schweiz"
 
 //------------- Copy Receiver -------------
-Instance: SUffererCopyReceiver
+/*Instance: SUffererCopyReceiver
 InstanceOf: ChCorePatient
 Title: "Susanna Ufferer Copy Receiver"
 Description: "Example for Patient"
@@ -220,7 +220,7 @@ Description: "Example for Patient"
 * address.city = "Zürich"
 * address.postalCode = "8000"
 * address.country = "Schweiz"
-
+*/
 
 //------------- Data Enterer -------------
 Instance: DAtaentererHappyDoctors
@@ -268,6 +268,25 @@ Description: "Example for Practitioner"
 * telecom[0].value = "+41 44 333 22 11"
 * telecom[1].system = #email
 * telecom[1].value = "o.rderplacer@happydoctors.ch"
+
+
+Instance: SMeier
+InstanceOf: ChCorePractitioner
+Title: "Ottilie Rderplacer"
+Description: "Example for Practitioner"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000050728"
+* name.use = #official
+* name.family = "Meier"
+* name.given = "Sabine"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[0].value = "+41 44 333 13 15"
+* telecom[1].system = #email
+* telecom[1].value = "s.meier@praxisseeblick.ch"
+
 
 
 //------------- Receiver -------------
@@ -385,8 +404,8 @@ InstanceOf: ChOrfCoverage
 Title: "Coverage KVG"
 Description: "Example for Coverage"
 * contained[+] = Sanitas
-* identifier[+].type = CSCoverageIdentifierType#VeKa
-* identifier[=].value = "80756015090002647590"
+* identifier.type = CSCoverageIdentifierType#VeKa
+* identifier[insuranceCardNumber].value = "80756015090002647590"
 * status = #active
 * type = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor#1 "Krankenversicherung (obligat.)"
 * beneficiary = Reference(SUfferer)

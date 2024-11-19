@@ -1,20 +1,23 @@
-
 ### Transition of care letter
-The players are:
+Players:
 
-* Referrer: Dr. O. Rderplacer, who is a family physician in the Happy Doctors group practice.
-* Hospital: Surgical department of Happy Hospital
-* Patient: Ms. S. Ufferer, who is in need of surgical intervention.
+* Order placed by: [Dr O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html), general practitioner at the [group practice ‘Happy Doctors’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyDoctors.html).
+* Recipient of the order: [Dr O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Head Physician [Visceral Surgery ‘Happy Hospital’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html)
+* Patient: [Mrs S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html), who requires surgical intervention
 
-Patient S. Ufferer has an appointment with Dr. O. Rderplacer who agrees with the patient that an operation is necessary, to be performed in the Surgical Department of Happy Hospital. Dr. O. Rderplacer writes a referral containing all the necessary information and sends it to Happy Hospital. This includes existing x-rays and reports, as well as lab results. He also asks that a copy of the report be sent to the patient.
+Patient [S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html) is on holiday in the Bergblick nursing home. Dr O. Rderplacer is in charge of this nursing home. An acute myocardial infarction makes an admission to the [Internal Medicine ‘Happy Hospital’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) necessary. [Dr O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html) writes a referral containing all the necessary information and sends it to [Dr O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Head Physician [Internal Medicine ‘Happy Hospital’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html). She also sends a copy of the registration to the family doctor [Dr med S.Meier](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-SMeier.html).
 
-### Requesting a discharge letter from earlier
-The players are:
+Related [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocTransCare.html)
 
-* Dr. O. Rderplacer, who is a family physician in the Happy Doctors group practice.
-* Surgical department in Happy Hospital.
-* Patient: Ms. S. Ufferer, who was at Happy Hospital 2 or 3 years ago for an operative procedure.
 
-Dr. O. Rderplacer requests the discharge report from Happy Hospital.
+### Request for a discharge letter from earlier
+Players:
 
-<i>Although the primary care physician could be called something else (e.g., Dr. R. Equester; since in common usage it is a request rather than an order), we will stick with calling the primary care physician Dr. O. Rderplacer: conceptually, there is no difference between requesting a report, a referral, and an order (laboratory. radiology, etc.).<i>
+* Order placed by: [Dr O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html), general practitioner at the [group practice ‘Happy Doctors’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyDoctors.html).
+* Recipient of the order: [Dr O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chief Physician [Visceral Surgery ‘Happy Hospital’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html)
+* Patient: [Mrs S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html), who was with [Dr O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chief Physician [Visceral Surgery ‘Happy Hospital’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) 3 years ago
+
+ [Dr O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html) requests the discharge letter from [Dr O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chief Physician [Visceral Surgery ‘Happy Hospital’](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html).
+
+
+Associated [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocRequestPrevious.html)

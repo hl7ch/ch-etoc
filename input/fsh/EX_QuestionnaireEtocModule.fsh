@@ -178,7 +178,7 @@ Usage: #example
 //------ Appointment ------------------------------ 
 * item[+].linkId = "appointment"
 * item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.extension:locationAndTime"
-* item[=].text = "Ort und Zeit der Durchführung der angeforderten Leistung"
+* item[=].text = "Ort und Zeit"
 * item[=].type = #group
 * item[=].repeats = true
 
@@ -202,7 +202,7 @@ Usage: #example
 
 //------- What is the Patient referred for? ------------------------------
 * item[+].linkId = "purpose"
-* item[=].text = "Wozu wird der Patient zugewiesen?"
+* item[=].text = "Zweck?"
 * item[=].type = #group
 
 * item[=].item.extension.url = "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaire-subQuestionnaire"
@@ -351,13 +351,13 @@ Description: "Subquestionnaire Purpose"
 
 * item[+].linkId = "purpose.aim"
 * item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.code.text"
-* item[=].text = "Procedere / Behandlung"
+* item[=].text = "Procedere / Behandlung / Sonstiges?"
 * item[=].type = #string
 //* item[=].repeats = true
 
 * item[=].item[+].linkId = "purpose.aim.detail"
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-etoc-servicerequest#ServiceRequest.orderDetail"
-* item[=].item[=].text = "Procedere / Behandlung im Detail"
+* item[=].item[=].text = "Procedere / Behandlung im Detail?"
 * item[=].item[=].type = #string
 * item[=].item[=].repeats = true
 
@@ -694,7 +694,7 @@ Description: "Subquestionnaire Attachment"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "attachedFile"  
-* item[=].definition = "http://fhir.ch/ig/ch-rad-order/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
+* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
 * item[=].text = "Datei"
 * item[=].type = #attachment
 * item[=].repeats = true
