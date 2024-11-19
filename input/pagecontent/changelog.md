@@ -2,11 +2,11 @@
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
 ### STU 3 (2024)
+* [Issue #101](https://github.com/hl7ch/ch-etoc/issues/101): Resource CoverageKVG had wrong slicing
 * [Issue #92](https://github.com/hl7ch/ch-etoc/issues/92): Update Usecases German; added QR for each Usecase
 * [Issue #91](https://github.com/hl7ch/ch-etoc/issues/91): Update Usecases English; added QR for each Usecase
-* [Issue #101](https://github.com/hl7ch/ch-etoc/issues/101): Resource CoverageKVG had wrong slicing
-* identifier.type = CSCoverageIdentifierType#VeKa
-* identifier[insuranceCardNumber].value = "80756015090002647590"
+
+  
 
 #### Open Issues
 During the ballot, the following comments came in, which will be taken into account in the further development of CH eTOC:
