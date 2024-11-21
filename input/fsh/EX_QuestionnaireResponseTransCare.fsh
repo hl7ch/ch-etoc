@@ -1,6 +1,6 @@
 Instance: QuestionnaireResponseEtocTransCare
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "QuestionnaireResponseEtoc für eine Überweisung"
+Title: "QuestionnaireResponse für eine Überweisung"
 Description: "Example for QuestionnaireResponse for a transition of care letter"
 * questionnaire = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * status = #completed
@@ -135,7 +135,7 @@ Description: "Example for QuestionnaireResponse for a transition of care letter"
 
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[0].valueString = "Happystrasse 14"
+* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 133"
 //* item[=].item[=].item[=].answer[1].valueString = "Postfach 14"
 
 * item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
@@ -503,7 +503,7 @@ Description: "Example for QuestionnaireResponse for a transition of care letter"
 
 * item[=].item[=].item[+].linkId = "appointment.location.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[0].valueString = "Seestrasse 133"
+* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 133"
 //* item[=].item[=].item[=].answer[1].valueString = "Haus C"
 
 * item[=].item[=].item[+].linkId = "appointment.location.postalCode"

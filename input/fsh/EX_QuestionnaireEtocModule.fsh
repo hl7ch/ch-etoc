@@ -2,7 +2,7 @@
 Instance: QuestionnaireEtoc-modular
 InstanceOf: ChOrfQuestionnaire
 Title: "Questionnaire eTOC (Modular version)"
-Description: "Example for Questionnaire"
+Description: "Questionnaire Modules"
 Usage: #example
 
 * meta.profile[+] = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-questionnaire"

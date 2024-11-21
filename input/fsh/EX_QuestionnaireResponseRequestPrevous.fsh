@@ -1,6 +1,6 @@
 Instance: QuestionnaireResponseEtocRequestPrevious
 InstanceOf: ChOrfQuestionnaireResponse
-Title: "QuestionnaireResponseEtoc für die Anfrage für Unterlagen von früher"
+Title: "QuestionnaireResponse für die Anfrage für Unterlagen von früher"
 Description: "Example for QuestionnaireResponse for a request for a discharge letter from earlier"
 * questionnaire = "http://fhir.ch/ig/ch-etoc/Questionnaire/QuestionnaireEtoc"
 * status = #completed
@@ -135,7 +135,7 @@ Description: "Example for QuestionnaireResponse for a request for a discharge le
 
 * item[=].item[=].item[+].linkId = "receiver.organization.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-* item[=].item[=].item[=].answer[0].valueString = "Happystrasse 14"
+* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 133"
 //* item[=].item[=].item[=].answer[1].valueString = "Postfach 14"
 
 * item[=].item[=].item[+].linkId = "receiver.organization.postalCode"
@@ -161,7 +161,6 @@ Description: "Example for QuestionnaireResponse for a request for a discharge le
 * item[=].item[+].linkId = "initiator.personalrelation"
 * item[=].item[=].text = "Persönliche Beziehung zum Patienten?"
 // * item[=].item[=].answer.valueCoding = http://snomed.info/sct#65616008 "Sohn"
-* item[=].item[=].answer.valueCoding = http://snomed.info/sct#65616008
 
 * item[=].item[+].linkId = "initiator.relatedPerson"
 * item[=].item[=].text = "Andere Person"
@@ -502,7 +501,7 @@ Description: "Example for QuestionnaireResponse for a request for a discharge le
 
 * item[=].item[=].item[+].linkId = "appointment.location.streetAddressLine"
 * item[=].item[=].item[=].text = "Strasse, Hausnummer, Postfach etc."
-//* item[=].item[=].item[=].answer[0].valueString = "Seestrasse 133"
+//* item[=].item[=].item[=].answer[0].valueString = "Kantonsstrasse 133"
 //* item[=].item[=].item[=].answer[1].valueString = "Haus C"
 
 * item[=].item[=].item[+].linkId = "appointment.location.postalCode"
@@ -522,7 +521,7 @@ Description: "Example for QuestionnaireResponse for a request for a discharge le
 
 * item[=].item[=].item[0].linkId = "appointment.requestedPeriod.start"
 * item[=].item[=].item[=].text = "Von"
-* item[=].item[=].item[=].answer.valueDateTime = "2021" 
+* item[=].item[=].item[=].answer.valueDateTime = "2020" 
 
 * item[=].item[=].item[+].linkId = "appointment.requestedPeriod.end"
 * item[=].item[=].item[=].text = "Bis"
