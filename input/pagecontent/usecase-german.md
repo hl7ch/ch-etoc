@@ -3,11 +3,11 @@ TBD
 ### Zuweisungsschreiben
 Akteure:
 
-* Auftrag erteilt durch: [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyDoctors.html).
-* Empfänger des Auftrages: [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html)
-* Patientin: [Frau S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html); sie hat einen Herzinfarkt.
+* Auftrag erteilt durch: [Dr. O. Rderplacer](Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](Organization-HappyDoctors.html).
+* Empfänger des Auftrages: [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html)
+* Patientin: [Frau S. Ufferer](Patient-SUfferer.html); sie hat einen Herzinfarkt.
 
-[Frau S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html) ist für einen Ferienaufenthalt im Pflegeheim Bergblick. Dr. O. Rderplacer betreut dieses Pflegeheim. Ein akuter Herzinfarkt macht eine Einweisung in die [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) nötig. [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html) schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html). Außerdem schickt sie der Hausärztin [Dr. med S.Meier](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-SMeier.html) eine Kopie der Anmeldung.
+[Frau S. Ufferer](Patient-SUfferer.html) ist für einen Ferienaufenthalt im Pflegeheim Bergblick. Dr. O. Rderplacer betreut dieses Pflegeheim. Ein akuter Herzinfarkt macht eine Einweisung in die [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html) nötig. [Dr. O. Rderplacer](Practitioner-ORderplacer.html) schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html). Außerdem schickt sie der Hausärztin [Dr. med S.Meier](Practitioner-SMeier.html) eine Kopie der Anmeldung.
 
 Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocTransCare.html)
 
@@ -15,11 +15,11 @@ Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/Que
 ### Anforderung eines Austrittsberichtes von früher
 Akteure
 
-* Auftrag erteilt durch: [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyDoctors.html).
-* Empfänger des Auftrages: [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html)
-* Patientin: [Frau S. Ufferer](http://build.fhir./ig/hl7ch/ch-etoc/Patient-PatSUfferer.html), die vor 3 Jahren bei [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) war
+* Auftrag erteilt durch: [Dr. O. Rderplacer](Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](Organization-HappyDoctors.html).
+* Empfänger des Auftrages: [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html)
+* Patientin: [Frau S. Ufferer](Patient-SUfferer.html), die vor 3 Jahren bei [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html) war
 
- [Dr. O. Rderplacer](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderplacer.html) fordert bei [Dr. O. Rderfiller](http://build.fhir./ig/hl7ch/ch-etoc/Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](http://build.fhir./ig/hl7ch/ch-etoc/Organization-HappyHospital.html) den Austrittsbericht an.
+ [Dr. O. Rderplacer](Practitioner-ORderplacer.html) fordert bei [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html) den Austrittsbericht an.
 
 
 Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocRequestPrevious.html)
