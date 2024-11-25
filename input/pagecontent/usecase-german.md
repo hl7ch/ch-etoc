@@ -9,7 +9,7 @@ Akteure:
 
 [Frau S. Ufferer](Patient-SUfferer.html) ist für einen Ferienaufenthalt im Pflegeheim Bergblick. Dr. O. Rderplacer betreut dieses Pflegeheim. Ein akuter Herzinfarkt macht eine Einweisung in die [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html) nötig. [Dr. O. Rderplacer](Practitioner-ORderplacer.html) schreibt eine Überweisung, die alle notwendigen Informationen enthält und schickt sie an [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html). Außerdem schickt sie der Hausärztin [Dr. med S.Meier](Practitioner-SMeier.html) eine Kopie der Anmeldung.
 
-Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocTransCare.html)
+Zugehöriger [Questionnaire Response](QuestionnaireResponse-QuestionnaireResponseEtocTransCare.html)
 
 
 ### Anforderung eines Austrittsberichtes von früher
@@ -22,4 +22,4 @@ Akteure
  [Dr. O. Rderplacer](Practitioner-ORderplacer.html) fordert bei [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html) den Austrittsbericht an.
 
 
-Zugehöriger [Questionnaire Response](http://build.fhir.org/ig/hl7ch/ch-etoc/QuestionnaireResponse-QuestionnaireResponseEtocRequestPrevious.html)
+Zugehöriger [Questionnaire Response](QuestionnaireResponse-QuestionnaireResponseEtocRequestPrevious.html)

@@ -87,7 +87,7 @@ Description: "Example for Composition"
 * extension[dataEnterer].extension[enterer].url = "enterer"
 * extension[dataEnterer].extension[enterer].valueReference = Reference(DAtaentererHappyDoctors)
 * extension[receiver].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
-* extension[receiver].valueReference = Reference(MedicalDepartmentHappyHospital)
+* extension[receiver].valueReference = Reference(ORderfillerHappyHospital)
 * extension[copyReceiver].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
 * extension[copyReceiver].valueReference = Reference(SUfferer)
 * status = #final
@@ -138,8 +138,10 @@ Description: "Example for Bundle"
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/ORderplacer"
 * entry[=].resource = ORderplacer
 //------------- Receiver -------------
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MedicalDepartmentHappyHospital"
-* entry[=].resource = MedicalDepartmentHappyHospital
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/ORderfillerHappyHospital"
+* entry[=].resource = ORderfillerHappyHospital
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/ORderfiller"
+* entry[=].resource = ORderfiller
 //------------- Organizations -------------
 * entry[+].fullUrl = "http://example.com/fhir/Organization/HappyDoctors"
 * entry[=].resource = HappyDoctors
@@ -272,7 +274,7 @@ Description: "Example for Practitioner"
 
 Instance: SMeier
 InstanceOf: ChCorePractitioner
-Title: "Ottilie Rderplacer"
+Title: "Sabine Meier"
 Description: "Example for Practitioner"
 * identifier.system = "urn:oid:2.51.1.3"
 * identifier.value = "7601000050728"
@@ -288,12 +290,12 @@ Description: "Example for Practitioner"
 * telecom[1].value = "s.meier@praxisseeblick.ch"
 
 
-
 //------------- Receiver -------------
-Instance: MedicalDepartmentHappyHospital
+Instance: ORderfillerHappyHospital
 InstanceOf: ChCorePractitionerRole
-Title: "MedicalDepartment@Happy Hospital"
+Title: "Otto Rderfiller@Happy Hospital"  
 Description: "Example for PractionerRole"
+* practitioner = Reference(ORderfiller)
 * organization = Reference(HappyHospital)
 
 
@@ -312,9 +314,9 @@ Description: "Example for Organization"
 
 Instance: HappyHospital
 InstanceOf: ChCoreOrganization
-Title: "Klinik Happy Hospital"
+Title: "Innere Medizin Klinik Happy Hospital"
 Description: "Example for Organization"
-* name = "Klinik Happy Hospital"
+* name = "Innere Medizin Klinik Happy Hospital"
 * address.line[0] = "Kantonsstrasse 133"
 * address.line[1] = "Haus C"
 * address.city = "Zürich"
@@ -328,7 +330,7 @@ Title: "Otto Rderfiller"
 Description: "Example for Practitioner"
 * name.use = #official
 * name.family = "Rderfiller"
-* name.given = "Ottilie"
+* name.given = "Otto"
 
 
 //-------------  Time and Location -------------
@@ -426,11 +428,11 @@ Instance: LocationHospitalStay
 InstanceOf: ChOrfLocation
 Title: "Location Hospital Stay"
 Description: "Example for Location"
-* name = "Happy Hospital"
+* name = "Innere Medizin Happy Hospital"
 * telecom[0].system = #phone
 * telecom[0].value = "+41 44 412 65 56"
 * address.line[0] = "Kantonsstrasse 133"
-* address.line[1] = "Innere Medizin"
+//* address.line[1] = "Innere Medizin"
 * address.city = "Zürich"
 * address.postalCode = "8000"
 * address.country = "Schweiz"
