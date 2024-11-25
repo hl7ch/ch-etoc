@@ -1394,4 +1394,4 @@ Usage: #example
 * item[=].item.linkId = "note.text"
 * item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.note.text"
 * item[=].item.text = "Kommentar"
-* item[=].item.type = #string
+* item[=].item.type = #string 
