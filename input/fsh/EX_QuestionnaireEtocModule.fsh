@@ -694,13 +694,13 @@ Description: "Subquestionnaire Attachment"
 * publisher = "HL7 Switzerland"
 
 * item[+].linkId = "attachedFile"  
-* item[=].definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.content.attachment"
+* item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#DocumentReference.content.attachment"
 * item[=].text = "Datei"
 * item[=].type = #attachment
 * item[=].repeats = true
 
 * item[=].item[+].linkId = "attachedFile.description"  
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#DocumentReference.description"
 * item[=].item[=].text = "Beschreibung"
 * item[=].item[=].type = #string 
 

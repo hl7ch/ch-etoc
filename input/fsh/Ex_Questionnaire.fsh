@@ -1380,12 +1380,12 @@ Usage: #example
 * item[=].text = "Anhang"
 * item[=].type = #group
 * item[=].item.linkId = "attachedFile"
-* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.content.attachment"
+* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#DocumentReference.content.attachment.data"
 * item[=].item.text = "Datei"
 * item[=].item.type = #attachment
 * item[=].item.repeats = true
 * item[=].item.item.linkId = "attachedFile.description"
-* item[=].item.item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
+* item[=].item.item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference#DocumentReference.description"
 * item[=].item.item.text = "Beschreibung"
 * item[=].item.item.type = #string
 * item[+].linkId = "note"
