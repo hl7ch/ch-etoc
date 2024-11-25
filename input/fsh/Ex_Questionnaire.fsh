@@ -81,7 +81,7 @@ Usage: #example
 * item[=].type = #group
 * item[=].required = true
 * item[=].item[0].linkId = "order.authoredOn"
-* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition-ch-orf-servicerequest#ServiceRequest.authoredOn"
+* item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-servicerequest#ServiceRequest.authoredOn"
 * item[=].item[=].text = "Datum/Zeit der Auftragserteilung"
 * item[=].item[=].type = #dateTime
 * item[=].item[+].linkId = "order.placerOrderIdentifier"
@@ -1380,7 +1380,7 @@ Usage: #example
 * item[=].text = "Anhang"
 * item[=].type = #group
 * item[=].item.linkId = "attachedFile"
-* item[=].item.definition = "http://fhir.ch/ig/ch-etoc/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
+* item[=].item.definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-defintions#DocumentReference.content.attachedFile"
 * item[=].item.text = "Datei"
 * item[=].item.type = #attachment
 * item[=].item.repeats = true
