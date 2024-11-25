@@ -702,6 +702,6 @@ Description: "Subquestionnaire Attachment"
 * item[=].item[+].linkId = "attachedFile.description"  
 * item[=].item[=].definition = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-documentreference-definitions#DocumentReference.description"
 * item[=].item[=].text = "Beschreibung"
-* item[=].item[=].type = #string
+* item[=].item[=].type = #string 
 
 
