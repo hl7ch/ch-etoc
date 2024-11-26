@@ -499,8 +499,8 @@ InstanceOf: ChOrfDocumentReference
 Title: "Befund_Rx_Thorax_S_Ufferer_20190401"
 Description: "Example of Document Reference for Attachment (e.g. pdf)"
 * status = #current
-* content.attachment.title = ""
-* description = "Befund Thorax-Rx vom 1.2.23; Eyample of Attachment Attachment"
+* content.attachment.title = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
+* description = "Befund Thorax-Rx vom 1.2.23; Example of Attachment Attachment"
 * content.attachment.contentType = MimeType#application/pdf
 * content.attachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
 
