@@ -277,7 +277,7 @@ InstanceOf: ChCorePractitioner
 Title: "Sabine Meier"
 Description: "Example for Practitioner"
 * identifier.system = "urn:oid:2.51.1.3"
-* identifier.value = "7601000050728"
+* identifier.value = "7601000234322"
 * name.use = #official
 * name.family = "Meier"
 * name.given = "Sabine"

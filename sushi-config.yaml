@@ -10,11 +10,11 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-10-16
-version: 3.0.0-ci-build
+date: 2024-12-17
+version: 3.0.0
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trail-use | release | update | normative+trail-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trail-use | release | update | normative+trail-use
 publisher:
   name: HL7 Switzerland
 contact:
@@ -23,7 +23,7 @@ contact:
       - system: url
         value: https://www.hl7.ch
 dependencies:
-  hl7.terminology: 6.0.2
+  hl7.terminology: 6.1.0
   ch.fhir.ig.ch-orf: current
   ch.fhir.ig.ch-core: current
   ch.fhir.ig.ch-term: current
