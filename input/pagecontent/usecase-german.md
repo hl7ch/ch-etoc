@@ -1,5 +1,3 @@
-TBD
-
 ### Zuweisungsschreiben
 Akteure:
 
