@@ -11,7 +11,7 @@ Zugehöriger [Questionnaire Response](QuestionnaireResponse-QuestionnaireRespons
 
 
 ### Anforderung eines Austrittsberichtes von früher
-Akteure
+Akteure:
 
 * Auftrag erteilt durch: [Dr. O. Rderplacer](Practitioner-ORderplacer.html), Hausärztin in der [Gemeinschaftspraxis "Happy Doctors"](Organization-HappyDoctors.html).
 * Empfänger des Auftrages: [Dr. O. Rderfiller](Practitioner-ORderfiller.html), Chefarzt [Innere Medizin "Happy Hospital"](Organization-HappyHospital.html)
