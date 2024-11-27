@@ -87,9 +87,9 @@ Description: "Example for Composition"
 * extension[dataEnterer].extension[enterer].url = "enterer"
 * extension[dataEnterer].extension[enterer].valueReference = Reference(DAtaentererHappyDoctors)
 * extension[receiver].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-receiver"
-* extension[receiver].valueReference = Reference(MedicalDepartmentHappyHospital)
+* extension[receiver].valueReference = Reference(ORderfillerHappyHospital)
 * extension[copyReceiver].url = "http://fhir.ch/ig/ch-orf/StructureDefinition/ch-orf-copyreceiver"
-* extension[copyReceiver].valueReference = Reference(SUffererCopyReceiver)
+* extension[copyReceiver].valueReference = Reference(SUfferer)
 * status = #final
 // fixer Wert aus DocumentEntry.typeCode
 //* type = SCT#419891008 "Nicht näher bezeichnetes Dokument"
@@ -102,11 +102,11 @@ Description: "Example for Composition"
 * section[orderReferral].title = "Order-Referral"
 //* section[orderReferral].code = LNC#93037-0 "Portable medical order form"
 * section[orderReferral].entry[Questionnaire] = Reference(QuestionnaireEtoc)
-* section[orderReferral].entry[QuestionnaireResponse] = Reference(QuestionnaireResponseEtoc)
+* section[orderReferral].entry[QuestionnaireResponse] = Reference(QuestionnaireResponseEtocTransCare)
 * section[orderReferral].entry[ServiceRequest] = Reference(ServiceRequestEtoc)
 
 
-Instance: DocumentEtoc // Noch nicht vollständig
+Instance: DocumentEtoc 
 InstanceOf: ChEtocDocument
 Title: "Bundle Medical Referral"
 Description: "Example for Bundle"
@@ -118,15 +118,15 @@ Description: "Example for Bundle"
 * entry[=].resource = CompositionEtoc
 * entry[+].fullUrl = "http://example.com/fhir/Questionnaire/QuestionnaireEtoc"
 * entry[=].resource = QuestionnaireEtoc
-* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/QuestionnaireResponseEtoc"
-* entry[=].resource = QuestionnaireResponseEtoc
+* entry[+].fullUrl = "http://example.com/fhir/QuestionnaireResponse/QuestionnaireResponseEtocTransCare"
+* entry[=].resource = QuestionnaireResponseEtocTransCare
 * entry[+].fullUrl = "http://example.com/fhir/ServiceRequest/ServiceRequestEtoc"
 * entry[=].resource = ServiceRequestEtoc
 //------------- Patient and Copy Receiver -------------
 * entry[+].fullUrl = "http://example.com/fhir/Patient/SUfferer"
 * entry[=].resource = SUfferer
-* entry[+].fullUrl = "http://example.com/fhir/Patient/SUffererCopyReceiver"
-* entry[=].resource = SUffererCopyReceiver
+//* entry[+].fullUrl = "http://example.com/fhir/Patient/SUffererCopyReceiver"
+//* entry[=].resource = SUffererCopyReceiver
 //------------- Data Enterer -------------
 * entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/DAtaentererHappyDoctors"
 * entry[=].resource = DAtaentererHappyDoctors
@@ -138,8 +138,10 @@ Description: "Example for Bundle"
 * entry[+].fullUrl = "http://example.com/fhir/Practitioner/ORderplacer"
 * entry[=].resource = ORderplacer
 //------------- Receiver -------------
-* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/MedicalDepartmentHappyHospital"
-* entry[=].resource = MedicalDepartmentHappyHospital
+* entry[+].fullUrl = "http://example.com/fhir/PractitionerRole/ORderfillerHappyHospital"
+* entry[=].resource = ORderfillerHappyHospital
+* entry[+].fullUrl = "http://example.com/fhir/Practitioner/ORderfiller"
+* entry[=].resource = ORderfiller
 //------------- Organizations -------------
 * entry[+].fullUrl = "http://example.com/fhir/Organization/HappyDoctors"
 * entry[=].resource = HappyDoctors
@@ -205,7 +207,7 @@ Description: "Example for Patient"
 * address.country = "Schweiz"
 
 //------------- Copy Receiver -------------
-Instance: SUffererCopyReceiver
+/*Instance: SUffererCopyReceiver
 InstanceOf: ChCorePatient
 Title: "Susanna Ufferer Copy Receiver"
 Description: "Example for Patient"
@@ -220,7 +222,7 @@ Description: "Example for Patient"
 * address.city = "Zürich"
 * address.postalCode = "8000"
 * address.country = "Schweiz"
-
+*/
 
 //------------- Data Enterer -------------
 Instance: DAtaentererHappyDoctors
@@ -270,11 +272,30 @@ Description: "Example for Practitioner"
 * telecom[1].value = "o.rderplacer@happydoctors.ch"
 
 
+Instance: SMeier
+InstanceOf: ChCorePractitioner
+Title: "Sabine Meier"
+Description: "Example for Practitioner"
+* identifier.system = "urn:oid:2.51.1.3"
+* identifier.value = "7601000050728"
+* name.use = #official
+* name.family = "Meier"
+* name.given = "Sabine"
+* name.prefix = "Dr. med."
+* name.prefix.extension.url = "http://hl7.org/fhir/StructureDefinition/iso21090-EN-qualifier"
+* name.prefix.extension.valueCode = #AC
+* telecom[0].system = #phone
+* telecom[0].value = "+41 44 333 13 15"
+* telecom[1].system = #email
+* telecom[1].value = "s.meier@praxisseeblick.ch"
+
+
 //------------- Receiver -------------
-Instance: MedicalDepartmentHappyHospital
+Instance: ORderfillerHappyHospital
 InstanceOf: ChCorePractitionerRole
-Title: "MedicalDepartment@Happy Hospital"
+Title: "Otto Rderfiller@Happy Hospital"  
 Description: "Example for PractionerRole"
+* practitioner = Reference(ORderfiller)
 * organization = Reference(HappyHospital)
 
 
@@ -284,7 +305,7 @@ InstanceOf: ChCoreOrganization
 Title: "Praxis Happy Doctors"
 Description: "Example for Organization"
 * name = "Praxis Happy Docotors"
-* address.line[0] = "Kantonsstrasse 14"
+* address.line[0] = "Happystrasse 14"
 * address.line[1] = "Postfach 14"
 * address.city = "Zürich"
 * address.postalCode = "8000"
@@ -293,10 +314,10 @@ Description: "Example for Organization"
 
 Instance: HappyHospital
 InstanceOf: ChCoreOrganization
-Title: "Klinik Happy Hospital"
+Title: "Innere Medizin Klinik Happy Hospital"
 Description: "Example for Organization"
-* name = "Klinik Happy Hospital"
-* address.line[0] = "Seestrasse 133"
+* name = "Innere Medizin Klinik Happy Hospital"
+* address.line[0] = "Kantonsstrasse 133"
 * address.line[1] = "Haus C"
 * address.city = "Zürich"
 * address.postalCode = "8000"
@@ -309,7 +330,7 @@ Title: "Otto Rderfiller"
 Description: "Example for Practitioner"
 * name.use = #official
 * name.family = "Rderfiller"
-* name.given = "Ottilie"
+* name.given = "Otto"
 
 
 //-------------  Time and Location -------------
@@ -385,8 +406,8 @@ InstanceOf: ChOrfCoverage
 Title: "Coverage KVG"
 Description: "Example for Coverage"
 * contained[+] = Sanitas
-* identifier[+].type = CSCoverageIdentifierType#VeKa
-* identifier[=].value = "80756015090002647590"
+* identifier.type = CSCoverageIdentifierType#VeKa
+* identifier[insuranceCardNumber].value = "80756015090002647590"
 * status = #active
 * type = http://fhir.ch/ig/ch-core/CodeSystem/bfs-medstats-25-mainguarantor#1 "Krankenversicherung (obligat.)"
 * beneficiary = Reference(SUfferer)
@@ -407,11 +428,11 @@ Instance: LocationHospitalStay
 InstanceOf: ChOrfLocation
 Title: "Location Hospital Stay"
 Description: "Example for Location"
-* name = "Happy Hospital"
+* name = "Innere Medizin Happy Hospital"
 * telecom[0].system = #phone
 * telecom[0].value = "+41 44 412 65 56"
-* address.line[0] = "Seestrasse 133"
-* address.line[1] = "Innere Medizin"
+* address.line[0] = "Kantonsstrasse 133"
+//* address.line[1] = "Innere Medizin"
 * address.city = "Zürich"
 * address.postalCode = "8000"
 * address.country = "Schweiz"
@@ -479,7 +500,7 @@ Title: "Befund_Rx_Thorax_S_Ufferer_20190401"
 Description: "Example of Document Reference for Attachment (e.g. pdf)"
 * status = #current
 * content.attachment.title = "Befund_Rx_Thorax_S_Ufferer_20190401.pdf"
-* description = "Befund Thorax-Rx vom 1.2.23; Eyample of Attachment Attachment"
+* description = "Befund Thorax-Rx vom 1.2.23; Example of Attachment Attachment"
 * content.attachment.contentType = MimeType#application/pdf
 * content.attachment.data = "VGVzdCBCZWZ1bmQgTm9uIERpY29t" // Encoded in base64
 
