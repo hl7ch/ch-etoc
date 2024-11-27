@@ -19,7 +19,7 @@ See also open issues on [GitHub](https://github.com/hl7ch/ch-etoc/issues).
 * [#90](https://github.com/hl7ch/ch-etoc/issues/90): Update the documentation regarding the relationship with IPS (also taking into account new developments in the field of IPS)
 
 #### Fixed
-
+* [#101](https://github.com/hl7ch/ch-etoc/issues/101): Ressource CoverageKVG: Wrong slicing
 
 ### STU 3 Ballot (2024-05-17)
 #### Open Issues
