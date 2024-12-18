@@ -11,10 +11,10 @@ license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
 date: 2024-12-17
-version: 3.0.0
+version: 4.0.0-ballot-ci-build
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trail-use | release | update | normative+trail-use
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trail-use | release | update | normative+trail-use
 publisher:
   name: HL7 Switzerland
 contact:
