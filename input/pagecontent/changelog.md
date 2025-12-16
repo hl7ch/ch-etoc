@@ -1,6 +1,15 @@
 
 All significant changes to this FHIR implementation guide will be documented on this page.   
 
+### STU 3 Technical Correction (2025-12-16)
+Updated dependencies to the latest Swiss Implementation Guide versions; applied corresponding IG updates and technical fixes required by the updated HL7 IG Publisher.
+* CH Core: 5.0.0 -> 6.0.0
+* CH ORF: 3.0.0 -> 3.0.2
+* [#105](https://github.com/hl7ch/ch-etoc/issues/105): Remove unused dependency to CH RAD-Order
+* [#103](https://github.com/hl7ch/ch-etoc/issues/103): Add [expansion-parameter](https://build.fhir.org/codesystem-guide-parameter-code.html#:~:text=expansion%2Dparameter,as%20SNOMED%20CT) for the usage of SNOMED CT Swiss Extension
+* Add [pin-canonicals](http://build.fhir.org/ig/FHIR/fhir-tools-ig/branches/master/CodeSystem-ig-parameters.html#:~:text=for%20further%20information-,pin%2Dcanonicals,-Pin%20Canonical%20Versions) parameter to define the handling of unversioned canonical references
+* Fix VS URL: ch-epr-term -> ch-term
+
 ### STU 3 (2024-12-17)
 
 #### Open Issues
