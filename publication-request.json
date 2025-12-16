@@ -1,11 +1,11 @@
 {
   "package-id" : "ch.fhir.ig.ch-etoc",
-  "version" : "3.0.0",
-  "path" : "http://fhir.ch/ig/ch-etoc/3.0.0",
+  "version" : "3.0.1",
+  "path" : "http://fhir.ch/ig/ch-etoc/3.0.1",
   "mode" : "milestone",
   "status" : "trial-use",
   "sequence" : "STU 3",
-  "desc" : "HL7 Switzerland STU 3",
+  "desc" : "HL7 Switzerland STU 3 Technical Correction",
   "changes" : "changelog.html",
   "first": false
 }

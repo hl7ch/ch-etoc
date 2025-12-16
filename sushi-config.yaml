@@ -10,11 +10,11 @@ status: active
 license: CC0-1.0
 copyright: CC0-1.0
 jurisdiction: urn:iso:std:iso:3166#CH
-date: 2024-12-17
-version: 4.0.0-ballot-ci-build
+date: 2025-12-16
+version: 3.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2021+
-releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trail-use | release | update | normative+trail-use
+releaseLabel: trial-use # ci-build | draft | qa-preview | ballot | trail-use | release | update | normative+trail-use
 publisher:
   name: HL7 Switzerland
 contact:
@@ -23,12 +23,9 @@ contact:
       - system: url
         value: https://www.hl7.ch
 dependencies:
-  hl7.terminology: 6.1.0
-  ch.fhir.ig.ch-orf: 3.0.0
-  ch.fhir.ig.ch-core: 5.0.0
-  ch.fhir.ig.ch-term: 3.1.x
-  ch.fhir.ig.ch-rad-order: 2.0.0
-
+  ch.fhir.ig.ch-core: 6.0.0
+  ch.fhir.ig.ch-orf: 3.0.2
+  
 pages:
   index.md:
     title: Home
@@ -49,3 +46,5 @@ parameters:
   excludettl: true
   allow-extensible-warnings: true
   display-warnings: true  
+  path-expansion-params: '../../expansion-params.json'  # for using SNOMED CT Swiss Extension
+  pin-canonicals: pin-multiples

@@ -1,20 +1,12 @@
 == Suppressed Messages ==
 
 # Links for answer options not resolved
-The link 'null#item.order.priority' for "Answers: 4 options" cannot be resolved
-The link 'null#item.initiator.legalrelation' for "Answers: 2 options" cannot be resolved
-The link 'null#item.initiator.personalrelation' for "Answers: 10 options" cannot be resolved
-The link 'null#item.patient.gender' for "Answers: 3 options" cannot be resolved
-The link 'null#item.patient.maritalStatus' for "Answers: 8 options" cannot be resolved
-The link 'null#item.requestedEncounter.class' for "Answers: 3 options" cannot be resolved
-The link 'null#item.requestedEncounter.desiredAccommodation' for "Answers: 3 options" cannot be resolved
-The link 'null#item.appointment.status' for "Answers: 3 options" cannot be resolved
-The link 'null#item.patient.consent.statement' for "Answers: 2 options" cannot be resolved
+The link '%
 
 # Not practicable in this context/use case
 Best Practice Recommendation: In general, all observations should have a performer
 Best Practice Recommendation: In general, all observations should have an effective[x] ()
-Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' (defined in http://hl7.org/fhir/StructureDefinition/Questionnaire)
+Constraint failed: que-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation%
 
 # Swiss specific display values
 Wrong Display Name%
@@ -28,5 +20,6 @@ None of the codings provided are in the value set 'Condition Category Codes' (ht
 Reference to draft CodeSystem http://hl7.org/fhir/appointmentstatus|4.0.1
 Reference to draft CodeSystem http://hl7.org/fhir/request-priority|4.0.1
 
-# Other value set problem
-ValueSet 'http://fhir.ch/ig/ch-epr-term/ValueSet/DocumentEntry.languageCode' not found
+# Known IG Publisher issue (https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20v2.2E0.2E24.20-.20error.20in.20local.20build/with/547712458)
+The HTML fragment 'expansion-params.xhtml' is not included anywhere in the produced implementation guide
+No definition could be found for URL value 'http://hl7.org/fhir/tools/StructureDefinition/expansion-parameters'
